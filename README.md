@@ -1,8 +1,8 @@
 # 😊 Hi, I’m Charlie
 
 I’m a Nairobi-based software & data builder who enjoys designing  
-clear, thoughtful systems that are clear, grounded, and built to last —
-schemas before scripts, meaning before motion.
+clear, thoughtful systems that are clear, grounded, and built to last.
+
 
 I care about **schema-first design**, reproducible analytics,  
 and small, meaningful improvements over noisy activity.  
