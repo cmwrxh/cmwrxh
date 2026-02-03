@@ -87,7 +87,8 @@ Built for reliability and traceability.
 </div>
 
 <br/>
-<img src="https://raw.githubusercontent.com/cmwrxh/cmwrxh/main/github-metrics.svg" />
+<img src="./github-metrics.svg" width="100%" />
+
 
 **Connect**
 
