@@ -1,12 +1,12 @@
 Retro-futuristic, pixelart
 <div align="center"> 
 
-<b>Hey, I'm Charlie</b>
+<b style="font-size:1.2em;">Hey, I'm Charlie</b>
 
 <br/>
 
 **Nairobi-based software & data engineer**  
-Building clear, **schema-first systems** that actually last.  
+I build **schema-first systems** designed to last.  
 _Schemas before scripts · Meaning before motion_
 
 <br/>
@@ -23,33 +23,48 @@ _Schemas before scripts · Meaning before motion_
 **Focus**
 
 FinTech & Risk  
-Climate & Social Economics  
 Health Systems  
-Mathematics & Education  
+Climate & Social Economics  
 Governance & Gender Equity  
+Mathematics & Education  
 
-Clarity over cleverness. Docs first.
+Clarity over cleverness. Documentation first.
 
 <br/>
 
 **Key Projects**
 
 **FinTech Risk Lab**  
-Credit risk & fraud analytics (**Python + Oracle SQL**)  
-→ [GitHub](https://github.com/cmwrxh/fintech-risk-lab) · [Site](https://cmwrxh.github.io/fintech-risk-lab/)
+Credit risk and fraud analytics (**Python + Oracle SQL**)  
+Designed to explore robust, auditable risk pipelines.  
+→ https://github.com/cmwrxh/fintech-risk-lab · https://cmwrxh.github.io/fintech-risk-lab/
 
 **Climate & Social Economics Dashboard** *(WIP)*  
-Indicators & visualizations (**R + JavaScript**)
+Indicators and visualizations (**R + JavaScript**)  
+Focused on clarity, comparability, and long-term signals.
 
 **Health Data Pipelines** *(WIP)*  
-Clean ETL patterns (**Go + SQL**)
+Clean, reproducible ETL patterns (**Go + SQL**)  
+Built for reliability and traceability.
 
 <br/>
 
 **Stack**
 
-**Core:** Python · SQL (Oracle) · JavaScript · Go  
-**Tools:** Git · Linux · Bash · HTML/CSS · Rails  
+<div align="center">
+
+<img src="https://img.shields.io/badge/Python-FDBA74?style=flat-square&logo=python&logoColor=0B0B0B" />
+<img src="https://img.shields.io/badge/Oracle%20SQL-F97316?style=flat-square&logo=oracle&logoColor=0B0B0B" />
+<img src="https://img.shields.io/badge/JavaScript-FFB000?style=flat-square&logo=javascript&logoColor=0B0B0B" />
+<img src="https://img.shields.io/badge/Go-FF7A18?style=flat-square&logo=go&logoColor=0B0B0B" />
+<img src="https://img.shields.io/badge/Git-F97316?style=flat-square&logo=git&logoColor=0B0B0B" />
+<img src="https://img.shields.io/badge/Linux-FDBA74?style=flat-square&logo=linux&logoColor=0B0B0B" />
+<img src="https://img.shields.io/badge/Bash-FF7A18?style=flat-square&logo=gnu-bash&logoColor=0B0B0B" />
+<img src="https://img.shields.io/badge/HTML5-F97316?style=flat-square&logo=html5&logoColor=0B0B0B" />
+<img src="https://img.shields.io/badge/CSS3-FDBA74?style=flat-square&logo=css3&logoColor=0B0B0B" />
+<img src="https://img.shields.io/badge/Rails-FF7A18?style=flat-square&logo=rubyonrails&logoColor=0B0B0B" />
+
+</div>
 
 <br/>
 
@@ -87,8 +102,8 @@ You’ll need to do things to feel better.
 
 <div align="center">
   <img
-    alt="Sleepy Pixel Cat Retro Setup"
-    width="520"
+    alt="Sleepy retro cat at the end of the page"
+    width="100%"
     src="https://i.etsystatic.com/38395464/r/il/65c6d2/4990640698/il_fullxfull.4990640698_duan.jpg"
   />
 </div>
