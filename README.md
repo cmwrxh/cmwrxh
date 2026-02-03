@@ -36,16 +36,36 @@ Clarity over cleverness. Documentation first.
 
 **FinTech Risk Lab**  
 Credit risk and fraud analytics (**Python + Oracle SQL**)  
-Designed to explore robust, auditable risk pipelines.  
-→ https://github.com/cmwrxh/fintech-risk-lab · https://cmwrxh.github.io/fintech-risk-lab/
+Designed to explore robust, auditable risk pipelines.
+
+<div>
+  <a href="https://github.com/cmwrxh/fintech-risk-lab">
+    <img src="https://img.shields.io/badge/Code-F97316?style=flat-square&logo=github&logoColor=0B0B0B"/>
+  </a>
+  <a href="https://cmwrxh.github.io/fintech-risk-lab/">
+    <img src="https://img.shields.io/badge/Live-FDBA74?style=flat-square&logo=googlechrome&logoColor=0B0B0B"/>
+  </a>
+</div>
+
+<br/>
 
 **Climate & Social Economics Dashboard** *(WIP)*  
 Indicators and visualizations (**R + JavaScript**)  
 Focused on clarity, comparability, and long-term signals.
 
+<div>
+  <img src="https://img.shields.io/badge/Status-WIP-FF7A18?style=flat-square&logo=clockify&logoColor=0B0B0B"/>
+</div>
+
+<br/>
+
 **Health Data Pipelines** *(WIP)*  
 Clean, reproducible ETL patterns (**Go + SQL**)  
 Built for reliability and traceability.
+
+<div>
+  <img src="https://img.shields.io/badge/Status-WIP-FF7A18?style=flat-square&logo=clockify&logoColor=0B0B0B"/>
+</div>
 
 <br/>
 
