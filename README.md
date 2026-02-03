@@ -71,14 +71,25 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Python-FDBA74?style=flat-square&logo=python&logoColor=0B0B0B" />
   <img src="https://img.shields.io/badge/Oracle%20SQL-F97316?style=flat-square&logo=oracle&logoColor=0B0B0B" />
-  <img src="https://img.shields.io/badge/JavaScript-FFB000?style=flat-square&logo=javascript&logoColor=0B0B0B" />
+  <img src="https://img.shields.io/badge/PostgreSQL-FDBA74?style=flat-square&logo=postgresql&logoColor=0B0B0B" />
+  <img src="https://img.shields.io/badge/MySQL-FFB000?style=flat-square&logo=mysql&logoColor=0B0B0B" />
+  <img src="https://img.shields.io/badge/R-F97316?style=flat-square&logo=r&logoColor=0B0B0B" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Apache%20Kafka-FF7A18?style=flat-square&logo=apachekafka&logoColor=0B0B0B" />
+  <img src="https://img.shields.io/badge/AWS-F97316?style=flat-square&logo=amazonaws&logoColor=0B0B0B" />
+  <img src="https://img.shields.io/badge/Terraform-FDBA74?style=flat-square&logo=terraform&logoColor=0B0B0B" />
+  <img src="https://img.shields.io/badge/Google%20Cloud-FFB000?style=flat-square&logo=googlecloud&logoColor=0B0B0B" />
+  <img src="https://img.shields.io/badge/BigQuery-F97316?style=flat-square&logo=googlebigquery&logoColor=0B0B0B" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/JavaScript-FDBA74?style=flat-square&logo=javascript&logoColor=0B0B0B" />
   <img src="https://img.shields.io/badge/Go-FF7A18?style=flat-square&logo=go&logoColor=0B0B0B" />
   <img src="https://img.shields.io/badge/Git-F97316?style=flat-square&logo=git&logoColor=0B0B0B" />
   <img src="https://img.shields.io/badge/Linux-FDBA74?style=flat-square&logo=linux&logoColor=0B0B0B" />
   <img src="https://img.shields.io/badge/Bash-FF7A18?style=flat-square&logo=gnu-bash&logoColor=0B0B0B" />
-  <img src="https://img.shields.io/badge/HTML5-F97316?style=flat-square&logo=html5&logoColor=0B0B0B" />
-  <img src="https://img.shields.io/badge/CSS3-FDBA74?style=flat-square&logo=css3&logoColor=0B0B0B" />
-  <img src="https://img.shields.io/badge/Rails-FF7A18?style=flat-square&logo=rubyonrails&logoColor=0B0B0B" />
 </p>
 
 <p align="center">
@@ -90,4 +101,13 @@
 <p align="center">
   <a href="https://github.com/cmwrxh"><img src="https://img.shields.io/badge/GitHub-F97316?style=for-the-badge&logo=github&logoColor=0B0B0B"/></a>
   <a href="https://cmwrxh.github.io"><img src="https://img.shields.io/badge/Website-F97316?style=for-the-badge&logo=googlechrome&logoColor=0B0B0B"/></a>
-  <a href="https://www.linkedin.com/in/charles-mwaura-bb7814140/"><img src="https://img.shields.io/badge/LinkedIn-F97316?style=for-the-badge&logo
+  <a href="https://www.linkedin.com/in/charles-mwaura-bb7814140/"><img src="https://img.shields.io/badge/LinkedIn-F97316?style=for-the-badge&logo=linkedin&logoColor=0B0B0B"/></a>
+</p>
+
+<p align="center">
+  <sub>Don’t wait to feel better to do things. You’ll need to do things to feel better.</sub>
+</p>
+
+<p align="center">
+  <sub><i>I design systems that survive audits, scale, and time.</i></sub>
+</p>
