@@ -14,8 +14,6 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
 
       - name: Generate 3D contribution graph
         uses: yoshi389111/github-profile-3d-contrib@latest
@@ -23,20 +21,15 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: cmwrxh
 
-      - name: Commit & push (only if changes exist)
+      - name: Commit generated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Avoid exit 128 edge cases
-          git status
-
-          # Only commit if something actually changed
-          if git diff --quiet; then
-            echo "No changes to commit."
-            exit 0
+          if git status --porcelain | grep .; then
+            git add -A
+            git commit -m "chore: generate 3D contribution graph"
+            git push
+          else
+            echo "No changes to commit"
           fi
-
-          git add -A
-          git commit -m "chore: update 3D contribution graph"
-          git push
