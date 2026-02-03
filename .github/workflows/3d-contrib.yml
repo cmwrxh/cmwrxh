@@ -1,4 +1,4 @@
-name: 3D Contribution Graph
+name: GitHub Profile 3D Contrib
 
 on:
   schedule:
@@ -12,16 +12,31 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
       - name: Generate 3D contribution graph
-        uses: yoshi389111/github-profile-3d-contrib@0.7.1
+        uses: yoshi389111/github-profile-3d-contrib@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: cmwrxh
 
-      - name: Commit & push
+      - name: Commit & push (only if changes exist)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Avoid exit 128 edge cases
+          git status
+
+          # Only commit if something actually changed
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
           git add -A
-          git commit -m "chore: update 3D contribution graph" || exit 0
+          git commit -m "chore: update 3D contribution graph"
           git push
