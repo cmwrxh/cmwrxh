@@ -1,7 +1,9 @@
 Retro-futuristic, pixelart
 <div align="center"> 
 
-# Hey, I'm Charlie
+<b>Hey, I'm Charlie</b>
+
+<br/>
 
 **Nairobi-based software & data engineer**  
 Building clear, **schema-first systems** that actually last.  
@@ -9,7 +11,6 @@ _Schemas before scripts · Meaning before motion_
 
 <br/>
 
-<!-- Burnt orange badge set (consistent theme) -->
 <img src="https://img.shields.io/badge/Oracle--first-F97316?style=for-the-badge&logo=oracle&logoColor=0B0B0B" />
 <img src="https://img.shields.io/badge/Python-FDBA74?style=for-the-badge&logo=python&logoColor=0B0B0B" />
 <img src="https://img.shields.io/badge/Design-Schema--first-EF6C00?style=for-the-badge&logo=buffer&logoColor=FFF7ED" />
@@ -17,20 +18,21 @@ _Schemas before scripts · Meaning before motion_
 
 </div>
 
----
+<br/>
 
-## Focus
+**Focus**
+
 FinTech & Risk  
 Climate & Social Economics  
 Health Systems  
 Mathematics & Education  
 Governance & Gender Equity  
 
-**Clarity over cleverness. Docs first.**
+Clarity over cleverness. Docs first.
 
----
+<br/>
 
-## Key Projects
+**Key Projects**
 
 **FinTech Risk Lab**  
 Credit risk & fraud analytics (**Python + Oracle SQL**)  
@@ -42,15 +44,16 @@ Indicators & visualizations (**R + JavaScript**)
 **Health Data Pipelines** *(WIP)*  
 Clean ETL patterns (**Go + SQL**)
 
----
+<br/>
 
-## Stack
+**Stack**
+
 **Core:** Python · SQL (Oracle) · JavaScript · Go  
 **Tools:** Git · Linux · Bash · HTML/CSS · Rails  
 
----
+<br/>
 
-## Connect
+**Connect**
 
 <div align="center">
 
@@ -75,12 +78,13 @@ Clean ETL patterns (**Go + SQL**)
 
 </div>
 
----
+<br/>
 
-> Don't wait to feel better to do things.  
-> You'll need to do things to feel better.
+Don’t wait to feel better to do things.  
+You’ll need to do things to feel better.
 
-<!-- sleepy retro cat stays, always -->
+<br/>
+
 <div align="center">
   <img
     alt="Sleepy Pixel Cat Retro Setup"
