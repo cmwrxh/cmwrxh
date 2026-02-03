@@ -1,83 +1,90 @@
-# 😊 Hi, I’m Charlie
+Retro-futuristic, pixelart
+<div align="center"> 
 
-I’m a Nairobi-based software & data builder who enjoys designing  
-clear, thoughtful systems that are clear, grounded, and built to last.
+# Hey, I'm Charlie
 
+**Nairobi-based software & data engineer**  
+Building clear, **schema-first systems** that actually last.  
+_Schemas before scripts · Meaning before motion_
 
-I care about **schema-first design**, reproducible analytics,  
-and small, meaningful improvements over noisy activity.  
-I like writing things down, keeping projects tidy,  
-and building with intention.
+<br/>
 
-🌸 schemas before scripts · meaning before motion
+<!-- Burnt orange badge set (consistent theme) -->
+<img src="https://img.shields.io/badge/Oracle--first-F97316?style=for-the-badge&logo=oracle&logoColor=0B0B0B" />
+<img src="https://img.shields.io/badge/Python-FDBA74?style=for-the-badge&logo=python&logoColor=0B0B0B" />
+<img src="https://img.shields.io/badge/Design-Schema--first-EF6C00?style=for-the-badge&logo=buffer&logoColor=FFF7ED" />
+<img src="https://img.shields.io/badge/Profile-Maintained-FF7A18?style=for-the-badge&logo=github&logoColor=0B0B0B" />
 
-![Oracle-first](https://img.shields.io/badge/Oracle--first-SQL-red)
-![Python](https://img.shields.io/badge/Python-Data%20%26%20Systems-blue)
-![Schema-first](https://img.shields.io/badge/Design-Schema--first-success)
-![Maintained](https://img.shields.io/badge/Profile-Maintained-green)
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=cmwrxh&show_icons=true&hide_title=true)
-
----
-
-## 🌱 Areas I enjoy building and exploring
-- FinTech & Risk  
-- Environment & Social Economics  
-- Mathematics & Education  
-- Health Systems  
-- Politics & Governance  
-- Gender Equity  
-- History, Literature & Language  
+</div>
 
 ---
 
-## 🧠 How I think about tech
-I’m drawn to systems that are **understandable**, **well-structured**,  
-and built to last. I prefer clarity over cleverness,  
-integrity over shortcuts, and documentation as a first-class citizen.
+## Focus
+FinTech & Risk  
+Climate & Social Economics  
+Health Systems  
+Mathematics & Education  
+Governance & Gender Equity  
+
+**Clarity over cleverness. Docs first.**
 
 ---
 
-## 🚀 Flagship projects
-A small selection of work that reflects how I build and think:
+## Key Projects
 
-- **FinTech Risk Lab**  
-  Credit risk & fraud analytics (Python + Oracle-style SQL)  
-  🔗 https://github.com/cmwrxh/fintech-risk-lab  
-  🌐 https://cmwrxh.github.io/fintech-risk-lab/
+**FinTech Risk Lab**  
+Credit risk & fraud analytics (**Python + Oracle SQL**)  
+→ [GitHub](https://github.com/cmwrxh/fintech-risk-lab) · [Site](https://cmwrxh.github.io/fintech-risk-lab/)
 
-- **Climate & Social Economics Dashboard** *(in progress)*  
-  Data-driven indicators and visual exploration (R + JavaScript)
+**Climate & Social Economics Dashboard** *(WIP)*  
+Indicators & visualizations (**R + JavaScript**)
 
-- **Health Data Pipelines** *(in progress)*  
-  Clean, validated ETL patterns for health datasets (Go + SQL)
+**Health Data Pipelines** *(WIP)*  
+Clean ETL patterns (**Go + SQL**)
 
 ---
 
-## 🧰 Tech stack
-**Languages**  
-Python · SQL (Oracle-first) · JavaScript · Go · C++ · R  
-
-**Web & tooling**  
-HTML · CSS · Rails · Git · Linux · Bash  
+## Stack
+**Core:** Python · SQL (Oracle) · JavaScript · Go  
+**Tools:** Git · Linux · Bash · HTML/CSS · Rails  
 
 ---
 
-## 😊 A little more about me
-I enjoy working across the stack — from data models and backend logic  
-to documentation and simple interfaces.  
-Small, meaningful commits matter to me.  
-So does writing things down.
+## Connect
+
+<div align="center">
+
+<a href="https://github.com/cmwrxh">
+  <img src="https://img.shields.io/badge/GitHub-F97316?style=for-the-badge&logo=github&logoColor=0B0B0B"/>
+</a>
+<a href="https://cmwrxh.github.io">
+  <img src="https://img.shields.io/badge/Website-F97316?style=for-the-badge&logo=googlechrome&logoColor=0B0B0B"/>
+</a>
+<a href="https://www.linkedin.com/in/charles-mwaura-bb7814140/">
+  <img src="https://img.shields.io/badge/LinkedIn-F97316?style=for-the-badge&logo=linkedin&logoColor=0B0B0B"/>
+</a>
+<a href="https://x.com/cmwrxh">
+  <img src="https://img.shields.io/badge/X-F97316?style=for-the-badge&logo=x&logoColor=0B0B0B"/>
+</a>
+<a href="https://www.instagram.com/cmwrxh/">
+  <img src="https://img.shields.io/badge/Instagram-F97316?style=for-the-badge&logo=instagram&logoColor=0B0B0B"/>
+</a>
+<a href="https://leetcode.com/u/cmwrxh/">
+  <img src="https://img.shields.io/badge/LeetCode-F97316?style=for-the-badge&logo=leetcode&logoColor=0B0B0B"/>
+</a>
+
+</div>
 
 ---
 
-## 🌸 Where I share work & thoughts
-- **GitHub:** https://github.com/cmwrxh  
-- **Website:** https://cmwrxh.github.io  
-- **Blog:** https://mystory186.wordpress.com/2026/01/30/the-cheapest-cross/  
-- **LinkedIn:** https://www.linkedin.com/in/charles-mwaura-bb7814140/  
-- **LeetCode:** https://leetcode.com/u/cmwrxh/  
-- **Instagram:** https://www.instagram.com/cmwrxh/  
-- **X (Twitter):** https://x.com/cmwrxh  
+> Don't wait to feel better to do things.  
+> You'll need to do things to feel better.
 
-✨ ✦ ✧ ✦ ✨
+<!-- sleepy retro cat stays, always -->
+<div align="center">
+  <img
+    alt="Sleepy Pixel Cat Retro Setup"
+    width="520"
+    src="https://i.etsystatic.com/38395464/r/il/65c6d2/4990640698/il_fullxfull.4990640698_duan.jpg"
+  />
+</div>
