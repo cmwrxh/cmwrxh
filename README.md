@@ -87,12 +87,14 @@ Built for reliability and traceability.
 </div>
 
 <br/>
-<img src="./github-metrics.svg" width="100%" />
+<img src="./profile-3d-contrib/profile-night-green.svg" width="100%" />
+
+
 
 
 **Connect**
 
-<div align="center">
+</div align="center">
 
 <a href="https://github.com/cmwrxh">
   <img src="https://img.shields.io/badge/GitHub-F97316?style=for-the-badge&logo=github&logoColor=0B0B0B"/>
@@ -122,7 +124,7 @@ You’ll need to do things to feel better.
 
 <br/>
 
-<div align="center">
+</div align="center">
   <img
     alt="Sleepy retro cat at the end of the page"
     width="100%"
