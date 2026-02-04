@@ -90,27 +90,27 @@
 <p align="center"><b>Stack</b></p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-FDBA74?style=flat-square&logo=python&logoColor=0B0B0B" />
-  <img src="https://img.shields.io/badge/Oracle%20SQL-F97316?style=flat-square&logo=oracle&logoColor=0B0B0B" />
-  <img src="https://img.shields.io/badge/PostgreSQL-FDBA74?style=flat-square&logo=postgresql&logoColor=0B0B0B" />
-  <img src="https://img.shields.io/badge/MySQL-FFB000?style=flat-square&logo=mysql&logoColor=0B0B0B" />
-  <img src="https://img.shields.io/badge/R-F97316?style=flat-square&logo=r&logoColor=0B0B0B" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Apache%20Kafka-FF7A18?style=flat-square&logo=apachekafka&logoColor=0B0B0B" />
-  <img src="https://img.shields.io/badge/AWS-F97316?style=flat-square&logo=amazonaws&logoColor=0B0B0B" />
-  <img src="https://img.shields.io/badge/Terraform-FDBA74?style=flat-square&logo=terraform&logoColor=0B0B0B" />
-  <img src="https://img.shields.io/badge/Google%20Cloud-FFB000?style=flat-square&logo=googlecloud&logoColor=0B0B0B" />
-  <img src="https://img.shields.io/badge/BigQuery-F97316?style=flat-square&logo=googlebigquery&logoColor=0B0B0B" />
+  <img src="https://img.shields.io/badge/Apache%20Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white" />
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white" />
+  <img src="https://img.shields.io/badge/Terraform-623CE4?style=flat-square&logo=terraform&logoColor=white" />
+  <img src="https://img.shields.io/badge/Google%20Cloud-4285F4?style=flat-square&logo=googlecloud&logoColor=white" />
+  <img src="https://img.shields.io/badge/BigQuery-4285F4?style=flat-square&logo=googlebigquery&logoColor=white" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/JavaScript-FDBA74?style=flat-square&logo=javascript&logoColor=0B0B0B" />
-  <img src="https://img.shields.io/badge/Go-FF7A18?style=flat-square&logo=go&logoColor=0B0B0B" />
-  <img src="https://img.shields.io/badge/Git-F97316?style=flat-square&logo=git&logoColor=0B0B0B" />
-  <img src="https://img.shields.io/badge/Linux-FDBA74?style=flat-square&logo=linux&logoColor=0B0B0B" />
-  <img src="https://img.shields.io/badge/Bash-FF7A18?style=flat-square&logo=gnu-bash&logoColor=0B0B0B" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" />
+  <img src="https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white" />
 </p>
 
 <p align="center">
