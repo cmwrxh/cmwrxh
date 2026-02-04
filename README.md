@@ -66,6 +66,27 @@
   <img src="https://img.shields.io/badge/Status-WIP-FF7A18?style=flat-square&logo=clockify&logoColor=0B0B0B"/>
 </p>
 
+<p align="center"><b>Portfolio Projects</b></p>
+
+<p align="center">
+  <sub>Small, focused demos built with clean commit history (9 each) — variety across stacks</sub>
+</p>
+
+<p align="center">
+  <a href="https://github.com/cmwrxh/taskforge-cli">
+    <img src="https://img.shields.io/badge/TaskForge_CLI-F97316?style=flat-square&logo=typescript&logoColor=0B0B0B"/>
+  </a>
+  <a href="https://github.com/cmwrxh/focus-flow">
+    <img src="https://img.shields.io/badge/Focus_Flow-FDBA74?style=flat-square&logo=javascript&logoColor=0B0B0B"/>
+  </a>
+  <a href="https://github.com/cmwrxh/snake-ai-duel">
+    <img src="https://img.shields.io/badge/Snake_AI_Duel-FF7A18?style=flat-square&logo=python&logoColor=0B0B0B"/>
+  </a>
+  <a href="https://github.com/cmwrxh/req">
+    <img src="https://img.shields.io/badge/req-FFB000?style=flat-square&logo=go&logoColor=0B0B0B"/>
+  </a>
+</p>
+
 <p align="center"><b>Stack</b></p>
 
 <p align="center">
@@ -93,7 +114,7 @@
 </p>
 
 <p align="center">
-  <img src="./profile-3d-contrib/profile-night-green.svg" width="100%" />
+  <img src="./profile-3d-contrib/profile-night-green.svg" width="80%" alt="3D Contribution Graph" />
 </p>
 
 <p align="center"><b>Connect</b></p>
