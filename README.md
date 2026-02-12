@@ -23,15 +23,11 @@
   <img src="https://img.shields.io/badge/Profile-Maintained-FF7A18?style=for-the-badge&logo=github&logoColor=0B0B0B" />
 </p>
 
----
-
 <p align="center"><b>Focus</b></p>
 
 <p align="center">
   <sub>FinTech & Risk · Health Systems · Climate & Social Economics · Governance & Gender Equity · Mathematics & Education · <i>Clarity over cleverness. Docs first.</i></sub>
 </p>
-
----
 
 <p align="center"><b>Key Projects</b></p>
 
@@ -70,8 +66,6 @@
   <img src="https://img.shields.io/badge/Status-WIP-FF7A18?style=flat-square&logo=clockify&logoColor=0B0B0B"/>
 </p>
 
----
-
 <p align="center"><b>Portfolio Projects</b></p>
 
 <p align="center">
@@ -92,8 +86,6 @@
     <img src="https://img.shields.io/badge/req-FFB000?style=flat-square&logo=go&logoColor=0B0B0B"/>
   </a>
 </p>
-
----
 
 <p align="center"><b>Stack</b></p>
 
@@ -121,28 +113,19 @@
   <img src="https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white" />
 </p>
 
----
-
 <p align="center"><b>Activity</b></p>
 
 <p align="center">
-  <img 
-    src="https://github-readme-stats.vercel.app/api?username=cmwrxh&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&bg_color=0B0B0B&title_color=FF7A18&icon_color=F97316&text_color=FDBA74"
-    height="165"
-  />
+  <img src="https://github-readme-stats.vercel.app/api?username=cmwrxh&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&bg_color=0B0B0B&title_color=FF7A18&icon_color=F97316&text_color=FDBA74" height="165" />
 </p>
 
 <p align="center">
-  <img 
-    src="https://streak-stats.demolab.com?user=cmwrxh&theme=dark&hide_border=true&background=0B0B0B&ring=FF7A18&fire=F97316&currStreakLabel=FDBA74"
-  />
+  <img src="https://streak-stats.demolab.com?user=cmwrxh&theme=dark&hide_border=true&background=0B0B0B&ring=FF7A18&fire=F97316&currStreakLabel=FDBA74" />
 </p>
 
 <p align="center">
   <img src="./profile-3d-contrib/profile-night-green.svg" width="80%" />
 </p>
-
----
 
 <p align="center"><b>Connect</b></p>
 
@@ -151,8 +134,6 @@
   <a href="https://cmwrxh.github.io"><img src="https://img.shields.io/badge/Website-F97316?style=for-the-badge&logo=googlechrome&logoColor=0B0B0B"/></a>
   <a href="https://www.linkedin.com/in/charles-mwaura-bb7814140/"><img src="https://img.shields.io/badge/LinkedIn-F97316?style=for-the-badge&logo=linkedin&logoColor=0B0B0B"/></a>
 </p>
-
----
 
 <p align="center">
   <sub>Don’t wait to feel better to do things. You’ll need to do things to feel better.</sub>
