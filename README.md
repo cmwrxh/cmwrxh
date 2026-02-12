@@ -5,9 +5,10 @@
 </p>
 
 <p align="center">
-  <a href="https://open.spotify.com/track/7xGfFoTpQ2E7fRF5lN10tr">
-    <img alt="Spotify" src="https://img.shields.io/badge/Now%20Playing-Take%20My%20Breath%20Away-1DB954?style=for-the-badge&logo=spotify&logoColor=0B0B0B" />
-  </a>
+  <img
+    src="https://readme-typing-svg.demolab.com?font=DejaVu+Sans+Mono&size=18&duration=2800&pause=700&color=FF7A18&center=true&vCenter=true&width=520&lines=Schema-first+systems+that+last;Meaning+before+motion;Docs+first.+Auditable+by+default"
+    alt="Typing SVG"
+  />
 </p>
 
 <p align="center"><b>Hey, I'm Charlie</b></p>
@@ -21,6 +22,10 @@
   <img src="https://img.shields.io/badge/Python-FDBA74?style=for-the-badge&logo=python&logoColor=0B0B0B" />
   <img src="https://img.shields.io/badge/Design-Schema--first-EF6C00?style=for-the-badge&logo=buffer&logoColor=FFF7ED" />
   <img src="https://img.shields.io/badge/Profile-Maintained-FF7A18?style=for-the-badge&logo=github&logoColor=0B0B0B" />
+</p>
+
+<p align="center">
+  <img src="./assets/spotify.svg" width="520" alt="Spotify Now Playing" />
 </p>
 
 <p align="center"><b>Focus</b></p>
@@ -116,15 +121,15 @@
 <p align="center"><b>Activity</b></p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=cmwrxh&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&bg_color=0B0B0B&title_color=FF7A18&icon_color=F97316&text_color=FDBA74" height="165" />
+  <img src="./assets/metrics.svg" width="92%" alt="GitHub Metrics (Stats + Achievements)" />
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=cmwrxh&theme=dark&hide_border=true&background=0B0B0B&ring=FF7A18&fire=F97316&currStreakLabel=FDBA74" />
+  <img src="https://raw.githubusercontent.com/cmwrxh/cmwrxh/output/github-snake.svg" width="92%" alt="Contribution Snake" />
 </p>
 
 <p align="center">
-  <img src="./profile-3d-contrib/profile-night-green.svg" width="80%" />
+  <img src="./profile-3d-contrib/profile-night-green.svg" width="80%" alt="3D Contribution Graph" />
 </p>
 
 <p align="center"><b>Connect</b></p>
