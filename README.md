@@ -82,12 +82,12 @@
 
 <p align="center"><b>Language Proficiency</b></p>
 <p align="center">
-  <img src="assets/metrics.svg" width="640" alt="Most Used Languages" />
+  <img src="assets/metrics.svg" width="500" alt="Most Used Languages" />
 </p>
 
 <p align="center"><b>Contribution Activity</b></p>
 <p align="center">
-  <img src="assets/github-snake.svg" width="640" alt="Contribution Snake" />
+  <img src="assets/github-snake.svg" width="500" alt="Contribution Snake" />
 </p>
 
 <p align="center"><b>Connect</b></p>
