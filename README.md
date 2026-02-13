@@ -26,11 +26,12 @@
 
 <p align="center"><b>Spotify</b></p>
 <p align="center">
-  <img src="./assets/spotify.svg" width="520" alt="Spotify (Recent Track)" />
+  <!-- Replace with your deployed instance or try this public one (authorize if needed) -->
+  <img src="https://spotify-recently-played-readme.vercel.app/api?user=cmwrxh" width="520" alt="Spotify (Recent Track)" />
+  <!-- Alternative: https://novatorem.vercel.app/api/spotify?username=cmwrxh -->
 </p>
 
 <p align="center"><b>Focus</b></p>
-
 <p align="center">
   <sub>FinTech & Risk · Health Systems · Climate & Social Economics · Governance & Gender Equity · Mathematics & Education · <i>Clarity over cleverness. Docs first.</i></sub>
 </p>
@@ -118,7 +119,8 @@
 
 <p align="center"><b>Contributions</b></p>
 <p align="center">
-  <img src="./assets/github-snake.svg" width="640" alt="Contribution Snake" />
+  <!-- Green snake + green contribution shades -->
+  <img src="https://raw.githubusercontent.com/cmwrxh/cmwrxh/output/github-snake.svg?color_snake=#00ff00&color_dots=#0e4429,#006d32,#26a641,#39d353,#85e070" width="640" alt="Contribution Snake" />
 </p>
 
 <p align="center"><b>Connect</b></p>
