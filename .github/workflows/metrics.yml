@@ -40,7 +40,7 @@ jobs:
           # Contributions calendar summary
           plugin_isocalendar: yes
 
-      - name: Generate Spotify Now Playing
+      - name: Generate Spotify (recent tracks, no Premium required)
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
