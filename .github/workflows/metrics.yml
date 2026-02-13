@@ -2,7 +2,7 @@ name: GitHub Metrics
 
 on:
   schedule:
-    - cron: "0 */6 * * *"   # every 6 hours
+    - cron: "0 0 * * *"
   workflow_dispatch:
 
 permissions:
@@ -13,44 +13,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Generate main GitHub metrics (stats + achievements)
+      - name: Generate GitHub Metrics (no achievements)
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-          # Output file
           filename: assets/metrics.svg
 
-          # Base sections (clean recruiter layout)
+          # Clean layout
           base: header, activity, community, repositories
-          template: classic
 
-          # Languages
+          # Languages only
           plugin_languages: yes
           plugin_languages_limit: 8
           plugin_languages_sections: most-used
           plugin_languages_details: percentage
-          plugin_languages_indepth: yes
 
-          # Achievements (trophy-style)
-          plugin_achievements: yes
-          plugin_achievements_display: compact
-          plugin_achievements_threshold: C
+          # Remove achievements
+          plugin_achievements: no
 
-          # Contributions calendar summary
+          # Optional: keep calendar
           plugin_isocalendar: yes
-
-      - name: Generate Spotify (recent tracks, no Premium required)
-        uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-          filename: assets/spotify.svg
-          base: ""
-
-          plugin_music: yes
-          plugin_music_provider: spotify
-          plugin_music_mode: recent
-          plugin_music_limit: 1
-          plugin_music_played_at: yes
-          plugin_music_token: ${{ secrets.SPOTIFY_TOKENS }}
