@@ -1,63 +1,32 @@
-name: Generate GitHub Profile Stats
-
+name: Metrics
 on:
-  schedule:
-    - cron: "0 0 * * *" # Runs daily at midnight UTC
+  # Schedule updates (daily at midnight)
+  schedule: [{cron: "0 0 * * *"}]
+  # Lines below allow you to run it manually from the Actions tab
   workflow_dispatch:
-
-permissions:
-  contents: write
+  # Also runs when you push to main
+  push: {branches: ["master", "main"]}
 
 jobs:
-  build:
+  github-metrics:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: lowlighter/metrics@latest
+        with:
+          # Your Personal Access Token (stored in Secrets)
+          token: ${{ secrets.METRICS_TOKEN }}
 
-      - name: Fetch and Save Stats SVGs (retry + keep last good)
-        run: |
-          set -euo pipefail
-          mkdir -p assets
-
-          fetch() {
-            local url="$1"
-            local out="$2"
-
-            echo "Fetching: $url"
-            for i in 1 2 3 4 5; do
-              # Download to temp
-              if curl -sS --connect-timeout 10 --max-time 60 "$url" -o "$out.tmp"; then
-                # Sanity check: ensure it's SVG (avoid committing HTML error pages)
-                if head -n 2 "$out.tmp" | grep -q "<svg"; then
-                  mv "$out.tmp" "$out"
-                  echo "Saved: $out"
-                  return 0
-                fi
-              fi
-
-              echo "Attempt $i failed; sleeping..."
-              sleep $((i * 3))
-            done
-
-            rm -f "$out.tmp"
-            echo "WARNING: Could not fetch $url (keeping existing $out if present)."
-            return 0
-          }
-
-          # 1) Main Stats Card
-          fetch "https://github-readme-stats.vercel.app/api?username=cmwrxh&show_icons=true&theme=radical&hide_rank=true&include_all_commits=true&count_private=true" \
-                "assets/stats.svg"
-
-          # 2) Top Languages Card
-          fetch "https://github-readme-stats.vercel.app/api/top-langs/?username=cmwrxh&layout=compact&theme=radical&langs_count=10&hide=html,css&card_width=500" \
-                "assets/top-langs.svg"
-
-          # 3) Streak Stats (more reliable endpoint than herokuapp)
-          fetch "https://streak-stats.demolab.com?user=cmwrxh&theme=radical&hide_border=true" \
-                "assets/streak.svg"
-
-      - name: Commit and push if changed
-        run: |
-          git config user.name "
-::contentReference[oaicite:0]{index=0}
+          # Options
+          user: cmwrxh
+          template: classic
+          base: header, activity, community, repositories, metadata
+          
+          # Plugin: Languages
+          plugin_languages: yes
+          plugin_languages_ignored: html, css
+          plugin_languages_details: bytes-size, percentage
+          
+          # Output location (matches the link in your README)
+          filename: assets/metrics.svg
