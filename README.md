@@ -25,7 +25,7 @@
 </p>
 
 <p align="center">
-  <img src="./assets/spotify.svg" width="520" alt="Spotify Now Playing" />
+  <img src="./assets/spotify.svg" width="520" alt="Spotify (Recent Track)" />
 </p>
 
 <p align="center"><b>Focus</b></p>
@@ -121,15 +121,15 @@
 <p align="center"><b>Activity</b></p>
 
 <p align="center">
-  <img src="./assets/metrics.svg" width="92%" alt="GitHub Metrics (Stats + Achievements)" />
+  <img src="./assets/metrics.svg" width="640" alt="GitHub Metrics (Stats + Achievements)" />
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/cmwrxh/cmwrxh/output/github-snake.svg" width="92%" alt="Contribution Snake" />
+  <img src="./assets/github-snake.svg" width="640" alt="Contribution Snake" />
 </p>
 
 <p align="center">
-  <img src="./profile-3d-contrib/profile-night-green.svg" width="80%" alt="3D Contribution Graph" />
+  <img src="./profile-3d-contrib/profile-night-green.svg" width="640" alt="3D Contribution Graph" />
 </p>
 
 <p align="center"><b>Connect</b></p>
