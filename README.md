@@ -90,9 +90,16 @@
   <img src="https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white" />
 </p>
 
+<p align="center"><b>Activity</b></p>
+
 <p align="center">
-  <img src="./profile-3d-contrib/profile-night-green.svg" width="640" alt="3D Contribution Graph" />
+  <img src="./assets/metrics.svg" width="640" alt="GitHub Metrics" />
 </p>
+
+<p align="center">
+  <img src="./assets/github-snake.svg" width="640" alt="Contribution Snake" />
+</p>
+
 
 <p align="center"><b>Connect</b></p>
 <p align="center">
