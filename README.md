@@ -112,13 +112,12 @@
 
 <p align="center"><b>Languages</b></p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/cmwrxh/cmwrxh/main/assets/top-langs.svg" width="640" alt="Most Used Languages" />
+  <img src="https://raw.githubusercontent.com/cmwrxh/cmwrxh/main/assets/metrics.svg" width="640" alt="Most Used Languages" />
 </p>
 
 <p align="center"><b>Contributions</b></p>
 <p align="center">
-  <!-- Green snake + green contribution shades -->
-  <img src="https://raw.githubusercontent.com/cmwrxh/cmwrxh/output/github-snake.svg?color_snake=#00ff00&color_dots=#0e4429,#006d32,#26a641,#39d353,#85e070" width="640" alt="Contribution Snake" />
+  <img src="https://raw.githubusercontent.com/cmwrxh/cmwrxh/output/github-snake.svg?color_snake=%2300ff00&color_dots=%230e4429,%23006d32,%2326a641,%2339d353,%2385e070" width="640" alt="Contribution Snake" />
 </p>
 
 <p align="center"><b>Connect</b></p>
