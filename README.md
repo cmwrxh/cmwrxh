@@ -26,9 +26,7 @@
 
 <p align="center"><b>Spotify</b></p>
 <p align="center">
-  <!-- Replace with your deployed instance or try this public one (authorize if needed) -->
-  <img src="https://spotify-recently-played-readme.vercel.app/api?user=cmwrxh" width="520" alt="Spotify (Recent Track)" />
-  <!-- Alternative: https://novatorem.vercel.app/api/spotify?username=cmwrxh -->
+  <img src="https://spotify-recently-played-readme.vercel.app/api?user=wotwo8jf4wande7lrqy2n36zo" width="520" alt="Spotify (Recent Track)" />
 </p>
 
 <p align="center"><b>Focus</b></p>
