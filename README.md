@@ -87,9 +87,8 @@
   <img src="https://img.shields.io/badge/GCP-Professional_Data_Engineer-4285F4?style=flat-square&logo=googlecloud&logoColor=white" />
 </p>
 
-<p align="center"><b>Language Proficiency</b></p>
 <p align="center">
-  <img src="assets/metrics.svg" width="500" alt="Most Used Languages" />
+  <img src="assets/metrics.svg" width="500" alt="Metrics" />
 </p>
 
 <p align="center"><b>Contribution Activity</b></p>
@@ -107,4 +106,8 @@
 <p align="center">
   <sub><i>Don’t wait to feel better to do things. You’ll need to do things to feel better.</i></sub><br/>
   <sub><b>I design systems that survive audits, scale, and time.</b></sub>
+</p>
+
+<p align="center">
+  <sub>© 2026 Charles Mwaura. Designed with intent. All rights reserved.</sub>
 </p>
