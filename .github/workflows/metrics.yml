@@ -1,3 +1,10 @@
+permissions:
+  contents: write          # Usually needed for pushing commits, tags, releases
+  pull-requests: write     # For commenting on PRs, labeling, assigning
+  issues: write            # If modifying issues
+  actions: write           # Sometimes for runner registration or other actions
+  security-events: write   # Critical if uploading SARIF/code scanning results
+  checks: write            # For check runs/statuses
 name: Generate GitHub Metrics
 
 on:
