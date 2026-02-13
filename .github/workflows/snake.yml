@@ -2,7 +2,7 @@ name: Generate Contribution Snake
 
 on:
   schedule:
-    - cron: "0 1 * * *"   # once daily
+    - cron: "0 1 * * *"
   workflow_dispatch:
 
 permissions:
@@ -13,17 +13,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Generate snake SVG
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: cmwrxh
           outputs: |
-            dist/github-snake.svg?palette=github-dark&color_snake=FF7A18&color_dots=#0B0B0B,#1a1a1a,#FDBA74,#F97316,#FF7A18
+            assets/github-snake.svg?palette=github-dark&color_snake=FF7A18&color_dots=#0B0B0B,#1a1a1a,#FDBA74,#F97316,#FF7A18
 
-      - name: Push snake to output branch
-        uses: crazy-max/ghaction-github-pages@v4
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit snake
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/github-snake.svg
+          git commit -m "update snake" || echo "No changes"
+          git push
