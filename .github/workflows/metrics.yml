@@ -1,40 +1,42 @@
-name: GitHub-Profile-README generation
+name: Generate GitHub Profile Stats
+
 on:
   schedule:
-    - cron: "0 0 * * *"  # daily at midnight UTC
-  workflow_dispatch:     # allows manual run from Actions tab
+    - cron: "0 0 * * *"  # Runs daily at midnight UTC
+  workflow_dispatch:     # Allows manual trigger from Actions tab
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Generate GitHub Metrics
-        uses: lowlighter/metrics@latest
+      - name: Generate Stats Cards
+        uses: anuraghazra/github-readme-stats@master
         with:
-          filename: assets/metrics.svg               # or wherever you commit it
-          token: ${{ secrets.METRICS_TOKEN }}
-          template: classic
-          
-          # Let base sections use defaults first (don't force empty)
-          # base: ""                                 # COMMENT THIS OUT or remove if present
-          
-          # Explicit order: activity first, then languages
-          config_order: activity, languages
-          
-          # Explicitly enable and configure activity (contribution graph + recent events)
-          plugin_activity: yes
-          plugin_activity_days: 14                   # look back 14 days; change to 30/60/180/365 if needed
-          plugin_activity_timestamps: yes            # show commit times
-          plugin_activity_limit: 5                   # show up to 5 recent events (increase if you want more)
-          
-          # Your languages config (keep as-is, it's working)
-          plugin_languages: yes
-          plugin_languages_details: lines, bytes-size, percentage
-          plugin_languages_threshold: 0%             # show even tiny languages
-          plugin_languages_limit: 20                 # plenty for your 13
-          
-          # Optional but helpful for visibility/debug
-          config_animations: yes                     # subtle animations if you like
-          config_timezone: Africa/Nairobi            # since you're in EAT/KE
+          # No 'with' params needed here; we generate via URLs below.
+          # But this action is often used directly in README embeds.
+          # For self-hosted generation in Actions, we use curl/fetch method below for reliability.
+
+      # Alternative reliable method: Fetch and save SVGs directly (recommended for stability)
+      - name: Fetch and Save Stats SVGs
+        run: |
+          mkdir -p assets
+
+          # 1. Main Stats Card (commits, PRs, stars, etc. - includes contribution graph activity)
+          curl -s "https://github-readme-stats.vercel.app/api?username=cmwrxh&show_icons=true&theme=radical&hide_rank=true&include_all_commits=true&count_private=true" -o assets/stats.svg
+
+          # 2. Top Languages Card (your most used languages - adjust count as needed)
+          curl -s "https://github-readme-stats.vercel.app/api/top-langs/?username=cmwrxh&layout=compact&theme=radical&langs_count=10&hide=html,css&card_width=500" -o assets/top-langs.svg
+
+          # 3. Streak Stats (contribution streak / activity calendar-like)
+          curl -s "https://github-readme-streak-stats.herokuapp.com?user=cmwrxh&theme=radical&hide_border=true" -o assets/streak.svg
+
+      - name: Commit changes if any
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add assets/*.svg
+          git commit -m "Update profile stats cards [skip ci]" || echo "No changes to commit"
+          git push
