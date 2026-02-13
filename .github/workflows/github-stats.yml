@@ -2,32 +2,32 @@ name: Generate GitHub Profile Stats
 
 on:
   schedule:
-    - cron: '0 0 * * *'   # daily
-  workflow_dispatch:       # manual run button
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 jobs:
-  generate-stats:
+  generate:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Create assets folder
+      - name: Create assets directory
         run: mkdir -p assets
 
-      - name: Download Stats Card
-        run: curl -s -o assets/stats.svg "https://github-readme-stats.vercel.app/api?username=cmwrxh&show_icons=true&theme=radical&hide_rank=true&include_all_commits=true&count_private=true"
+      - name: Fetch Stats SVG
+        run: curl -s -o assets/stats.svg 'https://github-readme-stats.vercel.app/api?username=cmwrxh&show_icons=true&theme=radical&hide_rank=true&include_all_commits=true&count_private=true'
 
-      - name: Download Top Languages (13)
-        run: curl -s -o assets/top-langs.svg "https://github-readme-stats.vercel.app/api/top-langs/?username=cmwrxh&layout=compact&theme=radical&langs_count=13&hide=html,css&card_width=500"
+      - name: Fetch Top Languages SVG
+        run: curl -s -o assets/top-langs.svg 'https://github-readme-stats.vercel.app/api/top-langs/?username=cmwrxh&layout=compact&theme=radical&langs_count=13&hide=html,css&card_width=500'
 
-      - name: Download Streak Card
-        run: curl -s -o assets/streak.svg "https://github-readme-streak-stats.herokuapp.com?user=cmwrxh&theme=radical&hide_border=true"
+      - name: Fetch Streak SVG
+        run: curl -s -o assets/streak.svg 'https://github-readme-streak-stats.herokuapp.com?user=cmwrxh&theme=radical&hide_border=true'
 
       - name: Commit changes if any
         run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "actions@github.com"
+          git config --global user.name 'GitHub Actions Bot'
+          git config --global user.email 'actions@github.com'
           git add assets/*.svg || true
-          git commit -m "Update profile stats [skip ci]" || echo "No changes"
-          git push || echo "Push skipped"
+          git commit -m 'Update profile stats SVGs [skip ci]' || echo 'No changes'
+          git push || echo 'Push skipped'
