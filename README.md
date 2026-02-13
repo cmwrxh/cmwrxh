@@ -45,7 +45,7 @@
 <p align="center">
   <b>FinTech Risk Lab</b><br/>
   <sub>Credit risk & fraud analytics (Python + Oracle SQL) — robust, auditable pipelines.</sub><br/>
-  <img src="https://img.shields.io/badge/Status-Stable-F97316?style=flat-square&logo=checkmarx&logoColor=0B0B0B"/>
+  <img src="https://img.shields.io/badge/Version-v1.0-F97316?style=flat-square&logo=checkmarx&logoColor=0B0B0B"/>
   <a href="https://github.com/cmwrxh/fintech-risk-lab"><img src="https://img.shields.io/badge/Code-F97316?style=flat-square&logo=github&logoColor=0B0B0B"/></a>
   <a href="https://cmwrxh.github.io/fintech-risk-lab/"><img src="https://img.shields.io/badge/Live-FDBA74?style=flat-square&logo=googlechrome&logoColor=0B0B0B"/></a>
 </p>
