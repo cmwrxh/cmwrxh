@@ -117,7 +117,7 @@
 
 <p align="center"><b>Contributions</b></p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/cmwrxh/cmwrxh/output/github-snake.svg?color_snake=%2300ff00&color_dots=%230e4429,%23006d32,%2326a641,%2339d353,%2385e070" width="640" alt="Contribution Snake" />
+  <img src="https://raw.githubusercontent.com/cmwrxh/cmwrxh/main/assets/github-snake.svg" width="640" alt="Contribution Snake" />
 </p>
 
 <p align="center"><b>Connect</b></p>
