@@ -112,7 +112,7 @@
 
 <p align="center"><b>Languages</b></p>
 <p align="center">
-  <img src="./assets/metrics.svg" width="640" alt="Most Used Languages" />
+  <img src="https://raw.githubusercontent.com/cmwrxh/cmwrxh/main/assets/top-langs.svg" width="640" alt="Most Used Languages" />
 </p>
 
 <p align="center"><b>Contributions</b></p>
