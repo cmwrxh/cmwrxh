@@ -29,8 +29,6 @@
   <img src="https://img.shields.io/badge/Profile-Maintained-FF7A18?style=for-the-badge&logo=github&logoColor=0B0B0B" />
 </p>
 
-<hr />
-
 <p align="center"><b>Spotify Recently Played</b></p>
 <p align="center">
   <img src="https://spotify-recently-played-readme.vercel.app/api?user=wotwo8jf4wande7lrqy2n36zo&count=3&width=400" width="400" alt="Spotify" />
@@ -41,8 +39,6 @@
   <sub>FinTech & Risk · Health Systems · Climate & Social Economics · Governance · Mathematics</sub><br/>
   <sub><i>Clarity over cleverness. Docs first.</i></sub>
 </p>
-
-<hr />
 
 <p align="center"><b>Key Projects</b></p>
 
@@ -73,8 +69,6 @@
   <a href="https://github.com/cmwrxh/req"><img src="https://img.shields.io/badge/req-FFB000?style=flat-square&logo=go&logoColor=0B0B0B"/></a>
 </p>
 
-<hr />
-
 <p align="center"><b>Tech Stack</b></p>
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
@@ -95,8 +89,6 @@
 <p align="center">
   <img src="assets/github-snake.svg" width="640" alt="Contribution Snake" />
 </p>
-
-<hr />
 
 <p align="center"><b>Connect</b></p>
 <p align="center">
