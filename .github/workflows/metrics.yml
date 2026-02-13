@@ -1,7 +1,7 @@
 name: Metrics and Snake
 on:
-  schedule: [{cron: "0 0 * * *"}] # Runs at midnight
-  workflow_dispatch: # Allows manual run
+  schedule: [{cron: "0 0 * * *"}] # Runs daily at midnight
+  workflow_dispatch: # Allows you to click "Run Workflow" manually
 
 jobs:
   github-metrics:
@@ -9,11 +9,13 @@ jobs:
     permissions:
       contents: write
     steps:
-      # 1. NEW: Check out the repository so the runner can see your files
+      # 1. Prepare the workspace
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      # 2. Generate Metrics (Languages)
+      # 2. Generate the Language Metrics
       - name: GitHub Metrics
         uses: lowlighter/metrics@latest
         with:
@@ -27,7 +29,7 @@ jobs:
           plugin_languages_ignored: html, css, tex
           plugin_languages_limit: 8
 
-      # 3. Generate Snake Animation
+      # 3. Generate the Snake Animation
       - name: Generate Snake
         uses: Platane/snk@v3
         with:
@@ -36,11 +38,17 @@ jobs:
             assets/github-snake.svg
             assets/github-snake-dark.svg?palette=github-dark
 
-      # 4. Push to Repository
+      # 4. Web-Safe Push (Handles conflicts automatically)
       - name: Push to Repository
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add assets/*.svg
-          # Use 'git commit -m' only if there are changes to avoid errors
-          git diff --quiet && git diff --staged --quiet || (git commit -m "docs: update profile metrics and snake [skip ci]" && git push)
+          if ! git diff --cached --quiet; then
+            git commit -m "docs: update profile assets [skip ci]"
+            # This 'pull --rebase' prevents the "rejected" error you saw
+            git pull --rebase origin main
+            git push origin main
+          else
+            echo "No changes detected."
+          fi
