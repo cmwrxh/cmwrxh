@@ -2,8 +2,8 @@ name: Generate GitHub Metrics
 
 on:
   schedule:
-    - cron: "0 0 * * *"           # Daily at midnight UTC
-  workflow_dispatch:              # Allows manual run from Actions tab
+    - cron: "0 0 * * *"
+  workflow_dispatch:
 
 jobs:
   metrics:
@@ -11,42 +11,26 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}  # Recommended: PAT for deeper access
+        # No token here — uses default GITHUB_TOKEN
 
       - name: Generate metrics
         uses: lowlighter/metrics@latest
         with:
-          # Output file (matches your README img src)
           filename: assets/metrics.svg
-
-          # Token (required for private repos or more data)
-          token: ${{ secrets.METRICS_TOKEN }}
-
-          # Basic template & order (prioritize languages)
+          token: ${{ secrets.METRICS_TOKEN }}  # This needs to exist as secret
           template: classic
           config_order: languages
-          config_timezone: Africa/Nairobi  # Adjust if needed
+          config_timezone: Africa/Nairobi
 
-          # Languages plugin - maximized for many entries
           plugin_languages: yes
-          plugin_languages_limit: 20                  # High limit → up to 20 languages
-          plugin_languages_threshold: 0%              # Show ALL languages, even <1%
-          plugin_languages_details: percentage,lines,bytes-size  # Detailed stats
-          plugin_languages_indepth: yes               # More accurate repo analysis
-          plugin_languages_analysis_timeout: 15       # 15 min total timeout
-          plugin_languages_analysis_timeout_repositories: 2  # 2 min per repo
-          plugin_languages_categories: markup,programming  # Code-focused
-          plugin_languages_colors: github             # Official colors
-          # Optional: skip indepth custom repos if slow
-          # plugin_languages_indepth_custom: ""
+          plugin_languages_limit: 20
+          plugin_languages_threshold: 0%
+          plugin_languages_details: percentage,lines,bytes-size
+          plugin_languages_indepth: yes
+          plugin_languages_analysis_timeout: 15
+          plugin_languages_analysis_timeout_repositories: 2
+          plugin_languages_categories: markup,programming
+          plugin_languages_colors: github
 
-          # Other common plugins (add/enable if you want more sections)
-          # plugin_achievements: yes
-          # plugin_isocalendar: yes
-          # plugin_habits: yes
-          # etc.
-
-          # Base settings (minimal)
           base: ""
           base_indepth: false
