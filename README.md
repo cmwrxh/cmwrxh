@@ -26,8 +26,7 @@
 
 <p align="center"><b>Spotify</b></p>
 <p align="center">
-  <!-- Spotify widget – after commit, warm up by refreshing https://spotify-recently-played-readme.vercel.app/api?user=wotwo8jf4wande7lrqy2n36zo a few times until SVG shows, then hard-refresh GitHub profile -->
-  <img src="https://spotify-recently-played-readme.vercel.app/api?user=wotwo8jf4wande7lrqy2n36zo" width="520" alt="Spotify (Recent Track)" />
+  <img src="https://spotify-recently-played-readme.vercel.app/api?user=wotwo8jf4wande7lrqy2n36zo&count=3&width=400" width="400" alt="Spotify (Recent Tracks)" />
 </p>
 
 <p align="center"><b>Focus</b></p>
