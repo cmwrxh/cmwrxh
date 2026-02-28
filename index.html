@@ -1,101 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brilliant Unicorn LLC | Systems that Survive</title>
+    <meta name="description" content="Brilliant Unicorn LLC: A founder-led technology lab building resilient systems, quantitative engines, and SaaS products that think, measure, and survive at scale.">
+    <title>Brilliant Unicorn LLC | Infrastructure of Truth</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { 
-            background-color: #050505; 
-            color: #e5e7eb; 
-            font-family: 'JetBrains Mono', monospace; 
+        :root {
+            --corp-blue: #0A192F;
+            --amber: #F59E0B;
         }
-        .hero-glow { 
-            filter: drop-shadow(0 0 35px rgba(156, 39, 176, 0.4)); 
+        body { background-color: var(--corp-blue); color: #E2E8F0; font-family: 'Inter', sans-serif; }
+        .serif { font-family: 'Playfair Display', serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(245, 158, 11, 0.1), transparent);
         }
-        .gradient-text {
-            background: linear-gradient(90deg, #FF7A18, #9C27B0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .accent-border { border-left: 3px solid var(--amber); }
+        .glow-text { text-shadow: 0 0 10px rgba(245, 158, 11, 0.2); } /* Softened for accessibility */
     </style>
 </head>
-<body class="antialiased selection:bg-orange-500/30">
+<body class="antialiased selection:bg-amber-500/30 hero-gradient">
 
-    <header class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center border-b border-white/5">
-        <div class="text-center md:text-left">
-            <h1 class="text-2xl font-bold tracking-tighter uppercase text-white">
-                Brilliant Unicorn <span class="text-orange-500">LLC</span>
+    <nav class="max-w-7xl mx-auto px-6 py-10 flex justify-between items-center">
+        <div class="flex items-center gap-5">
+            <img src="logo.png" alt="Brilliant Unicorn Emblem" class="w-14 h-14 rounded-full border border-amber/20 glow-text">
+            <div>
+                <span class="serif text-2xl font-bold tracking-tight uppercase leading-none">Brilliant Unicorn <span class="text-amber">LLC</span></span>
+                <span class="mono text-[11px] opacity-40 tracking-[0.4em]">SOVEREIGN TECHNOLOGY UMBRELLA</span>
+            </div>
+        </div>
+        <div class="hidden md:flex gap-10 mono text-[12px] uppercase tracking-[0.2em] opacity-60">
+            <a href="#layers" class="hover:text-amber transition" aria-label="Architecture Section">Architecture</a>
+            <a href="#doctrine" class="hover:text-amber transition" aria-label="Doctrine Section">Doctrine</a>
+            <a href="#terminal" class="hover:text-amber transition" aria-label="Status Section">Status</a>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6 pt-20 pb-40">
+        <section class="max-w-5xl">
+            <span class="mono text-amber text-xs uppercase tracking-[0.5em] mb-6 block">Established 2026 | Nairobi, Kenya</span>
+            <h1 class="serif text-6xl md:text-9xl font-bold mb-10 leading-[1.05] tracking-tight">
+                Building the <br><span class="italic text-amber">Infrastructure</span> of Truth.
             </h1>
-            <p class="text-[10px] opacity-40 mt-1 tracking-[0.4em]">FOUNDER: CHARLES MWAURA (@cmwrxh)</p>
-        </div>
-        
-        <div class="mt-8 md:mt-0">
-            <img src="logo.png" alt="Brilliant Unicorn Logo" class="w-32 h-32 rounded-full hero-glow border border-white/10">
-        </div>
-    </header>
-
-    <main class="max-w-5xl mx-auto px-6 py-20">
-        <section class="mb-32">
-            <h2 class="text-4xl md:text-7xl font-bold mb-10 leading-tight tracking-tight">
-                We build systems that <span class="gradient-text">think</span>, measure, and <span class="underline decoration-orange-500 underline-offset-8">survive</span> at scale.
-            </h2>
-            <p class="text-lg md:text-xl opacity-60 border-l-4 border-orange-600 pl-8 leading-relaxed max-w-3xl">
-                Brilliant Unicorn LLC is a founder-led technology lab and SaaS studio building quantitative engines, resilient cloud systems, and research-driven software products.
+            <p class="text-xl md:text-2xl opacity-70 leading-relaxed accent-border pl-10 mt-12 mb-16 max-w-3xl">
+                A founder-led laboratory designing systems that <span class="text-white font-semibold">think, measure, and survive</span> at scale. We prioritize correctness over short-term optimization.
             </p>
-        </section>
-
-        <section class="grid md:grid-cols-2 gap-8 mb-32">
-            <div class="p-8 border border-white/5 bg-white/[0.02] rounded-2xl">
-                <h3 class="text-orange-500 font-bold mb-4 uppercase tracking-widest text-xs">// Core_Layer</h3>
-                <p class="opacity-50 text-sm leading-relaxed">
-                    Quant Engines, Internal APIs, and Data Pipelines. Optimized for high-throughput and SIMD-based logic.
-                </p>
-            </div>
-            <div class="p-8 border border-white/5 bg-white/[0.02] rounded-2xl">
-                <h3 class="text-purple-500 font-bold mb-4 uppercase tracking-widest text-sm">// Research_Lab</h3>
-                <p class="opacity-50 text-sm leading-relaxed">
-                    Experimental systems, simulations, and reliability testing. Bridging the gap between theory and production.
-                </p>
+            <div class="flex flex-wrap gap-6">
+                <a href="#layers" class="px-10 py-4 bg-amber text-corp-blue mono font-bold text-xs uppercase tracking-widest hover:bg-white transition duration-500">Explore Architecture</a>
+                <a href="mailto:cmwrxh@brilliantunicorn.com" class="px-10 py-4 border border-white/20 mono text-xs uppercase tracking-widest hover:border-amber transition duration-500">Direct Command</a>
             </div>
         </section>
 
-        <section class="mb-32">
-            <h3 class="text-center opacity-30 text-[10px] uppercase tracking-[0.5em] mb-12">Organization Repositories</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-                <a href="https://github.com/cmwrxh/quant-engine" class="p-6 border border-white/5 bg-white/[0.01] text-center text-sm hover:border-orange-500/50 transition-all rounded-lg">quant-engine</a>
-                <a href="https://github.com/cmwrxh/platform-infra" class="p-6 border border-white/5 bg-white/[0.01] text-center text-sm hover:border-orange-500/50 transition-all rounded-lg">platform-infra</a>
-                <a href="https://github.com/cmwrxh/saas-products" class="p-6 border border-white/5 bg-white/[0.01] text-center text-sm hover:border-orange-500/50 transition-all rounded-lg">saas-products</a>
-                <a href="https://github.com/cmwrxh/research-lab" class="p-6 border border-white/5 bg-white/[0.01] text-center text-sm hover:border-orange-500/50 transition-all rounded-lg">research-lab</a>
+        <section id="layers" class="mt-60">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                <h2 class="serif text-5xl font-bold">Hybrid Layers</h2>
+                <p class="mono text-xs opacity-40 max-w-sm uppercase tracking-widest">Synergistic systems engineered for scalable valuation and resilience.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="glass p-10 hover:border-amber/50 transition-all duration-700 group">
+                    <span class="mono text-amber text-[11px] block mb-10 opacity-50 group-hover:opacity-100 uppercase tracking-[0.3em]">01_Core_Brain</span>
+                    <h3 class="serif text-2xl font-bold mb-6">Resilient Quant Engine</h3>
+                    <p class="text-sm opacity-50 leading-loose mb-10">High-throughput data pipelines and internal APIs optimized for "Order Truth".</p>
+                    <div class="flex gap-3">
+                        <span class="mono text-[10px] bg-white/5 px-2 py-1 rounded">RUST</span>
+                        <span class="mono text-[10px] bg-white/5 px-2 py-1 rounded">SIMD</span>
+                    </div>
+                </div>
+
+                <div class="glass p-10 hover:border-amber/50 transition-all duration-700 group">
+                    <span class="mono text-amber text-[11px] block mb-10 opacity-50 group-hover:opacity-100 uppercase tracking-[0.3em]">02_SaaS_Product</span>
+                    <h3 class="serif text-2xl font-bold mb-6">Product Layer</h3>
+                    <p class="text-sm opacity-50 leading-loose mb-10">Commercial applications and monitoring dashboards built for recursive revenue.</p>
+                    <div class="flex gap-3">
+                        <span class="mono text-[10px] bg-white/5 px-2 py-1 rounded">PYTHON</span>
+                        <span class="mono text-[10px] bg-white/5 px-2 py-1 rounded">DOCKER</span>
+                    </div>
+                </div>
+
+                <div class="glass p-10 hover:border-amber/50 transition-all duration-700 group">
+                    <span class="mono text-amber text-[11px] block mb-10 opacity-50 group-hover:opacity-100 uppercase tracking-[0.3em]">03_Chaos_Lab</span>
+                    <h3 class="serif text-2xl font-bold mb-6">Research Layer</h3>
+                    <p class="text-sm opacity-50 leading-loose mb-10">Chaos testing, simulations, and the generation of rare intellectual property.</p>
+                    <div class="flex gap-3">
+                        <span class="mono text-[10px] bg-white/5 px-2 py-1 rounded">R&D</span>
+                        <span class="mono text-[10px] bg-white/5 px-2 py-1 rounded">AUDITS</span>
+                    </div>
+                </div>
+
+                <div class="glass p-10 hover:border-amber/50 transition-all duration-700 group">
+                    <span class="mono text-amber text-[11px] block mb-10 opacity-50 group-hover:opacity-100 uppercase tracking-[0.3em]">04_Consult_Mastery</span>
+                    <h3 class="serif text-2xl font-bold mb-6">Engineering Mastery</h3>
+                    <p class="text-sm opacity-50 leading-loose mb-10">Strategic AI training and enterprise systems auditing for high-leverage clients.</p>
+                    <div class="flex gap-3">
+                        <span class="mono text-[10px] bg-white/5 px-2 py-1 rounded">AI</span>
+                        <span class="mono text-[10px] bg-white/5 px-2 py-1 rounded">STRATEGY</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="text-center py-20 border-t border-white/5">
-            <a href="blueprint.pdf" target="_blank" class="inline-block px-10 py-4 bg-orange-600 hover:bg-orange-500 text-white font-bold rounded-full transition-all transform hover:scale-105 shadow-lg shadow-orange-900/20">
-                View Company Blueprint (PDF)
-            </a>
-            <p class="mt-6 text-xs opacity-30 italic">Foundational architecture for unicorn-grade technology</p>
+        <section id="doctrine" class="mt-60 glass p-12 md:p-24 relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-10 mono text-[150px] opacity-[0.02] select-none uppercase font-bold">UNICORN</div>
+            <div class="max-w-3xl relative z-10">
+                <h2 class="serif text-4xl font-bold mb-16">Sovereign Engineering Standards</h2>
+                <div class="space-y-12">
+                    <div class="flex gap-8 group">
+                        <span class="mono text-amber font-bold text-xl group-hover:glow-text">01</span>
+                        <div>
+                            <h3 class="mono text-xs uppercase tracking-widest mb-2 text-white">Correctness > Optimization</h3>
+                            <p class="opacity-50 text-sm leading-relaxed">Systems must be paper-safe by default. Zero Trust infrastructure and secret isolation are mandatory.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-8 group">
+                        <span class="mono text-amber font-bold text-xl group-hover:glow-text">02</span>
+                        <div>
+                            <h3 class="mono text-xs uppercase tracking-widest mb-2 text-white">Audit Lineage</h3>
+                            <p class="opacity-50 text-sm leading-relaxed">Every repository must include failure mode mapping and deep observability as a first-class requirement.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-8 group">
+                        <span class="mono text-amber font-bold text-xl group-hover:glow-text">03</span>
+                        <div>
+                            <h3 class="mono text-xs uppercase tracking-widest mb-2 text-white">Growth through Leverage</h3>
+                            <p class="opacity-50 text-sm leading-relaxed">We pursue growth through engineered intelligence, not headcount. Complexity is only introduced if it creates a durable advantage.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer class="max-w-6xl mx-auto px-6 pb-20 opacity-40 text-[11px]">
-        <div class="grid md:grid-cols-3 gap-12 border-t border-white/5 pt-12">
-            <div>
-                <p class="font-bold text-white mb-2 uppercase tracking-widest">Brilliant Unicorn LLC</p>
-                <p>P.O. Box 406, Kiambu, Kenya</p>
-                <p>© 2026 Charles Mwaura. All rights reserved.</p>
+    <footer id="terminal" class="max-w-7xl mx-auto px-6 pb-32">
+        <div class="grid md:grid-cols-4 gap-16 border-t border-white/10 pt-20">
+            <div class="col-span-2">
+                <p class="serif text-2xl font-bold mb-6">Brilliant Unicorn <span class="text-amber">LLC</span></p>
+                <p class="mono text-[11px] opacity-40 leading-loose uppercase tracking-widest">
+                    P.O. Box 406, Kiambu, Kenya<br>
+                    Founder: Charles Mwaura (cmwrxh)<br>
+                    © 2026. Built to survive audits, scale, and time.
+                </p>
             </div>
-            <div class="grid grid-cols-1 gap-2">
-                <a href="mailto:cmwrxh@brilliantunicorn.com" class="hover:text-orange-500">founder: cmwrxh@brilliantunicorn.com</a>
-                <a href="mailto:hello@brilliantunicorn.com" class="hover:text-orange-500">contact: hello@brilliantunicorn.com</a>
-                <a href="mailto:security@brilliantunicorn.com" class="hover:text-orange-500">security: security@brilliantunicorn.com</a>
+            
+            <div class="space-y-6">
+                <p class="mono text-[11px] uppercase tracking-[0.3em] text-amber font-bold">Official Channels</p>
+                <ul class="space-y-3 mono text-[12px] opacity-50">
+                    <li><a href="mailto:cmwrxh@brilliantunicorn.com" class="hover:text-amber transition">founder@brilliantunicorn.com</a></li>
+                    <li><a href="mailto:hello@brilliantunicorn.com" class="hover:text-amber transition">hello@brilliantunicorn.com</a></li>
+                    <li><a href="mailto:security@brilliantunicorn.com" class="hover:text-amber transition">security@brilliantunicorn.com</a></li>
+                </ul>
             </div>
-            <div class="md:text-right">
-                <p class="mb-2">Network Status: <span class="text-green-500 text-[10px]">• ONLINE</span></p>
-                <p>Infrastructure: Cloudflare & GitHub Pages</p>
-                <p>Security: SSL / DMARC / SPF Verified</p>
+
+            <div class="space-y-6 md:text-right">
+                <p class="mono text-[11px] uppercase tracking-[0.3em] text-amber font-bold">Terminal Status</p>
+                <p class="mono text-[11px] opacity-40 uppercase leading-loose">
+                    Infrastructure: <span class="text-green-500 underline">Encrypted & Active</span><br>
+                    Logic Stack: Rust / Python / PostgreSQL<br>
+                    Security: Cloudflare SSL / UFW Verified
+                </p>
             </div>
         </div>
     </footer>
