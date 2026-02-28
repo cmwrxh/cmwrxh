@@ -1,52 +1,40 @@
-name: Generate GitHub Metrics
-
+name: Metrics
 on:
-  schedule:
-    - cron: "0 0 * * *"   # Daily
+  schedule: [{cron: "0 */12 * * *"}]
   workflow_dispatch:
-
-permissions:
-  contents: write         # Allows commit/push
+  push: {branches: ["master", "main"]}
 
 jobs:
-  metrics:
+  github-metrics:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Generate Metrics
+      - name: General Metrics
         uses: lowlighter/metrics@latest
         with:
-          filename: metrics.svg               # Saves to workspace root
-          token: ${{ secrets.GITHUB_TOKEN }}
+          # FIXED: Exact casing for your secret
+          token: ${{ secrets.New_METRICS_TOKEN }}
+          
           user: cmwrxh
           template: classic
-          base: header, activity, community, repositories, metadata
-          config_timezone: Africa/Nairobi
-          plugin_achievements: yes
+          filename: metrics.svg
+          
+          # Base data
+          base: header, repositories, metadata
+          
+          # Languages Plugin
           plugin_languages: yes
-          plugin_lines: yes
-          plugin_stargazers: yes
-          plugin_topics: yes
-          # Optional: Add more like plugin_traffic: yes (needs extra scopes)
-
-      - name: Commit updated metrics.svg
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: update metrics.svg [skip ci]"
-          file_pattern: metrics.svg
-          commit_user_name: github-actions[bot]
-          commit_user_email: github-actions[bot]@users.noreply.github.com
-          skip_dirty_check: false             # Only commit if changed
-          skip_fetch: true
-          skip_checkout: false
-
-      - name: Fallback manual commit if auto fails  # Optional safety net
-        if: failure()
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add metrics.svg || true
-          git commit -m "chore: update metrics.svg (fallback)" || echo "No changes"
-          git push || echo "Push failed"
+          plugin_languages_details: bytes-size, percentage
+          plugin_languages_limit: 8
+          
+          # Achievements Plugin
+          plugin_achievements: yes
+          plugin_achievements_display: compact
+          
+          # Nairobi Timezone
+          config_timezone: Africa/Nairobi
+          
+          # Push settings
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          committer_message: "chore: update metrics [skip ci]"
