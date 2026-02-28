@@ -69,7 +69,7 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/cmwrxh/cmwrxh/main/metrics.svg?sanitize=true" width="520" alt="Metrics" /><br><br>
+  <img src="https://raw.githubusercontent.com/cmwrxh/cmwrxh/main/github-metrics.svg" width="520" alt="Metrics" /><br><br>
   <img src="./github-snake.svg" width="520" alt="Contribution Snake" />
 </p>
 
