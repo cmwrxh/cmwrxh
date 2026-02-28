@@ -1,4 +1,11 @@
 <p align="center">
+  <img src="./assets/celestial-dark-nebula-loop.gif" 
+       width="100%" 
+       style="max-width: 1200px; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.7);" 
+       alt="Dark Celestial Nebula Background" />
+</p>
+
+<p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=DejaVu+Sans+Mono&size=15&duration=1800&pause=800&color=FF7A18&center=true&vCenter=true&width=420&lines=Retro-futuristic+%E2%80%A2+Schema-first+Engineering" alt="Subheader" />
 </p>
 
@@ -62,7 +69,7 @@
 </p>
 
 <p align="center">
-  <img src="./metrics.svg" width="520" alt="Metrics" /><br><br>
+  <img src="https://raw.githubusercontent.com/cmwrxh/cmwrxh/main/metrics.svg?sanitize=true" width="520" alt="Metrics" /><br><br>
   <img src="./github-snake.svg" width="520" alt="Contribution Snake" />
 </p>
 
