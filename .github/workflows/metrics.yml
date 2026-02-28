@@ -13,30 +13,30 @@ jobs:
       - name: General Metrics
         uses: lowlighter/metrics@latest
         with:
-          # FIXED: Using your new secret name
+          # Using your God-mode token
           token: ${{ secrets.METRICSX }}
-          
           user: cmwrxh
           template: classic
           filename: metrics.svg
           
-          # Base data
+          # Core Config
           base: header, repositories, metadata
+          config_timezone: Africa/Nairobi
           
-          # Languages Plugin (Confirmed Working)
+          # Languages Plugin (Confirmed working)
           plugin_languages: yes
           plugin_languages_details: bytes-size, percentage
           plugin_languages_limit: 8
           
-          # Achievements Plugin (Fixing the Error)
+          # Achievements Plugin (Hard-reset)
           plugin_achievements: yes
           plugin_achievements_display: compact
-          plugin_achievements_threshold: B
-          plugin_achievements_secrets: yes # Allows access to hidden achievements
+          plugin_achievements_threshold: C
+          plugin_achievements_limit: 0
           
-          # Nairobi Timezone
-          config_timezone: Africa/Nairobi
+          # Fixes for rendering errors
+          use_precompiled_images: yes
           
-          # Push settings
+          # Committer settings
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           committer_message: "chore: update metrics [skip ci]"
