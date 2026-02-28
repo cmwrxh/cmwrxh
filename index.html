@@ -5,44 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brilliant Unicorn LLC | Systems that Survive</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #050505; color: #e5e7eb; font-family: ui-monospace, 'DejaVu Sans Mono', monospace; }
-        .hero-glow { filter: drop-shadow(0 0 30px rgba(156, 39, 176, 0.3)); }
+        body { 
+            background-color: #050505; 
+            color: #e5e7eb; 
+            font-family: 'JetBrains Mono', monospace; 
+        }
+        .hero-glow { 
+            filter: drop-shadow(0 0 35px rgba(156, 39, 176, 0.4)); 
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #FF7A18, #9C27B0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
-<body class="p-6 md:p-16">
-    <header class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center mb-24">
-        <div>
-            <h1 class="text-3xl font-bold tracking-tighter uppercase">Brilliant Unicorn <span class="text-orange-500">LLC</span></h1>
-            <p class="text-xs opacity-40 mt-1 tracking-[0.3em]">FOUNDER: CHARLES MWAURA (@cmwrxh)</p>
+<body class="antialiased selection:bg-orange-500/30">
+
+    <header class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center border-b border-white/5">
+        <div class="text-center md:text-left">
+            <h1 class="text-2xl font-bold tracking-tighter uppercase text-white">
+                Brilliant Unicorn <span class="text-orange-500">LLC</span>
+            </h1>
+            <p class="text-[10px] opacity-40 mt-1 tracking-[0.4em]">FOUNDER: CHARLES MWAURA (@cmwrxh)</p>
         </div>
-        <img src="logo.png" alt="Brilliant Unicorn Logo" class="w-40 h-40 hero-glow rounded-full mt-8 md:mt-0">
+        
+        <div class="mt-8 md:mt-0">
+            <img src="logo.png" alt="Brilliant Unicorn Logo" class="w-32 h-32 rounded-full hero-glow border border-white/10">
+        </div>
     </header>
 
-    <main class="max-w-4xl mx-auto">
+    <main class="max-w-5xl mx-auto px-6 py-20">
         <section class="mb-32">
-            <h2 class="text-5xl md:text-7xl font-bold mb-10 leading-tight">
-                We build systems that <span class="text-orange-500">think</span>, measure, and <span class="text-purple-500 underline">survive</span> at scale.
+            <h2 class="text-4xl md:text-7xl font-bold mb-10 leading-tight tracking-tight">
+                We build systems that <span class="gradient-text">think</span>, measure, and <span class="underline decoration-orange-500 underline-offset-8">survive</span> at scale.
             </h2>
-            <p class="text-xl opacity-60 border-l-4 border-orange-600 pl-8 leading-relaxed">
+            <p class="text-lg md:text-xl opacity-60 border-l-4 border-orange-600 pl-8 leading-relaxed max-w-3xl">
                 Brilliant Unicorn LLC is a founder-led technology lab and SaaS studio building quantitative engines, resilient cloud systems, and research-driven software products.
             </p>
         </section>
 
-        <section class="grid md:grid-cols-2 gap-16 mb-32 text-center md:text-left">
-            <a href="https://github.com/cmwrxh/quant-engine" class="p-6 bg-white/5 border border-white/5 hover:border-orange-500 transition rounded">quant-engine</a>
-            <a href="https://github.com/cmwrxh/platform-infra" class="p-6 bg-white/5 border border-white/5 hover:border-orange-500 transition rounded">platform-infra</a>
+        <section class="grid md:grid-cols-2 gap-8 mb-32">
+            <div class="p-8 border border-white/5 bg-white/[0.02] rounded-2xl">
+                <h3 class="text-orange-500 font-bold mb-4 uppercase tracking-widest text-xs">// Core_Layer</h3>
+                <p class="opacity-50 text-sm leading-relaxed">
+                    Quant Engines, Internal APIs, and Data Pipelines. Optimized for high-throughput and SIMD-based logic.
+                </p>
+            </div>
+            <div class="p-8 border border-white/5 bg-white/[0.02] rounded-2xl">
+                <h3 class="text-purple-500 font-bold mb-4 uppercase tracking-widest text-sm">// Research_Lab</h3>
+                <p class="opacity-50 text-sm leading-relaxed">
+                    Experimental systems, simulations, and reliability testing. Bridging the gap between theory and production.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-32">
+            <h3 class="text-center opacity-30 text-[10px] uppercase tracking-[0.5em] mb-12">Organization Repositories</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="https://github.com/cmwrxh/quant-engine" class="p-6 border border-white/5 bg-white/[0.01] text-center text-sm hover:border-orange-500/50 transition-all rounded-lg">quant-engine</a>
+                <a href="https://github.com/cmwrxh/platform-infra" class="p-6 border border-white/5 bg-white/[0.01] text-center text-sm hover:border-orange-500/50 transition-all rounded-lg">platform-infra</a>
+                <a href="https://github.com/cmwrxh/saas-products" class="p-6 border border-white/5 bg-white/[0.01] text-center text-sm hover:border-orange-500/50 transition-all rounded-lg">saas-products</a>
+                <a href="https://github.com/cmwrxh/research-lab" class="p-6 border border-white/5 bg-white/[0.01] text-center text-sm hover:border-orange-500/50 transition-all rounded-lg">research-lab</a>
+            </div>
+        </section>
+
+        <section class="text-center py-20 border-t border-white/5">
+            <a href="blueprint.pdf" target="_blank" class="inline-block px-10 py-4 bg-orange-600 hover:bg-orange-500 text-white font-bold rounded-full transition-all transform hover:scale-105 shadow-lg shadow-orange-900/20">
+                View Company Blueprint (PDF)
+            </a>
+            <p class="mt-6 text-xs opacity-30 italic">Foundational architecture for unicorn-grade technology</p>
         </section>
     </main>
 
-    <footer class="max-w-6xl mx-auto border-t border-white/10 pt-16 flex flex-col md:flex-row justify-between opacity-50 text-xs">
-        <div class="space-y-2">
-            <p>P.O. Box 406, Kiambu, Kenya</p>
-            <p>© 2026 Charles Mwaura</p>
-        </div>
-        <div class="text-right">
-            <a href="Brilliant_Unicorn_LLC_Blueprint_v2.pdf" class="underline decoration-orange-500">View Blueprint</a>
+    <footer class="max-w-6xl mx-auto px-6 pb-20 opacity-40 text-[11px]">
+        <div class="grid md:grid-cols-3 gap-12 border-t border-white/5 pt-12">
+            <div>
+                <p class="font-bold text-white mb-2 uppercase tracking-widest">Brilliant Unicorn LLC</p>
+                <p>P.O. Box 406, Kiambu, Kenya</p>
+                <p>© 2026 Charles Mwaura. All rights reserved.</p>
+            </div>
+            <div class="grid grid-cols-1 gap-2">
+                <a href="mailto:cmwrxh@brilliantunicorn.com" class="hover:text-orange-500">founder: cmwrxh@brilliantunicorn.com</a>
+                <a href="mailto:hello@brilliantunicorn.com" class="hover:text-orange-500">contact: hello@brilliantunicorn.com</a>
+                <a href="mailto:security@brilliantunicorn.com" class="hover:text-orange-500">security: security@brilliantunicorn.com</a>
+            </div>
+            <div class="md:text-right">
+                <p class="mb-2">Network Status: <span class="text-green-500 text-[10px]">• ONLINE</span></p>
+                <p>Infrastructure: Cloudflare & GitHub Pages</p>
+                <p>Security: SSL / DMARC / SPF Verified</p>
+            </div>
         </div>
     </footer>
+
 </body>
 </html>
