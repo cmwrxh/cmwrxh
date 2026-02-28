@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Brilliant Unicorn LLC: A founder-led technology lab building resilient systems, quantitative engines, and SaaS products that think, measure, and survive at scale.">
     <title>Brilliant Unicorn LLC | Infrastructure of Truth</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -11,6 +10,7 @@
         :root {
             --corp-blue: #0A192F;
             --amber: #F59E0B;
+            --burnt-orange: #D97706;
         }
         body { background-color: var(--corp-blue); color: #E2E8F0; font-family: 'Inter', sans-serif; }
         .serif { font-family: 'Playfair Display', serif; }
@@ -20,34 +20,34 @@
         }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
         .accent-border { border-left: 3px solid var(--amber); }
-        .glow-text { text-shadow: 0 0 10px rgba(245, 158, 11, 0.2); } /* Softened for accessibility */
+        .glow-text { text-shadow: 0 0 20px rgba(245, 158, 11, 0.3); }
     </style>
 </head>
 <body class="antialiased selection:bg-amber-500/30 hero-gradient">
 
     <nav class="max-w-7xl mx-auto px-6 py-10 flex justify-between items-center">
         <div class="flex items-center gap-5">
-            <img src="logo.png" alt="Brilliant Unicorn Emblem" class="w-14 h-14 rounded-full border border-amber/20 glow-text">
+            <img src="logo.png" alt="Emblem" class="w-14 h-14 rounded-full border border-amber/20 glow-text">
             <div>
-                <span class="serif text-2xl font-bold tracking-tight uppercase leading-none">Brilliant Unicorn <span class="text-amber">LLC</span></span>
-                <span class="mono text-[11px] opacity-40 tracking-[0.4em]">SOVEREIGN TECHNOLOGY UMBRELLA</span>
+                <h1 class="serif text-2xl font-bold tracking-tight uppercase leading-none">Brilliant Unicorn <span class="text-amber">LLC</span></h1>
+                <span class="mono text-[10px] opacity-40 tracking-[0.4em]">SOVEREIGN TECHNOLOGY UMBRELLA</span>
             </div>
         </div>
-        <div class="hidden md:flex gap-10 mono text-[12px] uppercase tracking-[0.2em] opacity-60">
-            <a href="#layers" class="hover:text-amber transition" aria-label="Architecture Section">Architecture</a>
-            <a href="#doctrine" class="hover:text-amber transition" aria-label="Doctrine Section">Doctrine</a>
-            <a href="#terminal" class="hover:text-amber transition" aria-label="Status Section">Status</a>
+        <div class="hidden md:flex gap-10 mono text-[11px] uppercase tracking-[0.2em] opacity-60">
+            <a href="#layers" class="hover:text-amber transition">Architecture</a>
+            <a href="#doctrine" class="hover:text-amber transition">Doctrine</a>
+            <a href="#terminal" class="hover:text-amber transition">Status</a>
         </div>
     </nav>
 
     <main class="max-w-7xl mx-auto px-6 pt-20 pb-40">
         <section class="max-w-5xl">
             <span class="mono text-amber text-xs uppercase tracking-[0.5em] mb-6 block">Established 2026 | Nairobi, Kenya</span>
-            <h1 class="serif text-6xl md:text-9xl font-bold mb-10 leading-[1.05] tracking-tight">
+            <h2 class="serif text-6xl md:text-9xl font-bold mb-10 leading-[1.05] tracking-tight">
                 Building the <br><span class="italic text-amber">Infrastructure</span> of Truth.
-            </h1>
+            </h2>
             <p class="text-xl md:text-2xl opacity-70 leading-relaxed accent-border pl-10 mt-12 mb-16 max-w-3xl">
-                A founder-led laboratory designing systems that <span class="text-white font-semibold">think, measure, and survive</span> at scale. We prioritize correctness over short-term optimization.
+                A founder-led laboratory [cite: 176] designing systems that <span class="text-white font-semibold">think, measure, and survive</span> at scale[cite: 174]. We prioritize correctness over short-term optimization[cite: 136].
             </p>
             <div class="flex flex-wrap gap-6">
                 <a href="#layers" class="px-10 py-4 bg-amber text-corp-blue mono font-bold text-xs uppercase tracking-widest hover:bg-white transition duration-500">Explore Architecture</a>
@@ -57,48 +57,48 @@
 
         <section id="layers" class="mt-60">
             <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-                <h2 class="serif text-5xl font-bold">Hybrid Layers</h2>
-                <p class="mono text-xs opacity-40 max-w-sm uppercase tracking-widest">Synergistic systems engineered for scalable valuation and resilience.</p>
+                <h3 class="serif text-5xl font-bold">Hybrid Layers [cite: 110]</h3>
+                <p class="mono text-xs opacity-40 max-w-sm uppercase tracking-widest">Synergistic systems engineered for scalable valuation and resilience[cite: 110, 123].</p>
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div class="glass p-10 hover:border-amber/50 transition-all duration-700 group">
-                    <span class="mono text-amber text-[11px] block mb-10 opacity-50 group-hover:opacity-100 uppercase tracking-[0.3em]">01_Core_Brain</span>
-                    <h3 class="serif text-2xl font-bold mb-6">Resilient Quant Engine</h3>
-                    <p class="text-sm opacity-50 leading-loose mb-10">High-throughput data pipelines and internal APIs optimized for "Order Truth".</p>
+                    <span class="mono text-amber text-[10px] block mb-10 opacity-50 group-hover:opacity-100 uppercase tracking-[0.3em]">01_Core_Brain [cite: 111]</span>
+                    <h4 class="serif text-2xl font-bold mb-6">Resilient Quant Engine</h4>
+                    <p class="text-sm opacity-50 leading-loose mb-10">High-throughput data pipelines and internal APIs optimized for "Order Truth"[cite: 111].</p>
                     <div class="flex gap-3">
-                        <span class="mono text-[10px] bg-white/5 px-2 py-1 rounded">RUST</span>
-                        <span class="mono text-[10px] bg-white/5 px-2 py-1 rounded">SIMD</span>
+                        <span class="mono text-[9px] bg-white/5 px-2 py-1 rounded">RUST</span>
+                        <span class="mono text-[9px] bg-white/5 px-2 py-1 rounded">SIMD</span>
                     </div>
                 </div>
 
                 <div class="glass p-10 hover:border-amber/50 transition-all duration-700 group">
-                    <span class="mono text-amber text-[11px] block mb-10 opacity-50 group-hover:opacity-100 uppercase tracking-[0.3em]">02_SaaS_Product</span>
-                    <h3 class="serif text-2xl font-bold mb-6">Product Layer</h3>
-                    <p class="text-sm opacity-50 leading-loose mb-10">Commercial applications and monitoring dashboards built for recursive revenue.</p>
+                    <span class="mono text-amber text-[10px] block mb-10 opacity-50 group-hover:opacity-100 uppercase tracking-[0.3em]">02_SaaS_Product [cite: 111]</span>
+                    <h4 class="serif text-2xl font-bold mb-6">Product Layer</h4>
+                    <p class="text-sm opacity-50 leading-loose mb-10">Commercial applications and monitoring dashboards built for recursive revenue[cite: 111, 123].</p>
                     <div class="flex gap-3">
-                        <span class="mono text-[10px] bg-white/5 px-2 py-1 rounded">PYTHON</span>
-                        <span class="mono text-[10px] bg-white/5 px-2 py-1 rounded">DOCKER</span>
+                        <span class="mono text-[9px] bg-white/5 px-2 py-1 rounded">PYTHON</span>
+                        <span class="mono text-[9px] bg-white/5 px-2 py-1 rounded">DOCKER</span>
                     </div>
                 </div>
 
                 <div class="glass p-10 hover:border-amber/50 transition-all duration-700 group">
-                    <span class="mono text-amber text-[11px] block mb-10 opacity-50 group-hover:opacity-100 uppercase tracking-[0.3em]">03_Chaos_Lab</span>
-                    <h3 class="serif text-2xl font-bold mb-6">Research Layer</h3>
-                    <p class="text-sm opacity-50 leading-loose mb-10">Chaos testing, simulations, and the generation of rare intellectual property.</p>
+                    <span class="mono text-amber text-[10px] block mb-10 opacity-50 group-hover:opacity-100 uppercase tracking-[0.3em]">03_Chaos_Lab [cite: 113]</span>
+                    <h4 class="serif text-2xl font-bold mb-6">Research Layer</h4>
+                    <p class="text-sm opacity-50 leading-loose mb-10">Chaos testing, simulations, and the generation of rare intellectual property[cite: 113].</p>
                     <div class="flex gap-3">
-                        <span class="mono text-[10px] bg-white/5 px-2 py-1 rounded">R&D</span>
-                        <span class="mono text-[10px] bg-white/5 px-2 py-1 rounded">AUDITS</span>
+                        <span class="mono text-[9px] bg-white/5 px-2 py-1 rounded">R&D</span>
+                        <span class="mono text-[9px] bg-white/5 px-2 py-1 rounded">AUDITS</span>
                     </div>
                 </div>
 
                 <div class="glass p-10 hover:border-amber/50 transition-all duration-700 group">
-                    <span class="mono text-amber text-[11px] block mb-10 opacity-50 group-hover:opacity-100 uppercase tracking-[0.3em]">04_Consult_Mastery</span>
-                    <h3 class="serif text-2xl font-bold mb-6">Engineering Mastery</h3>
-                    <p class="text-sm opacity-50 leading-loose mb-10">Strategic AI training and enterprise systems auditing for high-leverage clients.</p>
+                    <span class="mono text-amber text-[10px] block mb-10 opacity-50 group-hover:opacity-100 uppercase tracking-[0.3em]">04_Consult_Mastery [cite: 112]</span>
+                    <h4 class="serif text-2xl font-bold mb-6">Engineering Mastery</h4>
+                    <p class="text-sm opacity-50 leading-loose mb-10">Strategic AI training and enterprise systems auditing for high-leverage clients[cite: 112].</p>
                     <div class="flex gap-3">
-                        <span class="mono text-[10px] bg-white/5 px-2 py-1 rounded">AI</span>
-                        <span class="mono text-[10px] bg-white/5 px-2 py-1 rounded">STRATEGY</span>
+                        <span class="mono text-[9px] bg-white/5 px-2 py-1 rounded">AI</span>
+                        <span class="mono text-[9px] bg-white/5 px-2 py-1 rounded">STRATEGY</span>
                     </div>
                 </div>
             </div>
@@ -107,27 +107,27 @@
         <section id="doctrine" class="mt-60 glass p-12 md:p-24 relative overflow-hidden">
             <div class="absolute top-0 right-0 p-10 mono text-[150px] opacity-[0.02] select-none uppercase font-bold">UNICORN</div>
             <div class="max-w-3xl relative z-10">
-                <h2 class="serif text-4xl font-bold mb-16">Sovereign Engineering Standards</h2>
+                <h3 class="serif text-4xl font-bold mb-16">Sovereign Engineering Standards [cite: 117]</h3>
                 <div class="space-y-12">
                     <div class="flex gap-8 group">
                         <span class="mono text-amber font-bold text-xl group-hover:glow-text">01</span>
                         <div>
-                            <h3 class="mono text-xs uppercase tracking-widest mb-2 text-white">Correctness > Optimization</h3>
-                            <p class="opacity-50 text-sm leading-relaxed">Systems must be paper-safe by default. Zero Trust infrastructure and secret isolation are mandatory.</p>
+                            <h5 class="mono text-xs uppercase tracking-widest mb-2 text-white">Correctness > Optimization [cite: 118]</h5>
+                            <p class="opacity-50 text-sm leading-relaxed">Systems must be paper-safe by default. Zero Trust infrastructure and secret isolation are mandatory[cite: 118].</p>
                         </div>
                     </div>
                     <div class="flex gap-8 group">
                         <span class="mono text-amber font-bold text-xl group-hover:glow-text">02</span>
                         <div>
-                            <h3 class="mono text-xs uppercase tracking-widest mb-2 text-white">Audit Lineage</h3>
-                            <p class="opacity-50 text-sm leading-relaxed">Every repository must include failure mode mapping and deep observability as a first-class requirement.</p>
+                            <h5 class="mono text-xs uppercase tracking-widest mb-2 text-white">Audit Lineage [cite: 119]</h5>
+                            <p class="opacity-50 text-sm leading-relaxed">Every repository must include failure mode mapping and deep observability as a first-class requirement[cite: 119, 151].</p>
                         </div>
                     </div>
                     <div class="flex gap-8 group">
                         <span class="mono text-amber font-bold text-xl group-hover:glow-text">03</span>
                         <div>
-                            <h3 class="mono text-xs uppercase tracking-widest mb-2 text-white">Growth through Leverage</h3>
-                            <p class="opacity-50 text-sm leading-relaxed">We pursue growth through engineered intelligence, not headcount. Complexity is only introduced if it creates a durable advantage.</p>
+                            <h5 class="mono text-xs uppercase tracking-widest mb-2 text-white">Growth through Leverage [cite: 153]</h5>
+                            <p class="opacity-50 text-sm leading-relaxed">We pursue growth through engineered intelligence, not headcount. Complexity is only introduced if it creates a durable advantage[cite: 153, 154].</p>
                         </div>
                     </div>
                 </div>
@@ -140,15 +140,15 @@
             <div class="col-span-2">
                 <p class="serif text-2xl font-bold mb-6">Brilliant Unicorn <span class="text-amber">LLC</span></p>
                 <p class="mono text-[11px] opacity-40 leading-loose uppercase tracking-widest">
-                    P.O. Box 406, Kiambu, Kenya<br>
-                    Founder: Charles Mwaura (cmwrxh)<br>
-                    © 2026. Built to survive audits, scale, and time.
+                    P.O. Box 406, Kiambu, Kenya [cite: 65]<br>
+                    Founder: Charles Mwaura (cmwrxh) [cite: 61]<br>
+                    © 2026. Built to survive audits, scale, and time[cite: 160].
                 </p>
             </div>
             
             <div class="space-y-6">
-                <p class="mono text-[11px] uppercase tracking-[0.3em] text-amber font-bold">Official Channels</p>
-                <ul class="space-y-3 mono text-[12px] opacity-50">
+                <p class="mono text-[10px] uppercase tracking-[0.3em] text-amber font-bold">Official Channels [cite: 103]</p>
+                <ul class="space-y-3 mono text-[11px] opacity-50">
                     <li><a href="mailto:cmwrxh@brilliantunicorn.com" class="hover:text-amber transition">founder@brilliantunicorn.com</a></li>
                     <li><a href="mailto:hello@brilliantunicorn.com" class="hover:text-amber transition">hello@brilliantunicorn.com</a></li>
                     <li><a href="mailto:security@brilliantunicorn.com" class="hover:text-amber transition">security@brilliantunicorn.com</a></li>
@@ -156,11 +156,11 @@
             </div>
 
             <div class="space-y-6 md:text-right">
-                <p class="mono text-[11px] uppercase tracking-[0.3em] text-amber font-bold">Terminal Status</p>
+                <p class="mono text-[10px] uppercase tracking-[0.3em] text-amber font-bold">Terminal Status</p>
                 <p class="mono text-[11px] opacity-40 uppercase leading-loose">
                     Infrastructure: <span class="text-green-500 underline">Encrypted & Active</span><br>
-                    Logic Stack: Rust / Python / PostgreSQL<br>
-                    Security: Cloudflare SSL / UFW Verified
+                    Logic Stack: Rust / Python / PostgreSQL [cite: 53]<br>
+                    Security: Cloudflare SSL / UFW Verified [cite: 47]
                 </p>
             </div>
         </div>
