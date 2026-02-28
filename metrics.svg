@@ -1,7 +1,7 @@
 name: Metrics
 on:
   schedule: [{cron: "0 */12 * * *"}] # Updates every 12 hours
-  workflow_dispatch:                # Allows manual trigger
+  workflow_dispatch:                # Allows manual trigger button
   push: {branches: ["master", "main"]}
 
 jobs:
@@ -13,26 +13,23 @@ jobs:
       - name: General Metrics
         uses: lowlighter/metrics@latest
         with:
-          # Your specific secret name
-          token: ${{ secrets.NEW_METRICS_TOKEN }}
+          # This is how the code "attaches" to your secret
+          token: ${{ secrets.New_Metrics_Token }}
           
           user: cmwrxh
           template: classic
           filename: github-metrics.svg
-          
-          # Base data (Header + Repositories)
           base: header, repositories, metadata
           
-          # Languages Plugin (Shows your Python, Rust, Go stats)
+          # Languages Plugin
           plugin_languages: yes
           plugin_languages_details: bytes-size, percentage
           plugin_languages_limit: 8
-          plugin_languages_colors: github
           
-          # Achievements Plugin (Fixes the "Resource Not Found" error)
+          # Achievements Plugin (Badges)
           plugin_achievements: yes
           plugin_achievements_display: compact
           plugin_achievements_threshold: B
           
-          # Nairobi Timezone
+          # Timezone for Nairobi
           config_timezone: Africa/Nairobi
