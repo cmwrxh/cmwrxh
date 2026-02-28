@@ -69,9 +69,8 @@
 </p>
 
 <p align="center">
-  <img src="metrics.svg" width="520" alt="Metrics" /><br><br>
   <img src="./github-snake.svg" width="520" alt="Contribution Snake" />
-</p>
+/p>
 
 <p align="center"><font face="DejaVu Sans Mono" color="#FF7A18" size="4"><b>Connect & Support</b></font></p>
 <p align="center" style="margin:4px 0;">
