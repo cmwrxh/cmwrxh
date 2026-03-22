@@ -1,335 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brilliant Unicorn | Systems, Services, and Digital Products</title>
-    <link rel="icon" type="image/png" href="logo.png">
-    <meta name="description" content="Brilliant Unicorn builds practical digital systems, founder-focused services, and AI automation resources." />
-    
-    <style>
-        :root {
-            --bg: #0a0a0a;
-            --bg-soft: #111111;
-            --accent: #FFD700; /* Vibrant Startup Yellow */
-            --accent-hover: #ffdf33;
-            --text: #ffffff;
-            --muted: #a0a0a0;
-            --line: rgba(255, 215, 0, 0.1);
-            --radius: 12px; /* More modern, less rounded than before */
-            --max-width: 1100px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brilliant Unicorn | Systems, Services & Digital Products</title>
+  <meta name="description" content="Practical digital systems, founder-focused services, premium courses, and AI automation for modern businesses." />
+  
+  <!-- Favicon / browser tab logo -->
+  <link rel="icon" type="image/png" href="logo.png" />
+  
+  <style>
+    :root {
+      --black: #000000;
+      --dark: #0a0a0a;
+      --yellow: #ffea00;     /* bright startup yellow */
+      --yellow-dark: #d4c200;
+      --text: #f0f0f0;
+      --muted: #bbbbbb;
+      --radius: 12px;
+    }
 
-        * { box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--black);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--yellow); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-        body {
-            margin: 0;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-        .container {
-            width: min(90%, var(--max-width));
-            margin: 0 auto;
-        }
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #222;
+      z-index: 100;
+      padding: 20px 0;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--yellow);
+    }
+    .brand img {
+      width: 90px;          /* bigger logo */
+      height: 90px;
+      object-fit: contain;
+    }
+    nav a {
+      margin-left: 28px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+    nav a.active, nav a:hover { color: var(--yellow); }
 
-        /* Navigation */
-        .site-header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(10, 10, 10, 0.8);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--line);
-        }
+    .hero {
+      padding: 140px 0 100px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(3.2rem, 8vw, 6rem);
+      margin-bottom: 24px;
+      color: var(--yellow);
+      line-height: 1.1;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      color: var(--muted);
+    }
+    .btn {
+      display: inline-block;
+      background: var(--yellow);
+      color: #000;
+      font-weight: 800;
+      padding: 16px 32px;
+      border-radius: 999px;
+      margin: 12px;
+      transition: all 0.2s;
+    }
+    .btn:hover { background: var(--yellow-dark); transform: translateY(-2px); }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--yellow);
+      color: var(--yellow);
+    }
 
-        .nav {
-            height: 90px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+    section { padding: 100px 0; }
+    h2 { font-size: 3rem; color: var(--yellow); margin-bottom: 40px; text-align: center; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+    }
+    .card {
+      background: #111;
+      padding: 32px;
+      border-radius: var(--radius);
+      border: 1px solid #222;
+    }
+    .card h3 { color: var(--yellow); margin-bottom: 16px; }
+    .price { color: var(--yellow); font-size: 1.4rem; font-weight: bold; margin: 16px 0; }
 
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 1.1rem;
-            color: var(--accent);
-            text-decoration: none;
-        }
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      max-width: 600px;
+      margin: 32px auto;
+    }
+    input[type="email"] {
+      flex: 1;
+      min-width: 260px;
+      padding: 16px 20px;
+      border: 1px solid #333;
+      border-radius: 999px;
+      background: #111;
+      color: white;
+      font-size: 1rem;
+    }
+    button.btn { padding: 16px 40px; }
 
-        .brand img {
-            width: 80px; /* Bigger logo as requested */
-            height: auto;
-        }
+    footer {
+      background: #000;
+      border-top: 1px solid #222;
+      padding: 60px 0 40px;
+      text-align: center;
+      color: var(--muted);
+    }
+    footer a { color: var(--yellow); }
 
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--muted);
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: 0.2s;
-        }
-
-        .nav-links a:hover { color: var(--accent); }
-
-        /* Buttons */
-        .btn {
-            padding: 12px 24px;
-            border-radius: var(--radius);
-            font-weight: 700;
-            cursor: pointer;
-            transition: 0.2s;
-            text-decoration: none;
-            display: inline-block;
-            border: none;
-            text-align: center;
-        }
-
-        .btn-primary {
-            background: var(--accent);
-            color: #000;
-        }
-
-        .btn-primary:hover {
-            background: var(--accent-hover);
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--accent);
-            border: 1px solid var(--accent);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 215, 0, 0.05);
-        }
-
-        /* Hero */
-        .hero {
-            padding: 120px 0 80px;
-            text-align: left;
-        }
-
-        h1 {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            line-height: 1.1;
-            margin-bottom: 24px;
-            font-weight: 800;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--muted);
-            max-width: 600px;
-            margin-bottom: 40px;
-        }
-
-        .hero-btns {
-            display: flex;
-            gap: 15px;
-        }
-
-        /* Sections */
-        .section { padding: 100px 0; border-top: 1px solid var(--line); }
-        .section-title { margin-bottom: 60px; }
-        .section-title h2 { font-size: 2.5rem; color: var(--accent); }
-
-        /* Grid Cards */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: var(--bg-soft);
-            padding: 40px;
-            border-radius: var(--radius);
-            border: 1px solid var(--line);
-            transition: 0.3s;
-        }
-
-        .card:hover { border-color: var(--accent); }
-        .card h3 { color: var(--accent); margin-top: 0; }
-        .card ul { padding-left: 18px; color: var(--muted); }
-        .card li { margin-bottom: 8px; }
-
-        .price {
-            font-size: 1.5rem;
-            font-weight: 800;
-            margin: 20px 0;
-            display: block;
-        }
-
-        /* Footer & Form */
-        .site-footer {
-            background: #000;
-            padding: 80px 0 40px;
-            border-top: 2px solid var(--accent);
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            margin-bottom: 60px;
-        }
-
-        .footer-form h3 { color: var(--accent); margin-bottom: 20px; }
-        
-        .form-group {
-            display: flex;
-            gap: 10px;
-        }
-
-        input[type="email"] {
-            flex: 1;
-            padding: 15px;
-            background: #111;
-            border: 1px solid #333;
-            border-radius: var(--radius);
-            color: #fff;
-            outline: none;
-        }
-
-        input[type="email"]:focus { border-color: var(--accent); }
-
-        .footer-info a { color: var(--accent); text-decoration: none; }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 40px;
-            border-top: 1px solid #222;
-            color: #444;
-            font-size: 0.8rem;
-        }
-
-        @media (max-width: 768px) {
-            .footer-grid { grid-template-columns: 1fr; }
-            .nav-links { display: none; } /* Simplified for mobile startup look */
-            .hero { text-align: center; }
-            .hero p { margin: 0 auto 40px; }
-            .hero-btns { justify-content: center; }
-            .form-group { flex-direction: column; }
-        }
-    </style>
+    @media (max-width: 768px) {
+      .hero { padding: 100px 0 60px; }
+      .nav { flex-direction: column; text-align: center; }
+      nav a { margin: 12px 20px; }
+      .brand img { width: 70px; height: 70px; }
+    }
+  </style>
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="container nav">
-            <a href="index.html" class="brand">
-                <img src="logo.png" alt="Brilliant Unicorn" />
-                <span>Brilliant Unicorn</span>
-            </a>
-            <nav class="nav-links">
-                <a href="#services">Services</a>
-                <a href="#courses">Courses</a>
-                <a href="mailto:info@brilliantunicorn.com">Contact</a>
-                <a href="https://www.paypal.com/ncp/links/P4YZHZX9FEMCJ" class="btn btn-primary">Join Academy</a>
-            </nav>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="Brilliant Unicorn" />
+        Brilliant Unicorn
+      </a>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="mailto:info@brilliantunicorn.com">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Build Smarter. Scale Faster.</h1>
+        <p>Practical systems, AI automation, premium digital products, and founder-focused services — designed for modern builders and operators.</p>
+        <div>
+          <a href="services.html" class="btn">Explore Services</a>
+          <a href="products.html" class="btn btn-outline">View Courses</a>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Build Smarter.<br>Scale Faster.</h1>
-                <p>Brilliant Unicorn provides the digital infrastructure and AI systems modern founders need to monetize their expertise.</p>
-                <div class="hero-btns">
-                    <a href="#courses" class="btn btn-primary">Browse Courses</a>
-                    <a href="mailto:info@brilliantunicorn.com" class="btn btn-secondary">Book Consulting</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="services">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Digital Services</h2>
-                </div>
-                <div class="grid">
-                    <div class="card">
-                        <h3>Automation Strategy</h3>
-                        <p>We build AI workflows that handle lead gen, onboarding, and ops so you can focus on building.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Business Systems</h3>
-                        <p>Structural setup and operational clarity for LLCs and modern service ventures.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Product Leverage</h3>
-                        <p>Turning your service into a high-margin digital product that lasts years, not months.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="courses">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Academy</h2>
-                </div>
-                <div class="grid">
-                    <div class="card" style="border: 2px solid var(--accent);">
-                        <h3>The Founder Bundle</h3>
-                        <p>Get full access to AI Automation, Company Setup, and Product Strategy courses.</p>
-                        <span class="price">$127</span>
-                        <ul>
-                            <li>AI Business Workflows</li>
-                            <li>LLC Structure Guides</li>
-                            <li>Durable Product Design</li>
-                        </ul>
-                        <a href="https://www.paypal.com/ncp/links/P4YZHZX9FEMCJ" class="btn btn-primary" style="width: 100%;">Buy Bundle Now</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container footer-grid">
-            <div class="footer-info">
-                <img src="logo.png" alt="Logo" style="width: 60px; margin-bottom: 20px;">
-                <p>Founder-focused digital services and practical systems.</p>
-                <p>
-                    <strong>Contact:</strong><br>
-                    <a href="mailto:charlie@brilliantunicorn.com">charlie@brilliantunicorn.com</a><br>
-                    <a href="mailto:info@brilliantunicorn.com">info@brilliantunicorn.com</a>
-                </p>
-            </div>
-
-            <div class="footer-form">
-                <h3>Get the Free AI Guide</h3>
-                <p>10 AI Automations Every Small Business Should Use.</p>
-                <form action="https://formspree.io/f/mlgpyrrb" method="POST">
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="you@example.com" required>
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
-                    </div>
-                    <input type="hidden" name="_subject" value="New Lead: Brilliant Unicorn Footer">
-                </form>
-            </div>
+    <section>
+      <div class="container">
+        <h2>Core Offerings</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Digital Services</h3>
+            <p>Custom systems, automation strategy, and product positioning for founders who want leverage without complexity.</p>
+          </div>
+          <div class="card">
+            <h3>Premium Courses</h3>
+            <p>Execution-focused learning: AI workflows, business structure, durable digital products.</p>
+          </div>
+          <div class="card">
+            <h3>Long-Term Assets</h3>
+            <p>Build once, compound forever — from consulting to monetizable digital tools.</p>
+          </div>
         </div>
-        <div class="copyright">
-            &copy; 2026 Brilliant Unicorn LLC. All rights reserved.
+      </div>
+    </section>
+
+    <section style="background:#0a0a0a;">
+      <div class="container">
+        <h2>Brilliant Unicorn Academy</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>AI Business Automation</h3>
+            <div class="price">$49</div>
+            <p>Automate leads, onboarding, ops with practical AI workflows.</p>
+            <a href="https://www.paypal.com/ncp/links/P4YZHZX9FEMCJ" class="btn" target="_blank">Buy Now</a>
+          </div>
+          <div class="card">
+            <h3>LLC & Umbrella Setup</h3>
+            <div class="price">$39</div>
+            <p>Company structure fundamentals for modern founders.</p>
+            <a href="https://www.paypal.com/ncp/links/P4YZHZX9FEMCJ" class="btn" target="_blank">Buy Now</a>
+          </div>
+          <div class="card">
+            <h3>Products That Last</h3>
+            <div class="price">$39</div>
+            <p>Design digital products with real longevity and revenue focus.</p>
+            <a href="https://www.paypal.com/ncp/links/P4YZHZX9FEMCJ" class="btn" target="_blank">Buy Now</a>
+          </div>
         </div>
-    </footer>
+        <div style="text-align:center; margin-top:50px;">
+          <a href="https://www.paypal.com/ncp/links/P4YZHZX9FEMCJ" class="btn" target="_blank">Buy Full Bundle</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Get Free AI Guide</h2>
+        <p style="text-align:center; max-width:700px; margin:0 auto 32px;">10 AI Automations Every Small Business Should Use — straight to your inbox.</p>
+        <form action="https://formspree.io/f/mlgpyrrb" method="POST">
+          <input type="email" name="email" placeholder="Your email" required />
+          <input type="hidden" name="_subject" value="New Free Guide Signup - Brilliant Unicorn" />
+          <button type="submit" class="btn">Get Free Guide</button>
+        </form>
+      </div>
+    </section>
+
+    <section style="text-align:center; padding:80px 0;">
+      <div class="container">
+        <h2>Ready to Build?</h2>
+        <a href="mailto:info@brilliantunicorn.com" class="btn">Contact Us</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Brilliant Unicorn — Digital Courses • Consulting • AI Systems</p>
+      <p style="margin:20px 0;">
+        <a href="mailto:info@brilliantunicorn.com">info@brilliantunicorn.com</a>
+      </p>
+      <!-- Footer signup form -->
+      <form action="https://formspree.io/f/mlgpyrrb" method="POST" style="max-width:500px; margin:40px auto;">
+        <input type="email" name="email" placeholder="Stay updated — enter email" required />
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+      <p>&copy; Brilliant Unicorn</p>
+    </div>
+  </footer>
 
 </body>
 </html>
