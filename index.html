@@ -6,20 +6,26 @@
   <title>Brilliant Unicorn | Systems, Services, and Digital Products</title>
   <meta
     name="description"
-    content="Brilliant Unicorn builds practical digital systems, founder-focused services, and premium courses in AI automation, company setup, and durable product creation."
+    content="Brilliant Unicorn builds practical digital systems, founder-focused services, premium digital products, and AI automation resources for modern businesses."
   />
   <style>
     :root {
-      --bg: #ffffff;
-      --text: #111111;
-      --muted: #5f6368;
-      --line: #e5e7eb;
-      --soft: #f7f7f8;
-      --accent: #111111;
-      --accent-hover: #2c2c2c;
-      --radius: 20px;
-      --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-      --max-width: 1120px;
+      --bg: #0f0f10;
+      --bg-soft: #171719;
+      --card: #141416;
+      --card-2: #1b1b1f;
+      --text: #f6f2e8;
+      --muted: #cbbfa3;
+      --line: rgba(232, 193, 86, 0.18);
+      --gold: #e8c156;
+      --gold-deep: #c89211;
+      --gold-soft: #f3d98b;
+      --white: #ffffff;
+      --success: #87d39b;
+      --danger: #ff8e8e;
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+      --radius: 22px;
+      --max-width: 1140px;
     }
 
     * {
@@ -33,7 +39,10 @@
     body {
       margin: 0;
       font-family: Inter, Arial, Helvetica, sans-serif;
-      background: var(--bg);
+      background:
+        radial-gradient(circle at top right, rgba(232, 193, 86, 0.09), transparent 28%),
+        radial-gradient(circle at top left, rgba(232, 193, 86, 0.06), transparent 22%),
+        linear-gradient(180deg, #0d0d0f 0%, #131316 100%);
       color: var(--text);
       line-height: 1.65;
     }
@@ -57,13 +66,13 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(10px);
+      background: rgba(15, 15, 16, 0.9);
+      backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--line);
     }
 
     .nav {
-      min-height: 78px;
+      min-height: 82px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -75,33 +84,34 @@
       align-items: center;
       gap: 14px;
       font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: 0.01em;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: var(--gold-soft);
     }
 
     .brand img {
-      width: 58px;
-      height: 58px;
+      width: 68px;
+      height: 68px;
       object-fit: contain;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 26px;
+      gap: 24px;
       flex-wrap: wrap;
     }
 
     .nav-links a {
       color: var(--muted);
       font-size: 0.98rem;
-      font-weight: 500;
-      transition: color 0.2s ease;
+      font-weight: 600;
+      transition: color 0.2s ease, opacity 0.2s ease;
     }
 
     .nav-links a:hover,
     .nav-links a.active {
-      color: var(--text);
+      color: var(--gold);
     }
 
     .nav-cta,
@@ -111,39 +121,41 @@
       align-items: center;
       justify-content: center;
       border-radius: 999px;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 0.97rem;
-      transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+      padding: 13px 20px;
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
       cursor: pointer;
     }
 
     .nav-cta,
     .button {
-      background: var(--accent);
-      color: #ffffff;
-      padding: 13px 20px;
+      background: linear-gradient(135deg, var(--gold) 0%, #f5d06c 100%);
+      color: #171717;
+      border: none;
+      box-shadow: 0 10px 24px rgba(232, 193, 86, 0.18);
     }
 
     .nav-cta:hover,
     .button:hover {
-      background: var(--accent-hover);
       transform: translateY(-1px);
+      background: linear-gradient(135deg, #f0cb63 0%, #ffd979 100%);
     }
 
     .button-secondary {
-      background: #ffffff;
-      color: var(--text);
+      background: transparent;
+      color: var(--gold-soft);
       border: 1px solid var(--line);
-      padding: 13px 20px;
     }
 
     .button-secondary:hover {
-      border-color: #cfcfcf;
       transform: translateY(-1px);
+      border-color: rgba(232, 193, 86, 0.45);
+      color: var(--gold);
     }
 
     .hero {
-      padding: 96px 0 74px;
+      padding: 100px 0 78px;
     }
 
     .hero-grid {
@@ -158,29 +170,33 @@
       margin-bottom: 18px;
       padding: 8px 14px;
       border-radius: 999px;
-      background: var(--soft);
-      color: var(--muted);
-      font-size: 0.87rem;
-      font-weight: 700;
+      background: rgba(232, 193, 86, 0.08);
+      border: 1px solid rgba(232, 193, 86, 0.16);
+      color: var(--gold-soft);
+      font-size: 0.86rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
 
     h1, h2, h3 {
       margin: 0 0 16px;
       line-height: 1.12;
       letter-spacing: -0.03em;
+      color: var(--gold);
     }
 
     h1 {
-      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-size: clamp(2.7rem, 5vw, 4.7rem);
       max-width: 11ch;
     }
 
     h2 {
-      font-size: clamp(1.95rem, 3vw, 2.8rem);
+      font-size: clamp(2rem, 3vw, 2.95rem);
     }
 
     h3 {
-      font-size: 1.3rem;
+      font-size: 1.28rem;
     }
 
     p {
@@ -190,7 +206,7 @@
     }
 
     .hero-copy p {
-      max-width: 62ch;
+      max-width: 64ch;
     }
 
     .hero-actions {
@@ -210,12 +226,11 @@
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      background: #ffffff;
+      background: linear-gradient(180deg, rgba(25, 25, 28, 0.95) 0%, rgba(18, 18, 20, 0.98) 100%);
     }
 
     .hero-card {
       padding: 30px;
-      background: linear-gradient(180deg, #ffffff 0%, #f7f7f8 100%);
     }
 
     .hero-card ul,
@@ -237,11 +252,12 @@
     }
 
     .section {
-      padding: 74px 0;
+      padding: 76px 0;
     }
 
     .section-soft {
-      background: var(--soft);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.015) 0%, rgba(255, 255, 255, 0.01) 100%);
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
@@ -259,18 +275,9 @@
       gap: 24px;
     }
 
-    .features-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .services-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .courses-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
+    .features-grid,
+    .services-grid,
+    .courses-grid,
     .highlights-grid {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -289,10 +296,13 @@
       margin-bottom: 16px;
       padding: 8px 12px;
       border-radius: 999px;
-      background: var(--soft);
-      color: var(--muted);
-      font-size: 0.83rem;
-      font-weight: 700;
+      background: rgba(232, 193, 86, 0.08);
+      border: 1px solid rgba(232, 193, 86, 0.12);
+      color: var(--gold-soft);
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
     .course-card ul {
@@ -312,27 +322,29 @@
       position: absolute;
       left: 0;
       top: 0;
-      color: var(--text);
+      color: var(--gold);
       font-weight: 700;
     }
 
     .price-note {
-      color: var(--text);
-      font-weight: 700;
+      color: var(--gold-soft);
+      font-weight: 800;
       margin: 10px 0 16px;
       font-size: 1rem;
     }
 
     .lead-card {
-      max-width: 820px;
+      max-width: 860px;
       margin: 0 auto;
-      padding: 40px;
+      padding: 42px;
       text-align: center;
-      background: linear-gradient(180deg, #ffffff 0%, #f7f7f8 100%);
+      background:
+        radial-gradient(circle at top center, rgba(232, 193, 86, 0.08), transparent 42%),
+        linear-gradient(180deg, rgba(30, 30, 34, 0.98) 0%, rgba(18, 18, 20, 1) 100%);
     }
 
     .lead-card p {
-      max-width: 620px;
+      max-width: 650px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -347,35 +359,51 @@
     }
 
     .lead-form input[type="email"] {
-      width: min(340px, 100%);
-      padding: 14px 18px;
-      border: 1px solid #d8dbe0;
+      width: min(360px, 100%);
+      padding: 15px 18px;
+      border: 1px solid rgba(232, 193, 86, 0.2);
       border-radius: 999px;
       font-size: 1rem;
       outline: none;
-      background: #ffffff;
+      background: #111214;
       color: var(--text);
     }
 
-    .lead-form input[type="email"]:focus {
-      border-color: #b9bdc4;
+    .lead-form input[type="email"]::placeholder {
+      color: #a89e88;
     }
 
-    .lead-note {
+    .lead-form input[type="email"]:focus {
+      border-color: rgba(232, 193, 86, 0.55);
+      box-shadow: 0 0 0 4px rgba(232, 193, 86, 0.08);
+    }
+
+    .lead-note,
+    .form-status {
       font-size: 0.92rem;
       color: var(--muted);
       margin-top: 16px;
       margin-bottom: 0;
     }
 
+    .form-status.success {
+      color: var(--success);
+    }
+
+    .form-status.error {
+      color: var(--danger);
+    }
+
     .cta {
-      padding: 82px 0 88px;
+      padding: 84px 0 90px;
     }
 
     .cta-panel {
-      padding: 46px;
+      padding: 48px;
       text-align: center;
-      background: linear-gradient(180deg, #ffffff 0%, #f7f7f8 100%);
+      background:
+        radial-gradient(circle at top center, rgba(232, 193, 86, 0.08), transparent 40%),
+        linear-gradient(180deg, rgba(28, 28, 31, 1) 0%, rgba(17, 17, 19, 1) 100%);
     }
 
     .cta-panel p {
@@ -385,7 +413,7 @@
 
     .site-footer {
       border-top: 1px solid var(--line);
-      padding: 30px 0 44px;
+      padding: 32px 0 46px;
     }
 
     .footer-grid {
@@ -408,7 +436,11 @@
     }
 
     .footer-links a:hover {
-      color: var(--text);
+      color: var(--gold);
+    }
+
+    .gold-text {
+      color: var(--gold-soft);
     }
 
     @media (max-width: 980px) {
@@ -441,8 +473,8 @@
       .hero,
       .section,
       .cta {
-        padding-top: 56px;
-        padding-bottom: 56px;
+        padding-top: 58px;
+        padding-bottom: 58px;
       }
 
       .hero-card,
@@ -460,8 +492,8 @@
       }
 
       .brand img {
-        width: 52px;
-        height: 52px;
+        width: 58px;
+        height: 58px;
       }
 
       .lead-form {
@@ -519,7 +551,7 @@
           <ul>
             <li>Founder-focused digital services and consulting</li>
             <li>Practical systems for modern online businesses</li>
-            <li>Premium courses delivered through Notion</li>
+            <li>Premium courses delivered through digital platforms</li>
             <li>Guidance on automation, structure, and product strategy</li>
             <li>A clean path from expertise to monetizable assets</li>
           </ul>
@@ -551,7 +583,7 @@
             <h3>Premium Courses</h3>
             <p>
               Learn through focused, execution-oriented courses covering AI business automation,
-              company setup, and building products that last.
+              company setup, and durable product creation.
             </p>
           </div>
 
@@ -729,17 +761,18 @@
           <span class="eyebrow">Free Guide</span>
           <h2>Free Guide: AI Business Automation</h2>
           <p>
-            Download the free guide “10 AI Automations Every Small Business Should Use”
-            and learn how modern businesses automate workflows, lead generation,
-            and operations.
+            Get the free guide <span class="gold-text">“10 AI Automations Every Small Business Should Use”</span>
+            and learn how modern businesses automate workflows, lead generation, and operations.
           </p>
 
           <form
+            id="lead-form"
             action="https://formspree.io/f/mlgpyrrb"
             method="POST"
             class="lead-form"
           >
             <input type="hidden" name="source" value="homepage-leadmagnet" />
+            <input type="hidden" name="_subject" value="New Brilliant Unicorn lead magnet signup" />
 
             <input
               type="email"
@@ -751,7 +784,7 @@
             <button
               type="submit"
               class="button"
-              style="border: none;"
+              id="lead-submit"
             >
               Get Free Guide
             </button>
@@ -760,6 +793,7 @@
           <p class="lead-note">
             Join the Brilliant Unicorn list and start with a practical, high-value resource.
           </p>
+          <p id="form-status" class="form-status" aria-live="polite"></p>
         </div>
       </div>
     </section>
@@ -767,7 +801,7 @@
     <section class="cta">
       <div class="container">
         <div class="cta-panel">
-          <span class="eyebrow">Start here</span>
+          <span class="eyebrow">Start Here</span>
           <h2>Build with more clarity, structure, and leverage.</h2>
           <p>
             Explore Brilliant Unicorn services, discover the course collection,
@@ -786,7 +820,7 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <strong>Brilliant Unicorn</strong>
+        <strong style="color: var(--gold);">Brilliant Unicorn</strong>
         <p style="margin-top: 10px;">
           Digital Courses • Consulting • AI Systems
         </p>
@@ -806,5 +840,49 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const form = document.getElementById("lead-form");
+    const status = document.getElementById("form-status");
+    const submitButton = document.getElementById("lead-submit");
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      status.textContent = "";
+      status.className = "form-status";
+      submitButton.disabled = true;
+      submitButton.textContent = "Submitting...";
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: {
+            "Accept": "application/json"
+          }
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          status.textContent = "Success — your free guide request was sent.";
+          status.classList.add("success");
+          form.reset();
+        } else {
+          status.textContent = data.errors
+            ? data.errors.map(error => error.message).join(", ")
+            : "There was a problem submitting the form. Please try again.";
+          status.classList.add("error");
+        }
+      } catch (error) {
+        status.textContent = "Network error. Please try again in a moment.";
+        status.classList.add("error");
+      }
+
+      submitButton.disabled = false;
+      submitButton.textContent = "Get Free Guide";
+    });
+  </script>
 </body>
 </html>
