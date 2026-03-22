@@ -1,225 +1,471 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Products | Brilliant Unicorn</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products | Brilliant Unicorn LLC</title>
 
-<script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link rel="apple-touch-icon" href="logo.png" />
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-<style>
+    <style>
+        :root {
+            --amber: #F59E0B;
+            --amber-dark: #D97706;
+            --bg: #000000;
+            --panel: rgba(255, 255, 255, 0.03);
+            --panel-border: rgba(255, 255, 255, 0.08);
+            --text: #F3F4F6;
+            --muted: rgba(243, 244, 246, 0.68);
+            --soft: rgba(243, 244, 246, 0.38);
+        }
 
-body{
-background:#000;
-color:#F3F4F6;
-font-family:Inter;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-.serif{
-font-family:"Playfair Display";
-}
+        body {
+            background:
+                radial-gradient(circle at top, rgba(245, 158, 11, 0.08), transparent 30%),
+                #000000;
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+        }
 
-.mono{
-font-family:"JetBrains Mono";
-}
+        .serif { font-family: 'Playfair Display', serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
 
-.card{
-background:rgba(255,255,255,0.03);
-border:1px solid rgba(255,255,255,0.06);
-transition:.3s;
-}
+        .glass-card {
+            background: var(--panel);
+            border: 1px solid var(--panel-border);
+            backdrop-filter: blur(10px);
+            transition: all 0.35s ease;
+        }
 
-.card:hover{
-border-color:#F59E0B;
-transform:translateY(-3px);
-}
+        .glass-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(245, 158, 11, 0.45);
+            background: rgba(255, 255, 255, 0.045);
+            box-shadow: 0 0 30px rgba(245, 158, 11, 0.08);
+        }
 
-</style>
+        .nav-border {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
 
+        .section-border {
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .logo-glow {
+            filter: drop-shadow(0 0 34px rgba(245, 158, 11, 0.18));
+        }
+
+        .btn-primary {
+            background: var(--amber);
+            color: #000;
+            border: 1px solid var(--amber);
+            transition: all 0.25s ease;
+        }
+
+        .btn-primary:hover {
+            background: var(--amber-dark);
+            border-color: var(--amber-dark);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            border: 1px solid rgba(245, 158, 11, 0.55);
+            color: var(--text);
+            transition: all 0.25s ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--amber);
+            background: rgba(245, 158, 11, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        .soft {
+            color: var(--soft);
+        }
+
+        .hero-grid {
+            background-image:
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+        }
+    </style>
 </head>
-
-<body>
-
-<!-- NAV -->
-
-<nav class="max-w-6xl mx-auto px-6 py-8 flex justify-between">
-
-<div class="serif text-2xl">
-Brilliant Unicorn
-</div>
-
-<div class="mono text-xs space-x-6">
-
-<a href="index.html">Home</a>
-
-<a href="services.html">Services</a>
-
-<a href="products.html" class="text-amber-400">Products</a>
-
-<a href="about.html">About</a>
-
-</div>
-
-</nav>
-
-
-<!-- HERO -->
-
-<section class="max-w-5xl mx-auto px-6 py-20">
-
-<h1 class="serif text-6xl mb-8">
-
-Software Products Built For
-<span class="text-amber-400">Automation & Growth</span>
-
-</h1>
-
-<p class="text-xl opacity-60 max-w-3xl">
-
-Brilliant Unicorn develops tools that help founders,
-consultants and SaaS companies automate operations,
-organize data and scale systems.
-
-</p>
-
-</section>
-
-
-<!-- PRODUCTS -->
-
-<section class="max-w-6xl mx-auto px-6 pb-32 grid md:grid-cols-3 gap-8">
-
-<!-- PRODUCT 1 -->
-
-<div class="card p-8">
-
-<h3 class="mono text-amber-400 text-xs uppercase mb-4">
-LeadFlow AI
-</h3>
-
-<p class="opacity-60 mb-6">
-
-AI system that captures and qualifies inbound leads
-automatically and sends them into structured sales pipelines.
-
-</p>
-
-<ul class="text-sm opacity-40 space-y-2">
-
-<li>AI lead scoring</li>
-
-<li>CRM automation</li>
-
-<li>Follow-up workflows</li>
-
-</ul>
-
-<p class="mt-6 mono text-xs">
-Target price: $29/month
-</p>
-
-</div>
-
-
-<!-- PRODUCT 2 -->
-
-<div class="card p-8">
-
-<h3 class="mono text-amber-400 text-xs uppercase mb-4">
-Ops Dashboard
-</h3>
-
-<p class="opacity-60 mb-6">
-
-Analytics dashboard that consolidates revenue,
-operations and growth metrics into a single interface.
-
-</p>
-
-<ul class="text-sm opacity-40 space-y-2">
-
-<li>Business metrics dashboard</li>
-
-<li>Growth tracking</li>
-
-<li>Operational visibility</li>
-
-</ul>
-
-<p class="mt-6 mono text-xs">
-Target price: $39/month
-</p>
-
-</div>
-
-
-<!-- PRODUCT 3 -->
-
-<div class="card p-8">
-
-<h3 class="mono text-amber-400 text-xs uppercase mb-4">
-Automation OS
-</h3>
-
-<p class="opacity-60 mb-6">
-
-Workflow automation engine connecting APIs,
-internal tools and operational processes.
-
-</p>
-
-<ul class="text-sm opacity-40 space-y-2">
-
-<li>Workflow automation</li>
-
-<li>API integrations</li>
-
-<li>Process orchestration</li>
-
-</ul>
-
-<p class="mt-6 mono text-xs">
-Target price: $49/month
-</p>
-
-</div>
-
-</section>
-
-
-<!-- CTA -->
-
-<section class="text-center pb-32">
-
-<h2 class="serif text-4xl mb-6">
-Interested in Early Access?
-</h2>
-
-<p class="opacity-50 mb-10">
-Contact us to join product pilots or request a demo.
-</p>
-
-<a href="mailto:hello@brilliantunicorn.com"
-class="bg-amber-400 text-black px-6 py-3 mono text-xs uppercase">
-
-Request Demo
-
-</a>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer class="max-w-6xl mx-auto px-6 pb-16 border-t border-white/10 pt-10">
-
-<p class="mono text-xs opacity-40">
-© 2026 Brilliant Unicorn LLC
-</p>
-
-</footer>
-
+<body class="antialiased selection:bg-amber-500/30">
+
+    <!-- NAV -->
+    <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between nav-border sticky top-0 bg-black/75 backdrop-blur z-50">
+        <a href="index.html" class="flex items-center gap-4">
+            <img src="logo.png" alt="Brilliant Unicorn Logo" class="w-20 h-20 rounded-full border border-amber-500/20 logo-glow object-cover" />
+            <div>
+                <p class="serif text-xl md:text-2xl font-bold tracking-wide">
+                    Brilliant Unicorn <span class="text-amber-400">LLC</span>
+                </p>
+                <p class="mono text-xs uppercase tracking-[0.28em] soft mt-1">
+                    Products
+                </p>
+            </div>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8 mono text-xs uppercase tracking-[0.18em] text-white/70">
+            <a href="index.html" class="hover:text-amber-400 transition">Home</a>
+            <a href="services.html" class="hover:text-amber-400 transition">Services</a>
+            <a href="products.html" class="text-amber-400">Products</a>
+            <a href="about.html" class="hover:text-amber-400 transition">About</a>
+            <a href="#contact" class="hover:text-amber-400 transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="relative overflow-hidden">
+        <div class="absolute inset-0 hero-grid opacity-40 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 py-20 md:py-28 relative">
+            <div class="max-w-5xl">
+                <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-6">
+                    Software Products
+                </p>
+
+                <h1 class="serif text-4xl md:text-6xl font-bold leading-tight tracking-tight max-w-5xl">
+                    Software Tools Built for
+                    <span class="text-amber-400">Automation & Growth</span>
+                </h1>
+
+                <p class="mt-8 text-base md:text-lg muted max-w-3xl leading-relaxed">
+                    Brilliant Unicorn develops software concepts and productized systems that help
+                    founders, consultants, and modern companies automate operations, organize data,
+                    and build scalable workflows.
+                </p>
+
+                <div class="mt-10 flex flex-col sm:flex-row gap-4">
+                    <a href="#product-suite" class="btn-primary inline-flex items-center justify-center px-7 py-4 rounded-sm mono text-xs uppercase tracking-[0.18em] font-medium">
+                        View Product Suite
+                    </a>
+                    <a href="mailto:ceo@brilliantunicorn.com?subject=Product%20Inquiry%20-%20Brilliant%20Unicorn" class="btn-secondary inline-flex items-center justify-center px-7 py-4 rounded-sm mono text-xs uppercase tracking-[0.18em] font-medium">
+                        Ask About Products
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6">
+
+        <!-- PRODUCT OVERVIEW -->
+        <section id="product-suite" class="py-20">
+            <div class="grid md:grid-cols-3 gap-6 text-left">
+                <div class="border border-white/8 p-5 rounded-sm">
+                    <p class="mono text-xs uppercase tracking-[0.2em] text-amber-400 mb-2">Lead Capture</p>
+                    <p class="text-base text-white/60 leading-relaxed">
+                        Tools that help businesses capture, qualify, and act on opportunities faster.
+                    </p>
+                </div>
+                <div class="border border-white/8 p-5 rounded-sm">
+                    <p class="mono text-xs uppercase tracking-[0.2em] text-amber-400 mb-2">Operational Visibility</p>
+                    <p class="text-base text-white/60 leading-relaxed">
+                        Dashboards and reporting tools that give founders and teams clearer control.
+                    </p>
+                </div>
+                <div class="border border-white/8 p-5 rounded-sm">
+                    <p class="mono text-xs uppercase tracking-[0.2em] text-amber-400 mb-2">Workflow Engines</p>
+                    <p class="text-base text-white/60 leading-relaxed">
+                        Automation layers that connect tools, APIs, and recurring operational processes.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CORE PRODUCTS -->
+        <section class="py-20 section-border">
+            <div class="max-w-3xl mb-12">
+                <p class="mono text-xs uppercase tracking-[0.3em] soft mb-4">Launch Suite</p>
+                <h2 class="serif text-3xl md:text-4xl font-semibold mb-5">Three Product Concepts Positioned for Growth</h2>
+                <p class="text-base md:text-lg muted leading-relaxed">
+                    These products align with the same strengths behind Brilliant Unicorn:
+                    automation, analytics, and infrastructure that makes business execution cleaner.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-sm">
+                    <div class="flex items-center justify-between gap-4 mb-4">
+                        <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em]">LeadFlow AI</h3>
+                        <span class="mono text-xs text-white/45 uppercase">SaaS Tool 01</span>
+                    </div>
+                    <p class="text-base text-white/65 leading-relaxed mb-5">
+                        A lead capture and qualification system for agencies, consultants, and SaaS teams.
+                        Built to reduce response time and improve pipeline organization.
+                    </p>
+                    <ul class="space-y-2 text-base text-white/50">
+                        <li>• Captures inbound leads</li>
+                        <li>• Uses AI to qualify prospects</li>
+                        <li>• Pushes leads into CRM workflows</li>
+                        <li>• Triggers follow-up automations</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-8 rounded-sm">
+                    <div class="flex items-center justify-between gap-4 mb-4">
+                        <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em]">Ops Dashboard</h3>
+                        <span class="mono text-xs text-white/45 uppercase">SaaS Tool 02</span>
+                    </div>
+                    <p class="text-base text-white/65 leading-relaxed mb-5">
+                        An operational analytics dashboard for founders and operators who need a single interface
+                        for business metrics, execution tracking, and reporting.
+                    </p>
+                    <ul class="space-y-2 text-base text-white/50">
+                        <li>• Revenue and KPI visibility</li>
+                        <li>• Team and workflow monitoring</li>
+                        <li>• Operational reporting</li>
+                        <li>• Founder-level decision support</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-8 rounded-sm">
+                    <div class="flex items-center justify-between gap-4 mb-4">
+                        <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em]">Automation OS</h3>
+                        <span class="mono text-xs text-white/45 uppercase">SaaS Tool 03</span>
+                    </div>
+                    <p class="text-base text-white/65 leading-relaxed mb-5">
+                        A workflow engine connecting internal tools, APIs, and business processes
+                        into one automation layer for scalable execution.
+                    </p>
+                    <ul class="space-y-2 text-base text-white/50">
+                        <li>• API-to-API process chaining</li>
+                        <li>• Internal workflow automation</li>
+                        <li>• Bottleneck reduction</li>
+                        <li>• Repeatable system execution</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCT MODELS -->
+        <section class="py-20 section-border">
+            <div class="max-w-3xl mb-12">
+                <p class="mono text-xs uppercase tracking-[0.3em] soft mb-4">Product Models</p>
+                <h2 class="serif text-3xl md:text-4xl font-semibold mb-5">How Each Product Creates Value</h2>
+                <p class="text-base md:text-lg muted leading-relaxed">
+                    These product concepts are designed to solve operational problems while also creating
+                    recurring revenue opportunities for the company.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-sm">
+                    <p class="mono text-xs uppercase tracking-[0.18em] text-amber-400 mb-4">LeadFlow AI</p>
+                    <h3 class="serif text-2xl md:text-3xl font-semibold mb-4">$29 / month concept</h3>
+                    <p class="text-base text-white/65 leading-relaxed mb-5">
+                        Best positioned for agencies, consultants, and small SaaS teams that need a simple way
+                        to capture, score, and follow up with inbound opportunities.
+                    </p>
+                    <ul class="space-y-2 text-base text-white/50">
+                        <li>• Target users: agencies and consultants</li>
+                        <li>• Main promise: leads organized and acted on automatically</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-8 rounded-sm">
+                    <p class="mono text-xs uppercase tracking-[0.18em] text-amber-400 mb-4">Ops Dashboard</p>
+                    <h3 class="serif text-2xl md:text-3xl font-semibold mb-4">$39 / month concept</h3>
+                    <p class="text-base text-white/65 leading-relaxed mb-5">
+                        Best positioned for founders who need visibility across revenue, workflows,
+                        and execution without digging through scattered tools.
+                    </p>
+                    <ul class="space-y-2 text-base text-white/50">
+                        <li>• Target users: founders and operators</li>
+                        <li>• Main promise: one operational control panel</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-8 rounded-sm">
+                    <p class="mono text-xs uppercase tracking-[0.18em] text-amber-400 mb-4">Automation OS</p>
+                    <h3 class="serif text-2xl md:text-3xl font-semibold mb-4">$49 / month concept</h3>
+                    <p class="text-base text-white/65 leading-relaxed mb-5">
+                        Best positioned for service businesses and operations-heavy teams that want
+                        to turn recurring processes into structured automations.
+                    </p>
+                    <ul class="space-y-2 text-base text-white/50">
+                        <li>• Target users: agencies and operations teams</li>
+                        <li>• Main promise: remove manual bottlenecks</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIGITAL PRODUCTS -->
+        <section class="py-20 section-border">
+            <div class="max-w-3xl mb-12">
+                <p class="mono text-xs uppercase tracking-[0.3em] soft mb-4">Digital Products</p>
+                <h2 class="serif text-3xl md:text-4xl font-semibold mb-5">Products You Can Showcase Immediately</h2>
+                <p class="text-base md:text-lg muted leading-relaxed">
+                    Alongside SaaS tools, Brilliant Unicorn can showcase lower-ticket digital products
+                    that build authority, collect leads, and create early product revenue.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-sm">
+                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">Notion Business Templates</h3>
+                    <p class="text-base text-white/55 leading-relaxed">
+                        Operational workspaces, founder dashboards, and process systems for businesses that want structure.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-sm">
+                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">Automation Playbooks</h3>
+                    <p class="text-base text-white/55 leading-relaxed">
+                        Guides and frameworks showing companies how to automate specific business workflows.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-sm">
+                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">System Templates</h3>
+                    <p class="text-base text-white/55 leading-relaxed">
+                        Dashboard templates, reporting structures, and backend workflow kits for operator-led teams.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCT STRATEGY -->
+        <section class="py-20 section-border">
+            <div class="glass-card rounded-sm p-8 md:p-12">
+                <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 items-start">
+                    <div>
+                        <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-4">Product Strategy</p>
+                        <h2 class="serif text-3xl md:text-4xl font-semibold mb-5">How the Product Line Supports Growth</h2>
+                        <p class="text-base md:text-lg muted leading-relaxed">
+                            Products do more than generate revenue. They also act as proof of capability,
+                            acquisition channels, and entry points into consulting engagements.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="border border-white/10 p-5 rounded-sm">
+                            <p class="mono text-xs uppercase tracking-[0.18em] text-amber-400 mb-2">Authority</p>
+                            <p class="text-base text-white/60">Products show that Brilliant Unicorn builds real systems, not just presentations.</p>
+                        </div>
+                        <div class="border border-white/10 p-5 rounded-sm">
+                            <p class="mono text-xs uppercase tracking-[0.18em] text-amber-400 mb-2">Revenue</p>
+                            <p class="text-base text-white/60">Low-ticket and recurring offers create additional paths beyond consulting.</p>
+                        </div>
+                        <div class="border border-white/10 p-5 rounded-sm">
+                            <p class="mono text-xs uppercase tracking-[0.18em] text-amber-400 mb-2">Lead Generation</p>
+                            <p class="text-base text-white/60">Buyers and waitlist users become future consulting and SaaS prospects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-20 section-border">
+            <div class="glass-card rounded-sm p-8 md:p-12">
+                <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 items-center">
+                    <div>
+                        <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-4">Interested in a Product Launch?</p>
+                        <h2 class="serif text-3xl md:text-4xl font-semibold mb-5">Ask About Pilots, Waitlists, or Demos</h2>
+                        <p class="text-base md:text-lg muted leading-relaxed max-w-2xl">
+                            Reach out to discuss product pilots, early access, implementation support,
+                            or how one of these tools could be adapted for your business workflow.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col gap-4">
+                        <a href="mailto:ceo@brilliantunicorn.com?subject=Product%20Inquiry%20-%20Brilliant%20Unicorn" class="btn-primary inline-flex items-center justify-center px-7 py-4 rounded-sm mono text-xs uppercase tracking-[0.18em] font-medium">
+                            Ask About Products
+                        </a>
+                        <a href="mailto:charlie@brilliantunicorn.com?subject=Product%20Discussion%20-%20Brilliant%20Unicorn" class="btn-secondary inline-flex items-center justify-center px-7 py-4 rounded-sm mono text-xs uppercase tracking-[0.18em] font-medium">
+                            Email Charlie
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="py-20 section-border">
+            <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-start">
+                <div>
+                    <p class="mono text-xs uppercase tracking-[0.3em] soft mb-4">Contact</p>
+                    <h2 class="serif text-3xl md:text-4xl font-semibold mb-5">Start the Conversation</h2>
+                    <p class="text-base md:text-lg muted leading-relaxed max-w-2xl mb-6">
+                        Reach out if you want to discuss a product idea, implementation support,
+                        or how Brilliant Unicorn can help turn a concept into a launchable system.
+                    </p>
+                    <p class="text-base text-white/60 leading-relaxed max-w-2xl">
+                        We work with teams that want practical tools, clean automation, and products that support real business operations.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-sm">
+                    <p class="mono text-xs uppercase tracking-[0.18em] text-amber-400 mb-5">Email Channels</p>
+                    <div class="space-y-4 text-white/70">
+                        <p class="text-base">Use any of the addresses below:</p>
+                        <a href="mailto:charlie@brilliantunicorn.com" class="block text-base md:text-lg hover:text-amber-400 transition">
+                            charlie@brilliantunicorn.com
+                        </a>
+                        <a href="mailto:ceo@brilliantunicorn.com" class="block text-base md:text-lg hover:text-amber-400 transition">
+                            ceo@brilliantunicorn.com
+                        </a>
+                        <a href="mailto:info@brilliantunicorn.com" class="block text-base md:text-lg hover:text-amber-400 transition">
+                            info@brilliantunicorn.com
+                        </a>
+                    </div>
+
+                    <a
+                        href="mailto:ceo@brilliantunicorn.com?subject=Product%20Inquiry%20-%20Brilliant%20Unicorn"
+                        class="btn-primary inline-flex items-center justify-center px-7 py-4 rounded-sm mono text-xs uppercase tracking-[0.18em] mt-8 w-full"
+                    >
+                        Request Product Info
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="max-w-7xl mx-auto px-6 pt-10 pb-16 border-t border-white/5">
+        <div class="grid md:grid-cols-3 gap-12">
+            <div>
+                <p class="serif text-xl font-bold mb-3">
+                    Brilliant Unicorn <span class="text-amber-400">LLC</span>
+                </p>
+                <p class="text-base text-white/50 leading-relaxed max-w-sm">
+                    Productized systems for automation, analytics, and operational scale.
+                </p>
+            </div>
+
+            <div class="mono text-xs uppercase tracking-[0.18em] text-white/45 space-y-3">
+                <p><a href="index.html" class="hover:text-amber-400 transition">Home</a></p>
+                <p><a href="services.html" class="hover:text-amber-400 transition">Services</a></p>
+                <p><a href="about.html" class="hover:text-amber-400 transition">About</a></p>
+                <p><a href="#contact" class="hover:text-amber-400 transition">Contact</a></p>
+            </div>
+
+            <div class="text-left md:text-right">
+                <p class="mono text-xs uppercase tracking-[0.18em] text-white/35 mb-3">Network Status</p>
+                <p class="text-base text-white/55">Encrypted & Active</p>
+                <p class="text-base text-white/40 mt-2">Built in Kenya for global delivery</p>
+                <p class="text-base text-white/35 mt-4">© 2026 Charles Mwaura</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
