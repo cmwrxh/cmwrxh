@@ -149,4 +149,136 @@
     @media (max-width: 768px) {
       .hero { padding: 100px 0 60px; }
       .nav { flex-direction: column; text-align: center; }
-      nav a { margin: 12px 20px;
+      nav a { margin: 12px 20px; }
+      .brand img { width: 70px; height: 70px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="Brilliant Unicorn" />
+        Brilliant Unicorn
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="about.html">About</a>
+        <a href="mailto:info@brilliantunicorn.com">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Premium Courses for Builders</h1>
+        <p>Practical, execution-focused digital learning: AI automation, smart company structure, and durable product creation — designed for founders, operators, and digital creators.</p>
+        <div>
+          <a href="#courses" class="btn">View Courses</a>
+          <a href="#bundle" class="btn btn-outline">Get the Bundle</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses">
+      <div class="container">
+        <h2>The Builder Series</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>AI Business Automation</h3>
+            <div class="price">$49</div>
+            <div class="note">Notion-based • Self-paced</div>
+            <p>Automate leads, onboarding, operations, and workflows using real AI tools and practical systems.</p>
+            <a href="https://mwauracharles.gumroad.com/l/sdwxc" class="btn btn-gumroad" target="_blank" rel="noopener noreferrer">Get Access on Gumroad</a>
+          </div>
+
+          <div class="card">
+            <h3>LLC & Umbrella Company Setup</h3>
+            <div class="price">$39</div>
+            <div class="note">Notion-based • Self-paced</div>
+            <p>Clear thinking on entity structure, operating models, and modern founder setups for global work.</p>
+            <!-- Placeholder: replace with your actual Gumroad link when ready -->
+            <a href="https://mwauracharles.gumroad.com" class="btn btn-gumroad" target="_blank" rel="noopener noreferrer">Get Access on Gumroad</a>
+          </div>
+
+          <div class="card">
+            <h3>How to Create Products That Last</h3>
+            <div class="price">$39</div>
+            <div class="note">Notion-based • Self-paced</div>
+            <p>Build digital products with strong positioning, longevity, and real revenue potential.</p>
+            <a href="https://mwauracharles.gumroad.com/l/smykd" class="btn btn-gumroad" target="_blank" rel="noopener noreferrer">Get Access on Gumroad</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="bundle" style="background:#0a0a0a;">
+      <div class="container">
+        <h2>Full Bundle – Best Value</h2>
+        <div class="grid" style="max-width:800px; margin:0 auto;">
+          <div class="card bundle-card">
+            <div class="best-value">Best Value – Save $28</div>
+            <h3>All 3 Courses</h3>
+            <div class="price">$99</div>
+            <p>Get instant access to the complete Builder Series: AI Automation + Company Setup + Durable Products.</p>
+            <ul style="margin:24px 0; padding-left:20px; color:var(--muted); list-style-type: disc;">
+              <li>AI Business Automation</li>
+              <li>LLC and Umbrella Setup</li>
+              <li>Products That Last</li>
+              <li>One-time payment • Lifetime access</li>
+            </ul>
+            <a href="https://www.paypal.com/ncp/links/P4YZHZX9FEMCJ" class="btn" target="_blank" rel="noopener noreferrer">Buy Bundle Now (PayPal)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Why These Courses?</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Practical & Direct</h3>
+            <p>Execution-focused frameworks you can apply immediately – no fluff.</p>
+          </div>
+          <div class="card">
+            <h3>Founder-First</h3>
+            <p>Built for real builders, freelancers, consultants, and digital operators.</p>
+          </div>
+          <div class="card">
+            <h3>Revenue Oriented</h3>
+            <p>Tools to create systems, structure, and assets that generate lasting value.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="text-align:center; padding:80px 0;">
+      <div class="container">
+        <h2>Questions?</h2>
+        <p style="margin-bottom:32px; color: var(--muted);">Reach out before buying or for custom needs.</p>
+        <a href="mailto:info@brilliantunicorn.com" class="btn">Contact Us</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Brilliant Unicorn — Digital Courses • Consulting • AI Systems</p>
+      <p style="margin:20px 0;">
+        <a href="mailto:info@brilliantunicorn.com">info@brilliantunicorn.com</a>
+      </p>
+      <form action="https://formspree.io/f/mlgpyrrb" method="POST" style="max-width:500px; margin:40px auto;">
+        <input type="email" name="email" placeholder="Stay updated — enter email" required />
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+      <p>&copy; Brilliant Unicorn</p>
+    </div>
+  </footer>
+
+</body>
+</html>
