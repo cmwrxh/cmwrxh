@@ -1,410 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | Brilliant Unicorn LLC</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Brilliant Unicorn</title>
+  <meta name="description" content="Founder-led systems engineering, automation, analytics, and dependable infrastructure for modern businesses." />
+  
+  <!-- Favicon / browser tab logo -->
+  <link rel="icon" type="image/png" href="logo.png" />
+  
+  <style>
+    :root {
+      --black: #000000;
+      --dark: #0a0a0a;
+      --yellow: #ffea00;     /* bright startup yellow */
+      --yellow-dark: #d4c200;
+      --text: #f0f0f0;
+      --muted: #bbbbbb;
+      --radius: 12px;
+    }
 
-    <link rel="icon" type="image/png" href="logo.png" />
-    <link rel="apple-touch-icon" href="logo.png" />
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--black);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--yellow); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-    <style>
-        :root {
-            --amber: #F59E0B;
-            --amber-dark: #D97706;
-            --bg: #000000;
-            --panel: rgba(255, 255, 255, 0.03);
-            --panel-border: rgba(255, 255, 255, 0.08);
-            --text: #F3F4F6;
-            --muted: rgba(243, 244, 246, 0.68);
-            --soft: rgba(243, 244, 246, 0.38);
-        }
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #222;
+      z-index: 100;
+      padding: 20px 0;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--yellow);
+    }
+    .brand img {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 12px rgba(255,234,0,0.25));
+    }
+    nav a {
+      margin-left: 28px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+    nav a.active, nav a:hover { color: var(--yellow); }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    .hero {
+      padding: 120px 0 80px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      margin-bottom: 24px;
+      color: var(--yellow);
+      line-height: 1.1;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 720px;
+      margin: 0 auto 40px;
+      color: var(--muted);
+    }
 
-        body {
-            background:
-                radial-gradient(circle at top, rgba(245, 158, 11, 0.08), transparent 30%),
-                #000000;
-            color: var(--text);
-            font-family: 'Inter', sans-serif;
-        }
+    .btn {
+      display: inline-block;
+      background: var(--yellow);
+      color: #000;
+      font-weight: 800;
+      padding: 16px 32px;
+      border-radius: 999px;
+      margin: 12px;
+      transition: all 0.2s;
+    }
+    .btn:hover { background: var(--yellow-dark); transform: translateY(-2px); }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--yellow);
+      color: var(--yellow);
+    }
 
-        .serif { font-family: 'Playfair Display', serif; }
-        .mono { font-family: 'JetBrains Mono', monospace; }
+    section { padding: 100px 0; }
+    h2 { font-size: 3rem; color: var(--yellow); margin-bottom: 40px; }
+    h3 { color: var(--yellow); margin-bottom: 16px; font-size: 1.6rem; }
 
-        .glass-card {
-            background: var(--panel);
-            border: 1px solid var(--panel-border);
-            backdrop-filter: blur(10px);
-            transition: all 0.35s ease;
-        }
+    .card {
+      background: #111;
+      padding: 32px;
+      border-radius: var(--radius);
+      border: 1px solid #222;
+    }
 
-        .glass-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(245, 158, 11, 0.45);
-            background: rgba(255, 255, 255, 0.045);
-            box-shadow: 0 0 30px rgba(245, 158, 11, 0.08);
-        }
+    .grid {
+      display: grid;
+      gap: 32px;
+    }
+    @media (min-width: 768px) {
+      .grid-2 { grid-template-columns: repeat(2, 1fr); }
+      .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    }
 
-        .nav-border {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-        }
+    .form-container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+      border: 1px solid #333;
+      border-radius: 999px;
+      background: #111;
+      color: white;
+      font-size: 1rem;
+    }
+    textarea {
+      border-radius: 12px;
+      min-height: 140px;
+      resize: vertical;
+    }
+    input::placeholder, textarea::placeholder {
+      color: #777;
+    }
 
-        .section-border {
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-        }
+    footer {
+      background: #000;
+      border-top: 1px solid #222;
+      padding: 60px 0 40px;
+      text-align: center;
+      color: var(--muted);
+    }
+    footer a { color: var(--yellow); }
 
-        .logo-glow {
-            filter: drop-shadow(0 0 34px rgba(245, 158, 11, 0.18));
-        }
-
-        .btn-primary {
-            background: var(--amber);
-            color: #000;
-            border: 1px solid var(--amber);
-            transition: all 0.25s ease;
-        }
-
-        .btn-primary:hover {
-            background: var(--amber-dark);
-            border-color: var(--amber-dark);
-            transform: translateY(-1px);
-        }
-
-        .btn-secondary {
-            border: 1px solid rgba(245, 158, 11, 0.55);
-            color: var(--text);
-            transition: all 0.25s ease;
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--amber);
-            background: rgba(245, 158, 11, 0.08);
-            transform: translateY(-1px);
-        }
-
-        .muted {
-            color: var(--muted);
-        }
-
-        .soft {
-            color: var(--soft);
-        }
-
-        .hero-grid {
-            background-image:
-                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-            background-size: 40px 40px;
-            mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
-        }
-    </style>
+    @media (max-width: 768px) {
+      .hero { padding: 100px 0 60px; }
+      .nav { flex-direction: column; text-align: center; }
+      nav a { margin: 12px 20px; }
+      .brand img { width: 70px; height: 70px; }
+    }
+  </style>
 </head>
-<body class="antialiased selection:bg-amber-500/30">
+<body>
 
-    <!-- NAV -->
-    <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between nav-border sticky top-0 bg-black/75 backdrop-blur z-50">
-        <a href="index.html" class="flex items-center gap-4">
-            <img src="logo.png" alt="Brilliant Unicorn Logo" class="w-20 h-20 rounded-full border border-amber-500/20 logo-glow object-cover" />
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="Brilliant Unicorn" />
+        Brilliant Unicorn
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="products.html">Products</a>
+        <a href="about.html" class="active">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Founder-Led Engineering for Modern Businesses</h1>
+        <p>Brilliant Unicorn is a founder-led company focused on automation systems, analytics platforms, and secure backend infrastructure built for reliability, clarity, and long-term business use.</p>
+        <div>
+          <a href="#story" class="btn">Read Our Story</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="story">
+      <div class="container">
+        <div class="grid grid-2">
+          <div>
+            <h2>Charles Mwaura</h2>
+            <p class="muted" style="font-size:1.1rem;">
+              Systems engineer. Founder. Builder of dependable software systems for real business use.
+            </p>
+          </div>
+
+          <div class="card">
+            <p style="margin-bottom:20px;">
+              Brilliant Unicorn is led by Charles Mwaura, a systems engineer with a background in mathematics and cyber security. The company was built around a simple idea: modern businesses need systems that are dependable, measurable, and structured for growth.
+            </p>
+            <p style="margin-bottom:20px;">
+              At Brilliant Unicorn, he led the technical design and delivery of automation and analytics systems used to support consulting and SaaS-style services. From 2020 to 2023, this included a data processing and analytics platform combining ingestion pipelines, validation layers, and reporting dashboards for client-facing data services.
+            </p>
+            <p>
+              Earlier work included building the AlphaCore Framework, a reusable orchestration layer supporting internal tools and service delivery systems. That background continues to shape the company’s approach to architecture, implementation, and product direction.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>The Engineering Standard</h2>
+        <p class="muted" style="text-align:center; max-width:720px; margin:0 auto 60px; font-size:1.2rem;">
+          Brilliant Unicorn is built on a simple belief: when the base system fails, everything on top of it becomes unstable.
+        </p>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Correctness Before Optimization</h3>
+            <p class="muted">
+              A fast system that produces unreliable outputs is still a broken system. Accuracy and integrity come first.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Resilience Before Scale</h3>
+            <p class="muted">
+              Scale only matters when the underlying system can withstand operational pressure without losing reliability.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Systems Over Noise</h3>
+            <p class="muted">
+              The goal is not complexity for its own sake, but dependable execution, clarity, and repeatable outcomes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>What Shapes the Work</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Automation & Analytics Systems</h3>
+            <p class="muted">
+              Founder-led work in designing systems that support internal operations, consulting delivery, and SaaS-style services.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Reusable Technical Foundations</h3>
+            <p class="muted">
+              Development of orchestration layers and internal platforms that support repeatable delivery.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Security-Minded Engineering</h3>
+            <p class="muted">
+              Technical thinking shaped by cyber security principles, adversarial analysis, and the need for trustworthy infrastructure.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Founder-Level Product Thinking</h3>
+            <p class="muted">
+              Systems built not just as code, but as products that support revenue, operations, and long-term use.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="card" style="max-width:900px; margin:0 auto;">
+          <div class="grid grid-2" style="align-items:start;">
             <div>
-                <p class="serif text-xl md:text-2xl font-bold tracking-wide">
-                    Brilliant Unicorn <span class="text-amber-400">LLC</span>
-                </p>
-                <p class="mono text-xs uppercase tracking-[0.28em] soft mt-1">
-                    About
-                </p>
+              <h2>To Build Infrastructure Businesses Can Depend On</h2>
+              <p class="muted" style="font-size:1.15rem;">
+                The company exists to help businesses move away from fragile, improvised systems toward automation, analytics, and backend foundations that actually support growth.
+              </p>
             </div>
-        </a>
 
-        <div class="hidden md:flex items-center gap-8 mono text-xs uppercase tracking-[0.18em] text-white/70">
-            <a href="index.html" class="hover:text-amber-400 transition">Home</a>
-            <a href="services.html" class="hover:text-amber-400 transition">Services</a>
-            <a href="products.html" class="hover:text-amber-400 transition">Products</a>
-            <a href="about.html" class="text-amber-400">About</a>
-            <a href="#contact" class="hover:text-amber-400 transition">Contact</a>
+            <div style="display:flex; flex-direction:column; gap:20px;">
+              <div class="card">
+                <strong style="color:var(--yellow);">Mission</strong><br>
+                Build systems that reduce manual work, improve trust in data, and increase reliability.
+              </div>
+              <div class="card">
+                <strong style="color:var(--yellow);">Focus</strong><br>
+                Automation systems, analytics platforms, and secure backend infrastructure.
+              </div>
+              <div class="card">
+                <strong style="color:var(--yellow);">Approach</strong><br>
+                Founder-led execution with clarity, precision, and durable delivery.
+              </div>
+            </div>
+          </div>
         </div>
-    </nav>
+      </div>
+    </section>
 
-    <!-- HERO -->
-    <header class="relative overflow-hidden">
-        <div class="absolute inset-0 hero-grid opacity-40 pointer-events-none"></div>
+    <section>
+      <div class="container" style="text-align:center;">
+        <h2>Ready to Work Together?</h2>
+        <p class="muted" style="max-width:720px; margin:0 auto 40px; font-size:1.2rem;">
+          If you need a founder-led partner to help design or deliver automation systems, analytics infrastructure, or resilient backend architecture, reach out.
+        </p>
+        <a href="#contact" class="btn">Let’s Start a Conversation</a>
+      </div>
+    </section>
 
-        <div class="max-w-7xl mx-auto px-6 py-20 md:py-28 relative">
-            <div class="max-w-5xl">
-                <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-6">
-                    About Brilliant Unicorn
-                </p>
+    <section id="contact">
+      <div class="container">
+        <div class="grid grid-2">
+          <div>
+            <h2>Start the Conversation</h2>
+            <p class="muted" style="font-size:1.15rem; margin-bottom:24px;">
+              Reach out if you want to discuss a consulting engagement, a technical build, or a founder-led systems project.
+            </p>
+            <p class="muted">
+              Brilliant Unicorn works with teams that value clean systems, reliable delivery, and infrastructure that can support real business growth.
+            </p>
+          </div>
 
-                <h1 class="serif text-4xl md:text-6xl font-bold leading-tight tracking-tight max-w-5xl">
-                    Founder-Led Engineering for
-                    <span class="text-amber-400">Modern Businesses</span>
-                </h1>
+          <div class="card form-container">
+            <h3 style="margin-bottom:24px;">Send a Message</h3>
 
-                <p class="mt-8 text-base md:text-lg muted max-w-3xl leading-relaxed">
-                    Brilliant Unicorn is a founder-led company focused on automation systems,
-                    analytics platforms, and secure backend infrastructure built for reliability,
-                    clarity, and long-term business use.
-                </p>
+            <form action="https://formspree.io/f/mlgpyrrb" method="POST">
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input type="email" name="email" placeholder="Your Email" required />
+              <input type="hidden" name="_subject" value="New About Page Contact – Brilliant Unicorn" />
+              <textarea name="message" placeholder="Your message... (consultation, project, question, etc.)" required></textarea>
+              <button type="submit" class="btn" style="width:100%; margin-top:12px;">Send Message</button>
+            </form>
 
-                <div class="mt-10 flex flex-col sm:flex-row gap-4">
-                    <a href="#story" class="btn-primary inline-flex items-center justify-center px-7 py-4 rounded-sm mono text-xs uppercase tracking-[0.18em] font-medium">
-                        Read Our Story
-                    </a>
-                    <a href="mailto:ceo@brilliantunicorn.com?subject=Consultation%20Request%20-%20Brilliant%20Unicorn" class="btn-secondary inline-flex items-center justify-center px-7 py-4 rounded-sm mono text-xs uppercase tracking-[0.18em] font-medium">
-                        Book Consultation
-                    </a>
-                </div>
-            </div>
+            <p class="muted" style="margin-top:24px; font-size:0.95rem; text-align:center;">
+              You’ll receive a confirmation email. I usually reply within 24–48 hours.
+            </p>
+          </div>
         </div>
-    </header>
+      </div>
+    </section>
+  </main>
 
-    <main class="max-w-7xl mx-auto px-6">
+  <footer>
+    <div class="container">
+      <p>Brilliant Unicorn — Digital Courses • Consulting • AI Systems</p>
+      <p style="margin:20px 0;">
+        <a href="mailto:info@brilliantunicorn.com">info@brilliantunicorn.com</a>
+      </p>
+      <p>&copy; Brilliant Unicorn</p>
+    </div>
+  </footer>
 
-        <!-- STORY -->
-        <section id="story" class="py-20">
-            <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-start">
-                <div>
-                    <p class="mono text-xs uppercase tracking-[0.3em] soft mb-4">Founder</p>
-                    <h2 class="serif text-3xl md:text-4xl font-semibold mb-5">Charles Mwaura</h2>
-                    <p class="text-base md:text-lg muted leading-relaxed">
-                        Systems engineer. Founder. Builder of dependable software systems for real business use.
-                    </p>
-                </div>
-
-                <div class="glass-card p-8 rounded-sm">
-                    <p class="text-base text-white/70 leading-relaxed mb-5">
-                        Brilliant Unicorn is led by Charles Mwaura, a systems engineer with a background in mathematics
-                        and cyber security. The company was built around a simple idea: modern businesses need systems
-                        that are dependable, measurable, and structured for growth.
-                    </p>
-                    <p class="text-base text-white/70 leading-relaxed mb-5">
-                        At Brilliant Unicorn, he led the technical design and delivery of automation and analytics systems
-                        used to support consulting and SaaS-style services. From 2020 to 2023, this included a data processing
-                        and analytics platform combining ingestion pipelines, validation layers, and reporting dashboards
-                        for client-facing data services.
-                    </p>
-                    <p class="text-base text-white/70 leading-relaxed">
-                        Earlier work included building the AlphaCore Framework, a reusable orchestration layer supporting
-                        internal tools and service delivery systems. That background continues to shape the company’s approach
-                        to architecture, implementation, and product direction.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- PRINCIPLES -->
-        <section class="py-20 section-border">
-            <div class="max-w-3xl mb-12">
-                <p class="mono text-xs uppercase tracking-[0.3em] soft mb-4">Core Principles</p>
-                <h2 class="serif text-3xl md:text-4xl font-semibold mb-5">The Engineering Standard</h2>
-                <p class="text-base md:text-lg muted leading-relaxed">
-                    Brilliant Unicorn is built on a simple belief: when the base system fails,
-                    everything on top of it becomes unstable.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass-card p-8 rounded-sm">
-                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">Correctness Before Optimization</h3>
-                    <p class="text-base text-white/55 leading-relaxed">
-                        A fast system that produces unreliable outputs is still a broken system.
-                        Accuracy and integrity come first.
-                    </p>
-                </div>
-
-                <div class="glass-card p-8 rounded-sm">
-                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">Resilience Before Scale</h3>
-                    <p class="text-base text-white/55 leading-relaxed">
-                        Scale only matters when the underlying system can withstand operational pressure
-                        without losing reliability.
-                    </p>
-                </div>
-
-                <div class="glass-card p-8 rounded-sm">
-                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">Systems Over Noise</h3>
-                    <p class="text-base text-white/55 leading-relaxed">
-                        The goal is not complexity for its own sake, but dependable execution,
-                        clarity, and repeatable outcomes.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- EXPERIENCE -->
-        <section class="py-20 section-border">
-            <div class="max-w-3xl mb-12">
-                <p class="mono text-xs uppercase tracking-[0.3em] soft mb-4">Experience Focus</p>
-                <h2 class="serif text-3xl md:text-4xl font-semibold mb-5">What Shapes the Work</h2>
-                <p class="text-base md:text-lg muted leading-relaxed">
-                    Brilliant Unicorn brings together systems engineering, product thinking,
-                    automation design, and security-minded architecture.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="glass-card p-8 rounded-sm">
-                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">Automation & Analytics Systems</h3>
-                    <p class="text-base text-white/55 leading-relaxed">
-                        Founder-led work in designing systems that support internal operations,
-                        consulting delivery, and SaaS-style services.
-                    </p>
-                </div>
-
-                <div class="glass-card p-8 rounded-sm">
-                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">Reusable Technical Foundations</h3>
-                    <p class="text-base text-white/55 leading-relaxed">
-                        Development of orchestration layers and internal platforms that support repeatable delivery.
-                    </p>
-                </div>
-
-                <div class="glass-card p-8 rounded-sm">
-                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">Security-Minded Engineering</h3>
-                    <p class="text-base text-white/55 leading-relaxed">
-                        Technical thinking shaped by cyber security principles, adversarial analysis,
-                        and the need for trustworthy infrastructure.
-                    </p>
-                </div>
-
-                <div class="glass-card p-8 rounded-sm">
-                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">Founder-Level Product Thinking</h3>
-                    <p class="text-base text-white/55 leading-relaxed">
-                        Systems built not just as code, but as products that support revenue,
-                        operations, and long-term use.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- MISSION -->
-        <section class="py-20 section-border">
-            <div class="glass-card rounded-sm p-8 md:p-12">
-                <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 items-start">
-                    <div>
-                        <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-4">Why Brilliant Unicorn Exists</p>
-                        <h2 class="serif text-3xl md:text-4xl font-semibold mb-5">To Build Infrastructure Businesses Can Depend On</h2>
-                        <p class="text-base md:text-lg muted leading-relaxed">
-                            The company exists to help businesses move away from fragile, improvised systems
-                            toward automation, analytics, and backend foundations that actually support growth.
-                        </p>
-                    </div>
-
-                    <div class="space-y-4">
-                        <div class="border border-white/10 p-5 rounded-sm">
-                            <p class="mono text-xs uppercase tracking-[0.18em] text-amber-400 mb-2">Mission</p>
-                            <p class="text-base text-white/60">Build systems that reduce manual work, improve trust in data, and increase reliability.</p>
-                        </div>
-                        <div class="border border-white/10 p-5 rounded-sm">
-                            <p class="mono text-xs uppercase tracking-[0.18em] text-amber-400 mb-2">Focus</p>
-                            <p class="text-base text-white/60">Automation systems, analytics platforms, and secure backend infrastructure.</p>
-                        </div>
-                        <div class="border border-white/10 p-5 rounded-sm">
-                            <p class="mono text-xs uppercase tracking-[0.18em] text-amber-400 mb-2">Approach</p>
-                            <p class="text-base text-white/60">Founder-led execution with clarity, precision, and durable delivery.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA -->
-        <section class="py-20 section-border">
-            <div class="glass-card rounded-sm p-8 md:p-12">
-                <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 items-center">
-                    <div>
-                        <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-4">Ready to Work Together?</p>
-                        <h2 class="serif text-3xl md:text-4xl font-semibold mb-5">Let’s Build Something Dependable</h2>
-                        <p class="text-base md:text-lg muted leading-relaxed max-w-2xl">
-                            If you need a founder-led partner to help design or deliver automation systems,
-                            analytics infrastructure, or resilient backend architecture, reach out.
-                        </p>
-                    </div>
-
-                    <div class="flex flex-col gap-4">
-                        <a href="mailto:ceo@brilliantunicorn.com?subject=Consultation%20Request%20-%20Brilliant%20Unicorn" class="btn-primary inline-flex items-center justify-center px-7 py-4 rounded-sm mono text-xs uppercase tracking-[0.18em] font-medium">
-                            Book Consultation
-                        </a>
-                        <a href="mailto:charlie@brilliantunicorn.com?subject=Project%20Inquiry%20-%20Brilliant%20Unicorn" class="btn-secondary inline-flex items-center justify-center px-7 py-4 rounded-sm mono text-xs uppercase tracking-[0.18em] font-medium">
-                            Email Charlie
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section id="contact" class="py-20 section-border">
-            <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-start">
-                <div>
-                    <p class="mono text-xs uppercase tracking-[0.3em] soft mb-4">Contact</p>
-                    <h2 class="serif text-3xl md:text-4xl font-semibold mb-5">Start the Conversation</h2>
-                    <p class="text-base md:text-lg muted leading-relaxed max-w-2xl mb-6">
-                        Reach out if you want to discuss a consulting engagement,
-                        a technical build, or a founder-led systems project.
-                    </p>
-                    <p class="text-base text-white/60 leading-relaxed max-w-2xl">
-                        Brilliant Unicorn works with teams that value clean systems,
-                        reliable delivery, and infrastructure that can support real business growth.
-                    </p>
-                </div>
-
-                <div class="glass-card p-8 rounded-sm">
-                    <p class="mono text-xs uppercase tracking-[0.18em] text-amber-400 mb-5">Email Channels</p>
-                    <div class="space-y-4 text-white/70">
-                        <p class="text-base">Use any of the addresses below:</p>
-                        <a href="mailto:charlie@brilliantunicorn.com" class="block text-base md:text-lg hover:text-amber-400 transition">
-                            charlie@brilliantunicorn.com
-                        </a>
-                        <a href="mailto:ceo@brilliantunicorn.com" class="block text-base md:text-lg hover:text-amber-400 transition">
-                            ceo@brilliantunicorn.com
-                        </a>
-                        <a href="mailto:info@brilliantunicorn.com" class="block text-base md:text-lg hover:text-amber-400 transition">
-                            info@brilliantunicorn.com
-                        </a>
-                    </div>
-
-                    <a
-                        href="mailto:ceo@brilliantunicorn.com?subject=Consultation%20Request%20-%20Brilliant%20Unicorn"
-                        class="btn-primary inline-flex items-center justify-center px-7 py-4 rounded-sm mono text-xs uppercase tracking-[0.18em] mt-8 w-full"
-                    >
-                        Request Consultation
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="max-w-7xl mx-auto px-6 pt-10 pb-16 border-t border-white/5">
-        <div class="grid md:grid-cols-3 gap-12">
-            <div>
-                <p class="serif text-xl font-bold mb-3">
-                    Brilliant Unicorn <span class="text-amber-400">LLC</span>
-                </p>
-                <p class="text-base text-white/50 leading-relaxed max-w-sm">
-                    Founder-led systems engineering for automation, analytics, and infrastructure that lasts.
-                </p>
-            </div>
-
-            <div class="mono text-xs uppercase tracking-[0.18em] text-white/45 space-y-3">
-                <p><a href="index.html" class="hover:text-amber-400 transition">Home</a></p>
-                <p><a href="services.html" class="hover:text-amber-400 transition">Services</a></p>
-                <p><a href="products.html" class="hover:text-amber-400 transition">Products</a></p>
-                <p><a href="#contact" class="hover:text-amber-400 transition">Contact</a></p>
-            </div>
-
-            <div class="text-left md:text-right">
-                <p class="mono text-xs uppercase tracking-[0.18em] text-white/35 mb-3">Network Status</p>
-                <p class="text-base text-white/55">Encrypted & Active</p>
-                <p class="text-base text-white/40 mt-2">Built in Kenya for global delivery</p>
-                <p class="text-base text-white/35 mt-4">© 2026 Charles Mwaura</p>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>
