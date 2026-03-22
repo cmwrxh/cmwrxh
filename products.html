@@ -4,835 +4,297 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Products | Brilliant Unicorn</title>
-  <meta
-    name="description"
-    content="Brilliant Unicorn digital courses on AI business automation, LLC and umbrella company setup, and creating products that last."
-  />
+  <meta name="description" content="Premium digital courses: AI Business Automation, LLC & Umbrella Setup, Products That Last – practical learning for founders and operators." />
+  
+  <!-- Favicon / browser tab logo -->
+  <link rel="icon" type="image/png" href="logo.png" />
+  
   <style>
     :root {
-      --bg: #ffffff;
-      --text: #111111;
-      --muted: #5f6368;
-      --line: #e5e7eb;
-      --soft: #f7f7f8;
-      --accent: #111111;
-      --accent-hover: #2c2c2c;
-      --radius: 20px;
-      --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-      --max-width: 1120px;
+      --black: #000000;
+      --dark: #0a0a0a;
+      --yellow: #ffea00;     /* bright startup yellow */
+      --yellow-dark: #d4c200;
+      --text: #f0f0f0;
+      --muted: #bbbbbb;
+      --radius: 12px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      margin: 0;
-      font-family: Inter, Arial, Helvetica, sans-serif;
-      background: var(--bg);
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--black);
       color: var(--text);
-      line-height: 1.65;
+      line-height: 1.6;
     }
+    a { color: var(--yellow); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    .container {
-      width: min(92%, var(--max-width));
-      margin: 0 auto;
-    }
-
-    .site-header {
+    header {
       position: sticky;
       top: 0;
-      z-index: 1000;
-      background: rgba(255, 255, 255, 0.94);
+      background: rgba(0,0,0,0.85);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
+      border-bottom: 1px solid #222;
+      z-index: 100;
+      padding: 20px 0;
     }
-
     .nav {
-      min-height: 78px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
     }
-
     .brand {
       display: flex;
       align-items: center;
-      gap: 14px;
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: 0.01em;
+      gap: 12px;
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--yellow);
     }
-
     .brand img {
-      width: 58px;
-      height: 58px;
+      width: 90px;
+      height: 90px;
       object-fit: contain;
     }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 26px;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      font-size: 0.98rem;
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--text);
-    }
-
-    .nav-cta,
-    .button,
-    .button-secondary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 999px;
+    nav a {
+      margin-left: 28px;
       font-weight: 600;
-      font-size: 0.97rem;
-      transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
-      cursor: pointer;
+      color: var(--muted);
     }
-
-    .nav-cta,
-    .button {
-      background: var(--accent);
-      color: #ffffff;
-      padding: 13px 20px;
-    }
-
-    .nav-cta:hover,
-    .button:hover {
-      background: var(--accent-hover);
-      transform: translateY(-1px);
-    }
-
-    .button-secondary {
-      background: #ffffff;
-      color: var(--text);
-      border: 1px solid var(--line);
-      padding: 13px 20px;
-    }
-
-    .button-secondary:hover {
-      border-color: #cfcfcf;
-      transform: translateY(-1px);
-    }
+    nav a.active, nav a:hover { color: var(--yellow); }
 
     .hero {
-      padding: 96px 0 72px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 34px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 18px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: var(--soft);
-      color: var(--muted);
-      font-size: 0.87rem;
-      font-weight: 700;
-    }
-
-    h1, h2, h3 {
-      margin: 0 0 16px;
-      line-height: 1.12;
-      letter-spacing: -0.03em;
-    }
-
-    h1 {
-      font-size: clamp(2.4rem, 5vw, 4.3rem);
-      max-width: 12ch;
-    }
-
-    h2 {
-      font-size: clamp(1.9rem, 3vw, 2.8rem);
-    }
-
-    h3 {
-      font-size: 1.3rem;
-    }
-
-    p {
-      margin: 0 0 18px;
-      color: var(--muted);
-      font-size: 1.04rem;
-    }
-
-    .hero-copy p {
-      max-width: 62ch;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 28px;
-    }
-
-    .hero-card,
-    .course-card,
-    .bundle-card,
-    .info-box,
-    .faq-item,
-    .cta-panel {
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .hero-card {
-      background: linear-gradient(180deg, #ffffff 0%, #f7f7f8 100%);
-      padding: 30px;
-    }
-
-    .hero-card ul,
-    .course-card ul,
-    .bundle-card ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .hero-card li {
-      padding: 12px 0;
-      border-bottom: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 1rem;
-    }
-
-    .hero-card li:last-child {
-      border-bottom: none;
-    }
-
-    .section {
-      padding: 74px 0;
-    }
-
-    .section-head {
-      max-width: 760px;
-      margin-bottom: 34px;
-    }
-
-    .course-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .course-card {
-      background: #ffffff;
-      padding: 28px;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-
-    .course-tag {
-      display: inline-block;
-      margin-bottom: 16px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: var(--soft);
-      color: var(--muted);
-      font-size: 0.83rem;
-      font-weight: 700;
-    }
-
-    .price {
-      margin: 12px 0 6px;
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--text);
-      letter-spacing: -0.03em;
-    }
-
-    .small-note {
-      font-size: 0.93rem;
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-
-    .course-card ul {
-      margin: 10px 0 24px;
-    }
-
-    .course-card li {
-      position: relative;
-      padding-left: 20px;
-      margin-bottom: 10px;
-      color: var(--muted);
-      font-size: 0.98rem;
-    }
-
-    .course-card li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: var(--text);
-      font-weight: 700;
-    }
-
-    .course-actions {
-      margin-top: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .course-actions a {
-      width: 100%;
-    }
-
-    .bundle-wrap {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 24px;
-      align-items: stretch;
-    }
-
-    .bundle-card {
-      background: #111111;
-      color: #ffffff;
-      padding: 34px;
-    }
-
-    .bundle-card p,
-    .bundle-card li,
-    .bundle-card .small-note {
-      color: rgba(255, 255, 255, 0.82);
-    }
-
-    .bundle-card .price {
-      color: #ffffff;
-    }
-
-    .bundle-card ul {
-      margin: 18px 0 28px;
-    }
-
-    .bundle-card li {
-      position: relative;
-      padding-left: 22px;
-      margin-bottom: 12px;
-    }
-
-    .bundle-card li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      top: 0;
-      font-weight: 700;
-      color: #ffffff;
-    }
-
-    .bundle-card .button {
-      background: #ffffff;
-      color: #111111;
-    }
-
-    .bundle-card .button:hover {
-      background: #efefef;
-    }
-
-    .info-box {
-      background: var(--soft);
-      padding: 30px;
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .why-grid .info-box {
-      background: #ffffff;
-      padding: 26px;
-    }
-
-    .faq {
-      display: grid;
-      gap: 16px;
-    }
-
-    .faq-item {
-      background: #ffffff;
-      padding: 24px;
-    }
-
-    .faq-item h3 {
-      font-size: 1.08rem;
-      margin-bottom: 10px;
-    }
-
-    .cta {
-      padding: 80px 0 88px;
-    }
-
-    .cta-panel {
-      background: linear-gradient(180deg, #ffffff 0%, #f7f7f8 100%);
-      padding: 44px;
+      padding: 120px 0 80px;
       text-align: center;
     }
-
-    .cta-panel p {
-      max-width: 760px;
-      margin: 0 auto 22px;
+    .hero h1 {
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      margin-bottom: 24px;
+      color: var(--yellow);
+      line-height: 1.1;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 720px;
+      margin: 0 auto 40px;
+      color: var(--muted);
+    }
+    .btn {
+      display: inline-block;
+      background: var(--yellow);
+      color: #000;
+      font-weight: 800;
+      padding: 16px 32px;
+      border-radius: 999px;
+      margin: 12px;
+      transition: all 0.2s;
+    }
+    .btn:hover { background: var(--yellow-dark); transform: translateY(-2px); }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--yellow);
+      color: var(--yellow);
     }
 
-    .site-footer {
-      border-top: 1px solid var(--line);
-      padding: 30px 0 44px;
-    }
-
-    .footer-grid {
+    section { padding: 100px 0; }
+    h2 { font-size: 3rem; color: var(--yellow); margin-bottom: 40px; text-align: center; }
+    .grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 24px;
-      align-items: start;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+    }
+    .card {
+      background: #111;
+      padding: 32px;
+      border-radius: var(--radius);
+      border: 1px solid #222;
+    }
+    .card h3 { color: var(--yellow); margin-bottom: 16px; font-size: 1.6rem; }
+    .price { color: var(--yellow); font-size: 2.2rem; font-weight: bold; margin: 16px 0; }
+    .note { color: var(--muted); font-size: 0.95rem; margin-bottom: 20px; }
+
+    .bundle-card {
+      background: linear-gradient(135deg, #1a1a00, #111100);
+      border: 2px solid var(--yellow);
+    }
+    .best-value {
+      display: inline-block;
+      background: var(--yellow);
+      color: #000;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      margin-bottom: 16px;
     }
 
-    .footer-links {
+    form {
       display: flex;
       flex-wrap: wrap;
-      gap: 18px;
-      justify-content: flex-end;
+      justify-content: center;
+      gap: 12px;
+      max-width: 600px;
+      margin: 32px auto;
     }
+    input[type="email"] {
+      flex: 1;
+      min-width: 260px;
+      padding: 16px 20px;
+      border: 1px solid #333;
+      border-radius: 999px;
+      background: #111;
+      color: white;
+      font-size: 1rem;
+    }
+    button.btn { padding: 16px 40px; }
 
-    .footer-links a {
+    footer {
+      background: #000;
+      border-top: 1px solid #222;
+      padding: 60px 0 40px;
+      text-align: center;
       color: var(--muted);
-      font-size: 0.96rem;
     }
+    footer a { color: var(--yellow); }
 
-    .footer-links a:hover {
-      color: var(--text);
-    }
-
-    @media (max-width: 980px) {
-      .hero-grid,
-      .course-grid,
-      .bundle-wrap,
-      .why-grid,
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 14px 0;
-      }
-
-      .nav-links,
-      .footer-links {
-        justify-content: flex-start;
-      }
-
-      h1 {
-        max-width: 100%;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .hero,
-      .section,
-      .cta {
-        padding-top: 56px;
-        padding-bottom: 56px;
-      }
-
-      .hero-card,
-      .course-card,
-      .bundle-card,
-      .info-box,
-      .faq-item,
-      .cta-panel {
-        padding: 22px;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
-      .brand img {
-        width: 52px;
-        height: 52px;
-      }
+    @media (max-width: 768px) {
+      .hero { padding: 100px 0 60px; }
+      .nav { flex-direction: column; text-align: center; }
+      nav a { margin: 12px 20px; }
+      .brand img { width: 70px; height: 70px; }
     }
   </style>
 </head>
 <body>
-  <header class="site-header">
+
+  <header>
     <div class="container nav">
       <a href="index.html" class="brand">
-        <img src="logo.png" alt="Brilliant Unicorn logo" />
-        <span>Brilliant Unicorn</span>
+        <img src="logo.png" alt="Brilliant Unicorn" />
+        Brilliant Unicorn
       </a>
-
-      <nav class="nav-links">
+      <nav>
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="products.html" class="active">Products</a>
         <a href="about.html">About</a>
-        <a href="mailto:info@brilliantunicorn.com" class="nav-cta">Contact</a>
+        <a href="mailto:info@brilliantunicorn.com">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">Brilliant Unicorn Academy</span>
-          <h1>3 premium digital courses for builders and founders.</h1>
-          <p>
-            Learn how to automate business workflows, structure companies more intelligently,
-            and create products built for long-term relevance and monetization.
-          </p>
-          <p>
-            These courses are delivered through Notion and designed to be practical,
-            direct, and commercially useful.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#courses" class="button">Explore Courses</a>
-            <a href="#bundle" class="button-secondary">Buy the Full Bundle</a>
-          </div>
-        </div>
-
-        <div class="hero-card">
-          <h3>What this includes</h3>
-          <ul>
-            <li>3 self-paced premium digital courses</li>
-            <li>Actionable frameworks for modern online business</li>
-            <li>Founder-focused guidance and practical execution</li>
-            <li>Simple access and direct implementation pathways</li>
-            <li>Premium bundle checkout powered by PayPal</li>
-          </ul>
+      <div class="container">
+        <h1>Premium Courses for Builders</h1>
+        <p>Practical, execution-focused digital learning: AI automation, smart company structure, and durable product creation — designed for founders, operators, and digital creators.</p>
+        <div>
+          <a href="#courses" class="btn">View Courses</a>
+          <a href="#bundle" class="btn btn-outline">Get the Bundle</a>
         </div>
       </div>
     </section>
 
-    <section class="section" id="courses">
+    <section id="courses">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Courses</span>
-          <h2>The Brilliant Unicorn Builder Series</h2>
-          <p>
-            A focused learning suite designed for freelancers, founders, consultants,
-            and operators who want better systems, stronger structure, and durable digital assets.
-          </p>
-        </div>
-
-        <div class="course-grid">
-          <article class="course-card">
-            <span class="course-tag">Course 01</span>
+        <h2>The Builder Series</h2>
+        <div class="grid">
+          <div class="card">
             <h3>AI Business Automation</h3>
-            <p>
-              Learn how to use AI tools and workflows to automate lead generation,
-              onboarding, operations, content support, and core business execution.
-            </p>
             <div class="price">$49</div>
-            <div class="small-note">Premium Notion-based course</div>
+            <div class="note">Notion-based • Self-paced</div>
+            <p>Automate leads, onboarding, operations, and workflows using real AI tools and practical systems.</p>
+            <a href="https://www.paypal.com/ncp/links/P4YZHZX9FEMCJ" class="btn" target="_blank">Buy Now</a>
+          </div>
 
-            <ul>
-              <li>AI workflows for real business operations</li>
-              <li>Automation ideas for service and digital businesses</li>
-              <li>Lead, admin, and process optimization systems</li>
-              <li>Execution-focused lessons you can apply fast</li>
-            </ul>
-
-            <div class="course-actions">
-              <a
-                href="mailto:info@brilliantunicorn.com?subject=AI%20Business%20Automation%20Course%20Access"
-                class="button-secondary"
-              >
-                Request Access
-              </a>
-            </div>
-          </article>
-
-          <article class="course-card">
-            <span class="course-tag">Course 02</span>
-            <h3>LLC and Umbrella Company Setup</h3>
-            <p>
-              A practical guide to thinking through company formation, structure,
-              operating models, and umbrella company frameworks for modern business.
-            </p>
+          <div class="card">
+            <h3>LLC & Umbrella Company Setup</h3>
             <div class="price">$39</div>
-            <div class="small-note">Premium Notion-based course</div>
+            <div class="note">Notion-based • Self-paced</div>
+            <p>Clear thinking on entity structure, operating models, and modern founder setups for global work.</p>
+            <a href="https://www.paypal.com/ncp/links/P4YZHZX9FEMCJ" class="btn" target="_blank">Buy Now</a>
+          </div>
 
-            <ul>
-              <li>Entity structure awareness for founders</li>
-              <li>Cleaner operational and ownership thinking</li>
-              <li>Practical setup direction for global work</li>
-              <li>Business positioning and structure fundamentals</li>
-            </ul>
-
-            <div class="course-actions">
-              <a
-                href="mailto:info@brilliantunicorn.com?subject=LLC%20and%20Umbrella%20Company%20Setup%20Course%20Access"
-                class="button-secondary"
-              >
-                Request Access
-              </a>
-            </div>
-          </article>
-
-          <article class="course-card">
-            <span class="course-tag">Course 03</span>
+          <div class="card">
             <h3>How to Create Products That Last</h3>
-            <p>
-              Learn how to build and position products with stronger market fit,
-              better utility, and lasting revenue potential in a fast-changing world.
-            </p>
             <div class="price">$39</div>
-            <div class="small-note">Premium Notion-based course</div>
+            <div class="note">Notion-based • Self-paced</div>
+            <p>Build digital products with strong positioning, longevity, and real revenue potential.</p>
+            <a href="https://www.paypal.com/ncp/links/P4YZHZX9FEMCJ" class="btn" target="_blank">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <ul>
-              <li>Durable product thinking and positioning</li>
-              <li>Long-term value creation principles</li>
-              <li>Revenue asset design for digital operators</li>
-              <li>Practical frameworks for stronger product decisions</li>
+    <section id="bundle" style="background:#0a0a0a;">
+      <div class="container">
+        <h2>Full Bundle – Best Value</h2>
+        <div class="grid" style="max-width:800px; margin:0 auto;">
+          <div class="card bundle-card">
+            <div class="best-value">Best Value – Save $28</div>
+            <h3>All 3 Courses</h3>
+            <div class="price">$99</div>
+            <p>Get instant access to the complete Builder Series: AI Automation + Company Setup + Durable Products.</p>
+            <ul style="margin:24px 0; padding-left:20px; color:var(--muted);">
+              <li>AI Business Automation</li>
+              <li>LLC and Umbrella Setup</li>
+              <li>Products That Last</li>
+              <li>One-time payment • Lifetime access</li>
             </ul>
-
-            <div class="course-actions">
-              <a
-                href="mailto:info@brilliantunicorn.com?subject=How%20to%20Create%20Products%20That%20Last%20Course%20Access"
-                class="button-secondary"
-              >
-                Request Access
-              </a>
-            </div>
-          </article>
+            <a href="https://www.paypal.com/ncp/links/P4YZHZX9FEMCJ" class="btn" target="_blank">Buy Bundle Now</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="bundle">
-      <div class="container bundle-wrap">
-        <div class="bundle-card">
-          <span class="eyebrow" style="background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.86);">Best Value</span>
-          <h2>Get the full course bundle</h2>
-          <p>
-            Buy all 3 courses together and get one complete learning system for
-            business automation, smarter company setup, and durable product creation.
-          </p>
-
-          <div class="price">$99</div>
-          <div class="small-note">Secure checkout via PayPal</div>
-
-          <ul>
-            <li>AI Business Automation</li>
-            <li>LLC and Umbrella Company Setup</li>
-            <li>How to Create Products That Last</li>
-            <li>One bundled offer for stronger value and simpler access</li>
-          </ul>
-
-          <a
-            href="https://www.paypal.com/ncp/links/P4YZHZX9FEMCJ"
-            class="button"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Buy the Full Bundle
-          </a>
-        </div>
-
-        <aside class="info-box">
-          <h3>How access works</h3>
-          <p>
-            After payment, course access can be delivered through your private Notion portal
-            or by direct email from Brilliant Unicorn.
-          </p>
-          <p>
-            For now, the bundle is the live checkout offer on the website, while single-course
-            buyers can request access directly by email.
-          </p>
-          <p>
-            This setup keeps your GitHub Pages site clean, fast, and easy to manage while
-            still allowing immediate monetization.
-          </p>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section">
+    <section>
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Why learn here</span>
-          <h2>Built for execution, monetization, and clarity.</h2>
-          <p>
-            These courses are designed to help you move from scattered ideas
-            into structured systems, useful products, and clearer business leverage.
-          </p>
-        </div>
-
-        <div class="why-grid">
-          <div class="info-box">
-            <h3>Practical frameworks</h3>
-            <p>
-              The material is built to be useful in the real world, not just inspirational.
-              You get ideas you can apply directly.
-            </p>
+        <h2>Why These Courses?</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Practical & Direct</h3>
+            <p>Execution-focused frameworks you can apply immediately – no fluff.</p>
           </div>
-
-          <div class="info-box">
-            <h3>Founder-oriented</h3>
-            <p>
-              Each course is designed for founders, freelancers, creators, and digital operators
-              building modern online businesses.
-            </p>
+          <div class="card">
+            <h3>Founder-First</h3>
+            <p>Built for real builders, freelancers, consultants, and digital operators.</p>
           </div>
-
-          <div class="info-box">
-            <h3>Revenue-minded</h3>
-            <p>
-              The focus is on helping you create better systems, stronger products,
-              and more monetizable digital assets over time.
-            </p>
+          <div class="card">
+            <h3>Revenue Oriented</h3>
+            <p>Tools to create systems, structure, and assets that generate lasting value.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section style="text-align:center; padding:80px 0;">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">FAQ</span>
-          <h2>Frequently asked questions</h2>
-        </div>
-
-        <div class="faq">
-          <div class="faq-item">
-            <h3>How do I access the courses?</h3>
-            <p>
-              After purchase or approval, course access is delivered through a private Notion setup
-              or direct email instructions from Brilliant Unicorn.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Can I buy one course only?</h3>
-            <p>
-              Yes. Single-course access is available by request, while the full bundle is the live
-              checkout offer currently available on the site.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Are the courses beginner-friendly?</h3>
-            <p>
-              Yes. They are structured to be accessible to beginners while still being valuable for
-              more experienced founders and digital operators.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>What is the best offer on the page?</h3>
-            <p>
-              The full bundle gives the strongest value because it combines all 3 courses into one
-              system for structure, automation, and product-building.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Can I contact Brilliant Unicorn before buying?</h3>
-            <p>
-              Yes. Reach out through
-              <a href="mailto:info@brilliantunicorn.com">info@brilliantunicorn.com</a>
-              for course questions, support, or custom requests.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta">
-      <div class="container">
-        <div class="cta-panel">
-          <span class="eyebrow">Start learning</span>
-          <h2>Turn your knowledge into systems, structure, and revenue.</h2>
-          <p>
-            Get the Brilliant Unicorn course bundle and start building smarter workflows,
-            better company foundations, and stronger digital products.
-          </p>
-
-          <div class="hero-actions" style="justify-content: center;">
-            <a
-              href="https://www.paypal.com/ncp/links/P4YZHZX9FEMCJ"
-              class="button"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Buy the Full Bundle
-            </a>
-            <a
-              href="mailto:info@brilliantunicorn.com?subject=Brilliant%20Unicorn%20Courses"
-              class="button-secondary"
-            >
-              Ask a Question
-            </a>
-          </div>
-        </div>
+        <h2>Questions?</h2>
+        <p style="margin-bottom:32px;">Reach out before buying or for custom needs.</p>
+        <a href="mailto:info@brilliantunicorn.com" class="btn">Contact Us</a>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <strong>Brilliant Unicorn</strong>
-        <p style="margin-top: 10px;">
-          Building practical digital products, founder-focused systems, and premium learning assets.
-        </p>
-        <p style="margin-top: 12px; margin-bottom: 0;">
-          Contact:
-          <a href="mailto:charlie@brilliantunicorn.com">charlie@brilliantunicorn.com</a>,
-          <a href="mailto:ceo@brilliantunicorn.com">ceo@brilliantunicorn.com</a>,
-          <a href="mailto:info@brilliantunicorn.com">info@brilliantunicorn.com</a>
-        </p>
-      </div>
-
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-      </div>
+  <footer>
+    <div class="container">
+      <p>Brilliant Unicorn — Digital Courses • Consulting • AI Systems</p>
+      <p style="margin:20px 0;">
+        <a href="mailto:info@brilliantunicorn.com">info@brilliantunicorn.com</a>
+      </p>
+      <!-- Simple footer signup -->
+      <form action="https://formspree.io/f/mlgpyrrb" method="POST" style="max-width:500px; margin:40px auto;">
+        <input type="email" name="email" placeholder="Stay updated — enter email" required />
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+      <p>&copy; Brilliant Unicorn</p>
     </div>
   </footer>
+
 </body>
 </html>
