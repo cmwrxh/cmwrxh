@@ -1,263 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Brilliant Unicorn LLC</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link rel="apple-touch-icon" href="logo.png" />
 
-<title>Services | Brilliant Unicorn</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-<script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --amber: #F59E0B;
+            --amber-dark: #D97706;
+            --bg: #000000;
+            --panel: rgba(255, 255, 255, 0.03);
+            --panel-border: rgba(255, 255, 255, 0.08);
+            --text: #F3F4F6;
+            --muted: rgba(243, 244, 246, 0.68);
+            --soft: rgba(243, 244, 246, 0.38);
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+        html {
+            scroll-behavior: smooth;
+        }
 
-<style>
+        body {
+            background:
+                radial-gradient(circle at top, rgba(245, 158, 11, 0.08), transparent 30%),
+                #000000;
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+        }
 
-body{
-background:#000;
-color:#F3F4F6;
-font-family:Inter;
-}
+        .serif { font-family: 'Playfair Display', serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
 
-.serif{
-font-family:"Playfair Display";
-}
+        .glass-card {
+            background: var(--panel);
+            border: 1px solid var(--panel-border);
+            backdrop-filter: blur(10px);
+            transition: all 0.35s ease;
+        }
 
-.mono{
-font-family:"JetBrains Mono";
-}
+        .glass-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(245, 158, 11, 0.45);
+            background: rgba(255, 255, 255, 0.045);
+            box-shadow: 0 0 30px rgba(245, 158, 11, 0.08);
+        }
 
-.card{
-background:rgba(255,255,255,0.03);
-border:1px solid rgba(255,255,255,0.06);
-transition:.3s;
-}
+        .nav-border {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
 
-.card:hover{
-border-color:#F59E0B;
-transform:translateY(-3px);
-}
+        .section-border {
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
 
-</style>
+        .logo-glow {
+            filter: drop-shadow(0 0 34px rgba(245, 158, 11, 0.18));
+        }
 
+        .btn-primary {
+            background: var(--amber);
+            color: #000;
+            border: 1px solid var(--amber);
+            transition: all 0.25s ease;
+        }
+
+        .btn-primary:hover {
+            background: var(--amber-dark);
+            border-color: var(--amber-dark);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            border: 1px solid rgba(245, 158, 11, 0.55);
+            color: var(--text);
+            transition: all 0.25s ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--amber);
+            background: rgba(245, 158, 11, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        .soft {
+            color: var(--soft);
+        }
+
+        .hero-grid {
+            background-image:
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+        }
+    </style>
 </head>
-
-<body>
-
-
-<!-- NAV -->
-
-<nav class="max-w-6xl mx-auto px-6 py-8 flex justify-between">
-
-<div class="serif text-2xl">
-Brilliant Unicorn
-</div>
-
-<div class="mono text-xs space-x-6">
-
-<a href="index.html">Home</a>
-
-<a href="services.html" class="text-amber-400">Services</a>
-
-<a href="products.html">Products</a>
-
-<a href="about.html">About</a>
-
-</div>
-
-</nav>
-
-
-<!-- HERO -->
-
-<section class="max-w-5xl mx-auto px-6 py-20">
-
-<h1 class="serif text-6xl mb-8">
-
-Consulting Services for
-<span class="text-amber-400">Automation, Data & Infrastructure</span>
-
-</h1>
-
-<p class="text-xl opacity-60 max-w-3xl">
-
-Brilliant Unicorn helps companies design and build
-automation systems, analytics platforms, and secure
-backend infrastructure that scale with their operations.
-
-</p>
-
-</section>
-
-
-
-<!-- SERVICES -->
-
-<section class="max-w-6xl mx-auto px-6 pb-32 grid md:grid-cols-3 gap-8">
-
-<!-- SERVICE 1 -->
-
-<div class="card p-8">
-
-<h3 class="mono text-amber-400 text-xs uppercase mb-4">
-AI Workflow Automation
-</h3>
-
-<p class="opacity-60 mb-6">
-
-Automation systems that connect APIs,
-internal tools, and AI workflows to
-remove manual operational work.
-
-</p>
-
-<ul class="text-sm opacity-40 space-y-2">
-
-<li>Lead automation systems</li>
-
-<li>Workflow automation</li>
-
-<li>API integrations</li>
-
-<li>Internal business tools</li>
-
-</ul>
-
-</div>
-
-
-
-<!-- SERVICE 2 -->
-
-<div class="card p-8">
-
-<h3 class="mono text-amber-400 text-xs uppercase mb-4">
-Data Platforms & Analytics
-</h3>
-
-<p class="opacity-60 mb-6">
-
-Data pipelines and analytics systems
-that transform operational data into
-clear reporting and business insights.
-
-</p>
-
-<ul class="text-sm opacity-40 space-y-2">
-
-<li>Data ingestion pipelines</li>
-
-<li>Validation layers</li>
-
-<li>Analytics dashboards</li>
-
-<li>Business intelligence systems</li>
-
-</ul>
-
-</div>
-
-
-
-<!-- SERVICE 3 -->
-
-<div class="card p-8">
-
-<h3 class="mono text-amber-400 text-xs uppercase mb-4">
-Secure Backend Infrastructure
-</h3>
-
-<p class="opacity-60 mb-6">
-
-Architecture and deployment of
-reliable backend systems designed
-with security-first engineering.
-
-</p>
-
-<ul class="text-sm opacity-40 space-y-2">
-
-<li>API architecture</li>
-
-<li>Backend services</li>
-
-<li>Cloud infrastructure</li>
-
-<li>System reliability</li>
-
-</ul>
-
-</div>
-
-</section>
-
-
-
-<!-- PROCESS -->
-
-<section class="max-w-6xl mx-auto px-6 pb-32">
-
-<h2 class="serif text-4xl mb-12">
-How We Work
-</h2>
-
-<div class="grid md:grid-cols-4 gap-6 mono text-xs">
-
-<div class="card p-6">
-01 — Discovery
-</div>
-
-<div class="card p-6">
-02 — Architecture
-</div>
-
-<div class="card p-6">
-03 — Build
-</div>
-
-<div class="card p-6">
-04 — Deployment
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- CTA -->
-
-<section class="text-center pb-32">
-
-<h2 class="serif text-4xl mb-6">
-Need Reliable Systems?
-</h2>
-
-<p class="opacity-50 mb-10">
-Contact Brilliant Unicorn to discuss your project.
-</p>
-
-<a href="mailto:hello@brilliantunicorn.com"
-class="bg-amber-400 text-black px-6 py-3 mono text-xs uppercase">
-
-Book Consultation
-
-</a>
-
-</section>
-
-
-
-<!-- FOOTER -->
-
-<footer class="max-w-6xl mx-auto px-6 pb-16 border-t border-white/10 pt-10">
-
-<p class="mono text-xs opacity-40">
-© 2026 Brilliant Unicorn LLC
-</p>
-
-</footer>
-
+<body class="antialiased selection:bg-amber-500/30">
+
+    <!-- NAV -->
+    <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between nav-border sticky top-0 bg-black/75 backdrop-blur z-50">
+        <a href="index.html" class="flex items-center gap-4">
+            <img src="logo.png" alt="Brilliant Unicorn Logo" class="w-20 h-20 rounded-full border border-amber-500/20 logo-glow object-cover" />
+            <div>
+                <p class="serif text-xl md:text-2xl font-bold tracking-wide">
+                    Brilliant Unicorn <span class="text-amber-400">LLC</span>
+                </p>
+                <p class="mono text-xs uppercase tracking-[0.28em] soft mt-1">
+                    Services
+                </p>
+            </div>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8 mono text-xs uppercase tracking-[0.18em] text-white/70">
+            <a href="index.html" class="hover:text-amber-400 transition">Home</a>
+            <a href="services.html" class="text-amber-400">Services</a>
+            <a href="products.html" class="hover:text-amber-400 transition">Products</a>
+            <a href="about.html" class="hover:text-amber-400 transition">About</a>
+            <a href="#contact" class="hover:text-amber-400 transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="relative overflow-hidden">
+        <div class="absolute inset-0 hero-grid opacity-40 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 py-20 md:py-28 relative">
+            <div class="max-w-5xl">
+                <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-6">
+                    Consulting Services
+                </p>
+
+                <h1 class="serif text-4xl md:text-6xl font-bold leading-tight tracking-tight max-w-5xl">
+                    Consulting Services for
+                    <span class="text-amber-400">Automation, Data & Infrastructure</span>
+                </h1>
+
+                <p class="mt-8 text-base md:text-lg muted max-w-3xl leading-relaxed">
+                    Brilliant Unicorn helps companies design and build automation systems,
+                    analytics platforms, and secure backend infrastructure that improve execution,
+                    visibility, and long-term reliability.
+                </p>
+
+                <div class="mt-10 flex flex-col sm:flex-row gap-4">
+                    <a href="#offers" class="btn-primary inline-flex items-center justify-center px-7 py-4 rounded-sm mono text-xs uppercase tracking-[0.18em] font-medium">
+                        Explore Services
+                    </a>
+                    <a href="mailto:ceo@brilliantunicorn.com?subject=Consultation%20Request%20-%20Brilliant%20Unicorn" class="btn-secondary inline-flex items-center justify-center px-7 py-4 rounded-sm mono text-xs uppercase tracking-[0.18em] font-medium">
+                        Book Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6">
+
+        <!-- SERVICE OVERVIEW -->
+        <section id="offers" class="py-20">
+            <div class="grid md:grid-cols-3 gap-6 text-left">
+                <div class="border border-white/8 p-5 rounded-sm">
+                    <p class="mono text-xs uppercase tracking-[0.2em] text-amber-400 mb-2">Automation Systems</p>
+                    <p class="text-base text-white/60 leading-relaxed">
+                        Workflow and API-driven systems that reduce manual operations.
+                    </p>
+                </div>
+                <div class="border border-white/8 p-5 rounded-sm">
+                    <p class="mono text-xs uppercase tracking-[0.2em] text-amber-400 mb-2">Data Platforms</p>
+                    <p class="text-base text-white/60 leading-relaxed">
+                        Reporting, analytics, and pipeline systems that make operations measurable.
+                    </p>
+                </div>
+                <div class="border border-white/8 p-5 rounded-sm">
+                    <p class="mono text-xs uppercase tracking-[0.2em] text-amber-400 mb-2">Secure Delivery</p>
+                    <p class="text-base text-white/60 leading-relaxed">
+                        Backend and infrastructure foundations designed for reliability and control.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CORE SERVICES -->
+        <section class="py-20 section-border">
+            <div class="max-w-3xl mb-12">
+                <p class="mono text-xs uppercase tracking-[0.3em] soft mb-4">Core Services</p>
+                <h2 class="serif text-3xl md:text-4xl font-semibold mb-5">What We Help Companies Build</h2>
+                <p class="text-base md:text-lg muted leading-relaxed">
+                    Each engagement is designed to solve a clear business problem:
+                    too much manual work, weak internal systems, unreliable reporting, or fragile infrastructure.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-sm">
+                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">AI Workflow Automation</h3>
+                    <p class="text-base text-white/65 leading-relaxed mb-5">
+                        Automation systems that connect internal tools, APIs, and AI workflows
+                        to remove repetitive operational work.
+                    </p>
+                    <ul class="space-y-2 text-base text-white/50">
+                        <li>• Lead automation systems</li>
+                        <li>• Workflow automation</li>
+                        <li>• API integrations</li>
+                        <li>• Internal business tools</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-8 rounded-sm">
+                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">Data Platforms & Analytics</h3>
+                    <p class="text-base text-white/65 leading-relaxed mb-5">
+                        Data pipelines and analytics systems that transform operational data
+                        into clear reporting and usable business insight.
+                    </p>
+                    <ul class="space-y-2 text-base text-white/50">
+                        <li>• Data ingestion pipelines</li>
+                        <li>• Validation layers</li>
+                        <li>• Analytics dashboards</li>
+                        <li>• Business intelligence systems</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-8 rounded-sm">
+                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">Secure Backend Infrastructure</h3>
+                    <p class="text-base text-white/65 leading-relaxed mb-5">
+                        Architecture and deployment of reliable backend systems built
+                        with security-first engineering and operational discipline.
+                    </p>
+                    <ul class="space-y-2 text-base text-white/50">
+                        <li>• API architecture</li>
+                        <li>• Backend services</li>
+                        <li>• Cloud infrastructure</li>
+                        <li>• System reliability</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENGAGEMENT TYPES -->
+        <section class="py-20 section-border">
+            <div class="max-w-3xl mb-12">
+                <p class="mono text-xs uppercase tracking-[0.3em] soft mb-4">Engagement Models</p>
+                <h2 class="serif text-3xl md:text-4xl font-semibold mb-5">How We Work With Clients</h2>
+                <p class="text-base md:text-lg muted leading-relaxed">
+                    Engagements are structured to create clarity quickly and move toward practical delivery.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="glass-card p-8 rounded-sm">
+                    <p class="mono text-xs uppercase tracking-[0.18em] text-amber-400 mb-4">Consulting & Technical Advisory</p>
+                    <h3 class="serif text-2xl md:text-3xl font-semibold mb-4">Clarity Before Build</h3>
+                    <p class="text-base text-white/65 leading-relaxed mb-5">
+                        For founders and teams that need technical direction before implementation.
+                        We map the system, define architecture, identify constraints, and turn complexity into a delivery plan.
+                    </p>
+                    <ul class="space-y-2 text-base text-white/50">
+                        <li>• System architecture direction</li>
+                        <li>• Automation strategy</li>
+                        <li>• Infrastructure recommendations</li>
+                        <li>• Security and reliability review</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-8 rounded-sm">
+                    <p class="mono text-xs uppercase tracking-[0.18em] text-amber-400 mb-4">Build & Delivery</p>
+                    <h3 class="serif text-2xl md:text-3xl font-semibold mb-4">Execution That Ships</h3>
+                    <p class="text-base text-white/65 leading-relaxed mb-5">
+                        For teams that need working systems, not just advice.
+                        We design, build, configure, and deploy the core system required for dependable operation.
+                    </p>
+                    <ul class="space-y-2 text-base text-white/50">
+                        <li>• Workflow and backend implementation</li>
+                        <li>• Dashboard and reporting buildout</li>
+                        <li>• Deployment and launch support</li>
+                        <li>• Iteration toward stable production use</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHO IT'S FOR -->
+        <section class="py-20 section-border">
+            <div class="max-w-3xl mb-12">
+                <p class="mono text-xs uppercase tracking-[0.3em] soft mb-4">Best Fit</p>
+                <h2 class="serif text-3xl md:text-4xl font-semibold mb-5">Who These Services Are For</h2>
+                <p class="text-base md:text-lg muted leading-relaxed">
+                    Brilliant Unicorn works best with companies that are growing and need systems
+                    that make execution cleaner, more reliable, and easier to scale.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="glass-card p-8 rounded-sm">
+                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">Consulting Firms</h3>
+                    <p class="text-base text-white/55 leading-relaxed">
+                        Firms that need internal automation, client reporting systems, and smoother delivery workflows.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-sm">
+                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">SaaS Companies</h3>
+                    <p class="text-base text-white/55 leading-relaxed">
+                        Teams that need backend support systems, analytics infrastructure, and scalable internal tools.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-sm">
+                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">Startups</h3>
+                    <p class="text-base text-white/55 leading-relaxed">
+                        Startups that want to automate operations early and avoid fragile technical foundations.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-sm">
+                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">Founder-Led Teams</h3>
+                    <p class="text-base text-white/55 leading-relaxed">
+                        Operators who need reliable systems for visibility, control, and repeatable execution.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section class="py-20 section-border">
+            <div class="glass-card rounded-sm p-8 md:p-12">
+                <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-10 items-start">
+                    <div>
+                        <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-4">Process</p>
+                        <h2 class="serif text-3xl md:text-4xl font-semibold mb-5">A Clean Delivery Flow</h2>
+                        <p class="text-base md:text-lg muted leading-relaxed">
+                            Engagements move from clarity to execution without unnecessary complexity.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="border border-white/10 p-5 rounded-sm">
+                            <p class="mono text-xs uppercase tracking-[0.18em] text-amber-400 mb-2">01 • Discovery</p>
+                            <p class="text-base text-white/60">Understand the business problem, workflow, and technical constraints.</p>
+                        </div>
+                        <div class="border border-white/10 p-5 rounded-sm">
+                            <p class="mono text-xs uppercase tracking-[0.18em] text-amber-400 mb-2">02 • Design</p>
+                            <p class="text-base text-white/60">Define architecture, systems map, scope, and operating model.</p>
+                        </div>
+                        <div class="border border-white/10 p-5 rounded-sm">
+                            <p class="mono text-xs uppercase tracking-[0.18em] text-amber-400 mb-2">03 • Build</p>
+                            <p class="text-base text-white/60">Implement workflows, backend systems, dashboards, or infrastructure.</p>
+                        </div>
+                        <div class="border border-white/10 p-5 rounded-sm">
+                            <p class="mono text-xs uppercase tracking-[0.18em] text-amber-400 mb-2">04 • Deploy</p>
+                            <p class="text-base text-white/60">Launch, stabilize, refine, and prepare for dependable ongoing use.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-20 section-border">
+            <div class="glass-card rounded-sm p-8 md:p-12">
+                <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 items-center">
+                    <div>
+                        <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-4">Need Reliable Systems?</p>
+                        <h2 class="serif text-3xl md:text-4xl font-semibold mb-5">Let’s Discuss Your Project</h2>
+                        <p class="text-base md:text-lg muted leading-relaxed max-w-2xl">
+                            If your company needs automation, analytics infrastructure, or secure backend architecture,
+                            Brilliant Unicorn can help you move from manual operations to dependable systems.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col gap-4">
+                        <a href="mailto:ceo@brilliantunicorn.com?subject=Consultation%20Request%20-%20Brilliant%20Unicorn" class="btn-primary inline-flex items-center justify-center px-7 py-4 rounded-sm mono text-xs uppercase tracking-[0.18em] font-medium">
+                            Book Consultation
+                        </a>
+                        <a href="mailto:charlie@brilliantunicorn.com?subject=Project%20Inquiry%20-%20Brilliant%20Unicorn" class="btn-secondary inline-flex items-center justify-center px-7 py-4 rounded-sm mono text-xs uppercase tracking-[0.18em] font-medium">
+                            Email Charlie
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="py-20 section-border">
+            <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-start">
+                <div>
+                    <p class="mono text-xs uppercase tracking-[0.3em] soft mb-4">Contact</p>
+                    <h2 class="serif text-3xl md:text-4xl font-semibold mb-5">Start the Conversation</h2>
+                    <p class="text-base md:text-lg muted leading-relaxed max-w-2xl mb-6">
+                        Reach out if you need a founder-led partner to help architect, build, or improve your systems.
+                    </p>
+                    <p class="text-base text-white/60 leading-relaxed max-w-2xl">
+                        We work with consulting firms, SaaS companies, and founder-led teams that want clean automation,
+                        reliable reporting, and secure technical foundations.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 rounded-sm">
+                    <p class="mono text-xs uppercase tracking-[0.18em] text-amber-400 mb-5">Email Channels</p>
+                    <div class="space-y-4 text-white/70">
+                        <p class="text-base">Use any of the addresses below:</p>
+                        <a href="mailto:charlie@brilliantunicorn.com" class="block text-base md:text-lg hover:text-amber-400 transition">
+                            charlie@brilliantunicorn.com
+                        </a>
+                        <a href="mailto:ceo@brilliantunicorn.com" class="block text-base md:text-lg hover:text-amber-400 transition">
+                            ceo@brilliantunicorn.com
+                        </a>
+                        <a href="mailto:info@brilliantunicorn.com" class="block text-base md:text-lg hover:text-amber-400 transition">
+                            info@brilliantunicorn.com
+                        </a>
+                    </div>
+
+                    <a
+                        href="mailto:ceo@brilliantunicorn.com?subject=Consultation%20Request%20-%20Brilliant%20Unicorn"
+                        class="btn-primary inline-flex items-center justify-center px-7 py-4 rounded-sm mono text-xs uppercase tracking-[0.18em] mt-8 w-full"
+                    >
+                        Request Consultation
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="max-w-7xl mx-auto px-6 pt-10 pb-16 border-t border-white/5">
+        <div class="grid md:grid-cols-3 gap-12">
+            <div>
+                <p class="serif text-xl font-bold mb-3">
+                    Brilliant Unicorn <span class="text-amber-400">LLC</span>
+                </p>
+                <p class="text-base text-white/50 leading-relaxed max-w-sm">
+                    Automation systems, analytics infrastructure, and secure backend delivery for modern companies.
+                </p>
+            </div>
+
+            <div class="mono text-xs uppercase tracking-[0.18em] text-white/45 space-y-3">
+                <p><a href="index.html" class="hover:text-amber-400 transition">Home</a></p>
+                <p><a href="products.html" class="hover:text-amber-400 transition">Products</a></p>
+                <p><a href="about.html" class="hover:text-amber-400 transition">About</a></p>
+                <p><a href="#contact" class="hover:text-amber-400 transition">Contact</a></p>
+            </div>
+
+            <div class="text-left md:text-right">
+                <p class="mono text-xs uppercase tracking-[0.18em] text-white/35 mb-3">Network Status</p>
+                <p class="text-base text-white/55">Encrypted & Active</p>
+                <p class="text-base text-white/40 mt-2">Built in Kenya for global delivery</p>
+                <p class="text-base text-white/35 mt-4">© 2026 Charles Mwaura</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
