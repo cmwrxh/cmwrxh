@@ -11,5 +11,8 @@
         }
       ]
     }
+  ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/404.html", "has": [{ "type": "header", "key": "x-vercel-id" }] }
   ]
 }
