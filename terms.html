@@ -1,15 +1,44 @@
-<section class="max-w-4xl mx-auto py-12 px-6">
-  <h1 class="text-3xl font-bold mb-6">Terms of Service</h1>
-  <p class="mb-4">By using Brilliant Unicorn LLC services, you agree to the following terms.</p>
-  
-  <h2 class="text-xl font-semibold mt-6 mb-2">1. No Financial Advice</h2>
-  <p>The Resilient Quant Engine (RQE) and related software are tools for informational and educational purposes only. Brilliant Unicorn LLC is not a financial advisor. You use these tools at your own risk.</p>
-  
-  <h2 class="text-xl font-semibold mt-6 mb-2">2. Intellectual Property</h2>
-  <p>All code, unless explicitly stated as Open Source, remains the property of Brilliant Unicorn LLC. Unauthorized redistribution is prohibited.</p>
-  
-  <h2 class="text-xl font-semibold mt-6 mb-2">3. Limitation of Liability</h2>
-  <p>Brilliant Unicorn LLC shall not be liable for any direct or indirect damages resulting from the use or inability to use our systems or frameworks.</p>
-  
-  <p class="mt-8">Governing Law: Republic of Kenya</p>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Service | Brilliant Unicorn</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <style>
+        :root { --amber: #F59E0B; --bg: #000000; --panel: rgba(255, 255, 255, 0.03); --panel-border: rgba(255, 255, 255, 0.08); --text: #F3F4F6; }
+        body { background: radial-gradient(circle at top, rgba(245, 158, 11, 0.05), transparent 40%), #000; color: var(--text); font-family: 'Inter', sans-serif; }
+        .serif { font-family: 'Playfair Display', serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .glass-card { background: var(--panel); border: 1px solid var(--panel-border); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="antialiased">
+    <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between border-b border-white/5 sticky top-0 bg-black/75 backdrop-blur z-50">
+        <a href="/" class="serif text-xl font-bold tracking-wide">Brilliant Unicorn <span class="text-amber-400">LLC</span></a>
+        <a href="/" class="mono text-[10px] uppercase tracking-widest text-amber-400">← Back to Home</a>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-20">
+        <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-4">Legal Framework</p>
+        <h1 class="serif text-5xl font-bold mb-12">Terms of Service</h1>
+        
+        <div class="glass-card p-8 md:p-12 rounded-sm space-y-8 leading-relaxed text-white/70">
+            <section>
+                <h2 class="mono text-amber-400 uppercase text-sm mb-4 tracking-widest font-bold">01. Acceptance of Terms</h2>
+                <p>By accessing Brilliant Unicorn LLC services, you agree to be bound by these sovereign engineering standards. If you do not agree, you must cease use of our infrastructure immediately.</p>
+            </section>
+            <section>
+                <h2 class="mono text-amber-400 uppercase text-sm mb-4 tracking-widest font-bold">02. No Financial Advice</h2>
+                <p>Software such as RQE (Resilient Quant Engine) is provided for informational and analytical purposes only. We are engineers, not financial advisors. All high-throughput logic is used at your own risk.</p>
+            </section>
+            <section>
+                <h2 class="mono text-amber-400 uppercase text-sm mb-4 tracking-widest font-bold">03. Intellectual Property</h2>
+                <p>All proprietary code, SIMD optimizations, and design patterns remain the exclusive property of Brilliant Unicorn LLC unless explicitly released under an Open Source license.</p>
+            </section>
+        </div>
+    </main>
+    <script src="footer.js"></script>
+</body>
+</html>
