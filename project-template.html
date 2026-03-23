@@ -90,26 +90,25 @@
         <div class="absolute inset-0 hero-grid opacity-30 pointer-events-none"></div>
         <div class="max-w-5xl mx-auto px-6 relative">
             <div class="flex gap-3 mb-8">
-                <span class="tech-tag mono uppercase tracking-widest">Pillar // FinTech</span>
-                <span class="tech-tag mono uppercase tracking-widest">Status // Active</span>
+                <span id="project-pillar" class="tech-tag mono uppercase tracking-widest">Pillar // Systems & Resilience</span>
+                <span id="project-status" class="tech-tag mono uppercase tracking-widest">Status // Active</span>
             </div>
-            <h1 class="serif text-5xl md:text-7xl font-bold mb-8">RQE-Pulse-v3</h1>
-            <p class="text-xl text-white/60 max-w-2xl leading-relaxed">
-                Institutional-grade hybrid execution suite designed for high-frequency market intelligence and trend orchestration across multi-asset classes.
+            <h1 id="project-title" class="serif text-5xl md:text-7xl font-bold mb-8">Unicorn-OS</h1>
+            <p id="project-description" class="text-xl text-white/60 max-w-2xl leading-relaxed">
+                A living reliability environment designed to self-test, intentionally fault, and document recovery patterns for distributed networks.
             </p>
         </div>
     </header>
 
     <main class="max-w-5xl mx-auto px-6 py-20">
-        
         <div class="grid lg:grid-cols-[1.5fr_1fr] gap-16">
             
             <div class="space-y-16">
                 <section>
                     <h3 class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-8">01 // Problem Statement</h3>
-                    <div class="text-white/70 leading-relaxed space-y-4">
-                        <p>Standard retail tools often fail to provide the deterministic execution required for high-volume asset management. Under extreme market volatility, latency spikes and data corruption become systemic risks.</p>
-                        <p>RQE-Pulse was engineered to solve for reliability first, ensuring that data integrity remains uncompromised regardless of market throughput.</p>
+                    <div id="problem-text" class="text-white/70 leading-relaxed space-y-4">
+                        <p>Modern distributed systems fail in unpredictable ways. Traditional staging environments fail to simulate "cascading failures"—the type of silent, creeping data corruption that destroys institutional trust.</p>
+                        <p>The challenge was to build a dedicated reliability lab that treats failure as a first-class citizen of the operating cycle.</p>
                     </div>
                 </section>
 
@@ -117,20 +116,20 @@
                     <h3 class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-8">02 // Implementation</h3>
                     <div class="glass-card p-8 md:p-12 rounded-sm space-y-8">
                         <div class="space-y-4">
-                            <h4 class="serif text-2xl font-bold text-white tracking-tight">AlphaCore Integration</h4>
-                            <p class="text-white/50 leading-relaxed">
-                                Utilizing the <span class="text-amber-400">AlphaCore orchestration layer</span>, the system employs an event-driven architecture that synchronizes ingestion from multiple WebSocket feeds with sub-millisecond precision.
+                            <h4 id="implementation-title" class="serif text-2xl font-bold text-white tracking-tight">Chaos Orchestration Layer</h4>
+                            <p id="implementation-text" class="text-white/50 leading-relaxed">
+                                Utilizing custom fault-injection hooks, the system intentionally disrupts the <span class="text-amber-400">AlphaCore framework</span> during high-throughput states to observe and document autonomous recovery protocols.
                             </p>
                         </div>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="p-6 border border-white/5 bg-white/[0.02] rounded-sm">
-                                <p class="mono text-[10px] text-amber-500 uppercase tracking-widest mb-2">Security</p>
-                                <p class="text-sm font-medium">AES-256 State Encryption</p>
+                                <p id="feature-1-label" class="mono text-[10px] text-amber-500 uppercase tracking-widest mb-2">Resilience</p>
+                                <p id="feature-1-val" class="text-sm font-medium">Automated Fault Recovery</p>
                             </div>
                             <div class="p-6 border border-white/5 bg-white/[0.02] rounded-sm">
-                                <p class="mono text-[10px] text-amber-500 uppercase tracking-widest mb-2">Integrity</p>
-                                <p class="text-sm font-medium">Checksum validation layers</p>
+                                <p id="feature-2-label" class="mono text-[10px] text-amber-500 uppercase tracking-widest mb-2">Analytics</p>
+                                <p id="feature-2-val" class="text-sm font-medium">Real-time Latency Profiling</p>
                             </div>
                         </div>
                     </div>
@@ -144,33 +143,33 @@
                     <ul class="space-y-6">
                         <li class="flex justify-between items-end border-b border-white/5 pb-2">
                             <span class="mono text-[10px] uppercase text-white/30">Registry</span>
-                            <span class="text-xs font-medium tracking-tight">BRU-INF-092</span>
+                            <span id="spec-registry" class="text-xs font-medium tracking-tight">BRU-SYS-101</span>
                         </li>
                         <li class="flex justify-between items-end border-b border-white/5 pb-2">
                             <span class="mono text-[10px] uppercase text-white/30">Architecture</span>
-                            <span class="text-xs font-medium tracking-tight">Distributed / Hybrid</span>
+                            <span id="spec-arch" class="text-xs font-medium tracking-tight">Distributed / Resilience Lab</span>
                         </li>
                         <li class="flex justify-between items-end border-b border-white/5 pb-2">
                             <span class="mono text-[10px] uppercase text-white/30">Stack</span>
-                            <span class="text-xs font-medium tracking-tight">Python • Rust • Vercel</span>
+                            <span id="spec-stack" class="text-xs font-medium tracking-tight">Rust • Docker • Prometheus</span>
                         </li>
                         <li class="flex justify-between items-end border-b border-white/5 pb-2">
-                            <span class="mono text-[10px] uppercase text-white/30">Encryption</span>
-                            <span class="text-xs font-medium tracking-tight">TLS 1.3 / mTLS</span>
+                            <span class="mono text-[10px] uppercase text-white/30">Security</span>
+                            <span id="spec-security" class="text-xs font-medium tracking-tight">mTLS / Isolated VPC</span>
                         </li>
                     </ul>
 
                     <div class="mt-12">
                         <h4 class="mono text-[10px] uppercase tracking-widest text-white/20 mb-6">Core Capability</h4>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-white/5 px-3 py-1 text-[10px] mono uppercase tracking-wider">Quant</span>
-                            <span class="bg-white/5 px-3 py-1 text-[10px] mono uppercase tracking-wider">WebSocket</span>
-                            <span class="bg-white/5 px-3 py-1 text-[10px] mono uppercase tracking-wider">Scalability</span>
+                        <div id="project-keywords" class="flex flex-wrap gap-2">
+                            <span class="bg-white/5 px-3 py-1 text-[10px] mono uppercase tracking-wider">Distributed</span>
+                            <span class="bg-white/5 px-3 py-1 text-[10px] mono uppercase tracking-wider">Chaos-Eng</span>
+                            <span class="bg-white/5 px-3 py-1 text-[10px] mono uppercase tracking-wider">Monitoring</span>
                         </div>
                     </div>
 
                     <a href="/contact" class="btn-primary block w-full text-center py-4 mt-12 rounded-sm text-[10px] font-bold">
-                        Request System Access
+                        Inquire About System
                     </a>
                 </div>
             </div>
