@@ -1,15 +1,44 @@
-<section class="max-w-4xl mx-auto py-12 px-6">
-  <h1 class="text-3xl font-bold mb-6">Refund Policy</h1>
-  <p class="mb-4">At Brilliant Unicorn LLC, we stand behind the quality of our engineering. However, due to the digital nature of our software and courses, we have a strict refund policy.</p>
-  
-  <h2 class="text-xl font-semibold mt-6 mb-2">1. Digital Products & Courses</h2>
-  <p>All sales of the "Builder Series" courses and digital downloads are final. Once access is granted, no refunds will be issued.</p>
-  
-  <h2 class="text-xl font-semibold mt-6 mb-2">2. SaaS Subscriptions (RQE & AlphaCore)</h2>
-  <p>Subscriptions may be canceled at any time. You will retain access until the end of your current billing cycle. We do not offer prorated refunds for partial months.</p>
-  
-  <h2 class="text-xl font-semibold mt-6 mb-2">3. Consulting Services</h2>
-  <p>Consulting deposits are non-refundable once work has commenced. Cancellations made 48 hours prior to a scheduled discovery call may be eligible for a full refund or rescheduling.</p>
-  
-  <p class="mt-8 text-sm text-gray-500">Contact: hello@brilliantunicorn.com</p>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Refund Policy | Brilliant Unicorn</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <style>
+        :root { --amber: #F59E0B; --bg: #000; --panel: rgba(255, 255, 255, 0.03); --panel-border: rgba(255, 255, 255, 0.08); --text: #F3F4F6; }
+        body { background: radial-gradient(circle at top, rgba(245, 158, 11, 0.05), transparent 40%), #000; color: var(--text); font-family: 'Inter', sans-serif; }
+        .serif { font-family: 'Playfair Display', serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .glass-card { background: var(--panel); border: 1px solid var(--panel-border); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="antialiased">
+    <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between border-b border-white/5 sticky top-0 bg-black/75 backdrop-blur z-50">
+        <a href="/" class="serif text-xl font-bold tracking-wide">Brilliant Unicorn <span class="text-amber-400">LLC</span></a>
+        <a href="/" class="mono text-[10px] uppercase tracking-widest text-amber-400">← Back to Home</a>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-20">
+        <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-4">Value Exchange</p>
+        <h1 class="serif text-5xl font-bold mb-12">Refund Policy</h1>
+        
+        <div class="glass-card p-8 md:p-12 rounded-sm space-y-8 leading-relaxed text-white/70">
+            <section>
+                <h2 class="mono text-amber-400 uppercase text-sm mb-4 tracking-widest font-bold">01. Digital Assets</h2>
+                <p>Due to the irrevocable nature of digital downloads and course access, all sales of "The Academy" products are final. No refunds will be issued once content has been accessed.</p>
+            </section>
+            <section>
+                <h2 class="mono text-amber-400 uppercase text-sm mb-4 tracking-widest font-bold">02. SaaS Subscriptions</h2>
+                <p>For RQE and AlphaCore, you may cancel at any time. We do not provide prorated refunds for the remaining period of a billing cycle.</p>
+            </section>
+            <section>
+                <h2 class="mono text-amber-400 uppercase text-sm mb-4 tracking-widest font-bold">03. Technical Failure</h2>
+                <p>If a product is technically non-functional, we will provide an immediate engineering fix. Refunds are only considered if a critical bug cannot be resolved within 14 business days.</p>
+            </section>
+        </div>
+    </main>
+    <script src="footer.js"></script>
+</body>
+</html>
