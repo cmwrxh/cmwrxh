@@ -62,6 +62,9 @@
             color: #000;
             border: 1px solid var(--amber);
             transition: all 0.25s ease;
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
         }
 
         .btn-primary:hover {
@@ -97,11 +100,9 @@
     <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between nav-border sticky top-0 bg-black/75 backdrop-blur z-50">
         <a href="/" class="flex items-center gap-4">
             <img src="logo.png" alt="Brilliant Unicorn Logo" class="w-16 h-16 rounded-full border border-amber-500/20 logo-glow object-cover" />
-            <div>
-                <p class="serif text-xl md:text-2xl font-bold tracking-wide">
-                    Brilliant Unicorn <span class="text-amber-400">LLC</span>
-                </p>
-            </div>
+            <p class="serif text-xl md:text-2xl font-bold tracking-wide text-white">
+                Brilliant Unicorn <span class="text-amber-400">LLC</span>
+            </p>
         </a>
 
         <div class="hidden md:flex items-center gap-8 mono text-xs uppercase tracking-[0.18em] text-white/70">
@@ -119,14 +120,14 @@
             <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-6">Consulting & Provisioning</p>
             <h1 class="serif text-4xl md:text-6xl font-bold leading-tight tracking-tight max-w-5xl">
                 Technical Systems for <br>
-                <span class="text-amber-400 italic">Scale & Resilience</span>
+                <span class="text-amber-400 italic">Scale & Resilience.</span>
             </h1>
             <p class="mt-8 text-base md:text-lg text-white/60 max-w-3xl leading-relaxed">
                 Brilliant Unicorn LLC architects automation ecosystems, quantitative data platforms, and secure backend infrastructure designed for high-throughput business execution.
             </p>
             <div class="mt-10 flex flex-col sm:flex-row gap-4">
-                <a href="#offers" class="btn-primary inline-flex items-center justify-center px-7 py-4 rounded-sm mono text-xs uppercase tracking-[0.18em] font-medium">Explore Capabilities</a>
-                <a href="/contact" class="border border-white/20 hover:border-amber-400 inline-flex items-center justify-center px-7 py-4 rounded-sm mono text-xs uppercase tracking-[0.18em] font-medium transition">Request Brief</a>
+                <a href="#offers" class="btn-primary inline-flex items-center justify-center px-7 py-4 rounded-sm font-medium">Explore Capabilities</a>
+                <a href="/contact" class="border border-white/20 hover:border-amber-400 inline-flex items-center justify-center px-7 py-4 rounded-sm mono text-xs uppercase tracking-[0.18em] font-medium transition text-white">Request Brief</a>
             </div>
         </div>
     </header>
@@ -137,17 +138,17 @@
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="glass-card p-8 rounded-sm">
                     <p class="mono text-[10px] uppercase tracking-[0.2em] text-amber-500 mb-4">01 // Automation</p>
-                    <h3 class="serif text-xl font-bold mb-3">Workflow Systems</h3>
+                    <h3 class="serif text-xl font-bold mb-3 text-white">Workflow Systems</h3>
                     <p class="text-sm text-white/50 leading-relaxed">API-driven orchestration that removes manual friction from high-volume operations.</p>
                 </div>
                 <div class="glass-card p-8 rounded-sm">
                     <p class="mono text-[10px] uppercase tracking-[0.2em] text-amber-500 mb-4">02 // Analytics</p>
-                    <h3 class="serif text-xl font-bold mb-3">Data Pipelines</h3>
+                    <h3 class="serif text-xl font-bold mb-3 text-white">Data Pipelines</h3>
                     <p class="text-sm text-white/50 leading-relaxed">Sub-millisecond ingestion and validation layers for institutional-grade reporting.</p>
                 </div>
                 <div class="glass-card p-8 rounded-sm">
                     <p class="mono text-[10px] uppercase tracking-[0.2em] text-amber-500 mb-4">03 // Security</p>
-                    <h3 class="serif text-xl font-bold mb-3">Secure Delivery</h3>
+                    <h3 class="serif text-xl font-bold mb-3 text-white">Secure Delivery</h3>
                     <p class="text-sm text-white/50 leading-relaxed">Hardened backend infrastructure built on zero-trust and mTLS architecture.</p>
                 </div>
             </div>
@@ -156,7 +157,7 @@
         <section class="py-20 section-border">
             <div class="max-w-3xl mb-12">
                 <p class="mono text-xs uppercase tracking-[0.3em] text-white/40 mb-4">Managed Infrastructure</p>
-                <h2 class="serif text-3xl md:text-4xl font-semibold mb-5">Flagship Managed Solutions</h2>
+                <h2 class="serif text-3xl md:text-4xl font-semibold mb-5 text-white">Flagship Managed Solutions</h2>
                 <p class="text-base md:text-lg text-white/60 leading-relaxed">
                     Production-grade platforms built by Brilliant Unicorn LLC. Available as managed SaaS with premium orchestration, monitoring, and enterprise-grade uptime.
                 </p>
@@ -165,7 +166,7 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="glass-card p-8 rounded-sm flex flex-col h-full border-amber-500/20">
                     <div class="saas-badge">Managed SaaS Available</div>
-                    <h3 class="serif text-xl font-semibold mb-3">RQE-Pulse-v3</h3>
+                    <h3 class="serif text-xl font-semibold mb-3 text-white">RQE-Pulse-v3</h3>
                     <p class="text-sm text-white/50 leading-relaxed mb-6 flex-grow">
                         Institutional quantitative engine for trend analysis and risk management. Features sub-millisecond data synchronization and audit-resilient validation.
                     </p>
@@ -174,7 +175,7 @@
                             <p>• $99/mo – Hosted Dashboards</p>
                             <p>• Alert Integration & 24/7 Monitoring</p>
                         </div>
-                        <a href="https://brilliantunicorn.com/checkout/buy/e4ede3ef-376e-462b-9517-19091009a9b1?embed=1" 
+                        <a href="https://brilliantunicorn.com/checkout/buy/e4ede3ef-376e-462b-9517-19091009a9b1" 
                            class="lemonsqueezy-button btn-primary w-full py-3 rounded-sm text-center mono text-[10px] font-bold block">
                            Subscribe to Pro
                         </a>
@@ -183,8 +184,8 @@
                 </div>
 
                 <div class="glass-card p-8 rounded-sm flex flex-col h-full">
-                    <div class="saas-badge">Enterprise Ready</div>
-                    <h3 class="serif text-xl font-semibold mb-3">AlphaCore Framework</h3>
+                    <div class="saas-badge text-white">Enterprise Ready</div>
+                    <h3 class="serif text-xl font-semibold mb-3 text-white">AlphaCore Framework</h3>
                     <p class="text-sm text-white/50 leading-relaxed mb-6 flex-grow">
                         High-performance async orchestration engine designed to prevent digital systems from crashing under extreme concurrent load.
                     </p>
@@ -193,7 +194,7 @@
                             <p>• $149/mo – Fully Managed Cluster</p>
                             <p>• Managed mTLS & Priority Support</p>
                         </div>
-                        <a href="/contact" class="border border-white/20 hover:border-amber-400 w-full py-3 rounded-sm text-center mono text-[10px] font-bold block transition">
+                        <a href="/contact" class="border border-white/20 hover:border-amber-400 w-full py-3 rounded-sm text-center mono text-[10px] font-bold block transition text-white">
                            Inquire for Access
                         </a>
                         <a href="https://github.com/cmwrxh/alpha-core-framework" class="block text-center text-[10px] mono text-white/30 hover:text-amber-400 transition">View Source Core</a>
@@ -201,8 +202,8 @@
                 </div>
 
                 <div class="glass-card p-8 rounded-sm flex flex-col h-full">
-                    <div class="saas-badge">Strategic Deployment</div>
-                    <h3 class="serif text-xl font-semibold mb-3">Kudu Biotech Platform</h3>
+                    <div class="saas-badge text-white">Strategic Deployment</div>
+                    <h3 class="serif text-xl font-semibold mb-3 text-white">Kudu Biotech Platform</h3>
                     <p class="text-sm text-white/50 leading-relaxed mb-6 flex-grow">
                         Edge-AI wildlife telemetry and immutable ledger systems for biological asset compliance and carbon monitoring.
                     </p>
@@ -211,7 +212,7 @@
                             <p>• $129/mo – Remote Instance</p>
                             <p>• Real-time Telemetry Analytics</p>
                         </div>
-                        <a href="/contact" class="border border-white/20 hover:border-amber-400 w-full py-3 rounded-sm text-center mono text-[10px] font-bold block transition">
+                        <a href="/contact" class="border border-white/20 hover:border-amber-400 w-full py-3 rounded-sm text-center mono text-[10px] font-bold block transition text-white">
                            Request Instance
                         </a>
                         <a href="/kudu-biotech" class="block text-center text-[10px] mono text-white/30 hover:text-amber-400 transition">View Specification</a>
@@ -253,7 +254,7 @@
     <footer class="max-w-7xl mx-auto px-6 py-20 border-t border-white/5">
         <div class="grid md:grid-cols-3 gap-12 mb-16">
             <div>
-                <p class="serif text-xl font-bold mb-4">Brilliant Unicorn <span class="text-amber-400">LLC</span></p>
+                <p class="serif text-xl font-bold mb-4 text-white">Brilliant Unicorn <span class="text-amber-400">LLC</span></p>
                 <p class="text-white/40 text-sm leading-relaxed max-w-xs">
                     Engineering resilient automation, quantitative platforms, and secure infrastructure.
                 </p>
