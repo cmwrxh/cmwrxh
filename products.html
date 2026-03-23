@@ -1,285 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Products | Brilliant Unicorn</title>
-  <meta name="description" content="Premium digital courses: AI Business Automation, LLC & Umbrella Setup, Products That Last – practical learning for founders and operators." />
-  
-  <link rel="icon" type="image/png" href="logo.png" />
-  
-  <!-- Vercel Web Analytics -->
-  <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
-  
-  <style>
-    :root {
-      --black: #000000;
-      --dark: #0a0a0a;
-      --yellow: #ffea00;     /* bright startup yellow */
-      --yellow-dark: #d4c200;
-      --text: #f0f0f0;
-      --muted: #bbbbbb;
-      --radius: 12px;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products | Brilliant Unicorn LLC</title>
+    <meta name="description" content="Premium digital courses: AI Business Automation, LLC & Umbrella Setup, Products That Last – practical learning for founders and operators." />
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: system-ui, -apple-system, sans-serif;
-      background: var(--black);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    a { color: var(--yellow); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link rel="apple-touch-icon" href="logo.png" />
 
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(0,0,0,0.85);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #222;
-      z-index: 100;
-      padding: 20px 0;
-    }
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 1.4rem;
-      font-weight: 900;
-      color: var(--yellow);
-    }
-    .brand img {
-      width: 90px;
-      height: 90px;
-      object-fit: contain;
-    }
-    nav a {
-      margin-left: 28px;
-      font-weight: 600;
-      color: var(--muted);
-    }
-    nav a.active, nav a:hover { color: var(--yellow); }
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-    .hero {
-      padding: 120px 0 80px;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: clamp(3rem, 8vw, 5.5rem);
-      margin-bottom: 24px;
-      color: var(--yellow);
-      line-height: 1.1;
-    }
-    .hero p {
-      font-size: 1.3rem;
-      max-width: 720px;
-      margin: 0 auto 40px;
-      color: var(--muted);
-    }
-    .btn {
-      display: inline-block;
-      background: var(--yellow);
-      color: #000;
-      font-weight: 800;
-      padding: 16px 32px;
-      border-radius: 999px;
-      margin: 12px;
-      transition: all 0.2s;
-    }
-    .btn:hover { background: var(--yellow-dark); transform: translateY(-2px); }
-    .btn-outline {
-      background: transparent;
-      border: 2px solid var(--yellow);
-      color: var(--yellow);
-    }
-    .btn-gumroad {
-      background: linear-gradient(135deg, var(--yellow), #ffd700);
-      color: #000;
-    }
+    <style>
+        :root {
+            --amber: #F59E0B;
+            --amber-dark: #D97706;
+            --bg: #000000;
+            --panel: rgba(255, 255, 255, 0.03);
+            --panel-border: rgba(255, 255, 255, 0.08);
+            --text: #F3F4F6;
+            --muted: rgba(243, 244, 246, 0.68);
+            --soft: rgba(243, 244, 246, 0.38);
+        }
 
-    section { padding: 100px 0; }
-    h2 { font-size: 3rem; color: var(--yellow); margin-bottom: 40px; text-align: center; }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 32px;
-    }
-    .card {
-      background: #111;
-      padding: 32px;
-      border-radius: var(--radius);
-      border: 1px solid #222;
-    }
-    .card h3 { color: var(--yellow); margin-bottom: 16px; font-size: 1.6rem; }
-    .price { color: var(--yellow); font-size: 2.2rem; font-weight: bold; margin: 16px 0; }
-    .note { color: var(--muted); font-size: 0.95rem; margin-bottom: 20px; }
+        html { scroll-behavior: smooth; }
 
-    .bundle-card {
-      background: linear-gradient(135deg, #1a1a00, #111100);
-      border: 2px solid var(--yellow);
-    }
-    .best-value {
-      display: inline-block;
-      background: var(--yellow);
-      color: #000;
-      padding: 6px 16px;
-      border-radius: 999px;
-      font-weight: 800;
-      font-size: 0.9rem;
-      margin-bottom: 16px;
-    }
+        body {
+            background: radial-gradient(circle at top, rgba(245, 158, 11, 0.08), transparent 30%), #000000;
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+        }
 
-    footer {
-      background: #000;
-      border-top: 1px solid #222;
-      padding: 60px 0 40px;
-      text-align: center;
-      color: var(--muted);
-    }
-    footer a { color: var(--yellow); }
+        .serif { font-family: 'Playfair Display', serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
 
-    @media (max-width: 768px) {
-      .hero { padding: 100px 0 60px; }
-      .nav { flex-direction: column; text-align: center; }
-      nav a { margin: 12px 20px; }
-      .brand img { width: 70px; height: 70px; }
-    }
-  </style>
+        .glass-card {
+            background: var(--panel);
+            border: 1px solid var(--panel-border);
+            backdrop-filter: blur(10px);
+            transition: all 0.35s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(245, 158, 11, 0.45);
+            background: rgba(255, 255, 255, 0.045);
+            box-shadow: 0 0 30px rgba(245, 158, 11, 0.08);
+        }
+
+        .nav-border { border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
+        .section-border { border-top: 1px solid rgba(255, 255, 255, 0.06); }
+
+        .logo-glow { filter: drop-shadow(0 0 34px rgba(245, 158, 11, 0.18)); }
+
+        .btn-primary {
+            background: var(--amber);
+            color: #000;
+            transition: all 0.25s ease;
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .btn-primary:hover {
+            background: var(--amber-dark);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            border: 1px solid rgba(245, 158, 11, 0.55);
+            color: var(--text);
+            transition: all 0.25s ease;
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--amber);
+            background: rgba(245, 158, 11, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .hero-grid {
+            background-image:
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+        }
+
+        .badge-amber {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.15);
+            color: #F59E0B;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+        }
+    </style>
 </head>
-<body>
+<body class="antialiased selection:bg-amber-500/30">
 
-  <header>
-    <div class="container nav">
-      <a href="/" class="brand">
-        <img src="logo.png" alt="Brilliant Unicorn" />
-        Brilliant Unicorn
-      </a>
-      <nav>
-        <a href="/">Home</a>
-        <a href="services">Services</a>
-        <a href="products" class="active">Products</a>
-        <a href="about">About</a>
-        <a href="mailto:charlie@brilliantunicorn.com">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between nav-border sticky top-0 bg-black/75 backdrop-blur z-50">
+        <a href="/" class="flex items-center gap-4">
+            <img src="logo.png" alt="Brilliant Unicorn Logo" class="w-16 h-16 rounded-full border border-amber-500/20 logo-glow object-cover" />
+            <p class="serif text-xl md:text-2xl font-bold tracking-wide">
+                Brilliant Unicorn <span class="text-amber-400">LLC</span>
+            </p>
+        </a>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Premium Courses for Builders</h1>
-        <p>Practical, execution-focused digital learning: AI automation, smart company structure, and durable product creation — designed for founders, operators, and digital creators.</p>
-        <div>
-          <a href="#courses" class="btn">View Courses</a>
-          <a href="#bundle" class="btn btn-outline">Get the Bundle</a>
+        <div class="hidden md:flex items-center gap-8 mono text-[10px] uppercase tracking-[0.18em] text-white/70">
+            <a href="/" class="hover:text-amber-400 transition">Home</a>
+            <a href="services.html" class="hover:text-amber-400 transition">Services</a>
+            <a href="products.html" class="text-amber-400">Products</a>
+            <a href="about.html" class="hover:text-amber-400 transition">About</a>
+            <a href="contact.html" class="hover:text-amber-400 transition">Contact</a>
         </div>
-      </div>
-    </section>
+    </nav>
 
-    <section id="courses">
-      <div class="container">
-        <h2>The Builder Series</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>AI Business Automation</h3>
-            <div class="price">$49</div>
-            <div class="note">Notion-based • Self-paced</div>
-            <p>Automate leads, onboarding, operations, and workflows using real AI tools and practical systems.</p>
-            <a href="https://mwauracharles.gumroad.com/l/sdwxc" class="btn btn-gumroad" target="_blank" rel="noopener noreferrer">Get Access on Gumroad</a>
-          </div>
+    <header class="relative overflow-hidden py-24 md:py-32">
+        <div class="absolute inset-0 hero-grid opacity-40 pointer-events-none"></div>
 
-          <div class="card">
-            <h3>LLC & Umbrella Company Setup</h3>
-            <div class="price">$39</div>
-            <div class="note">Notion-based • Self-paced</div>
-            <p>Clear thinking on entity structure, operating models, and modern founder setups for global work.</p>
-            <a href="https://mwauracharles.gumroad.com" class="btn btn-gumroad" target="_blank" rel="noopener noreferrer">Get Access on Gumroad</a>
-          </div>
+        <div class="max-w-7xl mx-auto px-6 relative text-center">
+            <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-6">The Builder Series</p>
+            <h1 class="serif text-5xl md:text-7xl font-bold leading-tight tracking-tight mb-8">
+                Premium Courses <br><span class="text-amber-400">for Modern Builders</span>
+            </h1>
 
-          <div class="card">
-            <h3>How to Create Products That Last</h3>
-            <div class="price">$39</div>
-            <div class="note">Notion-based • Self-paced</div>
-            <p>Build digital products with strong positioning, longevity, and real revenue potential.</p>
-            <a href="https://mwauracharles.gumroad.com/l/smykd" class="btn btn-gumroad" target="_blank" rel="noopener noreferrer">Get Access on Gumroad</a>
-          </div>
+            <p class="text-lg md:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed mb-12">
+                Practical, execution-focused digital learning: AI automation, smart company structure, and durable product creation — designed for founders and operators.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#courses" class="btn-primary px-10 py-4 rounded-sm font-medium">View Courses</a>
+                <a href="#bundle" class="btn-secondary px-10 py-4 rounded-sm font-medium">Get the Bundle</a>
+            </div>
         </div>
-      </div>
-    </section>
+    </header>
 
-    <section id="bundle" style="background:#0a0a0a;">
-      <div class="container">
-        <h2>Full Bundle – Best Value</h2>
-        <div class="grid" style="max-width:800px; margin:0 auto;">
-          <div class="card bundle-card">
-            <div class="best-value">Best Value – Save $28</div>
-            <h3>All 3 Courses</h3>
-            <div class="price">$99</div>
-            <p>Get instant access to the complete Builder Series: AI Automation + Company Setup + Durable Products.</p>
-            <ul style="margin:24px 0; padding-left:20px; color:var(--muted); list-style-type: disc;">
-              <li>AI Business Automation</li>
-              <li>LLC and Umbrella Setup</li>
-              <li>Products That Last</li>
-              <li>One-time payment • Lifetime access</li>
-            </ul>
-            <a href="https://www.paypal.com/ncp/links/P4YZHZX9FEMCJ" class="btn" target="_blank" rel="noopener noreferrer">Buy Bundle Now (PayPal)</a>
-          </div>
+    <main class="max-w-7xl mx-auto px-6">
+
+        <section id="courses" class="py-20 section-border">
+            <div class="text-center mb-16">
+                <p class="mono text-xs uppercase tracking-[0.3em] text-white/40 mb-4">Curriculum</p>
+                <h2 class="serif text-3xl md:text-5xl font-bold">Execution-Focused Learning</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-sm flex flex-col">
+                    <div class="badge-amber">Notion-based • Self-paced</div>
+                    <h3 class="serif text-2xl font-semibold mb-2">AI Business Automation</h3>
+                    <div class="mono text-amber-400 text-xl font-bold mb-6">$49</div>
+                    <p class="text-white/50 mb-8 flex-grow leading-relaxed">
+                        Automate leads, onboarding, operations, and workflows using real AI tools and practical systems used by modern agencies.
+                    </p>
+                    <a href="https://mwauracharles.gumroad.com/l/sdwxc" target="_blank" class="btn-primary py-4 rounded-sm text-center text-xs">Get Access on Gumroad</a>
+                </div>
+
+                <div class="glass-card p-8 rounded-sm flex flex-col">
+                    <div class="badge-amber">Notion-based • Self-paced</div>
+                    <h3 class="serif text-2xl font-semibold mb-2">LLC & Umbrella Setup</h3>
+                    <div class="mono text-amber-400 text-xl font-bold mb-6">$39</div>
+                    <p class="text-white/50 mb-8 flex-grow leading-relaxed">
+                        Clear thinking on entity structure, operating models, and modern founder setups for global, high-leverage work.
+                    </p>
+                    <a href="https://mwauracharles.gumroad.com" target="_blank" class="btn-primary py-4 rounded-sm text-center text-xs">Get Access on Gumroad</a>
+                </div>
+
+                <div class="glass-card p-8 rounded-sm flex flex-col">
+                    <div class="badge-amber">Notion-based • Self-paced</div>
+                    <h3 class="serif text-2xl font-semibold mb-2">Products That Last</h3>
+                    <div class="mono text-amber-400 text-xl font-bold mb-6">$39</div>
+                    <p class="text-white/50 mb-8 flex-grow leading-relaxed">
+                        Build digital products with strong positioning, longevity, and real revenue potential without the maintenance overhead.
+                    </p>
+                    <a href="https://mwauracharles.gumroad.com/l/smykd" target="_blank" class="btn-primary py-4 rounded-sm text-center text-xs">Get Access on Gumroad</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="bundle" class="py-20 section-border">
+            <div class="glass-card p-10 md:p-16 rounded-sm max-w-4xl mx-auto relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 blur-3xl rounded-full -mr-16 -mt-16"></div>
+                
+                <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 items-center">
+                    <div>
+                        <div class="badge-amber bg-amber-500 text-black px-4 py-2">Best Value – Save $28</div>
+                        <h2 class="serif text-4xl md:text-5xl font-bold mb-6">The Builder Bundle</h2>
+                        <p class="text-white/60 text-lg mb-8 leading-relaxed">
+                            Get instant access to the complete series. A comprehensive toolkit for taking a business from structure to automation to productization.
+                        </p>
+                        <ul class="space-y-3 mono text-xs uppercase tracking-widest text-white/50">
+                            <li class="flex items-center gap-3"><span class="text-amber-400">✓</span> AI Business Automation</li>
+                            <li class="flex items-center gap-3"><span class="text-amber-400">✓</span> LLC & Umbrella Setup</li>
+                            <li class="flex items-center gap-3"><span class="text-amber-400">✓</span> Products That Last</li>
+                            <li class="flex items-center gap-3"><span class="text-amber-400">✓</span> Lifetime Access & Updates</li>
+                        </ul>
+                    </div>
+                    <div class="text-center lg:text-right">
+                        <div class="mono text-white/30 text-sm line-through mb-1">$127</div>
+                        <div class="mono text-amber-400 text-6xl font-bold mb-8">$99</div>
+                        <a href="https://www.paypal.com/ncp/links/P4YZHZX9FEMCJ" target="_blank" class="btn-primary px-10 py-5 rounded-sm w-full block">Buy Full Bundle Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 section-border">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8">
+                    <h3 class="mono text-amber-400 text-xs uppercase tracking-[0.2em] mb-4">Practical & Direct</h3>
+                    <p class="text-white/50 text-sm leading-relaxed">Execution-focused frameworks you can apply immediately to your current projects. No fluff, just systems.</p>
+                </div>
+                <div class="p-8">
+                    <h3 class="mono text-amber-400 text-xs uppercase tracking-[0.2em] mb-4">Founder-First</h3>
+                    <p class="text-white/50 text-sm leading-relaxed">Built for real builders, freelancers, and operators who need to move fast and maintain control.</p>
+                </div>
+                <div class="p-8">
+                    <h3 class="mono text-amber-400 text-xs uppercase tracking-[0.2em] mb-4">Revenue Oriented</h3>
+                    <p class="text-white/50 text-sm leading-relaxed">Focusing on assets that generate value and systems that save time, leading to real bottom-line growth.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="max-w-7xl mx-auto px-6 pt-20 pb-12 border-t border-white/5">
+        <div class="grid md:grid-cols-3 gap-12 items-start mb-16">
+            <div>
+                <p class="serif text-2xl font-bold mb-4">Brilliant Unicorn <span class="text-amber-400">LLC</span></p>
+                <p class="text-white/40 leading-relaxed max-w-xs">
+                    Premium education and digital systems for founders looking to build durable leverage.
+                </p>
+            </div>
+            
+            <div class="mono text-[10px] uppercase tracking-[0.2em] space-y-4">
+                <p><a href="/" class="text-white/50 hover:text-amber-400">Home</a></p>
+                <p><a href="services.html" class="text-white/50 hover:text-amber-400">Services</a></p>
+                <p><a href="products.html" class="text-amber-400">Products</a></p>
+                <p><a href="about.html" class="text-white/50 hover:text-amber-400">About</a></p>
+            </div>
+
+            <div class="md:text-right">
+                <p class="mono text-[10px] uppercase tracking-[0.2em] text-white/30 mb-4">Support & Inquiries</p>
+                <a href="mailto:charlie@brilliantunicorn.com" class="block text-white/60 hover:text-amber-400 mb-2">charlie@brilliantunicorn.com</a>
+            </div>
         </div>
-      </div>
-    </section>
 
-    <section>
-      <div class="container">
-        <h2>Why These Courses?</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>Practical & Direct</h3>
-            <p>Execution-focused frameworks you can apply immediately – no fluff.</p>
-          </div>
-          <div class="card">
-            <h3>Founder-First</h3>
-            <p>Built for real builders, freelancers, consultants, and digital operators.</p>
-          </div>
-          <div class="card">
-            <h3>Revenue Oriented</h3>
-            <p>Tools to create systems, structure, and assets that generate lasting value.</p>
-          </div>
+        <div class="flex flex-col md:flex-row justify-between items-center border-t border-white/5 pt-8 gap-6 text-center">
+            <p class="mono text-[10px] uppercase tracking-widest text-white/20">© 2026 Brilliant Unicorn LLC</p>
+            <form action="https://formspree.io/f/mlgpyrrb" method="POST" class="flex flex-col sm:flex-row gap-2">
+                <input type="email" name="email" placeholder="Stay updated" required class="bg-white/5 border border-white/10 px-4 py-2 rounded-sm text-xs text-white" />
+                <button type="submit" class="btn-primary px-4 py-2 rounded-sm text-[10px]">Subscribe</button>
+            </form>
         </div>
-      </div>
-    </section>
-
-    <section style="text-align:center; padding:80px 0;">
-      <div class="container">
-        <h2>Questions?</h2>
-        <p style="margin-bottom:32px; color: var(--muted);">Reach out before buying or for custom needs.</p>
-        <a href="mailto:charlie@brilliantunicorn.com" class="btn">Contact Us</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>Brilliant Unicorn — Digital Courses • Consulting • AI Systems</p>
-      <p style="margin:20px 0;">
-        <a href="mailto:charlie@brilliantunicorn.com">charlie@brilliantunicorn.com</a>
-      </p>
-      <form action="https://formspree.io/f/mlgpyrrb" method="POST" style="max-width:500px; margin:40px auto;">
-        <input type="email" name="email" placeholder="Stay updated — enter email" required />
-        <button type="submit" class="btn">Subscribe</button>
-      </form>
-      <p>&copy; Brilliant Unicorn</p>
-    </div>
-  </footer>
+    </footer>
 
 </body>
 </html>
