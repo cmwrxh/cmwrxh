@@ -1,281 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Brilliant Unicorn</title>
-  <meta name="description" content="Founder-led systems engineering, automation, analytics, and dependable infrastructure for modern businesses." />
-  
-  <link rel="icon" type="image/png" href="logo.png" />
-  
-  <!-- Vercel Web Analytics -->
-  <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
-  
-  <style>
-    :root {
-      --black: #000000;
-      --dark: #0a0a0a;
-      --yellow: #ffea00;     /* bright startup yellow */
-      --yellow-dark: #d4c200;
-      --text: #f0f0f0;
-      --muted: #bbbbbb;
-      --radius: 12px;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Brilliant Unicorn LLC</title>
+    <meta name="description" content="Founder-led systems engineering, automation, analytics, and dependable infrastructure for modern businesses." />
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: system-ui, -apple-system, sans-serif;
-      background: var(--black);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    a { color: var(--yellow); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link rel="apple-touch-icon" href="logo.png" />
 
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(0,0,0,0.85);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #222;
-      z-index: 100;
-      padding: 20px 0;
-    }
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 1.4rem;
-      font-weight: 900;
-      color: var(--yellow);
-    }
-    .brand img {
-      width: 90px;
-      height: 90px;
-      object-fit: contain;
-      filter: drop-shadow(0 0 12px rgba(255,234,0,0.25));
-    }
-    nav a {
-      margin-left: 28px;
-      font-weight: 600;
-      color: var(--muted);
-    }
-    nav a.active, nav a:hover { color: var(--yellow); }
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-    .hero {
-      padding: 120px 0 80px;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: clamp(3rem, 8vw, 5.5rem);
-      margin-bottom: 24px;
-      color: var(--yellow);
-      line-height: 1.1;
-    }
-    .hero p {
-      font-size: 1.3rem;
-      max-width: 720px;
-      margin: 0 auto 40px;
-      color: var(--muted);
-    }
+    <style>
+        :root {
+            --amber: #F59E0B;
+            --amber-dark: #D97706;
+            --bg: #000000;
+            --panel: rgba(255, 255, 255, 0.03);
+            --panel-border: rgba(255, 255, 255, 0.08);
+            --text: #F3F4F6;
+            --muted: rgba(243, 244, 246, 0.68);
+            --soft: rgba(243, 244, 246, 0.38);
+        }
 
-    .btn {
-      display: inline-block;
-      background: var(--yellow);
-      color: #000;
-      font-weight: 800;
-      padding: 16px 32px;
-      border-radius: 999px;
-      margin: 12px;
-      transition: all 0.2s;
-    }
-    .btn:hover { background: var(--yellow-dark); transform: translateY(-2px); }
-    .btn-outline {
-      background: transparent;
-      border: 2px solid var(--yellow);
-      color: var(--yellow);
-    }
+        html { scroll-behavior: smooth; }
 
-    section { padding: 100px 0; }
-    h2 { font-size: 3rem; color: var(--yellow); margin-bottom: 40px; }
-    h3 { color: var(--yellow); margin-bottom: 16px; font-size: 1.6rem; }
+        body {
+            background: radial-gradient(circle at top, rgba(245, 158, 11, 0.08), transparent 30%), #000000;
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+        }
 
-    .card {
-      background: #111;
-      padding: 32px;
-      border-radius: var(--radius);
-      border: 1px solid #222;
-    }
+        .serif { font-family: 'Playfair Display', serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
 
-    .grid {
-      display: grid;
-      gap: 32px;
-    }
-    @media (min-width: 768px) {
-      .grid-2 { grid-template-columns: repeat(2, 1fr); }
-      .grid-3 { grid-template-columns: repeat(3, 1fr); }
-    }
+        .glass-card {
+            background: var(--panel);
+            border: 1px solid var(--panel-border);
+            backdrop-filter: blur(10px);
+            transition: all 0.35s ease;
+        }
 
-    .form-container {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 16px 20px;
-      margin-bottom: 16px;
-      border: 1px solid #333;
-      border-radius: 999px;
-      background: #111;
-      color: white;
-      font-size: 1rem;
-    }
-    textarea {
-      border-radius: 12px;
-      min-height: 140px;
-      resize: vertical;
-    }
-    input::placeholder, textarea::placeholder {
-      color: #777;
-    }
+        .glass-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(245, 158, 11, 0.45);
+            background: rgba(255, 255, 255, 0.045);
+            box-shadow: 0 0 30px rgba(245, 158, 11, 0.08);
+        }
 
-    footer {
-      background: #000;
-      border-top: 1px solid #222;
-      padding: 60px 0 40px;
-      text-align: center;
-      color: var(--muted);
-    }
-    footer a { color: var(--yellow); }
+        .nav-border { border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
+        .section-border { border-top: 1px solid rgba(255, 255, 255, 0.06); }
 
-    @media (max-width: 768px) {
-      .hero { padding: 100px 0 60px; }
-      .nav { flex-direction: column; text-align: center; }
-      nav a { margin: 12px 20px; }
-      .brand img { width: 70px; height: 70px; }
-    }
-  </style>
+        .logo-glow { filter: drop-shadow(0 0 34px rgba(245, 158, 11, 0.18)); }
+
+        .btn-primary {
+            background: var(--amber);
+            color: #000;
+            transition: all 0.25s ease;
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .btn-primary:hover {
+            background: var(--amber-dark);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            border: 1px solid rgba(245, 158, 11, 0.55);
+            color: var(--text);
+            transition: all 0.25s ease;
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--amber);
+            background: rgba(245, 158, 11, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .hero-grid {
+            background-image:
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+        }
+
+        input, textarea {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            border-color: var(--amber);
+            outline: none;
+        }
+    </style>
 </head>
-<body>
+<body class="antialiased selection:bg-amber-500/30">
 
-  <header>
-    <div class="container nav">
-      <a href="/" class="brand">
-        <img src="logo.png" alt="Brilliant Unicorn" />
-        Brilliant Unicorn
-      </a>
-      <nav>
-        <a href="/">Home</a>
-        <a href="services">Services</a>
-        <a href="products">Products</a>
-        <a href="about" class="active">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Founder-Led Engineering for Modern Businesses</h1>
-        <p>Brilliant Unicorn is a founder-led company focused on automation systems, analytics platforms, and secure backend infrastructure built for reliability, clarity, and long-term business use.</p>
-        <div>
-          <a href="#story" class="btn">Read Our Story</a>
-          <a href="#contact" class="btn btn-outline">Get in Touch</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="story">
-      <div class="container">
-        <div class="grid grid-2">
-          <div>
-            <h2>Charles Mwaura</h2>
-            <p class="muted" style="font-size:1.1rem;">
-              Systems engineer. Founder. Builder of dependable software systems for real business use.
+    <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between nav-border sticky top-0 bg-black/75 backdrop-blur z-50">
+        <a href="/" class="flex items-center gap-4">
+            <img src="logo.png" alt="Brilliant Unicorn Logo" class="w-16 h-16 rounded-full border border-amber-500/20 logo-glow object-cover" />
+            <p class="serif text-xl md:text-2xl font-bold tracking-wide">
+                Brilliant Unicorn <span class="text-amber-400">LLC</span>
             </p>
-          </div>
+        </a>
 
-          <div class="card">
-            <p style="margin-bottom:20px;">
-              Brilliant Unicorn is led by Charles Mwaura, a systems engineer with a background in mathematics and cyber security. The company was built around a simple idea: modern businesses need systems that are dependable, measurable, and structured for growth.
-            </p>
-            <p style="margin-bottom:20px;">
-              At Brilliant Unicorn, he led the technical design and delivery of automation and analytics systems used to support consulting and SaaS-style services. From 2020 to 2023, this included a data processing and analytics platform combining ingestion pipelines, validation layers, and reporting dashboards for client-facing data services.
-            </p>
-            <p>
-              Earlier work included building the AlphaCore Framework, a reusable orchestration layer supporting internal tools and service delivery systems. That background continues to shape the company’s approach to architecture, implementation, and product direction.
-            </p>
-          </div>
+        <div class="hidden md:flex items-center gap-8 mono text-[10px] uppercase tracking-[0.18em] text-white/70">
+            <a href="/" class="hover:text-amber-400 transition">Home</a>
+            <a href="services.html" class="hover:text-amber-400 transition">Services</a>
+            <a href="products.html" class="hover:text-amber-400 transition">Products</a>
+            <a href="about.html" class="text-amber-400">About</a>
+            <a href="#contact" class="hover:text-amber-400 transition">Contact</a>
         </div>
-      </div>
-    </section>
+    </nav>
 
-    <section>
-      <div class="container">
-        <h2 style="text-align:center;">The Engineering Standard</h2>
-        <p class="muted" style="text-align:center; max-width:720px; margin:0 auto 60px; font-size:1.2rem;">
-          Brilliant Unicorn is built on a simple belief: when the base system fails, everything on top of it becomes unstable.
-        </p>
+    <header class="relative overflow-hidden py-24 md:py-32">
+        <div class="absolute inset-0 hero-grid opacity-40 pointer-events-none"></div>
 
-        <div class="grid grid-3">
-          <div class="card">
-            <h3>Correctness Before Optimization</h3>
-            <p>We build systems that work reliably first. Speed matters, but stability is the priority for long-term operational success.</p>
-          </div>
-          <div class="card">
-            <h3>Measurable Execution</h3>
-            <p>Every system we build includes layers for visibility and validation. If it isn't measurable, it isn't manageable.</p>
-          </div>
-          <div class="card">
-            <h3>Secure Foundations</h3>
-            <p>Security is not an afterthought. We design infrastructure with protection and control integrated into the architecture.</p>
-          </div>
+        <div class="max-w-7xl mx-auto px-6 relative text-center">
+            <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-6">Systems Engineering</p>
+            <h1 class="serif text-5xl md:text-7xl font-bold leading-tight tracking-tight mb-8">
+                Founder-Led Engineering <br><span class="text-amber-400">for Modern Business</span>
+            </h1>
+
+            <p class="text-lg md:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed mb-12">
+                Focused on automation systems, analytics platforms, and secure backend infrastructure built for reliability, clarity, and long-term business scale.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#story" class="btn-primary px-10 py-4 rounded-sm font-medium">Read The Story</a>
+                <a href="#contact" class="btn-secondary px-10 py-4 rounded-sm font-medium">Get in Touch</a>
+            </div>
         </div>
-      </div>
-    </section>
+    </header>
 
-    <section id="contact" style="background:#0a0a0a;">
-      <div class="container">
-        <h2 style="text-align:center;">Contact</h2>
-        <div class="form-container">
-          <p style="text-align:center; margin-bottom:40px; color:var(--muted);">Reach out to discuss your project or internal systems.</p>
-          <form action="https://formspree.io/f/mlgpyrrb" method="POST">
-            <input type="text" name="name" placeholder="Name" required />
-            <input type="email" name="email" placeholder="Email" required />
-            <textarea name="message" placeholder="Project Details" required></textarea>
-            <button type="submit" class="btn" style="width:100%; margin:0;">Send Message</button>
-          </form>
+    <main class="max-w-7xl mx-auto px-6">
+
+        <section id="story" class="py-20 section-border">
+            <div class="grid lg:grid-cols-[0.8fr_1.2fr] gap-16 items-start">
+                <div>
+                    <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-6">The Founder</p>
+                    <h2 class="serif text-4xl md:text-5xl font-bold mb-6 text-white">Charles Mwaura</h2>
+                    <p class="mono text-sm text-white/40 uppercase tracking-widest leading-loose">
+                        Systems Engineer. Founder. <br>
+                        MSc Cyber Security Candidate. <br>
+                        BSc Mathematics & IT.
+                    </p>
+                </div>
+
+                <div class="glass-card p-8 md:p-12 rounded-sm space-y-6">
+                    <p class="text-white/70 leading-relaxed text-lg">
+                        Brilliant Unicorn was built around a simple idea: modern businesses need systems that are dependable, measurable, and structured for growth.
+                    </p>
+                    <p class="text-white/50 leading-relaxed">
+                        Led by Charles Mwaura, a systems engineer with a background in mathematics and cyber security, we bridge the gap between complex technical architecture and practical business execution. 
+                    </p>
+                    <p class="text-white/50 leading-relaxed">
+                        Between 2020 and 2023, Charles led the technical design and delivery of internal automation and analytics systems used to support consulting and SaaS-style services. This included a comprehensive data processing platform combining ingestion pipelines, validation layers, and reporting dashboards.
+                    </p>
+                    <p class="text-white/50 leading-relaxed">
+                        Earlier work involved the development of the <span class="text-amber-400">AlphaCore Framework</span>, a reusable orchestration layer designed to streamline internal tools and service delivery systems. This foundation of technical ownership continues to drive our approach to building reliable, secure infrastructure.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 section-border">
+            <div class="text-center mb-16">
+                <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-4">Values</p>
+                <h2 class="serif text-4xl md:text-5xl font-bold">The Engineering Standard</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-sm">
+                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">Correctness Before Optimization</h3>
+                    <p class="text-white/50 leading-relaxed text-sm">We build systems that work reliably first. Speed matters, but stability is the priority for long-term operational success.</p>
+                </div>
+                <div class="glass-card p-8 rounded-sm">
+                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">Measurable Execution</h3>
+                    <p class="text-white/50 leading-relaxed text-sm">Every system we build includes layers for visibility and validation. If it isn't measurable, it isn't manageable.</p>
+                </div>
+                <div class="glass-card p-8 rounded-sm">
+                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">Secure Foundations</h3>
+                    <p class="text-white/50 leading-relaxed text-sm">Security is not an afterthought. We design infrastructure with protection and control integrated directly into the architecture.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 section-border">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-4">Inquiries</p>
+                <h2 class="serif text-4xl font-bold mb-4">Start the Conversation</h2>
+                <p class="text-white/40">Reach out to discuss your project, internal systems, or automation strategy.</p>
+            </div>
+
+            <div class="glass-card p-8 md:p-12 rounded-sm max-w-2xl mx-auto">
+                <form action="https://formspree.io/f/mlgpyrrb" method="POST" class="space-y-4">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <input type="text" name="name" placeholder="Name" required class="px-6 py-4 rounded-sm mono text-xs w-full" />
+                        <input type="email" name="email" placeholder="Email" required class="px-6 py-4 rounded-sm mono text-xs w-full" />
+                    </div>
+                    <textarea name="message" placeholder="Project Details" required class="px-6 py-4 rounded-sm mono text-xs w-full min-h-[150px]"></textarea>
+                    <button type="submit" class="btn-primary w-full py-4 rounded-sm font-medium">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="max-w-7xl mx-auto px-6 pt-20 pb-12 border-t border-white/5">
+        <div class="grid md:grid-cols-3 gap-12 items-start mb-16">
+            <div>
+                <p class="serif text-2xl font-bold mb-4">Brilliant Unicorn <span class="text-amber-400">LLC</span></p>
+                <p class="text-white/40 leading-relaxed max-w-xs text-sm">
+                    Automation systems, analytics infrastructure, and secure backend delivery. Built in Nairobi for global operations.
+                </p>
+            </div>
+            
+            <div class="mono text-[10px] uppercase tracking-[0.2em] space-y-4">
+                <p><a href="/" class="text-white/50 hover:text-amber-400 transition">Home</a></p>
+                <p><a href="services.html" class="text-white/50 hover:text-amber-400 transition">Services</a></p>
+                <p><a href="products.html" class="text-white/50 hover:text-amber-400 transition">Products</a></p>
+                <p><a href="about.html" class="text-amber-400">About</a></p>
+            </div>
+
+            <div class="md:text-right">
+                <p class="mono text-[10px] uppercase tracking-[0.2em] text-white/30 mb-4">Contact Info</p>
+                <a href="mailto:charlie@brilliantunicorn.com" class="block text-white/60 hover:text-amber-400 mb-2">charlie@brilliantunicorn.com</a>
+                <p class="text-white/40">+254 797 560 284</p>
+            </div>
         </div>
-      </div>
-    </section>
-  </main>
 
-  <footer>
-    <div class="container">
-      <p>Brilliant Unicorn — Digital Courses • Consulting • AI Systems</p>
-      <p style="margin:20px 0;">
-        <a href="mailto:charlie@brilliantunicorn.com">charlie@brilliantunicorn.com</a> • 
-        <a href="tel:+254797560284">+254 797 560 284</a>
-      </p>
-      <div class="mono text-xs uppercase tracking-[0.18em] text-white/45 space-y-3">
-          <p><a href="/">Home</a></p>
-          <p><a href="services">Services</a></p>
-          <p><a href="products">Products</a></p>
-          <p><a href="about" class="active">About</a></p>
-      </div>
-      <p style="margin-top:40px;">&copy; Brilliant Unicorn</p>
-    </div>
-  </footer>
+        <div class="flex flex-col md:flex-row justify-between items-center border-t border-white/5 pt-8 gap-6">
+            <p class="mono text-[10px] uppercase tracking-widest text-white/20">© 2026 Brilliant Unicorn LLC</p>
+            <div class="flex gap-8 mono text-[10px] uppercase tracking-widest text-white/20">
+                <span>Charles Mwaura</span>
+                <span>Systems & Data</span>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
