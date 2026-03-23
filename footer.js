@@ -1,4 +1,23 @@
-// footer.js (Updated Links)
+// 1. DYNAMIC FAVICON INJECTION (The "One-Fix" for all pages)
+(function() {
+    const head = document.getElementsByTagName('head')[0];
+    
+    // Standard Favicon
+    const favicon = document.createElement('link');
+    favicon.rel = 'icon';
+    favicon.type = 'image/png';
+    favicon.href = '/logo.png'; 
+    
+    // Apple Devices Icon
+    const appleIcon = document.createElement('link');
+    appleIcon.rel = 'apple-touch-icon';
+    appleIcon.href = '/logo.png';
+    
+    head.appendChild(favicon);
+    head.appendChild(appleIcon);
+})();
+
+// 2. CENTRALIZED FOOTER (Clean URLs + Styling)
 const footerHTML = `
 <footer class="max-w-7xl mx-auto px-6 pt-20 pb-12 border-t border-white/5">
     <div class="grid md:grid-cols-3 gap-12 items-start mb-16">
@@ -24,6 +43,18 @@ const footerHTML = `
             <p class="text-white/40">+254 797 560 284</p>
         </div>
     </div>
-    ... (rest of the footer code) ...
+
+    <div class="flex flex-col md:flex-row justify-between items-center border-t border-white/5 pt-8 gap-6">
+        <p class="mono text-[10px] uppercase tracking-widest text-white/20">© 2026 Brilliant Unicorn LLC</p>
+        <div class="flex gap-8 mono text-[10px] uppercase tracking-widest text-white/20">
+            <span>Nairobi, Kenya</span>
+            <span class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
+                Active Infrastructure
+            </span>
+        </div>
+    </div>
 </footer>
 `;
+
+document.body.insertAdjacentHTML('beforeend', footerHTML);
