@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internet-Under-The-Hood | Project Documentation | Brilliant Unicorn LLC</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <style>
+        :root {
+            --amber: #F59E0B;
+            --amber-dark: #D97706;
+            --bg: #000000;
+            --panel: rgba(255, 255, 255, 0.03);
+            --panel-border: rgba(255, 255, 255, 0.08);
+            --text: #F3F4F6;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: radial-gradient(circle at top right, rgba(245, 158, 11, 0.05), transparent 40%), #000000;
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .serif { font-family: 'Playfair Display', serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+
+        .glass-card {
+            background: var(--panel);
+            border: 1px solid var(--panel-border);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-border { border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
+        .logo-glow { filter: drop-shadow(0 0 34px rgba(245, 158, 11, 0.18)); }
+
+        .btn-primary {
+            background: var(--amber);
+            color: #000;
+            transition: all 0.25s ease;
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .btn-primary:hover {
+            background: var(--amber-dark);
+            transform: translateY(-1px);
+        }
+
+        .hero-grid {
+            background-image:
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+        }
+
+        .tech-tag {
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            color: var(--amber);
+            font-size: 0.65rem;
+            padding: 2px 10px;
+            border-radius: 2px;
+            background: rgba(245, 158, 11, 0.03);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-amber-500/30">
+
+    <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between nav-border sticky top-0 bg-black/75 backdrop-blur z-50">
+        <a href="/" class="flex items-center gap-4">
+            <img src="logo.png" alt="Brilliant Unicorn Logo" class="w-16 h-16 rounded-full border border-amber-500/20 logo-glow object-cover" />
+            <p class="serif text-xl md:text-2xl font-bold tracking-wide">
+                Brilliant Unicorn <span class="text-amber-400">LLC</span>
+            </p>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8 mono text-[10px] uppercase tracking-[0.18em] text-white/70">
+            <a href="/" class="hover:text-amber-400 transition">Home</a>
+            <a href="/about" class="hover:text-amber-400 transition">Back to Portfolio</a>
+        </div>
+    </nav>
+
+    <header class="relative overflow-hidden py-20 border-b border-white/5">
+        <div class="absolute inset-0 hero-grid opacity-30 pointer-events-none"></div>
+        <div class="max-w-5xl mx-auto px-6 relative">
+            <div class="flex gap-3 mb-8">
+                <span class="tech-tag mono uppercase tracking-widest">Pillar // Systems & Resilience</span>
+                <span class="tech-tag mono uppercase tracking-widest">Status // Lab Insight</span>
+            </div>
+            <h1 class="serif text-5xl md:text-7xl font-bold mb-8 tracking-tight text-white">Internet-Under-The-Hood</h1>
+            <p class="text-xl text-white/60 max-w-2xl leading-relaxed">
+                A specialized laboratory for DNS, TLS, and BGP optimization, focusing on extreme low-latency CDN performance and secure protocol orchestration.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-20">
+        <div class="grid lg:grid-cols-[1.5fr_1fr] gap-16">
+            
+            <div class="space-y-16">
+                <section>
+                    <h3 class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-8">01 // Problem Statement</h3>
+                    <div class="text-white/70 leading-relaxed space-y-4">
+                        <p>Most organizations treat the internet's core protocols as "black boxes." This lack of visibility leads to unoptimized BGP routing, slow DNS resolution, and TLS handshake overhead that kills user experience—especially in emerging markets like Kenya.</p>
+                        <p>Brilliant Unicorn created this lab to deconstruct these layers and build highly optimized, deterministic networking paths for institutional applications.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-8">02 // Technical Implementation</h3>
+                    <div class="glass-card p-8 md:p-12 rounded-sm space-y-8">
+                        <div class="space-y-4">
+                            <h4 class="serif text-2xl font-bold text-white tracking-tight">Protocol Optimization Suite</h4>
+                            <p class="text-white/50 leading-relaxed">
+                                By simulating high-latency environments, we optimize <span class="text-amber-400">HTTP/3 (QUIC)</span> delivery and BGP peering configurations. This ensures that the global infrastructure managed by Brilliant Unicorn remains performant even under degraded network conditions.
+                            </p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="p-6 border border-white/5 bg-white/[0.02] rounded-sm">
+                                <p class="mono text-[10px] text-amber-500 uppercase tracking-widest mb-2">Connectivity</p>
+                                <p class="text-sm font-medium">Anycast DNS Optimization</p>
+                            </div>
+                            <div class="p-6 border border-white/5 bg-white/[0.02] rounded-sm">
+                                <p class="mono text-[10px] text-amber-500 uppercase tracking-widest mb-2">Security</p>
+                                <p class="text-sm font-medium">Automated mTLS Rotation</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="space-y-8">
+                <div class="glass-card p-8 rounded-sm sticky top-32">
+                    <h3 class="mono text-[10px] uppercase tracking-[0.3em] text-white/40 mb-10">System Specification</h3>
+                    
+                    <ul class="space-y-6">
+                        <li class="flex justify-between items-end border-b border-white/5 pb-2">
+                            <span class="mono text-[10px] uppercase text-white/30">Registry</span>
+                            <span class="text-xs font-medium tracking-tight">BRU-NET-201</span>
+                        </li>
+                        <li class="flex justify-between items-end border-b border-white/5 pb-2">
+                            <span class="mono text-[10px] uppercase text-white/30">Architecture</span>
+                            <span class="text-xs font-medium tracking-tight">Global Protocol Lab</span>
+                        </li>
+                        <li class="flex justify-between items-end border-b border-white/5 pb-2">
+                            <span class="mono text-[10px] uppercase text-white/30">Stack</span>
+                            <span class="text-xs font-medium tracking-tight">Go • C • Cloudflare Workers</span>
+                        </li>
+                        <li class="flex justify-between items-end border-b border-white/5 pb-2">
+                            <span class="mono text-[10px] uppercase text-white/30">Focus</span>
+                            <span class="text-xs font-medium tracking-tight">BGP / TLS 1.3 / HTTP3</span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-12">
+                        <h4 class="mono text-[10px] uppercase tracking-widest text-white/20 mb-6">Core Capability</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-white/5 px-3 py-1 text-[10px] mono uppercase tracking-wider">Networking</span>
+                            <span class="bg-white/5 px-3 py-1 text-[10px] mono uppercase tracking-wider">CDN</span>
+                            <span class="bg-white/5 px-3 py-1 text-[10px] mono uppercase tracking-wider">Low Latency</span>
+                        </div>
+                    </div>
+
+                    <a href="/contact" class="btn-primary block w-full text-center py-4 mt-12 rounded-sm text-[10px] font-bold">
+                        Request Audit
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="max-w-7xl mx-auto px-6 py-20 border-t border-white/5 text-center">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+            <p class="serif text-xl font-bold">Brilliant Unicorn <span class="text-amber-400">LLC</span></p>
+            <p class="mono text-[10px] uppercase tracking-widest text-white/20">© 2026 Systems & Resilience Group // Infrastructure Lab</p>
+        </div>
+    </footer>
+
+</body>
+</html>
