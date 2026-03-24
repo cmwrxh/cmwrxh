@@ -1,52 +1,68 @@
-// 1. DYNAMIC FAVICON
-(function() {
-    const head = document.head || document.getElementsByTagName('head')[0];
-    const icon = document.createElement('link');
-    icon.rel = 'icon'; icon.href = '/logo.png';
-    const apple = document.createElement('link');
-    apple.rel = 'apple-touch-icon'; apple.href = '/logo.png';
-    head.appendChild(icon); head.appendChild(apple);
-})();
+<!-- FOOTER SCRIPT - Paste this just before the closing </body> tag in ALL your HTML files -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const footerHTML = `
+        <footer class="max-w-7xl mx-auto px-6 pt-20 pb-12 border-t border-white/5 text-left">
+            <div class="grid md:grid-cols-3 gap-12 items-start mb-16">
+                
+                <!-- Brand Column -->
+                <div>
+                    <p class="serif text-2xl font-bold mb-4 text-white">
+                        Brilliant Unicorn <span class="text-amber-400">LLC</span>
+                    </p>
+                    <p class="text-white/50 leading-relaxed max-w-xs text-sm">
+                        Instant-access digital frameworks + implementation support for founders building systems that last.
+                    </p>
+                </div>
 
-// 2. BULLETPROOF FOOTER INJECTION
-document.addEventListener('DOMContentLoaded', () => {
-    const footerHTML = `
-    <footer style="max-width: 1280px; margin: 80px auto 0; padding: 60px 24px; border-top: 1px solid rgba(255,255,255,0.08); color: white; font-family: 'Inter', sans-serif; clear: both;">
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
-            
-            <div style="flex: 1; min-width: 250px;">
-                <p style="font-family: 'Playfair Display', serif; font-size: 22px; font-weight: bold; margin: 0 0 12px 0;">
-                    Brilliant Unicorn <span style="color: #F59E0B;">LLC</span>
+                <!-- Navigation Column -->
+                <div class="mono text-[10px] uppercase tracking-[0.2em] space-y-4">
+                    <p><a href="/" class="text-white/60 hover:text-amber-400 transition">Home</a></p>
+                    <p><a href="/products" class="text-white/60 hover:text-amber-400 transition">Products</a></p>
+                    <p><a href="/services" class="text-white/60 hover:text-amber-400 transition">Implementation Support</a></p>
+                    <p><a href="/about" class="text-white/60 hover:text-amber-400 transition">About</a></p>
+                    <p><a href="/contact" class="text-white/60 hover:text-amber-400 transition">Contact</a></p>
+                </div>
+
+                <!-- Legal + Contact Column -->
+                <div class="md:text-right">
+                    <p class="mono text-[10px] uppercase tracking-[0.2em] text-white/30 mb-6">Legal & Support</p>
+                    <div class="mono text-[10px] uppercase tracking-[0.2em] space-y-3">
+                        <p><a href="/terms" class="text-white/60 hover:text-amber-400 transition">Terms of Service</a></p>
+                        <p><a href="/privacy" class="text-white/60 hover:text-amber-400 transition">Privacy Policy</a></p>
+                        <p><a href="/refund-policy" class="text-white/60 hover:text-amber-400 transition">Refund Policy</a></p>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <a href="mailto:ceo@brilliantunicorn.com" 
+                           class="block text-white/70 hover:text-amber-400 text-sm mb-1">
+                            ceo@brilliantunicorn.com
+                        </a>
+                        <p class="text-white/40 text-sm">Nairobi, Kenya • Global Delivery</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="flex flex-col md:flex-row justify-between items-center border-t border-white/5 pt-8 gap-6">
+                <p class="mono text-[10px] uppercase tracking-widest text-white/20">
+                    © 2026 Brilliant Unicorn LLC
                 </p>
-                <p style="color: rgba(243, 244, 246, 0.4); line-height: 1.6; font-size: 13px; max-width: 300px;">
-                    Automation systems, analytics infrastructure, and premium digital products for modern companies.
-                </p>
+                <div class="flex items-center gap-6 mono text-[10px] uppercase tracking-widest text-white/20">
+                    <span>Systems That Last</span>
+                    <span class="flex items-center gap-2">
+                        <span class="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></span>
+                        Active
+                    </span>
+                </div>
             </div>
+        </footer>
+        `;
 
-            <div style="flex: 1; min-width: 150px; display: flex; flex-direction: column; gap: 10px;">
-                <a href="/" style="color: #F59E0B; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em;">Home</a>
-                <a href="/services" style="color: rgba(243, 244, 246, 0.6); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em;">Services</a>
-                <a href="/products" style="color: rgba(243, 244, 246, 0.6); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em;">Products</a>
-                <a href="/terms" style="color: rgba(243, 244, 246, 0.6); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em;">Terms</a>
-                <a href="/privacy" style="color: rgba(243, 244, 246, 0.6); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em;">Privacy</a>
-                <a href="/refund-policy" style="color: rgba(243, 244, 246, 0.6); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em;">Refunds</a>
-            </div>
-
-            <div style="flex: 1; min-width: 200px; text-align: right;">
-                <p style="font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; color: rgba(243, 244, 246, 0.2); margin: 0 0 12px 0;">Direct Access</p>
-                <a href="mailto:charlie@brilliantunicorn.com" style="color: rgba(243, 244, 246, 0.7); text-decoration: none; font-size: 14px; display: block; margin-bottom: 6px;">charlie@brilliantunicorn.com</a>
-                <p style="color: rgba(243, 244, 246, 0.3); font-size: 13px;">Nairobi, Kenya</p>
-            </div>
-        </div>
-
-        <div style="margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center;">
-            <p style="font-family: 'JetBrains Mono', monospace; font-size: 9px; text-transform: uppercase; color: rgba(243, 244, 246, 0.15); letter-spacing: 0.1em;">© 2026 Brilliant Unicorn LLC</p>
-            <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="width: 5px; height: 5px; background: #F59E0B; border-radius: 50%; box-shadow: 0 0 8px #F59E0B;"></span>
-                <span style="font-family: 'JetBrains Mono', monospace; font-size: 9px; text-transform: uppercase; color: rgba(243, 244, 246, 0.2); letter-spacing: 0.1em;">System Active</span>
-            </div>
-        </div>
-    </footer>
-    `;
-    if (document.body) { document.body.insertAdjacentHTML('beforeend', footerHTML); }
-});
+        // Remove any existing footers to prevent duplicates
+        document.querySelectorAll('footer').forEach(f => f.remove());
+        
+        // Inject the new footer
+        document.body.insertAdjacentHTML('beforeend', footerHTML);
+    });
+</script>
