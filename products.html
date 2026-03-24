@@ -68,15 +68,29 @@
             transform: translateY(-1px);
         }
 
+        .btn-secondary {
+            border: 1px solid rgba(245, 158, 11, 0.55);
+            color: var(--text);
+            transition: all 0.25s ease;
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--amber);
+            color: var(--amber);
+        }
+
         .hero-grid {
             background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
             background-size: 40px 40px;
             mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
         }
 
-        .badge-amber, .instant-badge {
+        .instant-badge {
             display: inline-block;
-            background: rgba(245, 158, 11, 0.15);
+            background: rgba(245, 158, 11, 0.2);
             color: #F59E0B;
             padding: 4px 12px;
             border-radius: 9999px;
@@ -85,16 +99,254 @@
             text-transform: uppercase;
             letter-spacing: 0.1em;
             margin-bottom: 12px;
-        }
-
-        .instant-badge {
-            background: rgba(245, 158, 11, 0.2);
             border: 1px solid rgba(245, 158, 11, 0.5);
         }
     </style>
 </head>
 <body class="antialiased selection:bg-amber-500/30 text-left">
 
-    <!-- NAVIGATION - Updated order to match homepage -->
+    <!-- NAVIGATION -->
     <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between nav-border sticky top-0 bg-black/75 backdrop-blur z-50">
-        <a href
+        <a href="/" class="flex items-center gap-4">
+            <img src="logo.png" alt="Brilliant Unicorn Logo" class="w-16 h-16 rounded-full border border-amber-500/20 logo-glow object-cover" />
+            <p class="serif text-xl md:text-2xl font-bold tracking-wide text-white">
+                Brilliant Unicorn <span class="text-amber-400">LLC</span>
+            </p>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8 mono text-[10px] uppercase tracking-[0.18em] text-white/70">
+            <a href="/" class="hover:text-amber-400 transition">Home</a>
+            <a href="/products" class="text-amber-400">Products</a>
+            <a href="/services" class="hover:text-amber-400 transition">Implementation Support</a>
+            <a href="/about" class="hover:text-amber-400 transition">About</a>
+            <a href="/contact" class="hover:text-amber-400 transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="relative overflow-hidden py-24 md:py-32">
+        <div class="absolute inset-0 hero-grid opacity-40 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 relative text-center">
+            <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-6">Instant Delivery • Notion-Based</p>
+            <h1 class="serif text-5xl md:text-7xl font-bold leading-tight tracking-tight mb-8 text-white">
+                Premium Systems <br><span class="text-amber-400 font-bold italic">for Modern Builders.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed mb-12">
+                Instant-access digital frameworks. Buy once. Deploy forever.<br>
+                Implementation support available only after purchasing a digital product.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#courses" class="btn-primary px-10 py-4 rounded-sm font-medium">View Digital Catalog</a>
+                <a href="/services" class="btn-secondary px-10 py-4 rounded-sm font-medium text-white">See Implementation Support</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6">
+
+        <!-- DIGITAL COURSES -->
+        <section id="courses" class="py-20 section-border">
+            <div class="text-center mb-16">
+                <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-4">Educational Systems • Instant Access</p>
+                <h2 class="serif text-3xl md:text-5xl font-bold text-white text-center">Execution Over Information</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-sm flex flex-col">
+                    <div class="instant-badge">Instant Access • Notion Delivery</div>
+                    <h3 class="serif text-2xl font-semibold mb-2 text-white text-left">AI Business Automation</h3>
+                    <div class="mono text-amber-400 text-xl font-bold mb-6 text-left">$49.99</div>
+                    <p class="text-white/50 mb-8 flex-grow leading-relaxed text-left">
+                        The definitive blueprint for automating leads, onboarding, and internal workflows using modern AI tools and AlphaCore-derived logic.
+                    </p>
+                    <a href="https://buy.brilliantunicorn.com/checkout/buy/2acade4c-d269-477d-9454-80d8b857a9c9" class="lemonsqueezy-button btn-primary py-4 rounded-sm text-center text-[10px] font-bold">Purchase Access</a>
+                </div>
+
+                <div class="glass-card p-8 rounded-sm flex flex-col">
+                    <div class="instant-badge">Instant Access • Notion Delivery</div>
+                    <h3 class="serif text-2xl font-semibold mb-2 text-white text-left">LLC & Umbrella Setup</h3>
+                    <div class="mono text-amber-400 text-xl font-bold mb-6 text-left">$39.99</div>
+                    <p class="text-white/50 mb-8 flex-grow leading-relaxed text-left">
+                        Practical architecture for entity structure, asset protection, and modern founder operating models for high-leverage global work.
+                    </p>
+                    <a href="https://buy.brilliantunicorn.com/checkout/buy/4b8ea006-9540-449e-a103-7c71b9070d99" class="lemonsqueezy-button btn-primary py-4 rounded-sm text-center text-[10px] font-bold">Purchase Access</a>
+                </div>
+
+                <div class="glass-card p-8 rounded-sm flex flex-col">
+                    <div class="instant-badge">Instant Access • Notion Delivery</div>
+                    <h3 class="serif text-2xl font-semibold mb-2 text-white text-left">Products That Last</h3>
+                    <div class="mono text-amber-400 text-xl font-bold mb-6 text-left">$39.99</div>
+                    <p class="text-white/50 mb-8 flex-grow leading-relaxed text-left">
+                        Engineer digital assets with strong positioning and real revenue potential without the maintenance overhead of traditional software.
+                    </p>
+                    <a href="https://buy.brilliantunicorn.com/checkout/buy/5a5eb2e0-0eda-4792-9e35-afb46a5ce71b" class="lemonsqueezy-button btn-primary py-4 rounded-sm text-center text-[10px] font-bold">Purchase Access</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- BUILDER BUNDLE -->
+        <section id="bundle" class="py-20 section-border">
+            <div class="glass-card p-10 md:p-16 rounded-sm max-w-4xl mx-auto relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 blur-3xl rounded-full -mr-16 -mt-16"></div>
+                
+                <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 items-center text-left">
+                    <div>
+                        <div class="instant-badge bg-amber-500 text-black px-4 py-2">Best Value • Save 30%</div>
+                        <h2 class="serif text-4xl md:text-5xl font-bold mb-6 text-white">The Builder Bundle</h2>
+                        <p class="text-white/60 text-lg mb-8 leading-relaxed">
+                            The complete infrastructure toolkit. Instant access to all three systems: structure, automation, and productization.
+                        </p>
+                        <ul class="space-y-3 mono text-[10px] uppercase tracking-widest text-white/50">
+                            <li class="flex items-center gap-3"><span class="text-amber-400">✓</span> AI Business Automation</li>
+                            <li class="flex items-center gap-3"><span class="text-amber-400">✓</span> LLC & Umbrella Setup</li>
+                            <li class="flex items-center gap-3"><span class="text-amber-400">✓</span> Products That Last</li>
+                            <li class="flex items-center gap-3"><span class="text-amber-400">✓</span> Lifetime Updates + Community</li>
+                        </ul>
+                    </div>
+                    <div class="text-center lg:text-right">
+                        <div class="mono text-white/30 text-sm line-through mb-1 tracking-widest">$127 USD</div>
+                        <div class="mono text-amber-400 text-6xl font-bold mb-8">$99</div>
+                        
+                        <a href="https://buy.brilliantunicorn.com/checkout/buy/cebcb256-ba95-4334-9869-1214eee955b5" 
+                           class="lemonsqueezy-button btn-primary px-10 py-5 rounded-sm w-full block text-center font-bold">
+                           Get Instant Access – $99
+                        </a>
+                        <p class="mono text-[10px] uppercase text-white/30 mt-4 tracking-tighter italic">Delivered instantly via Notion</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IMPLEMENTATION SUPPORT (Add-on) -->
+        <section id="advisory" class="py-24 section-border">
+            <div class="text-center mb-16">
+                <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-4">Implementation Support (Add-on Only)</p>
+                <h2 class="serif text-3xl md:text-5xl font-bold text-white text-center">Turn Your Frameworks Into Live Systems</h2>
+                <p class="text-white/60 mt-4 max-w-2xl mx-auto">These options are available only after you purchase any digital product above.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-10 rounded-sm flex flex-col border-white/5">
+                    <p class="mono text-[10px] uppercase tracking-[0.2em] text-white/40 mb-6 text-left">Level 01 // Clarity</p>
+                    <h3 class="serif text-2xl font-bold mb-2 text-white text-left">System Audit</h3>
+                    <div class="mono text-amber-400 text-3xl font-bold mb-6 text-left">$999</div>
+                    <ul class="space-y-4 text-sm text-white/50 mb-10 flex-grow text-left">
+                        <li>• Architecture & Security Review</li>
+                        <li>• Automation Bottleneck ID</li>
+                        <li>• 60-Min Strategy Call</li>
+                        <li>• Roadmap PDF</li>
+                    </ul>
+                    <a href="https://buy.brilliantunicorn.com/checkout/buy/d60f3094-d018-486f-903f-eb8f97654e86" class="lemonsqueezy-button btn-primary py-4 rounded-sm text-center text-[10px] font-bold">Purchase Support</a>
+                </div>
+
+                <div class="glass-card p-10 rounded-sm flex flex-col border-amber-500/30 bg-amber-500/[0.02] relative">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-500 text-black px-3 py-1 mono text-[8px] font-bold uppercase tracking-widest">Most Popular</div>
+                    <p class="mono text-[10px] uppercase tracking-[0.2em] text-amber-500 mb-6 text-left">Level 02 // Build</p>
+                    <h3 class="serif text-2xl font-bold mb-2 text-white text-left">Build Blueprint</h3>
+                    <div class="mono text-amber-400 text-3xl font-bold mb-6 text-left">$1,999</div>
+                    <ul class="space-y-4 text-sm text-white/70 mb-10 flex-grow text-left">
+                        <li><span class="text-amber-400">•</span> Custom System Architecture</li>
+                        <li><span class="text-amber-400">•</span> Logic Flow & API Mapping</li>
+                        <li><span class="text-amber-400">•</span> AlphaCore Integration Plan</li>
+                        <li><span class="text-amber-400">•</span> 2x Implementation Sessions</li>
+                    </ul>
+                    <a href="https://buy.brilliantunicorn.com/checkout/buy/79337d13-967f-4840-a745-d1256f2aaf38" class="lemonsqueezy-button btn-primary py-4 rounded-sm text-center text-[10px] font-bold">Purchase Support</a>
+                </div>
+
+                <div class="glass-card p-10 rounded-sm flex flex-col border-white/5">
+                    <p class="mono text-[10px] uppercase tracking-[0.2em] text-white/40 mb-6 text-left">Level 03 // Execution</p>
+                    <h3 class="serif text-2xl font-bold mb-2 text-white text-left">Full Provisioning</h3>
+                    <div class="mono text-amber-400 text-3xl font-bold mb-6 text-left">$2,999</div>
+                    <ul class="space-y-4 text-sm text-white/50 mb-10 flex-grow text-left">
+                        <li>• Done-With-You Implementation</li>
+                        <li>• Infrastructure Deployment</li>
+                        <li>• Performance Optimization</li>
+                        <li>• 30-Day Technical Support</li>
+                    </ul>
+                    <a href="https://buy.brilliantunicorn.com/checkout/buy/b96a68c6-f57c-4b2a-a0ba-839092dce629" class="lemonsqueezy-button btn-primary py-4 rounded-sm text-center text-[10px] font-bold">Purchase Support</a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 text-white/60 text-sm">
+                <strong>Important:</strong> You must own at least one digital framework before these implementation packages become available.
+            </div>
+        </section>
+
+        <!-- Systems Intelligence Brief -->
+        <section id="waitlist" class="py-24 section-border text-left">
+            <div class="max-w-5xl mx-auto">
+                <div class="glass-card p-10 md:p-16 rounded-sm relative overflow-hidden border-amber-500/10">
+                    <div class="absolute -bottom-12 -left-12 w-64 h-64 bg-amber-500/5 blur-3xl rounded-full"></div>
+
+                    <div class="grid lg:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <p class="mono text-[10px] uppercase tracking-[0.3em] text-amber-400 mb-6">Systems Intelligence</p>
+                            <h2 class="serif text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
+                                Build with <br><span class="text-amber-400 italic">Technical Leverage.</span>
+                            </h2>
+                            <p class="text-white/50 text-base md:text-lg leading-relaxed mb-8">
+                                Not ready for a full audit? Join founders receiving the <strong>Systems Intelligence Brief</strong>—a weekly breakdown of automation logic and secure infrastructure.
+                            </p>
+                            <ul class="space-y-3 mono text-[10px] uppercase tracking-widest text-white/30">
+                                <li><span class="text-amber-400">→</span> Weekly Automation Logic</li>
+                                <li><span class="text-amber-400">→</span> Infrastructure Templates</li>
+                            </ul>
+                        </div>
+
+                        <div class="relative z-10">
+                            <form action="https://formspree.io/f/mlgpyrrb" method="POST" class="space-y-4">
+                                <div>
+                                    <label class="mono text-[10px] uppercase tracking-widest text-white/40 mb-2 block">Email Address</label>
+                                    <input type="email" name="email" placeholder="ceo@company.com" required 
+                                        class="w-full bg-white/5 border border-white/10 rounded-sm px-5 py-4 text-white mono text-sm focus:outline-none focus:border-amber-400 transition">
+                                </div>
+                                <input type="hidden" name="_subject" value="New Systems Intelligence Signup" />
+                                <button type="submit" class="btn-primary w-full py-5 rounded-sm font-bold text-[10px] tracking-[0.2em]">
+                                    Join the Waitlist
+                                </button>
+                                <p class="text-center mono text-[9px] uppercase tracking-tighter text-white/20 mt-4">
+                                    Institutional-grade insights only.
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="max-w-7xl mx-auto px-6 pt-20 pb-12 border-t border-white/5 text-left">
+        <div class="grid md:grid-cols-3 gap-12 items-start mb-16">
+            <div>
+                <p class="serif text-2xl font-bold mb-4 text-white">Brilliant Unicorn <span class="text-amber-400">LLC</span></p>
+                <p class="text-white/40 leading-relaxed max-w-xs text-sm">
+                    Strategic education and digital infrastructure for founders building durable leverage.
+                </p>
+            </div>
+            
+            <div class="mono text-[10px] uppercase tracking-[0.2em] space-y-4">
+                <p><a href="/" class="text-white/50 hover:text-amber-400 transition">Home</a></p>
+                <p><a href="/products" class="text-amber-400">Products</a></p>
+                <p><a href="/services" class="text-white/50 hover:text-amber-400 transition">Implementation Support</a></p>
+                <p><a href="/about" class="text-white/50 hover:text-amber-400 transition">About</a></p>
+                <p><a href="/contact" class="text-white/50 hover:text-amber-400 transition">Contact</a></p>
+            </div>
+
+            <div class="md:text-right">
+                <p class="mono text-[10px] uppercase tracking-[0.2em] text-white/30 mb-4">Support & Inquiries</p>
+                <a href="mailto:ceo@brilliantunicorn.com" class="block text-white/60 hover:text-amber-400 mb-2">ceo@brilliantunicorn.com</a>
+                <p class="text-white/20 text-[10px] mt-4 uppercase tracking-widest">Nairobi // Global Delivery</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-between items-center border-t border-white/5 pt-8 gap-6">
+            <p class="mono text-[10px] uppercase tracking-widest text-white/20">© 2026 Brilliant Unicorn LLC</p>
+            <div class="flex gap-4">
+                <p class="mono text-[10px] uppercase tracking-widest text-white/20 italic text-white">Systems That Last</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
