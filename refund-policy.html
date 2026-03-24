@@ -3,42 +3,117 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Refund Policy | Brilliant Unicorn</title>
+    <title>Refund Policy | Brilliant Unicorn LLC</title>
+    <meta name="description" content="Brilliant Unicorn LLC Refund Policy - Clear terms for digital products and implementation support." />
+
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link rel="apple-touch-icon" href="logo.png" />
+
+    <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
     <style>
-        :root { --amber: #F59E0B; --bg: #000; --panel: rgba(255, 255, 255, 0.03); --panel-border: rgba(255, 255, 255, 0.08); --text: #F3F4F6; }
-        body { background: radial-gradient(circle at top, rgba(245, 158, 11, 0.05), transparent 40%), #000; color: var(--text); font-family: 'Inter', sans-serif; }
+        :root {
+            --amber: #F59E0B;
+            --amber-dark: #D97706;
+            --bg: #000000;
+            --panel: rgba(255, 255, 255, 0.03);
+            --panel-border: rgba(255, 255, 255, 0.08);
+            --text: #F3F4F6;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: radial-gradient(circle at top, rgba(245, 158, 11, 0.08), transparent 40%), #000000;
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+        }
+
         .serif { font-family: 'Playfair Display', serif; }
         .mono { font-family: 'JetBrains Mono', monospace; }
-        .glass-card { background: var(--panel); border: 1px solid var(--panel-border); backdrop-filter: blur(10px); }
+
+        .glass-card {
+            background: var(--panel);
+            border: 1px solid var(--panel-border);
+            backdrop-filter: blur(10px);
+            transition: all 0.35s ease;
+        }
+
+        .nav-border { border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
     </style>
 </head>
-<body class="antialiased">
-    <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between border-b border-white/5 sticky top-0 bg-black/75 backdrop-blur z-50">
-        <a href="/" class="serif text-xl font-bold tracking-wide">Brilliant Unicorn <span class="text-amber-400">LLC</span></a>
-        <a href="/" class="mono text-[10px] uppercase tracking-widest text-amber-400">← Back to Home</a>
+<body class="antialiased selection:bg-amber-500/30">
+
+    <!-- NAVIGATION -->
+    <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between nav-border sticky top-0 bg-black/75 backdrop-blur z-50">
+        <a href="/" class="flex items-center gap-4">
+            <img src="logo.png" alt="Brilliant Unicorn Logo" class="w-16 h-16 rounded-full border border-amber-500/20 logo-glow object-cover" />
+            <p class="serif text-xl md:text-2xl font-bold tracking-wide text-white">
+                Brilliant Unicorn <span class="text-amber-400">LLC</span>
+            </p>
+        </a>
+        <a href="/" class="mono text-[10px] uppercase tracking-widest text-amber-400 hover:text-amber-300 transition">← Back to Home</a>
     </nav>
 
     <main class="max-w-4xl mx-auto px-6 py-20">
-        <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-4">Value Exchange</p>
-        <h1 class="serif text-5xl font-bold mb-12">Refund Policy</h1>
-        
-        <div class="glass-card p-8 md:p-12 rounded-sm space-y-8 leading-relaxed text-white/70">
-            <section>
-                <h2 class="mono text-amber-400 uppercase text-sm mb-4 tracking-widest font-bold">01. Digital Assets</h2>
-                <p>Due to the irrevocable nature of digital downloads and course access, all sales of "The Academy" products are final. No refunds will be issued once content has been accessed.</p>
-            </section>
-            <section>
-                <h2 class="mono text-amber-400 uppercase text-sm mb-4 tracking-widest font-bold">02. SaaS Subscriptions</h2>
-                <p>For RQE and AlphaCore, you may cancel at any time. We do not provide prorated refunds for the remaining period of a billing cycle.</p>
-            </section>
-            <section>
-                <h2 class="mono text-amber-400 uppercase text-sm mb-4 tracking-widest font-bold">03. Technical Failure</h2>
-                <p>If a product is technically non-functional, we will provide an immediate engineering fix. Refunds are only considered if a critical bug cannot be resolved within 14 business days.</p>
-            </section>
+
+        <div class="mb-12">
+            <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-4">Legal</p>
+            <h1 class="serif text-5xl md:text-6xl font-bold leading-tight text-white">Refund Policy</h1>
+            <p class="text-white/60 mt-6 text-lg">Last updated: March 2026</p>
         </div>
+
+        <div class="glass-card p-10 md:p-14 rounded-sm space-y-10 text-white/80 leading-relaxed">
+
+            <section>
+                <h2 class="mono text-amber-400 text-sm font-bold uppercase tracking-widest mb-5">1. Digital Products &amp; Frameworks</h2>
+                <p class="mb-4">
+                    All digital products (including The Builder Bundle, AI Business Automation, LLC &amp; Umbrella Setup, Products That Last, and any other instant-access Notion-based frameworks) are <strong>final sale</strong>.
+                </p>
+                <p>
+                    Because these are digital goods that can be instantly downloaded and accessed, we do not offer refunds once the purchase is completed and access has been granted.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="mono text-amber-400 text-sm font-bold uppercase tracking-widest mb-5">2. Implementation Support &amp; Consulting Packages</h2>
+                <p>
+                    Implementation Support (System Audit, Build Blueprint, Full Provisioning) is a service. 
+                    <strong>No refunds</strong> will be issued once the service has started (i.e., after the first call or delivery of any materials).
+                </p>
+                <p class="mt-3 text-sm text-white/60">
+                    If you have not yet begun implementation, we may consider a refund within 7 days of purchase, minus any transaction fees.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="mono text-amber-400 text-sm font-bold uppercase tracking-widest mb-5">3. Technical Issues</h2>
+                <p>
+                    If a digital product fails to deliver or is technically defective, we will work with you to resolve the issue immediately. 
+                    A full refund will only be considered if we are unable to provide working access within 14 business days.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="mono text-amber-400 text-sm font-bold uppercase tracking-widest mb-5">4. Subscription Products</h2>
+                <p>
+                    For any recurring subscriptions (if applicable), you may cancel at any time. However, we do not issue prorated refunds for the remaining portion of the current billing cycle.
+                </p>
+            </section>
+
+            <div class="pt-8 border-t border-white/10 text-sm text-white/60">
+                <p><strong>Contact us</strong> at <a href="mailto:ceo@brilliantunicorn.com" class="text-amber-400 hover:underline">ceo@brilliantunicorn.com</a> if you have any questions about this policy.</p>
+                <p class="mt-6">By purchasing from Brilliant Unicorn LLC, you agree to this Refund Policy.</p>
+            </div>
+
+        </div>
+
     </main>
+
+    <!-- Footer will be injected by your footer.js script -->
     <script src="footer.js"></script>
+
 </body>
 </html>
