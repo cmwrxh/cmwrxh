@@ -4,14 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About | Brilliant Unicorn LLC</title>
-    <meta name="description" content="Brilliant Unicorn LLC: Architecting resilient systems, distributed infrastructure, and strategic AI solutions." />
+    <meta name="description" content="Charles Mwaura — Founder of Brilliant Unicorn LLC. Kenyan engineer building institutional-grade digital frameworks and implementation support for ambitious founders." />
 
     <link rel="icon" type="image/png" href="logo.png" />
     <link rel="apple-touch-icon" href="logo.png" />
 
     <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
     <style>
@@ -22,7 +21,6 @@
             --panel: rgba(255, 255, 255, 0.03);
             --panel-border: rgba(255, 255, 255, 0.08);
             --text: #F3F4F6;
-            --muted: rgba(243, 244, 246, 0.68);
         }
 
         html { scroll-behavior: smooth; }
@@ -68,10 +66,22 @@
             transform: translateY(-1px);
         }
 
+        .btn-secondary {
+            border: 1px solid rgba(245, 158, 11, 0.55);
+            color: var(--text);
+            transition: all 0.25s ease;
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--amber);
+            color: var(--amber);
+        }
+
         .hero-grid {
-            background-image:
-                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
             background-size: 40px 40px;
             mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
         }
@@ -79,189 +89,189 @@
 </head>
 <body class="antialiased selection:bg-amber-500/30">
 
+    <!-- NAVIGATION - Updated to match the rest of the site -->
     <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between nav-border sticky top-0 bg-black/75 backdrop-blur z-50">
         <a href="/" class="flex items-center gap-4">
             <img src="logo.png" alt="Brilliant Unicorn Logo" class="w-16 h-16 rounded-full border border-amber-500/20 logo-glow object-cover" />
-            <p class="serif text-xl md:text-2xl font-bold tracking-wide">
+            <p class="serif text-xl md:text-2xl font-bold tracking-wide text-white">
                 Brilliant Unicorn <span class="text-amber-400">LLC</span>
             </p>
         </a>
 
         <div class="hidden md:flex items-center gap-8 mono text-[10px] uppercase tracking-[0.18em] text-white/70">
             <a href="/" class="hover:text-amber-400 transition">Home</a>
-            <a href="/services" class="hover:text-amber-400 transition">Services</a>
             <a href="/products" class="hover:text-amber-400 transition">Products</a>
+            <a href="/services" class="hover:text-amber-400 transition">Implementation Support</a>
             <a href="/about" class="text-amber-400">About</a>
             <a href="/contact" class="hover:text-amber-400 transition">Contact</a>
         </div>
     </nav>
 
+    <!-- HERO -->
     <header class="relative overflow-hidden py-24 md:py-32">
         <div class="absolute inset-0 hero-grid opacity-40 pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-6 relative text-center">
-            <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-6">Systems & Infrastructure</p>
-            <h1 class="serif text-5xl md:text-7xl font-bold leading-tight tracking-tight mb-8">
-                Architecting <span class="text-amber-400 font-bold italic">Resilience.</span>
+            <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-6">Founded in Nairobi</p>
+            <h1 class="serif text-5xl md:text-7xl font-bold leading-tight tracking-tight mb-8 text-white">
+                Charles Mwaura<br>
+                <span class="text-amber-400 font-bold italic">Building Systems That Last.</span>
             </h1>
-
-            <p class="text-lg md:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed mb-12">
-                Brilliant Unicorn LLC designs and operates the invisible, rock-solid infrastructure that allows modern enterprises to scale without friction.
+            <p class="text-lg md:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed mb-12">
+                I design institutional-grade digital frameworks and provide implementation support for founders who want resilient infrastructure without the usual complexity.
             </p>
-
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#portfolio" class="btn-primary px-10 py-4 rounded-sm font-medium">View Portfolio</a>
-                <a href="/contact" class="border border-white/20 hover:border-amber-400 px-10 py-4 rounded-sm font-medium mono text-xs uppercase tracking-widest transition">Get in Touch</a>
+                <a href="/products" class="btn-primary px-10 py-4 rounded-sm font-medium">Explore Digital Frameworks</a>
+                <a href="/services" class="btn-secondary px-10 py-4 rounded-sm font-medium text-white">See Implementation Support</a>
             </div>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto px-6">
 
-        <section id="identity" class="py-20 section-border">
+        <!-- IDENTITY SECTION -->
+        <section class="py-20 section-border">
             <div class="grid lg:grid-cols-[0.8fr_1.2fr] gap-16 items-start">
                 <div>
-                    <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-6">The Firm</p>
-                    <h2 class="serif text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">Beyond Code. <br>Systemic Asset Ownership.</h2>
-                    <div class="space-y-4 pt-4">
+                    <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-6">The Founder</p>
+                    <h2 class="serif text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
+                        From Nairobi to Global Infrastructure.
+                    </h2>
+                    <div class="space-y-5 pt-4">
                         <div class="flex items-center gap-4">
                             <div class="w-1 h-1 rounded-full bg-amber-500"></div>
-                            <p class="mono text-[10px] uppercase tracking-widest text-white/40">B2B Infrastructure</p>
+                            <p class="mono text-[10px] uppercase tracking-widest text-white/50">Software & Data Engineer</p>
                         </div>
                         <div class="flex items-center gap-4">
                             <div class="w-1 h-1 rounded-full bg-amber-500"></div>
-                            <p class="mono text-[10px] uppercase tracking-widest text-white/40">Security-First Design</p>
+                            <p class="mono text-[10px] uppercase tracking-widest text-white/50">Creator of AlphaCore Framework</p>
                         </div>
                         <div class="flex items-center gap-4">
                             <div class="w-1 h-1 rounded-full bg-amber-500"></div>
-                            <p class="mono text-[10px] uppercase tracking-widest text-white/40">Nairobi-Based Intelligence</p>
+                            <p class="mono text-[10px] uppercase tracking-widest text-white/50">Focused on Long-Term Leverage</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="glass-card p-8 md:p-12 rounded-sm space-y-6">
                     <p class="text-white/80 leading-relaxed text-lg italic">
-                        "Modern enterprises require systems that are resilient, measurable, and architected for exponential growth."
+                        "I build systems that don't break when the business grows."
                     </p>
-                    <p class="text-white/60 leading-relaxed">
-                        Brilliant Unicorn LLC was founded to bridge the critical gap between complex technical architecture and practical business execution. Our expertise is rooted in the precision of Mathematics and the rigor of Cyber Security. 
+                    <p class="text-white/70 leading-relaxed">
+                        I'm Charles Mwaura, a 30-year-old Kenyan software and data engineer. After years working on production systems, I founded Brilliant Unicorn LLC to create reusable, battle-tested digital frameworks that founders can deploy instantly.
                     </p>
-                    <p class="text-white/60 leading-relaxed">
-                        We specialize in designing the "invisible" infrastructure that allows modern operators to scale—from high-throughput data ingestion pipelines to automated validation layers. Centered around our proprietary <span class="text-amber-400 font-medium">AlphaCore Framework</span>, we deliver a reusable orchestration layer that ensures every solution we provide is a secure, dependable, and long-term asset.
+                    <p class="text-white/70 leading-relaxed">
+                        My work centers around the <span class="text-amber-400 font-medium">AlphaCore Framework</span> — a high-performance orchestration layer that powers resilient automation, secure infrastructure, and scalable business systems. 
+                        I now offer these frameworks as instant-access digital products, with optional done-with-you implementation support for those who want faster results.
                     </p>
                 </div>
             </div>
         </section>
 
+        <!-- PORTFOLIO / ECOSYSTEMS -->
         <section id="portfolio" class="py-20 section-border">
             <div class="text-center mb-16">
-                <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-4">Portfolio</p>
-                <h2 class="serif text-4xl md:text-5xl font-bold">Specialized Ecosystems</h2>
+                <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-4">Built With Intention</p>
+                <h2 class="serif text-4xl md:text-5xl font-bold text-white">Core Frameworks & Ecosystems</h2>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass-card p-8 rounded-sm flex flex-col h-full hover:border-amber-500/50 transition-all">
-                    <p class="mono text-[10px] uppercase tracking-[0.2em] text-amber-500 mb-6">Systems & Resilience</p>
+                <div class="glass-card p-8 rounded-sm flex flex-col h-full">
+                    <p class="mono text-[10px] uppercase tracking-[0.2em] text-amber-500 mb-6">Core Infrastructure</p>
                     <div class="space-y-6 flex-grow">
                         <div>
-                            <a href="/unicorn-os" class="text-white font-semibold mb-2 hover:text-amber-400 block transition">Unicorn-OS & Distributed Lab</a>
-                            <p class="text-white/50 text-xs leading-relaxed">A living reliability environment designed to self-test, intentionally fault, and document recovery patterns for distributed networks.</p>
+                            <p class="text-white font-semibold mb-2">AlphaCore Framework</p>
+                            <p class="text-white/60 text-sm leading-relaxed">High-performance async orchestration engine designed for systems that must not fail under load.</p>
                         </div>
                         <div>
-                            <a href="/internet-under-the-hood" class="text-white font-semibold mb-2 hover:text-amber-400 block transition">Internet-Under-The-Hood</a>
-                            <p class="text-white/50 text-xs leading-relaxed">A specialized laboratory for DNS, TLS, and BGP optimization, focusing on extreme low-latency CDN performance.</p>
+                            <p class="text-white font-semibold mb-2">Unicorn-OS Lab</p>
+                            <p class="text-white/60 text-sm leading-relaxed">Reliability testing environment for distributed systems and recovery patterns.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="glass-card p-8 rounded-sm flex flex-col h-full border-amber-500/20 hover:border-amber-500/50 transition-all">
-                    <p class="mono text-[10px] uppercase tracking-[0.2em] text-amber-500 mb-6">FinTech & Quant Engines</p>
+                <div class="glass-card p-8 rounded-sm flex flex-col h-full border-amber-500/30">
+                    <p class="mono text-[10px] uppercase tracking-[0.2em] text-amber-500 mb-6">Business Systems</p>
                     <div class="space-y-6 flex-grow">
                         <div>
-                            <a href="/rqe-pulse" class="text-white font-semibold mb-2 hover:text-amber-400 block transition">RQE-Pulse-v3</a>
-                            <p class="text-white/50 text-xs leading-relaxed">Institutional-grade hybrid execution and intelligence suite for multi-asset class market analysis and trend tracking.</p>
+                            <p class="text-white font-semibold mb-2">AI Business Automation</p>
+                            <p class="text-white/60 text-sm leading-relaxed">Practical workflows for leads, onboarding, and operations using battle-tested logic.</p>
                         </div>
                         <div>
-                            <a href="/fintech-risk-lab" class="text-white font-semibold mb-2 hover:text-amber-400 block transition">FinTech Risk Lab</a>
-                            <p class="text-white/50 text-xs leading-relaxed">Proprietary modeling for local economic resilience and cashflow optimization engines for emerging markets.</p>
+                            <p class="text-white font-semibold mb-2">Products That Last</p>
+                            <p class="text-white/60 text-sm leading-relaxed">Framework for building digital products with longevity and minimal maintenance.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="glass-card p-8 rounded-sm flex flex-col h-full hover:border-amber-500/50 transition-all">
-                    <p class="mono text-[10px] uppercase tracking-[0.2em] text-amber-500 mb-6">Climate & Strategic AI</p>
+                <div class="glass-card p-8 rounded-sm flex flex-col h-full">
+                    <p class="mono text-[10px] uppercase tracking-[0.2em] text-amber-500 mb-6">Strategic Foundations</p>
                     <div class="space-y-6 flex-grow">
                         <div>
-                            <a href="/kudu-biotech" class="text-white font-semibold mb-2 hover:text-amber-400 block transition">Kudu Biotech</a>
-                            <p class="text-white/50 text-xs leading-relaxed">Strategic biological data engineering and wildlife telemetry infrastructure for large-scale conservation monitoring.</p>
+                            <p class="text-white font-semibold mb-2">LLC & Umbrella Setup</p>
+                            <p class="text-white/60 text-sm leading-relaxed">Modern entity structuring for global founders and asset protection.</p>
                         </div>
                         <div>
-                            <a href="/water-toolkit" class="text-white font-semibold mb-2 hover:text-amber-400 block transition">Water-Adaptation-Toolkit</a>
-                            <p class="text-white/50 text-xs leading-relaxed">AI-driven modeling for local water risk and rainfall forecasting in drought-prone territories.</p>
-                        </div>
-                        <div>
-                            <a href="/energy-forecaster" class="text-white font-semibold mb-2 hover:text-amber-400 block transition">Energy-Forecaster</a>
-                            <p class="text-white/50 text-xs leading-relaxed">Predictive demand modeling for hyperscale data centers, matching AI growth with clean energy sources.</p>
+                            <p class="text-white font-semibold mb-2">Systems Intelligence Brief</p>
+                            <p class="text-white/60 text-sm leading-relaxed">Weekly insights on automation, infrastructure, and technical leverage.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- VALUES -->
         <section class="py-20 section-border">
             <div class="text-center mb-16">
-                <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-4">Values</p>
-                <h2 class="serif text-4xl md:text-5xl font-bold">The Engineering Standard</h2>
+                <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-4">Engineering Philosophy</p>
+                <h2 class="serif text-4xl md:text-5xl font-bold text-white">Built to Last</h2>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="glass-card p-8 rounded-sm">
                     <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">Correctness First</h3>
-                    <p class="text-white/50 leading-relaxed text-sm">Stability is the priority for long-term operational success. We build systems that work reliably before they are optimized for speed.</p>
+                    <p class="text-white/60 leading-relaxed text-sm">We prioritize systems that work reliably before optimizing for speed or scale.</p>
                 </div>
                 <div class="glass-card p-8 rounded-sm">
                     <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">Measurability</h3>
-                    <p class="text-white/50 leading-relaxed text-sm">Every layer includes visibility and validation. If a system isn't measurable, it isn't manageable at scale.</p>
+                    <p class="text-white/60 leading-relaxed text-sm">If you can't measure it, you can't improve or trust it at scale.</p>
                 </div>
                 <div class="glass-card p-8 rounded-sm">
-                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">Secure Foundations</h3>
-                    <p class="text-white/50 leading-relaxed text-sm">Security is baked into the architecture, not added as a feature. Protection and control are integrated from day one.</p>
+                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">Secure by Design</h3>
+                    <p class="text-white/60 leading-relaxed text-sm">Security is never an afterthought — it's baked into every layer from day one.</p>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="max-w-7xl mx-auto px-6 pt-20 pb-12 border-t border-white/5">
+    <footer class="max-w-7xl mx-auto px-6 pt-20 pb-12 border-t border-white/5 text-left">
         <div class="grid md:grid-cols-3 gap-12 items-start mb-16">
             <div>
-                <p class="serif text-2xl font-bold mb-4">Brilliant Unicorn <span class="text-amber-400">LLC</span></p>
-                <p class="text-white/40 leading-relaxed max-w-xs text-sm">
-                    Architecting high-availability infrastructure, automated ecosystems, and secure data pipelines for global scale.
+                <p class="serif text-2xl font-bold mb-4 text-white">Brilliant Unicorn <span class="text-amber-400">LLC</span></p>
+                <p class="text-white/50 leading-relaxed max-w-xs text-sm">
+                    Digital frameworks and implementation support for founders who want infrastructure that scales.
                 </p>
             </div>
             
             <div class="mono text-[10px] uppercase tracking-[0.2em] space-y-4">
-                <p><a href="/" class="text-white/50 hover:text-amber-400 transition">Home</a></p>
-                <p><a href="/services" class="text-white/50 hover:text-amber-400 transition">Services</a></p>
-                <p><a href="/products" class="text-white/50 hover:text-amber-400 transition">Products</a></p>
+                <p><a href="/" class="text-white/60 hover:text-amber-400 transition">Home</a></p>
+                <p><a href="/products" class="text-white/60 hover:text-amber-400 transition">Products</a></p>
+                <p><a href="/services" class="text-white/60 hover:text-amber-400 transition">Implementation Support</a></p>
                 <p><a href="/about" class="text-amber-400">About</a></p>
-                <p><a href="/contact" class="text-white/50 hover:text-amber-400 transition">Contact</a></p>
+                <p><a href="/contact" class="text-white/60 hover:text-amber-400 transition">Contact</a></p>
             </div>
 
             <div class="md:text-right">
-                <p class="mono text-[10px] uppercase tracking-[0.2em] text-white/30 mb-4">Global Hub</p>
-                <a href="mailto:charlie@brilliantunicorn.com" class="block text-white/60 hover:text-amber-400 mb-2">charlie@brilliantunicorn.com</a>
-                <p class="text-white/40">Nairobi, Kenya</p>
+                <p class="mono text-[10px] uppercase tracking-[0.2em] text-white/30 mb-4">Let's build something that lasts</p>
+                <a href="mailto:ceo@brilliantunicorn.com" class="block text-white/70 hover:text-amber-400">ceo@brilliantunicorn.com</a>
+                <p class="text-white/40 mt-3">Nairobi, Kenya • Global Delivery</p>
             </div>
         </div>
 
         <div class="flex flex-col md:flex-row justify-between items-center border-t border-white/5 pt-8 gap-6">
             <p class="mono text-[10px] uppercase tracking-widest text-white/20">© 2026 Brilliant Unicorn LLC</p>
-            <div class="flex gap-8 mono text-[10px] uppercase tracking-widest text-white/20">
-                <span>Resilient Systems</span>
-                <span>Data Engineering</span>
-            </div>
+            <p class="mono text-[10px] uppercase tracking-widest text-white/20 italic">Systems That Last</p>
         </div>
     </footer>
 
