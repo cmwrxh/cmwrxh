@@ -4,13 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact | Brilliant Unicorn LLC</title>
-    <meta name="description" content="Get in touch about services, courses, AI automation, or custom projects." />
+    <meta name="description" content="Get in touch about digital frameworks, implementation support, or custom technical projects." />
 
     <link rel="icon" type="image/png" href="logo.png" />
     <link rel="apple-touch-icon" href="logo.png" />
 
     <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
@@ -22,8 +21,6 @@
             --panel: rgba(255, 255, 255, 0.03);
             --panel-border: rgba(255, 255, 255, 0.08);
             --text: #F3F4F6;
-            --muted: rgba(243, 244, 246, 0.68);
-            --soft: rgba(243, 244, 246, 0.38);
         }
 
         html { scroll-behavior: smooth; }
@@ -45,14 +42,13 @@
         }
 
         .glass-card:hover {
+            transform: translateY(-4px);
             border-color: rgba(245, 158, 11, 0.45);
             background: rgba(255, 255, 255, 0.045);
             box-shadow: 0 0 30px rgba(245, 158, 11, 0.08);
         }
 
         .nav-border { border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
-        .section-border { border-top: 1px solid rgba(255, 255, 255, 0.06); }
-
         .logo-glow { filter: drop-shadow(0 0 34px rgba(245, 158, 11, 0.18)); }
 
         .btn-primary {
@@ -62,8 +58,6 @@
             font-family: 'JetBrains Mono', monospace;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            border: none;
-            cursor: pointer;
         }
 
         .btn-primary:hover {
@@ -72,9 +66,7 @@
         }
 
         .hero-grid {
-            background-image:
-                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
             background-size: 40px 40px;
             mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
         }
@@ -84,115 +76,115 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             color: white;
             transition: border-color 0.3s ease;
-            appearance: none;
         }
 
         input:focus, textarea:focus, select:focus {
             border-color: var(--amber);
             outline: none;
         }
-
-        select {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23F59E0B' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 20px center;
-        }
     </style>
 </head>
-<body class="antialiased selection:bg-amber-500/30">
+<body class="antialiased selection:bg-amber-500/30 text-left">
 
+    <!-- NAVIGATION -->
     <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between nav-border sticky top-0 bg-black/75 backdrop-blur z-50">
         <a href="/" class="flex items-center gap-4">
             <img src="logo.png" alt="Brilliant Unicorn Logo" class="w-16 h-16 rounded-full border border-amber-500/20 logo-glow object-cover" />
-            <p class="serif text-xl md:text-2xl font-bold tracking-wide">
+            <p class="serif text-xl md:text-2xl font-bold tracking-wide text-white">
                 Brilliant Unicorn <span class="text-amber-400">LLC</span>
             </p>
         </a>
 
         <div class="hidden md:flex items-center gap-8 mono text-[10px] uppercase tracking-[0.18em] text-white/70">
             <a href="/" class="hover:text-amber-400 transition">Home</a>
-            <a href="/services" class="hover:text-amber-400 transition">Services</a>
             <a href="/products" class="hover:text-amber-400 transition">Products</a>
+            <a href="/services" class="hover:text-amber-400 transition">Implementation Support</a>
             <a href="/about" class="hover:text-amber-400 transition">About</a>
             <a href="/contact" class="text-amber-400">Contact</a>
         </div>
     </nav>
 
+    <!-- HERO - Calmer and more inviting -->
     <header class="relative overflow-hidden py-20 md:py-28">
         <div class="absolute inset-0 hero-grid opacity-40 pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-6 relative text-center">
-            <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-6">Connect</p>
-            <h1 class="serif text-5xl md:text-7xl font-bold leading-tight tracking-tight mb-8">
-                Get in <span class="text-amber-400">Touch</span>
+            <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-6">Let's Connect</p>
+            <h1 class="serif text-4xl md:text-5xl font-bold leading-tight tracking-tight mb-6 text-white">
+                Get in Touch
             </h1>
-
-            <p class="text-lg text-white/60 max-w-2xl mx-auto leading-relaxed">
-                Questions about custom systems, AI automation, premium courses, or consulting? Drop a message below or reach out directly.
+            <p class="text-xl text-white/80 max-w-2xl mx-auto">
+                Have questions about our digital frameworks, implementation support, or custom projects?<br>
+                We're here to help.
             </p>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-6 pb-20">
-        
-        <div class="grid lg:grid-cols-[1fr_1.5fr] gap-12 items-start">
-            
-            <div class="space-y-8">
+    <main class="max-w-7xl mx-auto px-6 pb-24">
+
+        <div class="grid lg:grid-cols-[1fr_1.4fr] gap-16 items-start">
+
+            <!-- Contact Info -->
+            <div class="space-y-10">
                 <div class="glass-card p-8 rounded-sm">
-                    <h3 class="mono text-amber-400 text-xs uppercase tracking-widest mb-6">Direct Channels</h3>
-                    <div class="space-y-6">
+                    <h3 class="mono text-amber-400 text-xs uppercase tracking-widest mb-6">Direct Contact</h3>
+                    <div class="space-y-8">
                         <div>
-                            <p class="text-[10px] uppercase text-white/30 mb-1">Primary Email</p>
-                            <a href="mailto:charlie@brilliantunicorn.com" class="text-white hover:text-amber-400 transition">charlie@brilliantunicorn.com</a>
+                            <p class="mono text-[10px] uppercase text-white/40 mb-1">Primary Email</p>
+                            <a href="mailto:ceo@brilliantunicorn.com" class="text-white hover:text-amber-400 transition text-lg">ceo@brilliantunicorn.com</a>
                         </div>
                         <div>
-                            <p class="text-[10px] uppercase text-white/30 mb-1">Alternative Email</p>
-                            <a href="mailto:info@brilliantunicorn.com" class="text-white hover:text-amber-400 transition">info@brilliantunicorn.com</a>
-                        </div>
-                        <div>
-                            <p class="text-[10px] uppercase text-white/30 mb-1">Phone / WhatsApp</p>
-                            <p class="text-white">+254 797 560 284</p>
-                            <p class="text-white/40 text-sm mt-1">+254 798 210 130</p>
+                            <p class="mono text-[10px] uppercase text-white/40 mb-1">Phone / WhatsApp</p>
+                            <p class="text-white text-lg">+254 797 560 284</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="p-8 border-l border-amber-500/20">
-                    <p class="text-sm text-white/40 leading-relaxed italic">
-                        "We usually reply within 1–2 business days. For urgent technical inquiries, please use the primary email address."
+                <div class="p-8 border-l-2 border-amber-500/30">
+                    <p class="text-white/70 italic leading-relaxed">
+                        We typically reply within 1–2 business days. For urgent technical or implementation inquiries, please use the primary email.
                     </p>
                 </div>
             </div>
 
-            <div class="glass-card p-8 md:p-12 rounded-sm">
-                <form action="https://formspree.io/f/mlgpyrrb" method="POST" class="space-y-6">
+            <!-- Contact Form -->
+            <div class="glass-card p-10 md:p-12 rounded-sm">
+                <form action="https://formspree.io/f/mlgpyrrb" method="POST" class="space-y-8">
                     <div class="grid md:grid-cols-2 gap-6">
-                        <div class="space-y-2">
-                            <label for="name" class="mono text-[10px] uppercase tracking-widest text-white/40">Your Name</label>
-                            <input type="text" name="name" id="name" placeholder="Name" required class="w-full px-5 py-4 rounded-sm text-sm" />
+                        <div>
+                            <label for="name" class="mono text-[10px] uppercase tracking-widest text-white/50 block mb-2">Your Name</label>
+                            <input type="text" name="name" id="name" placeholder="John Doe" required 
+                                   class="w-full px-6 py-4 rounded-sm text-sm bg-white/5 border border-white/10 focus:border-amber-400 transition">
                         </div>
-                        <div class="space-y-2">
-                            <label for="email" class="mono text-[10px] uppercase tracking-widest text-white/40">Your Email</label>
-                            <input type="email" name="email" id="email" placeholder="Email" required class="w-full px-5 py-4 rounded-sm text-sm" />
+                        <div>
+                            <label for="email" class="mono text-[10px] uppercase tracking-widest text-white/50 block mb-2">Your Email</label>
+                            <input type="email" name="email" id="email" placeholder="you@company.com" required 
+                                   class="w-full px-6 py-4 rounded-sm text-sm bg-white/5 border border-white/10 focus:border-amber-400 transition">
                         </div>
                     </div>
 
-                    <div class="space-y-2">
-                        <label for="topic" class="mono text-[10px] uppercase tracking-widest text-white/40">Topic</label>
-                        <select name="topic" id="topic" class="w-full px-5 py-4 rounded-sm text-sm text-white/60">
+                    <div>
+                        <label for="topic" class="mono text-[10px] uppercase tracking-widest text-white/50 block mb-2">What are you reaching out about?</label>
+                        <select name="topic" id="topic" required 
+                                class="w-full px-6 py-4 rounded-sm text-sm bg-white/5 border border-white/10 focus:border-amber-400 transition">
+                            <option value="">Select topic</option>
+                            <option value="Digital Frameworks">Digital Frameworks & Courses</option>
+                            <option value="Implementation Support">Implementation Support</option>
+                            <option value="Custom Project">Custom Technical Project</option>
                             <option value="General Inquiry">General Inquiry</option>
-                            <option value="Custom Systems">Custom Systems & Automation</option>
-                            <option value="Course Support">Course Support (Academy)</option>
-                            <option value="Consulting">Technical Consulting</option>
                         </select>
                     </div>
 
-                    <div class="space-y-2">
-                        <label for="message" class="mono text-[10px] uppercase tracking-widest text-white/40">Message</label>
-                        <textarea name="message" id="message" placeholder="How can we help?" required class="w-full px-5 py-4 rounded-sm text-sm min-h-[180px]"></textarea>
+                    <div>
+                        <label for="message" class="mono text-[10px] uppercase tracking-widest text-white/50 block mb-2">Your Message</label>
+                        <textarea name="message" id="message" rows="6" placeholder="How can we help you today?" required 
+                                  class="w-full px-6 py-4 rounded-sm text-sm bg-white/5 border border-white/10 focus:border-amber-400 transition resize-y"></textarea>
                     </div>
 
-                    <button type="submit" class="btn-primary w-full py-5 rounded-sm font-bold text-xs tracking-[0.2em]">Send Inquiry</button>
+                    <button type="submit" 
+                            class="btn-primary w-full py-5 rounded-sm font-bold text-xs tracking-[0.15em]">
+                        Send Message
+                    </button>
                 </form>
             </div>
 
@@ -200,17 +192,42 @@
 
     </main>
 
-    <footer class="max-w-7xl mx-auto px-6 pt-16 pb-12 border-t border-white/5 text-center md:text-left">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+    <!-- Horizontal Footer -->
+    <footer class="max-w-7xl mx-auto px-6 pt-20 pb-12 border-t border-white/5 text-left">
+        <div class="grid md:grid-cols-3 gap-12 items-start mb-16">
             <div>
-                <p class="serif text-xl font-bold mb-2">Brilliant Unicorn <span class="text-amber-400">LLC</span></p>
-                <p class="mono text-[10px] uppercase tracking-widest text-white/20">Nairobi • Built for Global Delivery</p>
+                <p class="serif text-2xl font-bold mb-4 text-white">Brilliant Unicorn <span class="text-amber-400">LLC</span></p>
+                <p class="text-white/50 leading-relaxed max-w-xs text-sm">
+                    Instant digital frameworks and implementation support for founders building systems that last.
+                </p>
             </div>
-            <div class="flex gap-8 mono text-[10px] uppercase tracking-widest text-white/30">
-                <a href="/" class="hover:text-amber-400">Home</a>
-                <a href="/about" class="hover:text-amber-400">About</a>
-                <a href="mailto:charlie@brilliantunicorn.com" class="hover:text-amber-400">Email</a>
+            
+            <div class="mono text-[10px] uppercase tracking-[0.2em] space-y-4">
+                <p><a href="/" class="text-white/60 hover:text-amber-400 transition">Home</a></p>
+                <p><a href="/products" class="text-white/60 hover:text-amber-400 transition">Products</a></p>
+                <p><a href="/services" class="text-white/60 hover:text-amber-400 transition">Implementation Support</a></p>
+                <p><a href="/about" class="text-white/60 hover:text-amber-400 transition">About</a></p>
+                <p><a href="/contact" class="text-amber-400">Contact</a></p>
             </div>
+
+            <div class="md:text-right">
+                <p class="mono text-[10px] uppercase tracking-[0.2em] text-white/30 mb-6">Legal</p>
+                <div class="mono text-[10px] uppercase tracking-[0.2em] space-y-3">
+                    <p><a href="/terms" class="text-white/60 hover:text-amber-400 transition">Terms of Service</a></p>
+                    <p><a href="/privacy" class="text-white/60 hover:text-amber-400 transition">Privacy Policy</a></p>
+                    <p><a href="/refund-policy" class="text-white/60 hover:text-amber-400 transition">Refund Policy</a></p>
+                </div>
+                
+                <div class="mt-10">
+                    <a href="mailto:ceo@brilliantunicorn.com" class="block text-white/70 hover:text-amber-400">ceo@brilliantunicorn.com</a>
+                    <p class="text-white/40 text-sm mt-2">Nairobi, Kenya • Global Delivery</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-between items-center border-t border-white/5 pt-8 gap-6">
+            <p class="mono text-[10px] uppercase tracking-widest text-white/20">© 2026 Brilliant Unicorn LLC</p>
+            <p class="mono text-[10px] uppercase tracking-widest text-white/20 italic">Systems That Last</p>
         </div>
     </footer>
 
