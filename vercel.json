@@ -1,15 +1,57 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  
   "cleanUrls": true,
   "trailingSlash": false,
+
   "headers": [
     {
-      "source": "/sitemap.xml",
+      "source": "/(.*)\\.(png|jpg|jpeg|gif|svg|webp|ico)",
       "headers": [
         {
-          "key": "Content-Type",
-          "value": "application/xml"
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
         }
       ]
+    },
+    {
+      "source": "/(.*)\\.(js|css)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ],
+
+  "redirects": [
+    {
+      "source": "/services",
+      "destination": "/services",
+      "permanent": false
+    },
+    {
+      "source": "/services/:path*",
+      "destination": "/services",
+      "permanent": false
     }
   ]
 }
