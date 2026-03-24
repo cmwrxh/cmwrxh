@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services | Brilliant Unicorn LLC</title>
-    <meta name="description" content="Strategic consulting for automation, data platforms, and secure infrastructure. Provisioning institutional-grade SaaS solutions." />
+    <title>Implementation Support | Brilliant Unicorn LLC</title>
+    <meta name="description" content="Implementation support and done-with-you help for buyers of our digital frameworks. Turn your purchased Notion systems into live production infrastructure." />
 
     <link rel="icon" type="image/png" href="logo.png" />
     <link rel="apple-touch-icon" href="logo.png" />
 
     <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
     <script src="https://app.lemonsqueezy.com/js/lemon.js" defer></script>
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
@@ -92,10 +91,20 @@
             letter-spacing: 0.05em;
             margin-bottom: 12px;
         }
+
+        .add-on-note {
+            background: rgba(245, 158, 11, 0.08);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            color: #F59E0B;
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-amber-500/30 text-left">
 
+    <!-- NAVIGATION - Updated to match homepage and products.html -->
     <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between nav-border sticky top-0 bg-black/75 backdrop-blur z-50">
         <a href="/" class="flex items-center gap-4">
             <img src="logo.png" alt="Brilliant Unicorn Logo" class="w-16 h-16 rounded-full border border-amber-500/20 logo-glow object-cover" />
@@ -106,214 +115,21 @@
 
         <div class="hidden md:flex items-center gap-8 mono text-xs uppercase tracking-[0.18em] text-white/70">
             <a href="/" class="hover:text-amber-400 transition">Home</a>
-            <a href="/services" class="text-amber-400">Services</a>
             <a href="/products" class="hover:text-amber-400 transition">Products</a>
+            <a href="/services" class="text-amber-400">Implementation Support</a>
             <a href="/about" class="hover:text-amber-400 transition">About</a>
             <a href="/contact" class="hover:text-amber-400 transition">Contact</a>
         </div>
     </nav>
 
+    <!-- HERO - Repositioned as Implementation Support -->
     <header class="relative overflow-hidden">
         <div class="absolute inset-0 hero-grid opacity-40 pointer-events-none"></div>
         <div class="max-w-7xl mx-auto px-6 py-20 md:py-28 relative text-left">
-            <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-6">Consulting & Provisioning</p>
+            <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-6">Add-on for Digital Framework Buyers</p>
             <h1 class="serif text-4xl md:text-6xl font-bold leading-tight tracking-tight max-w-5xl text-white">
-                Technical Systems for <br>
-                <span class="text-amber-400 italic">Scale & Resilience.</span>
+                Implementation Support for <br>
+                <span class="text-amber-400 italic">Your Purchased Frameworks.</span>
             </h1>
             <p class="mt-8 text-base md:text-lg text-white/60 max-w-3xl leading-relaxed">
-                Brilliant Unicorn LLC architects automation ecosystems, quantitative data platforms, and secure backend infrastructure designed for high-throughput business execution.
-            </p>
-            <div class="mt-10 flex flex-col sm:flex-row gap-4">
-                <a href="#advisory" class="btn-primary inline-flex items-center justify-center px-7 py-4 rounded-sm font-medium">View Advisory Tiers</a>
-                <a href="/contact" class="border border-white/20 hover:border-amber-400 inline-flex items-center justify-center px-7 py-4 rounded-sm mono text-xs uppercase tracking-[0.18em] font-medium transition text-white">Request Brief</a>
-            </div>
-        </div>
-    </header>
-
-    <main class="max-w-7xl mx-auto px-6">
-
-        <section id="advisory" class="py-24">
-            <div class="max-w-3xl mb-16 text-left">
-                <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-4">Direct Advisory</p>
-                <h2 class="serif text-4xl md:text-5xl font-semibold mb-6 text-white">Consulting Segments</h2>
-                <p class="text-base md:text-lg text-white/50 leading-relaxed">
-                    High-leverage technical partnership for founders and engineering teams. We move from architectural theory to production-ready systems.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass-card p-10 rounded-sm flex flex-col border-white/5">
-                    <p class="mono text-[10px] uppercase tracking-[0.2em] text-white/40 mb-6 text-left">Level 01 // Clarity</p>
-                    <h3 class="serif text-2xl font-bold mb-2 text-white text-left">System Audit</h3>
-                    <div class="mono text-amber-400 text-3xl font-bold mb-6 text-left">$999.99</div>
-                    <ul class="space-y-4 text-sm text-white/50 mb-10 flex-grow text-left">
-                        <li class="flex items-start gap-3"><span>•</span> Architecture & Security Review</li>
-                        <li class="flex items-start gap-3"><span>•</span> Automation Bottleneck ID</li>
-                        <li class="flex items-start gap-3"><span>•</span> 60-Minute Strategy Session</li>
-                        <li class="flex items-start gap-3"><span>•</span> Implementation Roadmap PDF</li>
-                    </ul>
-                    <a href="https://buy.brilliantunicorn.com/checkout/buy/d60f3094-d018-486f-903f-eb8f97654e86" class="lemonsqueezy-button btn-primary py-4 rounded-sm text-center text-[10px] font-bold">Purchase & Book</a>
-                </div>
-
-                <div class="glass-card p-10 rounded-sm flex flex-col border-amber-500/30 bg-amber-500/[0.02] relative">
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-500 text-black px-3 py-1 mono text-[8px] font-bold uppercase tracking-widest">Recommended</div>
-                    <p class="mono text-[10px] uppercase tracking-[0.2em] text-amber-500 mb-6 text-left">Level 02 // Build</p>
-                    <h3 class="serif text-2xl font-bold mb-2 text-white text-left">Build Blueprint</h3>
-                    <div class="mono text-amber-400 text-3xl font-bold mb-6 text-left">$1,999.99</div>
-                    <ul class="space-y-4 text-sm text-white/70 mb-10 flex-grow text-left">
-                        <li class="flex items-start gap-3"><span class="text-amber-400">•</span> Custom System Architecture</li>
-                        <li class="flex items-start gap-3"><span class="text-amber-400">•</span> Logic Flow & API Integrations</li>
-                        <li class="flex items-start gap-3"><span class="text-amber-400">•</span> AlphaCore Integration Strategy</li>
-                        <li class="flex items-start gap-3"><span class="text-amber-400">•</span> 2x Implementation Sessions</li>
-                    </ul>
-                    <a href="https://buy.brilliantunicorn.com/checkout/buy/79337d13-967f-4840-a745-d1256f2aaf38" class="lemonsqueezy-button btn-primary py-4 rounded-sm text-center text-[10px] font-bold">Purchase & Book</a>
-                </div>
-
-                <div class="glass-card p-10 rounded-sm flex flex-col border-white/5">
-                    <p class="mono text-[10px] uppercase tracking-[0.2em] text-white/40 mb-6 text-left">Level 03 // Execution</p>
-                    <h3 class="serif text-2xl font-bold mb-2 text-white text-left">Full Provisioning</h3>
-                    <div class="mono text-amber-400 text-3xl font-bold mb-6 text-left">$2,999.99</div>
-                    <ul class="space-y-4 text-sm text-white/50 mb-10 flex-grow text-left">
-                        <li class="flex items-start gap-3"><span>•</span> Done-With-You Implementation</li>
-                        <li class="flex items-start gap-3"><span>•</span> Infrastructure Deployment</li>
-                        <li class="flex items-start gap-3"><span>•</span> Performance Optimization</li>
-                        <li class="flex items-start gap-3"><span>•</span> 30-Day Technical Support</li>
-                    </ul>
-                    <a href="https://buy.brilliantunicorn.com/checkout/buy/b96a68c6-f57c-4b2a-a0ba-839092dce629" class="lemonsqueezy-button btn-primary py-4 rounded-sm text-center text-[10px] font-bold">Purchase & Book</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-20 section-border">
-            <div class="max-w-3xl mb-12 text-left">
-                <p class="mono text-xs uppercase tracking-[0.3em] text-white/40 mb-4">Managed Infrastructure</p>
-                <h2 class="serif text-3xl md:text-4xl font-semibold mb-5 text-white">Flagship Managed Solutions</h2>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="glass-card p-8 rounded-sm flex flex-col h-full border-amber-500/20">
-                    <div class="saas-badge">Managed SaaS Available</div>
-                    <h3 class="serif text-xl font-semibold mb-3 text-white text-left">RQE-Pulse-v3</h3>
-                    <p class="text-sm text-white/50 leading-relaxed mb-6 flex-grow text-left">
-                        Institutional quantitative engine for trend analysis and risk management. Features sub-millisecond data synchronization.
-                    </p>
-                    <div class="space-y-4">
-                        <div class="mono text-[10px] text-amber-400 space-y-1 text-left">
-                            <p>• $99/mo – Hosted Dashboards</p>
-                            <p>• Alert Integration & 24/7 Monitoring</p>
-                        </div>
-                        <a href="https://buy.brilliantunicorn.com/checkout/buy/e4ede3ef-376e-462b-9517-19091009a9b1" 
-                           class="lemonsqueezy-button btn-primary w-full py-3 rounded-sm text-center mono text-[10px] font-bold block">
-                           Subscribe to Pro
-                        </a>
-                        <a href="/rqe-pulse" class="block text-center text-[10px] mono text-white/30 hover:text-amber-400 transition">View Documentation</a>
-                    </div>
-                </div>
-
-                <div class="glass-card p-8 rounded-sm flex flex-col h-full">
-                    <div class="saas-badge text-white">Enterprise Ready</div>
-                    <h3 class="serif text-xl font-semibold mb-3 text-white text-left">AlphaCore Framework</h3>
-                    <p class="text-sm text-white/50 leading-relaxed mb-6 flex-grow text-left">
-                        High-performance async orchestration engine designed to prevent digital systems from crashing under load.
-                    </p>
-                    <div class="space-y-4">
-                        <div class="mono text-[10px] text-amber-400 space-y-1 text-left">
-                            <p>• $149/mo – Fully Managed Cluster</p>
-                            <p>• Managed mTLS & Priority Support</p>
-                        </div>
-                        <a href="/contact" class="border border-white/20 hover:border-amber-400 w-full py-3 rounded-sm text-center mono text-[10px] font-bold block transition text-white">
-                           Inquire for Access
-                        </a>
-                    </div>
-                </div>
-
-                <div class="glass-card p-8 rounded-sm flex flex-col h-full">
-                    <div class="saas-badge text-white">Strategic Deployment</div>
-                    <h3 class="serif text-xl font-semibold mb-3 text-white text-left">Kudu Biotech Platform</h3>
-                    <p class="text-sm text-white/50 leading-relaxed mb-6 flex-grow text-left">
-                        Edge-AI wildlife telemetry and immutable ledger systems for carbon monitoring.
-                    </p>
-                    <div class="space-y-4 text-left">
-                        <div class="mono text-[10px] text-amber-400 space-y-1">
-                            <p>• $129/mo – Remote Instance</p>
-                            <p>• Real-time Telemetry Analytics</p>
-                        </div>
-                        <a href="/contact" class="border border-white/20 hover:border-amber-400 w-full py-3 rounded-sm text-center mono text-[10px] font-bold block transition text-white">
-                           Request Instance
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="waitlist" class="py-24 section-border text-left">
-            <div class="max-w-5xl mx-auto">
-                <div class="glass-card p-10 md:p-16 rounded-sm relative overflow-hidden border-amber-500/10">
-                    <div class="absolute -bottom-12 -left-12 w-64 h-64 bg-amber-500/5 blur-3xl rounded-full"></div>
-
-                    <div class="grid lg:grid-cols-2 gap-16 items-center">
-                        <div>
-                            <p class="mono text-[10px] uppercase tracking-[0.3em] text-amber-400 mb-6">Systems Intelligence</p>
-                            <h2 class="serif text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
-                                Build with <br><span class="text-amber-400 italic">Technical Leverage.</span>
-                            </h2>
-                            <p class="text-white/50 text-base md:text-lg leading-relaxed mb-8">
-                                Not ready for a full audit? Join founders receiving the <strong>Systems Intelligence Brief</strong>—a weekly breakdown of automation logic and secure infrastructure.
-                            </p>
-                            <ul class="space-y-3 mono text-[10px] uppercase tracking-widest text-white/30">
-                                <li><span class="text-amber-400">→</span> Weekly Automation Logic</li>
-                                <li><span class="text-amber-400">→</span> Infrastructure Templates</li>
-                            </ul>
-                        </div>
-
-                        <div class="relative z-10">
-                            <form action="https://formspree.io/f/mlgpyrrb" method="POST" class="space-y-4">
-                                <div>
-                                    <label class="mono text-[10px] uppercase tracking-widest text-white/40 mb-2 block">Email Address</label>
-                                    <input type="email" name="email" placeholder="ceo@company.com" required 
-                                        class="w-full bg-white/5 border border-white/10 rounded-sm px-5 py-4 text-white mono text-sm focus:outline-none focus:border-amber-400 transition">
-                                </div>
-                                <input type="hidden" name="_subject" value="New Systems Intelligence Signup" />
-                                <button type="submit" class="btn-primary w-full py-5 rounded-sm font-bold text-[10px] tracking-[0.2em]">
-                                    Join the Waitlist
-                                </button>
-                                <p class="text-center mono text-[9px] uppercase tracking-tighter text-white/20 mt-4">
-                                    Institutional-grade insights only.
-                                </p>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="max-w-7xl mx-auto px-6 py-20 border-t border-white/5">
-        <div class="grid md:grid-cols-3 gap-12 mb-16 text-left">
-            <div>
-                <p class="serif text-xl font-bold mb-4 text-white">Brilliant Unicorn <span class="text-amber-400">LLC</span></p>
-                <p class="text-white/40 text-sm leading-relaxed max-w-xs">
-                    Engineering resilient automation, quantitative platforms, and secure infrastructure.
-                </p>
-            </div>
-            <div class="mono text-[10px] uppercase tracking-[0.2em] space-y-4">
-                <p><a href="/" class="text-white/50 hover:text-amber-400 transition">Home</a></p>
-                <p><a href="/products" class="text-white/50 hover:text-amber-400 transition">Products</a></p>
-                <p><a href="/about" class="text-white/50 hover:text-amber-400 transition">About</a></p>
-            </div>
-            <div class="md:text-right text-left">
-                <p class="mono text-[10px] uppercase tracking-[0.2em] text-white/20 mb-4">Contact Info</p>
-                <a href="mailto:ceo@brilliantunicorn.com" class="block text-white/60 hover:text-amber-400">ceo@brilliantunicorn.com</a>
-                <p class="text-white/30 mt-2 text-sm">Nairobi, Kenya</p>
-            </div>
-        </div>
-        <div class="flex justify-between items-center border-t border-white/5 pt-8">
-            <p class="mono text-[10px] uppercase tracking-widest text-white/20">© 2026 Brilliant Unicorn LLC</p>
-            <p class="mono text-[10px] uppercase tracking-widest text-white/20 italic">Secure // Encrypted // Active</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+                You buy
