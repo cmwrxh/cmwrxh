@@ -13,8 +13,8 @@
 
 <p align="center">
   <font face="DejaVu Sans Mono" color="#9C27B0"><b>Hey, I'm Charlie</b></font><br>
-  <sub>Nairobi-based Software & Data Engineer — systems that survive audits, scale, and time</sub><br>
-  <sub><i>Schemas before scripts • Meaning before motion</i></sub>
+  <sub>Nairobi-based Software & Data Engineer • Founder of <a href="https://brilliantunicorn.com">Brilliant Unicorn LLC</a></sub><br>
+  <sub><i>Building institutional-grade digital frameworks and implementation support that last.</i></sub>
 </p>
 
 <p align="center">
@@ -28,13 +28,13 @@
 <p align="center">
   <font face="DejaVu Sans Mono" color="#CC5500" size="4"><b>Flagship Project</b></font><br>
   <a href="https://github.com/cmwrxh/alpha-core-framework"><b>AlphaCore Framework</b></a><br>
-  <sub>High-performance async orchestration engine • SIMD-optimized Rust core • 6k+ commits</sub><br>
+  <sub>High-performance async orchestration engine • SIMD-optimized Rust core • Production-ready</sub><br>
   <img src="https://img.shields.io/badge/Version-v2.4_Stable-FF7A18?style=flat-square" alt="Version" />
   <img src="https://img.shields.io/badge/Architecture-Memory_Safe-0e8a16?style=flat-square" alt="Architecture" />
 </p>
 
 <p align="center">
-  <font face="DejaVu Sans Mono" color="#0A66C2" size="4"><b>Systems & Infrastructure</b></font><br>
+  <font face="DejaVu Sans Mono" color="#0A66C2" size="4"><b>Core Systems & Infrastructure</b></font><br>
   <a href="https://github.com/cmwrxh/unicorn-os"><code>unicorn-os</code></a> • 
   <a href="https://github.com/cmwrxh/resilient-distributed-systems-lab"><code>distributed-lab</code></a> • 
   <a href="https://github.com/cmwrxh/internet-under-the-hood"><code>internet-under-the-hood</code></a>
@@ -65,15 +65,22 @@
   <img src="./github-snake.svg" width="520" alt="Contribution Snake" />
 </p>
 
-<p align="center"><font face="DejaVu Sans Mono" color="#FF7A18" size="4"><b>Connect & Support</b></font></p>
-<p align="center" style="margin:4px 0;">
-  <a href="https://x.com/cmwrxh"><img src="https://img.shields.io/badge/X-000000?style=flat&logo=x&logoColor=white" height="22" alt="X"/></a>
-  <a href="https://instagram.com/cmwrxh"><img src="https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white" height="22" alt="Instagram"/></a>
-  <a href="https://www.linkedin.com/in/charles-mwaura-bb7814140/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" height="22" alt="LinkedIn"/></a>
-  <a href="https://brilliantunicorn.com"><img src="https://img.shields.io/badge/Website-FF7A18?style=flat&logo=googlechrome&logoColor=white" height="22" alt="Website"/></a>
-  <span style="margin:0 8px;">•</span>
-  <a href="https://www.paypal.com/ncp/links/P4YZHZX9FEMCJ"><img src="https://img.shields.io/badge/PayPal-00457C?style=flat&logo=paypal&logoColor=white" height="22" alt="PayPal"/></a>
-  <a href="https://brilliantunicorn.com"><img src="https://img.shields.io/badge/Wise-00B9FF?style=flat&logo=wise&logoColor=white" height="22" alt="Wise"/></a>
+<hr>
+
+<p align="center">
+  <font face="DejaVu Sans Mono" color="#FF7A18" size="4"><b>Brilliant Unicorn LLC</b></font><br>
+  <sub>Digital frameworks + implementation support for founders who want systems that scale and survive audits.</sub><br>
+  <a href="https://brilliantunicorn.com">🌐 Visit the Store</a> • 
+  <a href="https://payhip.com/b/Aofc2">📦 Latest Product</a>
+</p>
+
+<p align="center" style="margin:12px 0;">
+  <a href="https://x.com/cmwrxh"><img src="https://img.shields.io/badge/X-000000?style=flat&logo=x&logoColor=white" height="24" alt="X"/></a>
+  <a href="https://www.linkedin.com/in/charles-mwaura-bb7814140/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" height="24" alt="LinkedIn"/></a>
+  <a href="https://brilliantunicorn.com"><img src="https://img.shields.io/badge/Website-FF7A18?style=flat&logo=googlechrome&logoColor=white" height="24" alt="Website"/></a>
+  <span style="margin:0 12px;">•</span>
+  <a href="https://www.paypal.com/ncp/links/P4YZHZX9FEMCJ"><img src="https://img.shields.io/badge/PayPal-00457C?style=flat&logo=paypal&logoColor=white" height="24" alt="PayPal"/></a>
+  <a href="https://wise.com"><img src="https://img.shields.io/badge/Wise-00B9FF?style=flat&logo=wise&logoColor=white" height="24" alt="Wise"/></a>
 </p>
 
 <p align="center">
