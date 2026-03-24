@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brilliant Unicorn | Systems, Services & Digital Products</title>
-    <meta name="description" content="Practical digital systems, founder-focused services, premium courses, and AI automation for modern businesses." />
+    <title>Brilliant Unicorn | Instant Digital Frameworks + Implementation Support</title>
+    <meta name="description" content="Instant-access digital frameworks and implementation support for founders who want institutional-grade infrastructure without the headache." />
 
     <link rel="icon" type="image/png" href="logo.png" />
     <link rel="apple-touch-icon" href="logo.png" />
@@ -81,10 +81,23 @@
             background-size: 40px 40px;
             mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
         }
+
+        /* New instant access badge */
+        .instant-badge {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.15);
+            color: #F59E0B;
+            font-size: 10px;
+            padding: 2px 10px;
+            border-radius: 9999px;
+            border: 1px solid rgba(245, 158, 11, 0.4);
+            letter-spacing: 0.05em;
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-amber-500/30 text-left">
 
+    <!-- NAVIGATION - Updated order: Home, Products, Implementation Support, About, Contact -->
     <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between nav-border sticky top-0 bg-black/75 backdrop-blur z-50">
         <a href="/" class="flex items-center gap-4">
             <img src="logo.png" alt="Brilliant Unicorn Logo" class="w-16 h-16 rounded-full border border-amber-500/20 logo-glow object-cover" />
@@ -95,13 +108,14 @@
 
         <div class="hidden md:flex items-center gap-8 mono text-[10px] uppercase tracking-[0.18em] text-white/70">
             <a href="/" class="text-amber-400">Home</a>
-            <a href="/services" class="hover:text-amber-400 transition">Services</a>
             <a href="/products" class="hover:text-amber-400 transition">Products</a>
+            <a href="/services" class="hover:text-amber-400 transition">Implementation Support</a>
             <a href="/about" class="hover:text-amber-400 transition">About</a>
             <a href="/contact" class="hover:text-amber-400 transition">Contact</a>
         </div>
     </nav>
 
+    <!-- HERO SECTION - Updated exactly as requested -->
     <header class="relative overflow-hidden py-24 md:py-32">
         <div class="absolute inset-0 hero-grid opacity-40 pointer-events-none"></div>
 
@@ -111,115 +125,27 @@
                 Build Smarter. <br><span class="text-amber-400">Scale Faster.</span>
             </h1>
 
+            <h2 class="text-2xl md:text-3xl font-medium text-white/90 max-w-4xl mx-auto mb-6">
+                Instant-Access Digital Frameworks + Implementation Support for Founders Who Want Institutional-Grade Infrastructure Without the Headache.
+            </h2>
+
             <p class="text-lg md:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed mb-12">
-                Practical systems, AI automation, and premium digital products — designed to help founders and operators build high-leverage business infrastructure.
+                Buy once. Deploy forever. Or let me handle implementation for you.
             </p>
 
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="/services" class="btn-primary px-10 py-4 rounded-sm font-medium text-center">Explore Services</a>
-                <a href="/products" class="btn-secondary px-10 py-4 rounded-sm font-medium text-center text-white">View Academy</a>
+                <a href="/products" class="btn-primary px-10 py-4 rounded-sm font-medium text-center">Browse Digital Frameworks</a>
+                <a href="/products#builder-bundle" class="btn-secondary px-10 py-4 rounded-sm font-medium text-center text-white">Get Builder Bundle – $99</a>
             </div>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto px-6">
         
+        <!-- Core Ecosystem - Slightly updated to support new positioning -->
         <section class="py-20 section-border">
             <p class="mono text-xs uppercase tracking-[0.3em] text-white/40 text-center mb-12">Core Ecosystem</p>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="glass-card p-8 rounded-sm">
-                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">Digital Services</h3>
-                    <p class="text-white/60 leading-relaxed text-left text-sm">Custom systems, automation strategy, and product positioning for founders who want leverage without complexity.</p>
-                </div>
-                <div class="glass-card p-8 rounded-sm">
-                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">Premium Courses</h3>
-                    <p class="text-white/60 leading-relaxed text-left text-sm">Execution-focused learning: AI workflows, business structure, and building durable digital products.</p>
-                </div>
-                <div class="glass-card p-8 rounded-sm">
-                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">Long-Term Assets</h3>
-                    <p class="text-white/60 leading-relaxed text-left text-sm">Build once, compound forever — from consulting systems to monetizable digital tools and frameworks.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-20 section-border">
-            <div class="text-center mb-16">
-                <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-4">The Academy</p>
-                <h2 class="serif text-4xl md:text-5xl font-bold text-white">Brilliant Unicorn Academy</h2>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass-card p-8 rounded-sm flex flex-col">
-                    <h3 class="serif text-2xl font-semibold mb-2 text-white">AI Business Automation</h3>
-                    <div class="mono text-amber-400 text-xl font-bold mb-4">$49.99</div>
-                    <p class="text-white/50 mb-8 flex-grow text-sm">Automate leads, onboarding, and operations with practical, battle-tested AI workflows.</p>
-                    <a href="https://buy.brilliantunicorn.com/checkout/buy/2acade4c-d269-477d-9454-80d8b857a9c9" class="lemonsqueezy-button btn-primary py-3 rounded-sm text-center text-[10px] font-bold">Buy Course</a>
-                </div>
-
-                <div class="glass-card p-8 rounded-sm flex flex-col">
-                    <h3 class="serif text-2xl font-semibold mb-2 text-white">LLC & Umbrella Setup</h3>
-                    <div class="mono text-amber-400 text-xl font-bold mb-4">$39.99</div>
-                    <p class="text-white/50 mb-8 flex-grow text-sm">Company structure fundamentals for modern founders looking to scale multiple brands.</p>
-                    <a href="https://buy.brilliantunicorn.com/checkout/buy/4b8ea006-9540-449e-a103-7c71b9070d99" class="lemonsqueezy-button btn-primary py-3 rounded-sm text-center text-[10px] font-bold">Buy Course</a>
-                </div>
-
-                <div class="glass-card p-8 rounded-sm flex flex-col">
-                    <h3 class="serif text-2xl font-semibold mb-2 text-white">Products That Last</h3>
-                    <div class="mono text-amber-400 text-xl font-bold mb-4">$39.99</div>
-                    <p class="text-white/50 mb-8 flex-grow text-sm">Design digital products with real longevity, focus on revenue, and minimal maintenance.</p>
-                    <a href="https://buy.brilliantunicorn.com/checkout/buy/5a5eb2e0-0eda-4792-9e35-afb46a5ce71b" class="lemonsqueezy-button btn-primary py-3 rounded-sm text-center text-[10px] font-bold">Buy Course</a>
-                </div>
-            </div>
-
-            <div class="mt-12 text-center">
-                <a href="https://buy.brilliantunicorn.com/checkout/buy/cebcb256-ba95-4334-9869-1214eee955b5" class="btn-secondary px-8 py-4 inline-block text-white">Buy Full Academy Bundle</a>
-            </div>
-        </section>
-
-        <section id="waitlist" class="py-24 section-border">
-            <div class="max-w-5xl mx-auto">
-                <div class="glass-card p-10 md:p-16 rounded-sm relative overflow-hidden border-amber-500/10">
-                    <div class="absolute -bottom-12 -left-12 w-64 h-64 bg-amber-500/5 blur-3xl rounded-full"></div>
-
-                    <div class="grid lg:grid-cols-2 gap-16 items-center">
-                        <div class="text-left">
-                            <p class="mono text-[10px] uppercase tracking-[0.3em] text-amber-400 mb-6">Systems Intelligence</p>
-                            <h2 class="serif text-4xl md:text-5xl font-bold mb-6 text-white leading-tight text-left">
-                                Build with <br><span class="text-amber-400 italic">Technical Leverage.</span>
-                            </h2>
-                            <p class="text-white/50 text-base md:text-lg leading-relaxed mb-8 text-left">
-                                Not ready for a full audit? Join founders receiving the <strong>Systems Intelligence Brief</strong>—a weekly breakdown of automation logic and secure infrastructure.
-                            </p>
-                            <ul class="space-y-3 mono text-[10px] uppercase tracking-widest text-white/30 text-left">
-                                <li><span class="text-amber-400">→</span> Weekly Automation Logic</li>
-                                <li><span class="text-amber-400">→</span> Infrastructure Templates</li>
-                            </ul>
-                        </div>
-
-                        <div class="relative z-10">
-                            <form action="https://formspree.io/f/mlgpyrrb" method="POST" class="space-y-4">
-                                <div>
-                                    <label class="mono text-[10px] uppercase tracking-widest text-white/40 mb-2 block">Email Address</label>
-                                    <input type="email" name="email" placeholder="ceo@company.com" required 
-                                        class="w-full bg-white/5 border border-white/10 rounded-sm px-5 py-4 text-white mono text-sm focus:outline-none focus:border-amber-400 transition">
-                                </div>
-                                <input type="hidden" name="_subject" value="New Systems Intelligence Signup" />
-                                <button type="submit" class="btn-primary w-full py-5 rounded-sm font-bold text-[10px] tracking-[0.2em]">
-                                    Join the Waitlist
-                                </button>
-                                <p class="text-center mono text-[9px] uppercase tracking-tighter text-white/20 mt-4">
-                                    Institutional-grade insights only.
-                                </p>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <script src="footer.js"></script>
-
-</body>
-</html>
+                    <h3 class="mono text-amber-400 text-sm uppercase tracking-[0.18em] mb-4">Instant Digital Frameworks</h3>
+                    <p class="text-white/60 leading
