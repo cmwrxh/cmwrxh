@@ -8,7 +8,7 @@
 
 <p align="center">
   <b>Recently Played</b><br>
-  <img src="https://spotify-recently-played-readme.vercel.app/api?user=wotwo8jf4wande7lrqy2n36zo&count=3&width=380" width="380" alt="Spotify" />
+  <img src="![Spotify recently played](https://spotify-recently-played.jeffreyca.workers.dev/svg?user=wotwo8jf4wande7lrqy2n36zo) />
 </p>
 
 <p align="center">
