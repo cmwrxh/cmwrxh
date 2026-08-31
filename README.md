@@ -8,7 +8,7 @@
 
 <p align="center">
   <b>Recently Played</b><br>
-  <img src="![Spotify recently played](https://spotify-recently-played.jeffreyca.workers.dev/svg?user=wotwo8jf4wande7lrqy2n36zo) />
+  <img src="https://spotify-recently-played.jeffreyca.workers.dev/svg?user=wotwo8jf4wande7lrqy2n36zo" alt="Spotify recently played" />
 </p>
 
 <p align="center">
@@ -84,7 +84,7 @@
 </p>
 
 <p align="center">
-  <sub><i>Don’t wait to feel better to do things. You’ll need to do things to feel better.</i></sub><br>
+  <sub><i>Don't wait to feel better to do things. You'll need to do things to feel better.</i></sub><br>
   <sub><b>I design systems that survive audits, scale, and time.</b></sub><br>
   <sub>© 2026 Charles Mwaura • Designed with intent</sub>
 </p>
