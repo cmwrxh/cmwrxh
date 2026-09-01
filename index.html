@@ -129,32 +129,35 @@
             transform: translateY(-2px);
         }
 
-        /* ========== FIXED SUN (no filter = no dark center) ========== */
-        .sun-orb-wrapper {
+        /* Sun glow animation */
+        .sun-img {
             width: 96px;
             height: 96px;
-            position: relative;
+            display: block;
             margin-bottom: 2rem;
+            filter: 
+                drop-shadow(0 0 12px rgba(255, 255, 255, 0.5))
+                drop-shadow(0 0 30px rgba(252, 211, 77, 0.5))
+                drop-shadow(0 0 60px rgba(245, 158, 11, 0.3))
+                drop-shadow(0 0 100px rgba(245, 158, 11, 0.12));
+            animation: sun-glow 3s ease-in-out infinite;
         }
 
-        .sun-orb {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background: radial-gradient(
-                circle at 35% 35%,
-                #FFFFFF 0%,
-                #FFFBEA 15%,
-                #FDE68A 35%,
-                #FCD34D 55%,
-                #FBBF24 75%,
-                #F59E0B 100%
-            );
-            box-shadow: 
-                0 0 20px 4px rgba(255, 255, 255, 0.6),
-                0 0 40px 10px rgba(252, 211, 77, 0.5),
-                0 0 70px 20px rgba(245, 158, 11, 0.35),
-                0 0 100px 30px rgba(245, 158, 11, 0.15);
+        @keyframes sun-glow {
+            0%, 100% { 
+                filter: 
+                    drop-shadow(0 0 12px rgba(255, 255, 255, 0.5))
+                    drop-shadow(0 0 30px rgba(252, 211, 77, 0.5))
+                    drop-shadow(0 0 60px rgba(245, 158, 11, 0.3))
+                    drop-shadow(0 0 100px rgba(245, 158, 11, 0.12));
+            }
+            50% { 
+                filter: 
+                    drop-shadow(0 0 20px rgba(255, 255, 255, 0.7))
+                    drop-shadow(0 0 45px rgba(252, 211, 77, 0.65))
+                    drop-shadow(0 0 80px rgba(245, 158, 11, 0.4))
+                    drop-shadow(0 0 130px rgba(245, 158, 11, 0.2));
+            }
         }
 
         .hero-grid {
@@ -212,7 +215,7 @@
             font-weight: 500;
         }
 
-        /* WhatsApp button - clean full circle */
+        /* WhatsApp button */
         .whatsapp-float {
             position: fixed;
             bottom: 24px;
@@ -285,10 +288,13 @@
             </div>
 
             <div class="glass-card rounded-2xl p-10">
-                <!-- FIXED SUN - no more dark center -->
-                <div class="sun-orb-wrapper">
-                    <div class="sun-orb"></div>
-                </div>
+                <!-- REAL PNG SUN (works on Android Chrome + glass background) -->
+                <img 
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAETElEQVR4nO2dP04jMRTGv4mQKCgRR6GkoecOK46zh1jtSWgoKbnDNhFlCqTsZqsXTSaeGdvvrxP/JCQESWx/n9979sB4hv3nywELDPdPS79uksPXe/V7vz/e2O3fve4G+v5m7kWXKDxBY+MYIcUm9cNLFn9MzThvH5/Z7e5+3R2zzpkB1yI+4WXCsf1xDbASf/PwI/u1/7a/1foxpiYdcevB3etuONYATfFLBF97r5Yhw/2TS00Y9p8vBy3xOcKvoWVEqQncKJhdBdWiKfpcO1ZpKsXt4zPLhI3k7LcSX7Nd60XI8PfPz8WNWA5ewqeQibarVJTcBxR9QCDxAbn+mK0IWW8OJj7h0a/avUG1AVHFJyT6ZxEFVQZEF5+wNqEmCooNaEV8Inp/iwyIPpg5uP1WvUqQ/cJGxSes+l+ahrIMaF18IuI42PsAFjcP81/B0CrGqwaIz5pckZXMiBYFiwaIdpYjprARtePSKMY2KUhKvICpiYuuARr5PGiNmJJbB2YNYKcfbZGYnx8lDfmugjppA8LPfqF2IqyI5CPAOj83UA+W6ClIkZxCLGuA12w0blf07+hnPwiQFy3xHm9PQc7IGeBdDL3br6RHgDPdAGe6Ac50A5zpBjjTDXBGzoD9Vuyjmmy/kh4BzpwZ4Hmzgwfe45WNAK80YNyu5L1kPQUpknPThrwB1lHQaPElkgaw86KVKMx2vPM/0FOQO7MGhI8Cp9kvfTO3+H3CJ5BIktfqG8n5uXdN2qQgKdEaEb+ERQNEi9R+Wy8g570JoqQfICMCxFcKJOaaoLmvKyTCymeMbg1Yo6GUUjL7S+6az6oB0WZNLRHHkV2EI3a+BKv+l54ZUbQKatUEbr81D3IqXoa2ZkL0/lbtA6IPipDop1bxJao3YtFNsBa/FtZOOKoJHv1yO7ApmgleJ2bVIrIRo0F7/qu35ESwPDlxI+m0VzR4is9F/FLEWIwWzw0thXtu6PHo4qgn507RFN760NaTo4sPX+9qJkxFu5SzoyUYpg9wuLbT0wG/g7uBxDI0wkMNLPEQf0xyH3AtJniJn/UIE+rcJaakSBNsdSccqbMSRHqAD5B5KeJSTPAWP0X2RqzllMSdQFLiT2c/UHExrrVoiCw+UHkpooVokJgo2uIDzGtB40FGMEMyOrVy/hSxi3GeUSGdFiXFX5r9ADDQU90kH052/HBFMzRqkfSsXxMfGBkA6Jhw1mCFKRaF30N8YJKCvj/e1E2IuIqyyvcpTiJgjEU0eKMlfO7sBxb2AZ6zwoII4gMLETDmkqJBc2KVig9kGkC0bIR2RNeIDxQaQLRkhEUqrRUfqDRgTEQzLOsXR3xAwAAighHWCweu+ICgAVMsDPFaqUkIT6gZkIJjSpRlsaT4gLEBrSMtPuB9l2QjaAhP9MM6VtAUH+gGLKItPtBTUBIL4YljQ70Y2wpPnDV4jUZ4CE/MNnwNRngKT/wHCAH2qmDHLggAAAAASUVORK5CYII=" 
+                    alt="Sun" 
+                    class="sun-img"
+                >
+
                 <p class="text-white text-xl font-medium mb-6">How the matching works</p>
                 <ol class="space-y-5">
                     <li class="flex gap-4 items-start">
@@ -488,7 +494,7 @@
         </div>
     </footer>
 
-    <!-- WhatsApp button - clean full circle + correct icon -->
+    <!-- WhatsApp button -->
     <a href="https://wa.me/254797560284" 
        target="_blank" 
        rel="noopener" 
