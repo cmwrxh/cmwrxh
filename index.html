@@ -132,19 +132,20 @@
             transform: translateY(-2px);
         }
 
-        /* Bright Sun Orb */
+        /* Bright Sun Orb — massive white core, no transparent edge */
         .sun-orb {
             background: radial-gradient(
-                circle at 40% 35%, 
-                #FFF 0%, 
-                #FEF3C7 10%,      /* warm white */
-                #FCD34D 25%,      /* bright yellow */
-                #FBBF24 50%,      /* amber */
-                #F59E0B 75%,      /* deeper amber */
-                rgba(245, 158, 11, 0.3) 100%  /* soft glow edge, NOT transparent */
+                circle at 50% 50%, 
+                #FFFFFF 0%, 
+                #FFFFFF 35%,       /* solid white core — clearly visible */
+                #FFF7D1 50%,       /* warm white transition */
+                #FCD34D 70%,       /* bright yellow */
+                #F59E0B 90%,       /* amber */
+                rgba(245, 158, 11, 0.2) 100%
             );
             box-shadow: 
-                0 0 30px 8px rgba(252, 211, 77, 0.5),
+                0 0 15px 5px rgba(255, 255, 255, 0.5),   /* white inner halo */
+                0 0 40px 10px rgba(252, 211, 77, 0.5),
                 0 0 80px 20px rgba(245, 158, 11, 0.3),
                 0 0 120px 40px rgba(245, 158, 11, 0.15);
             animation: sun-pulse 3s ease-in-out infinite;
@@ -153,15 +154,17 @@
         @keyframes sun-pulse {
             0%, 100% { 
                 box-shadow: 
-                    0 0 20px 5px rgba(252, 211, 77, 0.4),
-                    0 0 60px 15px rgba(245, 158, 11, 0.25),
-                    0 0 100px 30px rgba(245, 158, 11, 0.1);
+                    0 0 15px 5px rgba(255, 255, 255, 0.5),
+                    0 0 40px 10px rgba(252, 211, 77, 0.5),
+                    0 0 80px 20px rgba(245, 158, 11, 0.3),
+                    0 0 120px 40px rgba(245, 158, 11, 0.15);
             }
             50% { 
                 box-shadow: 
-                    0 0 30px 8px rgba(252, 211, 77, 0.55),
-                    0 0 80px 25px rgba(245, 158, 11, 0.35),
-                    0 0 140px 40px rgba(245, 158, 11, 0.15);
+                    0 0 25px 10px rgba(255, 255, 255, 0.7),
+                    0 0 60px 15px rgba(252, 211, 77, 0.65),
+                    0 0 100px 30px rgba(245, 158, 11, 0.4),
+                    0 0 160px 50px rgba(245, 158, 11, 0.2);
             }
         }
 
@@ -234,6 +237,7 @@
         }
     </style>
 <base target="_blank">
+<base target="_blank">
 </head>
 <body class="antialiased">
 
@@ -278,7 +282,8 @@
             </div>
 
             <div class="glass-card rounded-2xl p-10">
-                <div class="w-16 h-16 rounded-full sun-orb mb-8"></div>
+                <!-- 80px orb with large white core -->
+                <div class="w-20 h-20 rounded-full sun-orb mb-8"></div>
                 <p class="text-white text-xl font-medium mb-6" style="font-family: 'Inter', sans-serif;">How the matching works</p>
                 <ol class="space-y-5">
                     <li class="flex gap-4 items-start">
