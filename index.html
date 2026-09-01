@@ -38,11 +38,9 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Original Font Classes */
         .serif { font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.02em; line-height: 1.2; }
         .mono { font-family: 'JetBrains Mono', monospace; font-weight: 400; letter-spacing: 0.02em; }
 
-        /* Transparent Glass Mosaic */
         .glass-card {
             background: linear-gradient(145deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.005) 100%);
             border: 1px solid var(--panel-border);
@@ -99,7 +97,6 @@
 
         .section-border { border-top: 1px solid rgba(255, 255, 255, 0.04); }
 
-        /* Buttons */
         .btn-primary {
             background: var(--amber);
             color: #000;
@@ -132,43 +129,40 @@
             transform: translateY(-2px);
         }
 
-        /* Bright Sun Orb — massive white core, no transparent edge */
         .sun-orb {
             background: radial-gradient(
                 circle at 50% 50%, 
                 #FFFFFF 0%, 
-                #FFFFFF 35%,       /* solid white core — clearly visible */
-                #FFF7D1 50%,       /* warm white transition */
-                #FCD34D 70%,       /* bright yellow */
-                #F59E0B 90%,       /* amber */
-                rgba(245, 158, 11, 0.2) 100%
+                #FFFDF0 40%, 
+                #FDE047 70%, 
+                #F59E0B 100%
             );
             box-shadow: 
-                0 0 15px 5px rgba(255, 255, 255, 0.5),   /* white inner halo */
-                0 0 40px 10px rgba(252, 211, 77, 0.5),
+                0 0 30px 10px rgba(255, 255, 255, 0.8),
+                0 0 55px 18px rgba(252, 211, 77, 0.5),
                 0 0 80px 20px rgba(245, 158, 11, 0.3),
                 0 0 120px 40px rgba(245, 158, 11, 0.15);
             animation: sun-pulse 3s ease-in-out infinite;
+            will-change: transform, box-shadow;
         }
 
         @keyframes sun-pulse {
             0%, 100% { 
                 box-shadow: 
-                    0 0 15px 5px rgba(255, 255, 255, 0.5),
-                    0 0 40px 10px rgba(252, 211, 77, 0.5),
+                    0 0 30px 10px rgba(255, 255, 255, 0.8),
+                    0 0 55px 18px rgba(252, 211, 77, 0.5),
                     0 0 80px 20px rgba(245, 158, 11, 0.3),
                     0 0 120px 40px rgba(245, 158, 11, 0.15);
             }
             50% { 
                 box-shadow: 
-                    0 0 25px 10px rgba(255, 255, 255, 0.7),
-                    0 0 60px 15px rgba(252, 211, 77, 0.65),
-                    0 0 100px 30px rgba(245, 158, 11, 0.4),
-                    0 0 160px 50px rgba(245, 158, 11, 0.2);
+                    0 0 40px 14px rgba(255, 255, 255, 0.95),
+                    0 0 70px 24px rgba(252, 211, 77, 0.65),
+                    0 0 95px 28px rgba(245, 158, 11, 0.4),
+                    0 0 145px 52px rgba(245, 158, 11, 0.22);
             }
         }
 
-        /* Background Grid */
         .hero-grid {
             background-image: 
                 linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), 
@@ -178,7 +172,6 @@
             -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent 80%);
         }
 
-        /* Ambient Glow */
         .ambient-glow {
             position: absolute;
             width: 600px;
@@ -190,7 +183,6 @@
 
         :focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; border-radius: 4px; }
 
-        /* Social Icons */
         .social-icon {
             width: 40px;
             height: 40px;
@@ -210,7 +202,6 @@
             transform: translateY(-3px);
         }
 
-        /* Labels */
         .label-mono {
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.7rem;
@@ -236,7 +227,6 @@
             color: #fff;
         }
     </style>
-<base target="_blank">
 <base target="_blank">
 </head>
 <body class="antialiased">
@@ -272,7 +262,7 @@
                 <h1 class="serif text-5xl md:text-6xl text-white mb-8">
                     We connect Kenyan businesses with solar installers worth trusting.
                 </h1>
-                <p class="text-lg text-white/60 leading-relaxed mb-10 max-w-xl" style="font-family: 'Inter', sans-serif;">
+                <p class="text-lg text-white/60 leading-relaxed mb-10 max-w-xl">
                     Tell us your bill, your roof, and your location. We qualify the details, answer your questions, and match you with a vetted installer from our network — free, no obligation.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
@@ -282,24 +272,23 @@
             </div>
 
             <div class="glass-card rounded-2xl p-10">
-                <!-- 80px orb with large white core -->
-                <div class="w-20 h-20 rounded-full sun-orb mb-8"></div>
-                <p class="text-white text-xl font-medium mb-6" style="font-family: 'Inter', sans-serif;">How the matching works</p>
+                <div class="w-24 h-24 rounded-full sun-orb mb-8"></div>
+                <p class="text-white text-xl font-medium mb-6">How the matching works</p>
                 <ol class="space-y-5">
                     <li class="flex gap-4 items-start">
                         <span class="step-number mt-1">01</span>
-                        <p class="text-white/60 text-sm leading-relaxed" style="font-family: 'Inter', sans-serif;">You tell us about your site — bill, roof, location.</p>
+                        <p class="text-white/60 text-sm leading-relaxed">You tell us about your site — bill, roof, location.</p>
                     </li>
                     <li class="flex gap-4 items-start">
                         <span class="step-number mt-1">02</span>
-                        <p class="text-white/60 text-sm leading-relaxed" style="font-family: 'Inter', sans-serif;">We qualify it and answer your questions honestly.</p>
+                        <p class="text-white/60 text-sm leading-relaxed">We qualify it and answer your questions honestly.</p>
                     </li>
                     <li class="flex gap-4 items-start">
                         <span class="step-number mt-1">03</span>
-                        <p class="text-white/60 text-sm leading-relaxed" style="font-family: 'Inter', sans-serif;">A vetted installer reaches out with a real quote.</p>
+                        <p class="text-white/60 text-sm leading-relaxed">A vetted installer reaches out with a real quote.</p>
                     </li>
                 </ol>
-                <a href="https://solar.brilliantunicorn.com" class="block mt-8 text-amber-400 text-sm hover:text-amber-300 transition font-medium" style="font-family: 'Inter', sans-serif;">Visit solar.brilliantunicorn.com →</a>
+                <a href="https://solar.brilliantunicorn.com" class="block mt-8 text-amber-400 text-sm hover:text-amber-300 transition font-medium">Visit solar.brilliantunicorn.com →</a>
             </div>
         </div>
     </header>
@@ -314,51 +303,51 @@
                     <h2 class="serif text-4xl md:text-5xl text-white mb-8 leading-tight">
                         Infrastructure reliability engineering for African fintechs
                     </h2>
-                    <p class="text-white/55 leading-relaxed mb-6 text-base" style="font-family: 'Inter', sans-serif;">
+                    <p class="text-white/55 leading-relaxed mb-6 text-base">
                         African fintech is scaling faster than the infrastructure under it. Flutterwave rails, M-Pesa integrations, API-driven banking — the products are ready before the systems underneath them are. That gap is where platforms crash during peak traffic, and where trust gets lost in a single bad afternoon.
                     </p>
-                    <p class="text-white/55 leading-relaxed text-base" style="font-family: 'Inter', sans-serif;">
+                    <p class="text-white/55 leading-relaxed text-base">
                         I've spent years in DNS, CDN, and BGP-level optimization, and in building systems that keep working when the network doesn't cooperate. That's the specific problem I help fintech, logistics, and healthtech platforms solve.
                     </p>
                 </div>
 
                 <div class="glass-card rounded-2xl p-8 h-fit">
                     <p class="mono text-amber-400 text-xs mb-6 uppercase tracking-widest">Taking On Founding Clients</p>
-                    <p class="text-white/60 text-sm leading-relaxed mb-8" style="font-family: 'Inter', sans-serif;">
+                    <p class="text-white/60 text-sm leading-relaxed mb-8">
                         This consulting practice is early-stage. Instead of case studies from past clients, here's what I can show you directly: live, working engineering research, in the open.
                     </p>
-                    <a href="mailto:ceo@brilliantunicorn.com?subject=Reliability%20engineering%20inquiry&body=What%20platform%20are%20you%20running%2C%20and%20where%20is%20it%20breaking%20under%20load%3F" class="btn-primary block text-center py-4 rounded-lg text-sm" style="font-family: 'Inter', sans-serif;">Tell me what's breaking →</a>
-                    <p class="text-white/30 text-xs mt-5 text-center" style="font-family: 'Inter', sans-serif;">Opens an email — describe your system and I'll reply with next steps.</p>
+                    <a href="mailto:ceo@brilliantunicorn.com?subject=Reliability%20engineering%20inquiry&body=What%20platform%20are%20you%20running%2C%20and%20where%20is%20it%20breaking%20under%20load%3F" class="btn-primary block text-center py-4 rounded-lg text-sm">Tell me what's breaking →</a>
+                    <p class="text-white/30 text-xs mt-5 text-center">Opens an email — describe your system and I'll reply with next steps.</p>
                 </div>
             </div>
 
             <p class="label-mono mb-8">The Proof — Public, Ongoing, Updated in the Open</p>
             <div class="grid md:grid-cols-2 gap-6 mb-16">
                 <a href="https://github.com/cmwrxh/internet-under-the-hood" target="_blank" rel="noopener" class="glass-card p-8 rounded-2xl block group">
-                    <h3 class="text-white text-lg font-medium mb-3 group-hover:text-amber-400 transition" style="font-family: 'Inter', sans-serif;">Internet Under The Hood</h3>
-                    <p class="text-white/50 text-sm leading-relaxed" style="font-family: 'Inter', sans-serif;">A live lab measuring real DNS, TLS, HTTP/3, CDN, and BGP behavior — not theory. Automated health checks run continuously.</p>
-                    <p class="text-amber-400/70 text-xs mt-5 font-medium group-hover:text-amber-400 transition" style="font-family: 'Inter', sans-serif;">View the repo →</p>
+                    <h3 class="text-white text-lg font-medium mb-3 group-hover:text-amber-400 transition">Internet Under The Hood</h3>
+                    <p class="text-white/50 text-sm leading-relaxed">A live lab measuring real DNS, TLS, HTTP/3, CDN, and BGP behavior — not theory. Automated health checks run continuously.</p>
+                    <p class="text-amber-400/70 text-xs mt-5 font-medium group-hover:text-amber-400 transition">View the repo →</p>
                 </a>
                 <a href="https://github.com/cmwrxh/resilient-distributed-systems-lab" target="_blank" rel="noopener" class="glass-card p-8 rounded-2xl block group">
-                    <h3 class="text-white text-lg font-medium mb-3 group-hover:text-amber-400 transition" style="font-family: 'Inter', sans-serif;">Resilient Distributed Systems Lab</h3>
-                    <p class="text-white/50 text-sm leading-relaxed" style="font-family: 'Inter', sans-serif;">A self-documenting chaos engineering lab: daily reliability journals, weekly controlled-failure experiments, recorded over time.</p>
-                    <p class="text-amber-400/70 text-xs mt-5 font-medium group-hover:text-amber-400 transition" style="font-family: 'Inter', sans-serif;">View the repo →</p>
+                    <h3 class="text-white text-lg font-medium mb-3 group-hover:text-amber-400 transition">Resilient Distributed Systems Lab</h3>
+                    <p class="text-white/50 text-sm leading-relaxed">A self-documenting chaos engineering lab: daily reliability journals, weekly controlled-failure experiments, recorded over time.</p>
+                    <p class="text-amber-400/70 text-xs mt-5 font-medium group-hover:text-amber-400 transition">View the repo →</p>
                 </a>
                 <a href="https://github.com/cmwrxh/alpha-core-framework" target="_blank" rel="noopener" class="glass-card p-8 rounded-2xl block group">
-                    <h3 class="text-white text-lg font-medium mb-3 group-hover:text-amber-400 transition" style="font-family: 'Inter', sans-serif;">AlphaCore Framework</h3>
-                    <p class="text-white/50 text-sm leading-relaxed" style="font-family: 'Inter', sans-serif;">A Rust concurrency engine built on a shared-nothing architecture, designed to keep processing through unstable power and network conditions.</p>
-                    <p class="text-amber-400/70 text-xs mt-5 font-medium group-hover:text-amber-400 transition" style="font-family: 'Inter', sans-serif;">View the repo →</p>
+                    <h3 class="text-white text-lg font-medium mb-3 group-hover:text-amber-400 transition">AlphaCore Framework</h3>
+                    <p class="text-white/50 text-sm leading-relaxed">A Rust concurrency engine built on a shared-nothing architecture, designed to keep processing through unstable power and network conditions.</p>
+                    <p class="text-amber-400/70 text-xs mt-5 font-medium group-hover:text-amber-400 transition">View the repo →</p>
                 </a>
                 <a href="https://github.com/cmwrxh/fintech-risk-lab" target="_blank" rel="noopener" class="glass-card p-8 rounded-2xl block group">
-                    <h3 class="text-white text-lg font-medium mb-3 group-hover:text-amber-400 transition" style="font-family: 'Inter', sans-serif;">FinTech Risk Lab</h3>
-                    <p class="text-white/50 text-sm leading-relaxed" style="font-family: 'Inter', sans-serif;">Credit risk and fraud-signal analytics, built with reproducible Python and SQL-first thinking.</p>
-                    <p class="text-amber-400/70 text-xs mt-5 font-medium group-hover:text-amber-400 transition" style="font-family: 'Inter', sans-serif;">View the repo →</p>
+                    <h3 class="text-white text-lg font-medium mb-3 group-hover:text-amber-400 transition">FinTech Risk Lab</h3>
+                    <p class="text-white/50 text-sm leading-relaxed">Credit risk and fraud-signal analytics, built with reproducible Python and SQL-first thinking.</p>
+                    <p class="text-amber-400/70 text-xs mt-5 font-medium group-hover:text-amber-400 transition">View the repo →</p>
                 </a>
             </div>
 
             <div class="glass-card rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-                <p class="text-white/70 text-base" style="font-family: 'Inter', sans-serif;">Running a fintech, logistics, or healthtech platform that's outgrowing its infrastructure?</p>
-                <a href="mailto:ceo@brilliantunicorn.com?subject=Reliability%20engineering%20inquiry" class="btn-primary px-8 py-3.5 rounded-lg whitespace-nowrap" style="font-family: 'Inter', sans-serif;">Start a conversation</a>
+                <p class="text-white/70 text-base">Running a fintech, logistics, or healthtech platform that's outgrowing its infrastructure?</p>
+                <a href="mailto:ceo@brilliantunicorn.com?subject=Reliability%20engineering%20inquiry" class="btn-primary px-8 py-3.5 rounded-lg whitespace-nowrap">Start a conversation</a>
             </div>
         </section>
 
@@ -370,39 +359,39 @@
                     <h2 class="serif text-4xl md:text-5xl text-white mb-8 leading-tight">
                         Building connections. Solving complex problems. Enabling businesses to scale.
                     </h2>
-                    <p class="text-white/50 leading-relaxed mb-6 text-base" style="font-family: 'Inter', sans-serif;">
+                    <p class="text-white/50 leading-relaxed mb-6 text-base">
                         Brilliant Unicorn Ltd is a Nairobi-based solutions company serving businesses across energy and technology.
                     </p>
-                    <p class="text-white/50 leading-relaxed mb-8 text-base" style="font-family: 'Inter', sans-serif;">
+                    <p class="text-white/50 leading-relaxed mb-8 text-base">
                         We operate across two complementary areas of expertise: <strong class="text-white/80 font-semibold">solar and energy solutions</strong>, and <strong class="text-white/80 font-semibold">technology and fintech infrastructure</strong>. In both, our role is to identify the right solutions, bring the right parties together, and provide the expertise required to deliver reliable outcomes.
                     </p>
                     
-                    <h3 class="text-white font-semibold text-lg mb-4 mt-10" style="font-family: 'Inter', sans-serif;">Solar & Energy Solutions</h3>
-                    <p class="text-white/50 leading-relaxed mb-8 text-base" style="font-family: 'Inter', sans-serif;">
+                    <h3 class="text-white font-semibold text-lg mb-4 mt-10">Solar & Energy Solutions</h3>
+                    <p class="text-white/50 leading-relaxed mb-8 text-base">
                         We facilitate connections between Kenyan businesses and qualified solar providers and installation partners. By understanding each business's requirements and matching them with suitable technical providers, we help simplify the process of sourcing and implementing dependable energy solutions.
                     </p>
                     
-                    <h3 class="text-white font-semibold text-lg mb-4" style="font-family: 'Inter', sans-serif;">Technology & Fintech Infrastructure</h3>
-                    <p class="text-white/50 leading-relaxed mb-8 text-base" style="font-family: 'Inter', sans-serif;">
+                    <h3 class="text-white font-semibold text-lg mb-4">Technology & Fintech Infrastructure</h3>
+                    <p class="text-white/50 leading-relaxed mb-8 text-base">
                         We provide technical consulting and infrastructure support to technology-driven businesses operating in demanding digital environments. Our work encompasses system architecture, DNS and network configuration, API and logic-flow analysis, and infrastructure optimization—helping businesses build resilient systems capable of supporting growth and real-world workloads.
                     </p>
                     
-                    <p class="text-white/50 leading-relaxed text-base" style="font-family: 'Inter', sans-serif;">
+                    <p class="text-white/50 leading-relaxed text-base">
                         Across every engagement, Brilliant Unicorn is guided by the same principle: <strong class="text-white/80 font-semibold">combine the right expertise, infrastructure, and partnerships to create solutions that are dependable, scalable, and built for long-term value.</strong>
                     </p>
                 </div>
                 <div class="space-y-4 lg:mt-24">
                     <div class="glass-card p-8 rounded-2xl">
-                        <p class="text-white font-semibold mb-2 text-base" style="font-family: 'Inter', sans-serif;">Correctness first</p>
-                        <p class="text-white/40 text-sm leading-relaxed" style="font-family: 'Inter', sans-serif;">Systems must be reliable before they're fast or flashy.</p>
+                        <p class="text-white font-semibold mb-2 text-base">Correctness first</p>
+                        <p class="text-white/40 text-sm leading-relaxed">Systems must be reliable before they're fast or flashy.</p>
                     </div>
                     <div class="glass-card p-8 rounded-2xl">
-                        <p class="text-white font-semibold mb-2 text-base" style="font-family: 'Inter', sans-serif;">Measurability</p>
-                        <p class="text-white/40 text-sm leading-relaxed" style="font-family: 'Inter', sans-serif;">If you can't measure it, you can't trust or improve it at scale.</p>
+                        <p class="text-white font-semibold mb-2 text-base">Measurability</p>
+                        <p class="text-white/40 text-sm leading-relaxed">If you can't measure it, you can't trust or improve it at scale.</p>
                     </div>
                     <div class="glass-card p-8 rounded-2xl">
-                        <p class="text-white font-semibold mb-2 text-base" style="font-family: 'Inter', sans-serif;">Secure by design</p>
-                        <p class="text-white/40 text-sm leading-relaxed" style="font-family: 'Inter', sans-serif;">Security is never an add-on — it's baked in from day one.</p>
+                        <p class="text-white font-semibold mb-2 text-base">Secure by design</p>
+                        <p class="text-white/40 text-sm leading-relaxed">Security is never an add-on — it's baked in from day one.</p>
                     </div>
                 </div>
             </div>
@@ -414,12 +403,12 @@
                 <div>
                     <p class="label-mono mb-6">Let's Connect</p>
                     <h2 class="serif text-4xl md:text-5xl text-white mb-6 leading-tight">Have a question about either business?</h2>
-                    <p class="text-white/50 leading-relaxed text-base" style="font-family: 'Inter', sans-serif;">We reply within 1–2 business days. For solar quotes, it's faster to go straight to the estimate tool.</p>
+                    <p class="text-white/50 leading-relaxed text-base">We reply within 1–2 business days. For solar quotes, it's faster to go straight to the estimate tool.</p>
                 </div>
                 <div class="space-y-5">
-                    <a href="mailto:ceo@brilliantunicorn.com" class="block text-white text-xl hover:text-amber-400 transition font-medium" style="font-family: 'Inter', sans-serif;">ceo@brilliantunicorn.com</a>
-                    <p class="text-white/40 text-base" style="font-family: 'Inter', sans-serif;">+254 797 560 284 · Nairobi, Kenya</p>
-                    <a href="https://solar.brilliantunicorn.com" class="btn-primary inline-block px-8 py-4 rounded-lg mt-4" style="font-family: 'Inter', sans-serif;">Go to solar estimate tool →</a>
+                    <a href="mailto:ceo@brilliantunicorn.com" class="block text-white text-xl hover:text-amber-400 transition font-medium">ceo@brilliantunicorn.com</a>
+                    <p class="text-white/40 text-base">+254 797 560 284 · Nairobi, Kenya</p>
+                    <a href="https://solar.brilliantunicorn.com" class="btn-primary inline-block px-8 py-4 rounded-lg mt-4">Go to solar estimate tool →</a>
                 </div>
             </div>
         </section>
@@ -430,39 +419,33 @@
     <footer class="relative z-10 border-t border-white/5 bg-gradient-to-b from-transparent to-black/40">
         <div class="max-w-7xl mx-auto px-6 pt-20 pb-12">
             
-            <!-- Top Footer -->
             <div class="grid md:grid-cols-4 gap-12 mb-16">
-                
-                <!-- Brand -->
                 <div class="md:col-span-1">
                     <p class="serif text-2xl text-white mb-4">Brilliant Unicorn <span class="text-amber-400">Ltd</span></p>
-                    <p class="text-white/40 text-sm leading-relaxed max-w-xs" style="font-family: 'Inter', sans-serif;">
+                    <p class="text-white/40 text-sm leading-relaxed max-w-xs">
                         We connect businesses with the right solar solutions and help technology companies build reliable systems that work well in the real world.
                     </p>
                 </div>
 
-                <!-- Services -->
                 <div>
                     <p class="mono text-xs uppercase tracking-widest text-white/30 mb-6">Services</p>
                     <div class="space-y-3 text-sm">
-                        <p><a href="https://solar.brilliantunicorn.com" class="text-white/50 hover:text-amber-400 transition" style="font-family: 'Inter', sans-serif;">Solar Advisory</a></p>
-                        <p><a href="#fintech" class="text-white/50 hover:text-amber-400 transition" style="font-family: 'Inter', sans-serif;">Fintech Consulting</a></p>
-                        <p><a href="#about" class="text-white/50 hover:text-amber-400 transition" style="font-family: 'Inter', sans-serif;">About</a></p>
-                        <p><a href="#contact" class="text-white/50 hover:text-amber-400 transition" style="font-family: 'Inter', sans-serif;">Contact</a></p>
+                        <p><a href="https://solar.brilliantunicorn.com" class="text-white/50 hover:text-amber-400 transition">Solar Advisory</a></p>
+                        <p><a href="#fintech" class="text-white/50 hover:text-amber-400 transition">Fintech Consulting</a></p>
+                        <p><a href="#about" class="text-white/50 hover:text-amber-400 transition">About</a></p>
+                        <p><a href="#contact" class="text-white/50 hover:text-amber-400 transition">Contact</a></p>
                     </div>
                 </div>
 
-                <!-- Legal -->
                 <div>
                     <p class="mono text-xs uppercase tracking-widest text-white/30 mb-6">Legal</p>
                     <div class="space-y-3 text-sm">
-                        <p><a href="/privacy" class="text-white/50 hover:text-amber-400 transition" style="font-family: 'Inter', sans-serif;">Privacy Policy</a></p>
-                        <p><a href="/terms" class="text-white/50 hover:text-amber-400 transition" style="font-family: 'Inter', sans-serif;">Terms of Use</a></p>
-                        <p><a href="/refund-policy" class="text-white/50 hover:text-amber-400 transition" style="font-family: 'Inter', sans-serif;">Refund Policy</a></p>
+                        <p><a href="/privacy" class="text-white/50 hover:text-amber-400 transition">Privacy Policy</a></p>
+                        <p><a href="/terms" class="text-white/50 hover:text-amber-400 transition">Terms of Use</a></p>
+                        <p><a href="/refund-policy" class="text-white/50 hover:text-amber-400 transition">Refund Policy</a></p>
                     </div>
                 </div>
 
-                <!-- Social -->
                 <div>
                     <p class="mono text-xs uppercase tracking-widest text-white/30 mb-6">Follow Us</p>
                     <div class="flex gap-3">
@@ -482,7 +465,6 @@
                 </div>
             </div>
 
-            <!-- Divider -->
             <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="mono text-[10px] tracking-widest text-white/20">© 2026 BRILLIANT UNICORN LTD</p>
                 <p class="mono text-[10px] tracking-widest text-white/20">SYSTEMS THAT LAST</p>
@@ -492,8 +474,7 @@
 
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/254797560284" target="_blank" rel="noopener" class="fixed bottom-5 right-5 z-50 flex items-center gap-3 bg-[#25D366] text-white px-4 py-3 rounded-full shadow-lg hover:scale-105 transition-transform duration-300 md:hidden" aria-label="Chat on WhatsApp">
-        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        <span class="text-sm font-semibold">Chat on WhatsApp</span>
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.4.321 2.684.958 3.738.636 1.053 1.574 2.067 2.814 3.042 1.24 0.975 2.658 1.657 4.254 2.046 1.595 0.389 2.89 0.288 3.886-.303 0.996-.591 1.636-1.439 1.92-2.544.284-1.105.142-2.115-.426-3.03z"/></svg>
     </a>
 
 </body>
