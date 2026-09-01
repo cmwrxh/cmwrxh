@@ -129,37 +129,44 @@
             transform: translateY(-2px);
         }
 
-        .sun-orb {
-            background: radial-gradient(
-                circle at 50% 50%, 
-                #FFFFFF 0%, 
-                #FFFDF0 40%, 
-                #FDE047 70%, 
-                #F59E0B 100%
-            );
-            box-shadow: 
-                0 0 30px 10px rgba(255, 255, 255, 0.8),
-                0 0 55px 18px rgba(252, 211, 77, 0.5),
-                0 0 80px 20px rgba(245, 158, 11, 0.3),
-                0 0 120px 40px rgba(245, 158, 11, 0.15);
-            animation: sun-pulse 3s ease-in-out infinite;
-            will-change: transform, box-shadow;
+        /* 
+           SUN ORB — Inline SVG for cross-browser consistency.
+           CSS gradients render differently in Chrome (OKLab) vs Safari (sRGB).
+           Inline SVG with explicit color-interpolation="sRGB" bypasses this entirely.
+        */
+        .sun-orb-wrapper {
+            width: 96px;
+            height: 96px;
+            position: relative;
+            margin-bottom: 2rem;
+            filter: 
+                drop-shadow(0 0 12px rgba(255, 255, 255, 0.5))
+                drop-shadow(0 0 30px rgba(252, 211, 77, 0.5))
+                drop-shadow(0 0 60px rgba(245, 158, 11, 0.3))
+                drop-shadow(0 0 100px rgba(245, 158, 11, 0.12));
+            animation: sun-glow 3s ease-in-out infinite;
         }
 
-        @keyframes sun-pulse {
+        .sun-orb-wrapper svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        @keyframes sun-glow {
             0%, 100% { 
-                box-shadow: 
-                    0 0 30px 10px rgba(255, 255, 255, 0.8),
-                    0 0 55px 18px rgba(252, 211, 77, 0.5),
-                    0 0 80px 20px rgba(245, 158, 11, 0.3),
-                    0 0 120px 40px rgba(245, 158, 11, 0.15);
+                filter: 
+                    drop-shadow(0 0 12px rgba(255, 255, 255, 0.5))
+                    drop-shadow(0 0 30px rgba(252, 211, 77, 0.5))
+                    drop-shadow(0 0 60px rgba(245, 158, 11, 0.3))
+                    drop-shadow(0 0 100px rgba(245, 158, 11, 0.12));
             }
             50% { 
-                box-shadow: 
-                    0 0 40px 14px rgba(255, 255, 255, 0.95),
-                    0 0 70px 24px rgba(252, 211, 77, 0.65),
-                    0 0 95px 28px rgba(245, 158, 11, 0.4),
-                    0 0 145px 52px rgba(245, 158, 11, 0.22);
+                filter: 
+                    drop-shadow(0 0 20px rgba(255, 255, 255, 0.7))
+                    drop-shadow(0 0 45px rgba(252, 211, 77, 0.65))
+                    drop-shadow(0 0 80px rgba(245, 158, 11, 0.4))
+                    drop-shadow(0 0 130px rgba(245, 158, 11, 0.2));
             }
         }
 
@@ -272,7 +279,22 @@
             </div>
 
             <div class="glass-card rounded-2xl p-10">
-                <div class="w-24 h-24 rounded-full sun-orb mb-8"></div>
+                <!-- Inline SVG Sun Orb -->
+                <div class="sun-orb-wrapper">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="sunGradient" cx="35%" cy="35%" r="70%" color-interpolation="sRGB">
+                                <stop offset="0%" stop-color="#FFFFFF" />
+                                <stop offset="20%" stop-color="#FFFBEA" />
+                                <stop offset="40%" stop-color="#FDE68A" />
+                                <stop offset="60%" stop-color="#FCD34D" />
+                                <stop offset="80%" stop-color="#FBBF24" />
+                                <stop offset="100%" stop-color="#F59E0B" />
+                            </radialGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="50" fill="url(#sunGradient)" />
+                    </svg>
+                </div>
                 <p class="text-white text-xl font-medium mb-6">How the matching works</p>
                 <ol class="space-y-5">
                     <li class="flex gap-4 items-start">
