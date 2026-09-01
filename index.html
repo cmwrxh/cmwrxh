@@ -279,20 +279,23 @@
             </div>
 
             <div class="glass-card rounded-2xl p-10">
-                <!-- Inline SVG Sun Orb -->
+                <!-- Inline SVG Sun Orb (fixed) -->
                 <div class="sun-orb-wrapper">
-                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <defs>
-                            <radialGradient id="sunGradient" cx="35%" cy="35%" r="70%" color-interpolation="sRGB">
-                                <stop offset="0%" stop-color="#FFFFFF" />
-                                <stop offset="20%" stop-color="#FFFBEA" />
-                                <stop offset="40%" stop-color="#FDE68A" />
-                                <stop offset="60%" stop-color="#FCD34D" />
-                                <stop offset="80%" stop-color="#FBBF24" />
-                                <stop offset="100%" stop-color="#F59E0B" />
+                            <radialGradient id="sunGradient" cx="35%" cy="35%" r="70%" 
+                                            gradientUnits="objectBoundingBox" color-interpolation="sRGB">
+                                <stop offset="0%"   stop-color="#FFFFFF"/>
+                                <stop offset="20%"  stop-color="#FFFBEA"/>
+                                <stop offset="40%"  stop-color="#FDE68A"/>
+                                <stop offset="60%"  stop-color="#FCD34D"/>
+                                <stop offset="80%"  stop-color="#FBBF24"/>
+                                <stop offset="100%" stop-color="#F59E0B"/>
                             </radialGradient>
                         </defs>
-                        <circle cx="50" cy="50" r="50" fill="url(#sunGradient)" />
+                        <!-- Solid fallback so it never goes black -->
+                        <circle cx="50" cy="50" r="50" fill="#F59E0B"/>
+                        <circle cx="50" cy="50" r="50" fill="url(#sunGradient)"/>
                     </svg>
                 </div>
                 <p class="text-white text-xl font-medium mb-6">How the matching works</p>
