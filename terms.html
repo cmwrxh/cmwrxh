@@ -3,42 +3,129 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Terms of Service | Brilliant Unicorn</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <title>Terms of Use | Brilliant Unicorn Ltd</title>
+    <meta name="description" content="Terms of Use for Brilliant Unicorn Ltd, Nairobi, Kenya." />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <style>
-        :root { --amber: #F59E0B; --bg: #000000; --panel: rgba(255, 255, 255, 0.03); --panel-border: rgba(255, 255, 255, 0.08); --text: #F3F4F6; }
-        body { background: radial-gradient(circle at top, rgba(245, 158, 11, 0.05), transparent 40%), #000; color: var(--text); font-family: 'Inter', sans-serif; }
+        :root {
+            --amber: #F59E0B;
+            --amber-dark: #D97706;
+            --bg: #050505;
+            --panel: rgba(255, 255, 255, 0.03);
+            --panel-border: rgba(255, 255, 255, 0.08);
+            --text: #F3F4F6;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            background: #050505;
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
         .serif { font-family: 'Playfair Display', serif; }
         .mono { font-family: 'JetBrains Mono', monospace; }
-        .glass-card { background: var(--panel); border: 1px solid var(--panel-border); backdrop-filter: blur(10px); }
+        .glass-card {
+            background: var(--panel);
+            border: 1px solid var(--panel-border);
+            backdrop-filter: blur(10px);
+        }
+        .nav-border { border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
+        .section-border { border-top: 1px solid rgba(255, 255, 255, 0.06); }
+        a { color: #FBBF24; text-decoration: none; transition: opacity 0.2s; }
+        a:hover { opacity: 0.8; text-decoration: underline; }
+        h1 { font-size: 2.25rem; line-height: 1.2; }
+        h2 { font-size: 1.25rem; margin-top: 2.5rem; margin-bottom: 0.75rem; color: #fff; font-weight: 600; }
+        h3 { font-size: 1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: rgba(255,255,255,0.9); font-weight: 600; }
+        p, li { color: rgba(255,255,255,0.65); font-size: 0.95rem; }
+        ul { margin-left: 1.25rem; margin-bottom: 1rem; }
+        li { margin-bottom: 0.4rem; }
+        .label-mono {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #FBBF24;
+            font-weight: 500;
+        }
+        :focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; border-radius: 4px; }
+        ::selection { background: rgba(251, 191, 36, 0.3); color: #fff; }
+        @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
     </style>
 </head>
-<body class="antialiased">
-    <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between border-b border-white/5 sticky top-0 bg-black/75 backdrop-blur z-50">
-        <a href="/" class="serif text-xl font-bold tracking-wide">Brilliant Unicorn <span class="text-amber-400">LLC</span></a>
-        <a href="/" class="mono text-[10px] uppercase tracking-widest text-amber-400">← Back to Home</a>
+<body class="antialiased selection:bg-amber-500/30">
+    <nav class="max-w-3xl mx-auto px-6 py-5 flex items-center justify-between nav-border sticky top-0 bg-black/80 backdrop-blur z-50">
+        <a href="/" class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-500/30 flex items-center justify-center">
+                <div class="w-4 h-4 rounded-full bg-amber-400"></div>
+            </div>
+            <p class="serif text-base font-semibold text-white leading-tight">Brilliant Unicorn <span class="text-amber-400">Ltd</span></p>
+        </a>
+        <a href="/" class="text-sm text-white/50 hover:text-amber-400 transition">← Back to site</a>
     </nav>
+    <main class="max-w-3xl mx-auto px-6 py-16">
+        <p class="label-mono mb-4">Legal</p>
+        <h1 class="serif text-3xl md:text-4xl font-semibold text-white mb-4">Terms of Use</h1>
+        <p class="text-white/40 text-sm mb-12">Last updated: 1 September 2026</p>
+        <div class="glass-card rounded-sm p-8 md:p-10">
+            <p class="text-white/70 text-sm leading-relaxed mb-6">
+                By using this website or submitting a lead form, you agree to these terms. If you do not agree, please do not use our services.
+            </p>
 
-    <main class="max-w-4xl mx-auto px-6 py-20">
-        <p class="mono text-xs uppercase tracking-[0.3em] text-amber-400 mb-4">Legal Framework</p>
-        <h1 class="serif text-5xl font-bold mb-12">Terms of Service</h1>
-        
-        <div class="glass-card p-8 md:p-12 rounded-sm space-y-8 leading-relaxed text-white/70">
-            <section>
-                <h2 class="mono text-amber-400 uppercase text-sm mb-4 tracking-widest font-bold">01. Acceptance of Terms</h2>
-                <p>By accessing Brilliant Unicorn LLC services, you agree to be bound by these sovereign engineering standards. If you do not agree, you must cease use of our infrastructure immediately.</p>
-            </section>
-            <section>
-                <h2 class="mono text-amber-400 uppercase text-sm mb-4 tracking-widest font-bold">02. No Financial Advice</h2>
-                <p>Software such as RQE (Resilient Quant Engine) is provided for informational and analytical purposes only. We are engineers, not financial advisors. All high-throughput logic is used at your own risk.</p>
-            </section>
-            <section>
-                <h2 class="mono text-amber-400 uppercase text-sm mb-4 tracking-widest font-bold">03. Intellectual Property</h2>
-                <p>All proprietary code, SIMD optimizations, and design patterns remain the exclusive property of Brilliant Unicorn LLC unless explicitly released under an Open Source license.</p>
-            </section>
+            <h2>1. What we do</h2>
+            <p>Brilliant Unicorn Ltd operates a <strong>solar lead-matching service</strong> and <strong>fintech infrastructure consulting</strong>. We are not a solar installer, EPC contractor, or licensed electrical contractor. We connect you with third-party installers and provide technical advisory services.</p>
+
+            <h2>2. No guarantee of quotes or installation</h2>
+            <p>Submitting a lead form does not guarantee that you will receive a quote, that a project will proceed, or that any specific savings will be achieved. Installers make their own independent decisions about whether to quote, and pricing is outside our control.</p>
+
+            <h2>3. Accuracy of your information</h2>
+            <p>You agree to provide accurate and truthful information. Inaccurate details (e.g., incorrect bill amounts, wrong location) may result in mismatched recommendations or rejected leads.</p>
+
+            <h2>4. Installer independence</h2>
+            <p>Installers in our network are independent businesses. We vet them for licensing, references, and warranty terms, but we do not control their workmanship, pricing, timelines, or contractual terms. Any dispute between you and an installer is a matter between you and them. We will assist in good faith where possible, but we are not liable for installer performance.</p>
+
+            <h2>5. Our fees</h2>
+            <p>Our solar lead-matching service is <strong>free to homeowners and businesses</strong>. We are compensated by installers through pre-agreed finder's fees or commissions on completed installations. There are no hidden charges to you.</p>
+            <p>Fintech consulting engagements are billed separately under individual statements of work.</p>
+
+            <h2>6. Intellectual property</h2>
+            <p>All content on this website — text, design, code, and branding — is the property of Brilliant Unicorn Ltd unless otherwise stated. You may not reproduce, distribute, or create derivative works without written permission.</p>
+
+            <h2>7. Limitation of liability</h2>
+            <p>To the maximum extent permitted by law, Brilliant Unicorn Ltd is not liable for:</p>
+            <ul>
+                <li>Any direct, indirect, incidental, or consequential damages arising from your use of this website or our matching service</li>
+                <li>Losses related to solar installation quality, delays, or pricing</li>
+                <li>Technical failures, data loss, or service interruptions</li>
+            </ul>
+            <p>Our total liability in any matter shall not exceed the amount you have paid us for the specific service giving rise to the claim — which, for lead matching, is zero.</p>
+
+            <h2>8. Governing law</h2>
+            <p>These terms are governed by the laws of <strong>Kenya</strong>. Any disputes shall be resolved in the courts of Nairobi, Kenya.</p>
+
+            <h2>9. Changes to these terms</h2>
+            <p>We may update these terms at any time. Continued use of the site after changes constitutes acceptance of the revised terms.</p>
+
+            <h2>10. Contact</h2>
+            <p>Brilliant Unicorn Ltd<br>
+            Nairobi, Kenya<br>
+            Email: <a href="mailto:ceo@brilliantunicorn.com">ceo@brilliantunicorn.com</a><br>
+            Phone: +254 797 560 284</p>
+        </div>
+        <div class="mt-12 text-center">
+            <p class="text-white/40 text-sm">Questions about these policies?</p>
+            <a href="mailto:ceo@brilliantunicorn.com" class="text-amber-400 text-sm font-medium mt-1 inline-block">ceo@brilliantunicorn.com</a>
         </div>
     </main>
-    <script src="footer.js"></script>
+    <footer class="max-w-3xl mx-auto px-6 pt-12 pb-10 border-t border-white/5 mt-16">
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p class="mono text-[10px] tracking-widest text-white/25">© 2026 BRILLIANT UNICORN LTD</p>
+            <div class="flex gap-6 text-xs text-white/40">
+                <a href="/privacy.html" class="hover:text-amber-400 transition">Privacy</a>
+                <a href="/terms.html" class="hover:text-amber-400 transition">Terms</a>
+                <a href="/refund.html" class="hover:text-amber-400 transition">Refunds</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
