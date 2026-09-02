@@ -13,7 +13,8 @@
 
 <p align="center">
   <font face="DejaVu Sans Mono" color="#9C27B0"><b>Hey, I'm Charlie</b></font><br>
-  <sub>Nairobi-based Software & Data Engineer • Founder of <a href="https://brilliantunicorn.com">Brilliant Unicorn LTD</a></sub><br>
+  <sub>Nairobi-based Software & Data Engineer</sub><br>
+  <sub>Founder of <a href="https://brilliantunicorn.com">Brilliant Unicorn LTD</a> (Solar & Energy) • <a href="https://africalatency.dev">africalatency.dev</a> (Infrastructure)</sub><br>
   <sub><i>Building institutional-grade digital frameworks and implementation support that last.</i></sub>
 </p>
 
@@ -38,6 +39,13 @@
   <a href="https://github.com/cmwrxh/unicorn-os"><code>unicorn-os</code></a> • 
   <a href="https://github.com/cmwrxh/resilient-distributed-systems-lab"><code>distributed-lab</code></a> • 
   <a href="https://github.com/cmwrxh/internet-under-the-hood"><code>internet-under-the-hood</code></a>
+</p>
+
+<p align="center">
+  <font face="DejaVu Sans Mono" color="#FF7A18" size="4"><b>Infrastructure Consulting</b></font><br>
+  <sub>Latency optimization • Cloud cost reduction • Reliability engineering for African fintech</sub><br>
+  <a href="https://africalatency.dev"><b>africalatency.dev</b></a> • 
+  <a href="https://github.com/cmwrxh/internet-under-the-hood">Proof of work →</a>
 </p>
 
 <p align="center">
@@ -68,16 +76,25 @@
 <hr>
 
 <p align="center">
-  <font face="DejaVu Sans Mono" color="#FF7A18" size="4"><b>Brilliant Unicorn LLC</b></font><br>
-  <sub>Digital frameworks + implementation support for founders who want systems that scale and survive audits.</sub><br>
+  <font face="DejaVu Sans Mono" color="#FF7A18" size="4"><b>Brilliant Unicorn LTD</b></font><br>
+  <sub>Solar connections & energy solutions for Kenyan businesses and homeowners.</sub><br>
   <a href="https://brilliantunicorn.com">🌐 Visit the Store</a> • 
+  <a href="https://solar.brilliantunicorn.com">☀️ Solar Matching</a> • 
   <a href="https://payhip.com/b/Aofc2">📦 Latest Product</a>
+</p>
+
+<p align="center">
+  <font face="DejaVu Sans Mono" color="#00FF88" size="4"><b>africalatency.dev</b></font><br>
+  <sub>Infrastructure reliability engineering for African fintech. DNS • CDN • BGP • Cost optimization.</sub><br>
+  <a href="https://africalatency.dev">🌐 View Services</a> • 
+  <a href="https://github.com/cmwrxh/internet-under-the-hood">📊 Open Benchmarks</a>
 </p>
 
 <p align="center" style="margin:12px 0;">
   <a href="https://x.com/cmwrxh"><img src="https://img.shields.io/badge/X-000000?style=flat&logo=x&logoColor=white" height="24" alt="X"/></a>
   <a href="https://www.linkedin.com/in/charles-mwaura-bb7814140/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" height="24" alt="LinkedIn"/></a>
   <a href="https://brilliantunicorn.com"><img src="https://img.shields.io/badge/Website-FF7A18?style=flat&logo=googlechrome&logoColor=white" height="24" alt="Website"/></a>
+  <a href="https://africalatency.dev"><img src="https://img.shields.io/badge/africalatency.dev-00FF88?style=flat&logo=googlechrome&logoColor=white" height="24" alt="africalatency.dev"/></a>
   <span style="margin:0 12px;">•</span>
   <a href="https://www.paypal.com/ncp/links/P4YZHZX9FEMCJ"><img src="https://img.shields.io/badge/PayPal-00457C?style=flat&logo=paypal&logoColor=white" height="24" alt="PayPal"/></a>
   <a href="https://wise.com"><img src="https://img.shields.io/badge/Wise-00B9FF?style=flat&logo=wise&logoColor=white" height="24" alt="Wise"/></a>
