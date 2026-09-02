@@ -13,7 +13,7 @@
 
 <p align="center">
   <font face="DejaVu Sans Mono" color="#9C27B0"><b>Hey, I'm Charlie</b></font><br>
-  <sub>Nairobi-based Software & Data Engineer • Founder of <a href="https://brilliantunicorn.com">Brilliant Unicorn LLC</a></sub><br>
+  <sub>Nairobi-based Software & Data Engineer • Founder of <a href="https://brilliantunicorn.com">Brilliant Unicorn LTD</a></sub><br>
   <sub><i>Building institutional-grade digital frameworks and implementation support that last.</i></sub>
 </p>
 
